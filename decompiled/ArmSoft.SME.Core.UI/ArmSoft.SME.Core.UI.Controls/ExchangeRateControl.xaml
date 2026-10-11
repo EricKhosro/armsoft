@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Core.UI.Controls.ExchangeRateControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:ArmSoft.SME.Core.UI.Controls;assembly=ArmSoft.SME.Core.UI">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="Auto" />
+    </Grid.ColumnDefinitions>
+    <dxe:PopupCalcEdit Name="PopupCalcRate" Grid.Column="0" MinWidth="100" HorizontalAlignment="Left" VerticalAlignment="Center" AllowNullInput="False" CausesValidation="True" Focusable="True" InvalidValueBehavior="AllowLeaveEditor" ValidateOnEnterKeyPressed="True" ValidateOnTextInput="False" />
+    <Label Name="LabelAt" Grid.Column="1" Margin="5,0,5,0" HorizontalAlignment="Left" VerticalAlignment="Center" Content="At" />
+    <dxe:PopupCalcEdit Name="PopupCalcBase" Grid.Column="2" MinWidth="70" HorizontalAlignment="Left" VerticalAlignment="Center" AllowNullInput="False" CausesValidation="True" Focusable="True" InvalidValueBehavior="AllowLeaveEditor" ValidateOnEnterKeyPressed="True" ValidateOnTextInput="False" />
+  </Grid>
+</UserControl>

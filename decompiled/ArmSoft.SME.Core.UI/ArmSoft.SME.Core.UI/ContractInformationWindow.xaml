@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dx:ThemedWindow x:Class="ArmSoft.SME.Core.UI.ContractInformationWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:coreCommon="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:customWindowControls="clr-namespace:ArmSoft.SME.Core.UI.CustomWindowControls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions" Title="{x:Static coreCommon:Resources.SubscriptionRenewalNotice}" Width="810" Height="560" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" xmlns:ui="clr-namespace:ArmSoft.SME.Core.UI">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <Style x:Key="WindowPrimaryButtonStyle" TargetType="{x:Type dx:SimpleButton}">
+        <Setter Property="dx:SimpleButton.CornerRadius" Value="5" />
+        <Setter Property="Width" Value="180" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="MinHeight" Value="50" />
+        <Setter Property="MinWidth" Value="160" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="FrameworkElement.UseLayoutRounding" Value="true" />
+        <Setter Property="BorderBrush" Value="{ext:ThemeBasedColor #3e7337#4fad77}" />
+      </Style>
+      <Style x:Key="WindowPrimaryButtonTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+      </Style>
+      <Style x:Key="WindowKeyValueTextKeyTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="18" />
+      </Style>
+      <Style x:Key="WindowKeyValueTextDashTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="FontSize" Value="18" />
+      </Style>
+      <Style x:Key="WindowKeyValueTextValueTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="FontSize" Value="18" />
+      </Style>
+      <Style x:Key="WindowBaseInfoTextStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="TextBlock.TextAlignment" Value="Left" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="FrameworkElement.UseLayoutRounding" Value="True" />
+      </Style>
+      <Style x:Key="WindowImportantInfoTextStyle" BasedOn="{StaticResource WindowBaseInfoTextStyle}" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="25" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Height" Value="67" />
+      </Style>
+      <Style x:Key="WindowPrimaryInfoTextStyle" BasedOn="{StaticResource WindowBaseInfoTextStyle}" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextBlock.LineHeight" Value="25" />
+        <Setter Property="Margin" Value="60,0,30,0" />
+        <Setter Property="TextBlock.LineStackingStrategy" Value="BlockLineHeight" />
+      </Style>
+      <Style x:Key="RemainingDaysDayTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="50" />
+        <Setter Property="Foreground" Value="{ext:ThemeBasedColor #C80340#C80340}" />
+      </Style>
+      <Style x:Key="RemainingDaysInfoTextBlockStyle" BasedOn="{StaticResource RemainingDaysDayTextBlockStyle}" TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{ext:ThemeBasedColor #000000#49504b}" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="20" />
+      </Style>
+      <Style x:Key="PrimaryContainerGridStyle" TargetType="{x:Type Grid}">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+      </Style>
+      <Style x:Key="WindowKeyValueContainerGridRowDefinitionStyle" TargetType="{x:Type RowDefinition}">
+        <Setter Property="Height" Value="26" />
+      </Style>
+      <Style x:Key="GridSeparatorColumnDefintionStyle" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="60" />
+      </Style>
+      <Style x:Key="InfoWindowMainGridStyle" TargetType="{x:Type Grid}">
+        <Setter Property="Margin" Value="20" />
+      </Style>
+      <Style x:Key="WindowMainGridKeyValuesContainerRowDefinitionStyle" TargetType="{x:Type RowDefinition}">
+        <Setter Property="Height" Value="auto" />
+      </Style>
+      <Style x:Key="RemainingDaysColumnDefinitionStyle" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="160" />
+      </Style>
+      <Style x:Key="RemainingDaysInfoBorderStyle" TargetType="{x:Type Border}">
+        <Setter Property="Border.Padding" Value="10,15,10,15" />
+        <Setter Property="Height" Value="107" />
+        <Setter Property="MinWidth" Value="125" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Background" Value="{ext:ThemeBasedColor #fbeaed#ffffff}" />
+        <Setter Property="BorderBrush" Value="{ext:ThemeBasedColor #C80340#ffffff}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Border.CornerRadius" Value="5" />
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Style="{StaticResource InfoWindowMainGridStyle}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="1*" />
+      <RowDefinition Height="0.7*" />
+      <RowDefinition Style="{StaticResource WindowMainGridKeyValuesContainerRowDefinitionStyle}" />
+      <RowDefinition Height="0.7*" />
+      <RowDefinition Height="0.5*" />
+    </Grid.RowDefinitions>
+    <Grid Row="0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Style="{StaticResource GridSeparatorColumnDefintionStyle}" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Style="{StaticResource GridSeparatorColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource RemainingDaysColumnDefinitionStyle}" />
+        <ColumnDefinition Style="{StaticResource GridSeparatorColumnDefintionStyle}" />
+      </Grid.ColumnDefinitions>
+      <TextBlock Name="TBSubscriptionExpire" Grid.Column="1" Style="{StaticResource WindowImportantInfoTextStyle}" Text="{x:Static coreCommon:Resources.SubscriptionExpire}" />
+      <Border Grid.Column="3" Style="{StaticResource RemainingDaysInfoBorderStyle}">
+        <Grid Style="{StaticResource PrimaryContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*" />
+            <ColumnDefinition Width="4" />
+            <ColumnDefinition Width="0.5*" />
+          </Grid.ColumnDefinitions>
+          <TextBlock Name="TBRemains1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Style="{StaticResource RemainingDaysInfoTextBlockStyle}" Text="{x:Static coreCommon:Resources.Remain}" />
+          <TextBlock Name="TBDays" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource RemainingDaysDayTextBlockStyle}" Text="5" />
+          <TextBlock Name="TBRemains2" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="30" Style="{StaticResource RemainingDaysInfoTextBlockStyle}" Text="{x:Static coreCommon:Resources.ContractDay}" />
+        </Grid>
+      </Border>
+    </Grid>
+    <StackPanel Grid.Row="1" VerticalAlignment="Center" Orientation="Vertical">
+      <TextBlock Name="TBSubscriptionInformation1" Style="{StaticResource WindowPrimaryInfoTextStyle}" Text="{x:Static coreCommon:Resources.ExpandSubscription}" />
+      <TextBlock Name="TBSubscriptionInformation2" Style="{StaticResource WindowPrimaryInfoTextStyle}" Text="{x:Static coreCommon:Resources.PaySubsciptionInAdvance}" />
+    </StackPanel>
+    <Grid Row="2">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource WindowKeyValueContainerGridRowDefinitionStyle}" />
+        <RowDefinition Style="{StaticResource WindowKeyValueContainerGridRowDefinitionStyle}" />
+        <RowDefinition Style="{StaticResource WindowKeyValueContainerGridRowDefinitionStyle}" />
+      </Grid.RowDefinitions>
+      <Grid Row="0" Style="{StaticResource PrimaryContainerGridStyle}">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition />
+          <ColumnDefinition />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="LILicense" Grid.Column="0" Style="{StaticResource WindowKeyValueTextKeyTextBlockStyle}" Text="{x:Static coreCommon:Resources.Key}" />
+        <TextBlock Grid.Column="1" Style="{StaticResource WindowKeyValueTextDashTextBlockStyle}" Text=" - " />
+        <TextBlock Name="TBLicense" Grid.Column="2" Style="{StaticResource WindowKeyValueTextValueTextBlockStyle}" />
+      </Grid>
+      <Grid Row="1" Style="{StaticResource PrimaryContainerGridStyle}">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition />
+          <ColumnDefinition />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="LIExpirationDate" Grid.Column="0" Style="{StaticResource WindowKeyValueTextKeyTextBlockStyle}" Text="{x:Static coreCommon:Resources.ExpirationDate}" />
+        <TextBlock Grid.Column="1" Style="{StaticResource WindowKeyValueTextDashTextBlockStyle}" Text=" - " />
+        <TextBlock Name="TBExpirationDate" Grid.Column="2" Style="{StaticResource WindowKeyValueTextValueTextBlockStyle}" />
+      </Grid>
+      <Grid Row="2" Style="{StaticResource PrimaryContainerGridStyle}">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition />
+          <ColumnDefinition />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="LIReNewalAmount" Grid.Column="0" Style="{StaticResource WindowKeyValueTextKeyTextBlockStyle}" Text="{x:Static coreCommon:Resources.RenewalAmount}" />
+        <TextBlock Grid.Column="1" Style="{StaticResource WindowKeyValueTextDashTextBlockStyle}" Text=" - " />
+        <TextBlock Name="TBReNewalAmount" Grid.Column="2" Style="{StaticResource WindowKeyValueTextValueTextBlockStyle}" />
+      </Grid>
+    </Grid>
+    <Grid Row="4">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <customWindowControls:CWCSimpleButton x:Name="CreatePayOrdButton" Click="CreatePayOrdButton_Click" Grid.Column="0" Style="{StaticResource WindowPrimaryButtonStyle}">
+        <TextBlock Style="{StaticResource WindowPrimaryButtonTextBlockStyle}" Text="{x:Static coreCommon:Resources.CreatePayOrder}" />
+      </customWindowControls:CWCSimpleButton>
+      <customWindowControls:CWCSimpleButton x:Name="GetPaymenButton" Click="GetPaymentDetailsButton_Click" Grid.Column="1" Style="{StaticResource WindowPrimaryButtonStyle}">
+        <TextBlock Style="{StaticResource WindowPrimaryButtonTextBlockStyle}" Text="{x:Static coreCommon:Resources.GetRekvizits}" />
+      </customWindowControls:CWCSimpleButton>
+    </Grid>
+  </Grid>
+</dx:ThemedWindow>

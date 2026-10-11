@@ -1,0 +1,20 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 28.5H15V16H28.5V8.5H0.5V28.5Z" fill="white"/>
+<path d="M0 8.5V29H15V28H1V9H28V16H29V8H0V8.5Z" fill="#212121" class="Black" />
+<path d="M0.5 8.5H28.5V2.5H0.5V8.5Z" fill="#D6E7FD" class="Blue_Light"/>
+<path d="M0 2.5V9H29V2H0V2.5ZM28 3V8H1V3H28Z" fill="#0070CB" class="Blue_Dark"/>
+<path opacity="0.6" d="M7 13H1V14H7V18H1V19H7V23H1V24H7V28H8V24H14V28H15V14H21V16H22V14H28V13H22V9H21V13H15V9H14V13H8V9H7V13ZM14 14V18H8V14H14ZM14 19V23H8V19H14Z" fill="#878787"/>
+<path d="M32 18H17V32H32V18Z" fill="#D92A18"/>
+<path d="M20 23V22H19V26V27H20H21V26H20V24H21V23H20Z" fill="white"/>
+<path d="M22 24H21V26H22V24Z" fill="white"/>
+<path opacity="0.5" d="M22 23H21V24H22V23Z" fill="white"/>
+<path opacity="0.5" d="M22 26H21V27H22V26Z" fill="white"/>
+<path d="M28 23V22H27V26V27H28H29V26H28V24H29V23H28Z" fill="white"/>
+<path d="M30 24H29V26H30V24Z" fill="white"/>
+<path opacity="0.5" d="M30 23H29V24H30V23Z" fill="white"/>
+<path opacity="0.5" d="M30 26H29V27H30V26Z" fill="white"/>
+<path d="M25 22H23V23H25V22Z" fill="white"/>
+<path d="M26 23H25V25H26V23Z" fill="white"/>
+<path d="M25 25H24V26H25V25Z" fill="white"/>
+<path d="M26 26H23V27H26V26Z" fill="white"/>
+</svg>

@@ -1,0 +1,115 @@
+{
+  "evidence_id": "ev_41e8e69fb76cee79fe3f05be34e071105087037d9a61d7b873c78ee909e8d6c6",
+  "subject": {
+    "name": "C:\\Program Files\\Armenian Software\\AS Trade\\lib\\ArmSoft.ECRConnector\\1.0.5\\lib\\net8.0\\ArmSoft.ECRConnector.dll",
+    "digest": {
+      "sha256": "94a4e8f9416d3b205705e4b827cd9b951fb680a801e71206c12b84d83016ed4e"
+    },
+    "format": "pe",
+    "architecture": "x86",
+    "local_path": "C:\\Program Files\\Armenian Software\\AS Trade\\lib\\ArmSoft.ECRConnector\\1.0.5\\lib\\net8.0\\ArmSoft.ECRConnector.dll"
+  },
+  "provider": {
+    "id": "rea-dotnet-static",
+    "name": "REA managed static analysis provider",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis",
+  "operation": "inspect_managed_native_boundaries",
+  "parameters": {},
+  "raw_result": null,
+  "normalized_result": {
+    "artifact": {
+      "path": "C:\\Program Files\\Armenian Software\\AS Trade\\lib\\ArmSoft.ECRConnector\\1.0.5\\lib\\net8.0\\ArmSoft.ECRConnector.dll",
+      "sha256": "94a4e8f9416d3b205705e4b827cd9b951fb680a801e71206c12b84d83016ed4e",
+      "byte_length": 89600,
+      "format": "pe"
+    },
+    "module": {
+      "name": "ArmSoft.ECRConnector.dll",
+      "generation": 0,
+      "mvid": "6f886545-c4fc-47da-9c6a-2648a2ee7ad8",
+      "enc_id": null,
+      "enc_base_id": null,
+      "token": "0x00000001",
+      "row_offset": 25392
+    },
+    "metadata": {
+      "status": "complete",
+      "version": "v4.0.30319",
+      "table_row_counts": {
+        "Module": 1,
+        "TypeRef": 99,
+        "TypeDef": 104,
+        "Field": 585,
+        "MethodDef": 487,
+        "Param": 319,
+        "InterfaceImpl": 43,
+        "MemberRef": 280,
+        "Constant": 172,
+        "CustomAttribute": 743,
+        "StandAloneSig": 99,
+        "PropertyMap": 26,
+        "Property": 128,
+        "MethodSemantics": 255,
+        "MethodImpl": 86,
+        "TypeSpec": 57,
+        "FieldRVA": 1,
+        "Assembly": 1,
+        "AssemblyRef": 7,
+        "NestedClass": 97,
+        "GenericParam": 9,
+        "MethodSpec": 128
+      }
+    },
+    "identity_scope": {
+      "token_identity": "build-local",
+      "requires_artifact_sha256": "94a4e8f9416d3b205705e4b827cd9b951fb680a801e71206c12b84d83016ed4e",
+      "requires_mvid": "6f886545-c4fc-47da-9c6a-2648a2ee7ad8"
+    },
+    "cli_native": {
+      "il_only": true,
+      "requires_32bit": false,
+      "strong_name_signed": false,
+      "native_entry_point": false,
+      "ready_to_run_signature": false,
+      "managed_native_header_rva": 0,
+      "managed_native_header_size": 0
+    },
+    "module_refs": [],
+    "pinvoke_imports": [],
+    "native_implementations": [],
+    "summary": {
+      "module_ref_count": 0,
+      "pinvoke_import_count": 0,
+      "native_implementation_count": 0,
+      "ready_to_run": false,
+      "mixed_mode_or_native_header": false
+    },
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "limitations": [
+      "P/Invoke rows prove managed import declarations only; this inspection does not verify that a native library, export, thunk, or provider-qualified function exists.",
+      "Managed metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+      "ReadyToRun, NativeAOT, C++/CLI, and IL2CPP native semantics require separately selected native-provider evidence; this tool does not translate managed tokens into native addresses."
+    ]
+  },
+  "confidence": "observed",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "P/Invoke rows prove managed import declarations only; this inspection does not verify that a native library, export, thunk, or provider-qualified function exists.",
+    "Managed metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+    "ReadyToRun, NativeAOT, C++/CLI, and IL2CPP native semantics require separately selected native-provider evidence; this tool does not translate managed tokens into native addresses."
+  ],
+  "locations": [
+    {
+      "kind": "file-offset",
+      "offset": 25392
+    }
+  ],
+  "evidence_links": []
+}

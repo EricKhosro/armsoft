@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Core.UI.Controls.MultiSelectDropDownControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:ArmSoft.SME.Core.UI.Controls;assembly=ArmSoft.SME.Core.UI">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Name="FirstColumn" Width="Auto" />
+      <ColumnDefinition Name="SecondColumn" Width="*" />
+    </Grid.ColumnDefinitions>
+    <dxe:ButtonEdit Name="CodeEdit" Grid.Column="0" AllowDefaultButton="False" AllowNullInput="True" CausesValidation="True" Focusable="True" InvalidValueBehavior="AllowLeaveEditor" ValidateOnEnterKeyPressed="True" ValidateOnTextInput="False">
+      <dxe:ButtonInfo Name="DropDown" GlyphKind="DropDown" />
+    </dxe:ButtonEdit>
+    <dxe:TextEdit Name="CommentEdit" Grid.Column="1" MaxWidth="240" Margin="0,0,0,0" HorizontalAlignment="left" VerticalAlignment="Center" Background="#00FFFFFF" IsReadOnly="True" IsTabStop="False" ShowBorder="False" />
+  </Grid>
+</UserControl>

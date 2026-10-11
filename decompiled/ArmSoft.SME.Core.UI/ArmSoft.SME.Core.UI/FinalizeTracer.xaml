@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dxc:ThemedWindow x:Class="ArmSoft.SME.Core.UI.FinalizeTracer" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Title="FinalizeTracer" Width="800" Height="450" xmlns:ui="clr-namespace:ArmSoft.SME.Core.UI;assembly=ArmSoft.SME.Core.UI">
+  <DockPanel LastChildFill="True">
+    <Grid DockPanel.Dock="Bottom">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Button Name="CallAllFinalize" Grid.Row="0" Grid.Column="1" MinWidth="100" Margin="15,0,15,5" HorizontalContentAlignment="Center" Click="CallAllFinalize_Click">Finalize All</Button>
+      <Button Name="ShowInfo" Grid.Row="0" Grid.Column="2" MinWidth="100" Margin="15,0,15,5" HorizontalContentAlignment="Center" Click="ShowInfo_Click">Show info</Button>
+    </Grid>
+    <dxe:TextEdit Name="InfoTB" Margin="0,0,0,5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Top" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" />
+  </DockPanel>
+</dxc:ThemedWindow>

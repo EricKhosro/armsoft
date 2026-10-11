@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dxc:ThemedWindow x:Class="ArmSoft.SME.Core.UI.Progress.MultilineProgressWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core" x:Name="MltlnProgressWindow" Title="" ResizeMode="NoResize" WindowStyle="SingleBorderWindow" ShowIcon="False" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Height="70" MinWidth="400" MaxHeight="800" SizeToContent="WidthAndHeight" xmlns:progress="clr-namespace:ArmSoft.SME.Core.UI.Progress;assembly=ArmSoft.SME.Core.UI">
+  <Grid Name="MainGrid">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="35" />
+    </Grid.RowDefinitions>
+    <FrameworkElement.Style>
+      <dxg:DefaultStyle />
+    </FrameworkElement.Style>
+    <StackPanel Name="Phases" Grid.Row="0" Margin="10" />
+    <TextBlock Name="TimeTextBlock" Grid.Row="1" HorizontalAlignment="Right" Text="MM:SS" UseLayoutRounding="True" VerticalAlignment="Center" Margin="0,0,10,0" />
+    <dxc:SimpleButton Name="AbortButton" Content="Button" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" UseLayoutRounding="True" Click="AbortButton_Click" />
+  </Grid>
+</dxc:ThemedWindow>

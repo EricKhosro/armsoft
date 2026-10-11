@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>ArmSoft.SME.Trade.AddIn</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="ArmSoft.SME.Trade.AddIn.AddinRibbon.xml" />
+    <None Remove="ArmSoft.SME.Trade.AddIn.AddinRibbonHY.xml" />
+    <EmbeddedResource Include="ArmSoft.SME.Trade.AddIn.AddinRibbon.xml" LogicalName="ArmSoft.SME.Trade.AddIn.AddinRibbon.xml" />
+    <EmbeddedResource Include="ArmSoft.SME.Trade.AddIn.AddinRibbonHY.xml" LogicalName="ArmSoft.SME.Trade.AddIn.AddinRibbonHY.xml" />
+    <ApplicationConfig Remove="ArmSoft.SME.Trade.AddIn.dll.config" />
+    <ApplicationConfig Include="ArmSoft.SME.Trade.AddIn.dll.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Text.Json">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\bin\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Core.AddIn">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\ArmSoft.SME.Core.AddIn.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime" />
+    <Reference Include="Microsoft.Office.Tools.Common.v4.0.Utilities">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\Microsoft.Office.Tools.Common.v4.0.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Common" />
+    <Reference Include="Microsoft.Office.Tools.Excel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Tools" />
+  </ItemGroup>
+</Project>

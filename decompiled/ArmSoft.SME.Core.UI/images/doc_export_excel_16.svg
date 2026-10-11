@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+  <g id="main">
+    <g id="icon">
+      <path d="M1.5,14.5L5.8,14.5L5.8,5.8L12.5,5.8L12.5,4.557L8.533,0.5L1.5,0.5zz" fill="white"/>
+      <path d="M1,0.5L1,14.5L1,15L1.5,15L5.8,15L5.8,14L2,14L2,1L8.323,1L12,4.761L12,5.8L13,5.8L13,4.557L13,4.353L12.86,4.207L8.89,0.1504L8.743,0L8.533,0L1.5,0L1,0zz" fill="black"/>
+      <path d="M8,4.5L8,5L8.5,5L12.5,5L12.5,4L9,4L9,0.5L8,0.5zz" fill="black"/>
+    </g>
+    <g id="overlay">
+      <rect x="7.5" y="7.5" width="8" height="8" fill="white" />
+      <rect x="7.5" y="7.5" width="8" height="8" fill="none" stroke="#17AB4F"  class="Green_Dark" stroke-width="1" stroke-miterlimit="10"/>
+      <path d="M9.556,8.7l3.894,5.65M13.45,8.7l-3.894,5.65" fill="white" />
+      <path d="M9.556,8.7l3.894,5.65M13.45,8.7l-3.894,5.65" fill="none" stroke="#17AB4F"  class="Green_Dark" stroke-width="1" stroke-miterlimit="10"/>
+    </g>
+  </g>
+</svg>

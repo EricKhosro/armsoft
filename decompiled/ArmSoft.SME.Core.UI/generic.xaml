@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:ArmSoft.SME.Core.UI.Controls" xmlns:conv="clr-namespace:ArmSoft.SME.Core.UI.Converters" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxet="http://schemas.devexpress.com/winfx/2008/xaml/editors/themekeys" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions" xmlns:local="clr-namespace:ArmSoft.SME.Core.UI">
+  <conv:NumericValueToIsNegative x:Key="NumericValueToIsNegative" />
+  <conv:NumericIsReadOnlyValueToIsNegative x:Key="NumericIsReadOnlyValueToIsNegative" />
+  <conv:NumericIsRequiredValueToIsNegative x:Key="NumericIsRequiredValueToIsNegative" />
+  <conv:FontFamilyConverter x:Key="GetSystemFont" />
+  <conv:TemplateTypeToImage x:Key="TemplateTypeToImage" />
+  <conv:GetFontFamily x:Key="GetFontFamily" />
+  <conv:GetFontSize x:Key="GetFontSize" />
+  <conv:CoreResourceConverter x:Key="CoreResourceConverter" />
+  <conv:SystemSpecificButtonBackgroundColor x:Key="SystemSpecificButtonBackgroundColor" />
+  <conv:GetCurrentBackgroundBrush x:Key="BackgroundBrush" />
+  <conv:GetCurrentForegroundBrush x:Key="ForegroundBrush" />
+  <conv:GetForegroundLinkBrush x:Key="ForegroundLinkBrush" />
+  <conv:GetCurrentControlBackground x:Key="ControlBackground" />
+  <conv:GetFavoritesImage x:Key="GetFavoritesImage" />
+  <DataTemplate x:Key="LayoutItemRequired">
+    <StackPanel Orientation="Horizontal">
+      <TextBlock Name="IsRequiredImage" VerticalAlignment="Center" FontSize="14" Foreground="#FFFF0000" Text="*" Visibility="Hidden" />
+      <TextBlock Name="Label" Margin="3,0,3,0" Text="{Binding}" />
+      <Border Name="IsNewText" Margin="10,0,10,0" Padding="4,2" VerticalAlignment="Center" CornerRadius="6" Visibility="Collapsed" Background="{Binding Path=ControlStatus.BadgeColor, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:LayoutItemWithRequired}}}">
+        <TextBlock VerticalAlignment="Center" FontSize="9" FontWeight="Regular" Foreground="#FFFFFFFF" LineHeight="12" FontFamily="{Binding Converter={StaticResource GetFontFamily}}" Text="{Binding Path=ControlStatus.Caption, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:LayoutItemWithRequired}}}" />
+      </Border>
+    </StackPanel>
+    <DataTemplate.Triggers>
+      <DataTrigger Value="False" Binding="{Binding Path=IsArmSoftRequired, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:LayoutItemWithRequired}}}">
+        <Setter TargetName="IsRequiredImage" Property="UIElement.Visibility" Value="Hidden" />
+      </DataTrigger>
+      <DataTrigger Value="" Binding="{Binding Path=Label, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:LayoutItemWithRequired}}}">
+        <Setter TargetName="IsRequiredImage" Property="UIElement.Visibility" Value="Hidden" />
+      </DataTrigger>
+      <DataTrigger Value="True" Binding="{Binding Path=IsArmSoftRequired, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:LayoutItemWithRequired}}}">
+        <Setter TargetName="IsRequiredImage" Property="UIElement.Visibility" Value="Visible" />
+      </DataTrigger>
+      <DataTrigger Value="True" Binding="{Binding Path=IsNew, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:LayoutItemWithRequired}}}">
+        <Setter TargetName="IsNewText" Property="UIElement.Visibility" Value="Visible" />
+      </DataTrigger>
+      <DataTrigger Value="False" Binding="{Binding Path=IsNew, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:LayoutItemWithRequired}}}">
+        <Setter TargetName="IsNewText" Property="UIElement.Visibility" Value="Collapsed" />
+      </DataTrigger>
+      <DataTrigger Value="True" Binding="{Binding Path=IsReadOnly, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:LayoutItemWithRequired}}}">
+        <Setter TargetName="Label" Property="TextBlock.Foreground">
+          <Setter.Value>
+            <SolidColorBrush Color="#FF7F7F7F" />
+          </Setter.Value>
+        </Setter>
+      </DataTrigger>
+    </DataTemplate.Triggers>
+  </DataTemplate>
+  <DataTemplate x:Key="LayoutItemRequiredTop">
+    <StackPanel Orientation="Horizontal">
+      <TextBlock Name="Label" Margin="3,0,3,0" Text="{Binding}" />
+      <TextBlock Name="IsRequiredImage" VerticalAlignment="Center" FontSize="14" Foreground="#FFFF0000" Text="*" Visibility="Hidden" />
+    </StackPanel>
+    <DataTemplate.Triggers>
+      <DataTrigger Value="False" Binding="{Binding Path=IsArmSoftRequired, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:LayoutItemWithRequired}}}">
+        <Setter TargetName="IsRequiredImage" Property="UIElement.Visibility" Value="Hidden" />
+      </DataTrigger>
+      <DataTrigger Value="" Binding="{Binding Path=Label, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:LayoutItemWithRequired}}}">
+        <Setter TargetName="IsRequiredImage" Property="UIElement.Visibility" Value="Hidden" />
+      </DataTrigger>
+      <DataTrigger Value="True" Binding="{Binding Path=IsArmSoftRequired, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:LayoutItemWithRequired}}}">
+        <Setter TargetName="IsRequiredImage" Property="UIElement.Visibility" Value="Visible" />
+      </DataTrigger>
+      <DataTrigger Value="True" Binding="{Binding Path=IsReadOnly, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:LayoutItemWithRequired}}}">
+        <Setter TargetName="Label" Property="TextBlock.Foreground">
+          <Setter.Value>
+            <SolidColorBrush Color="#FF7F7F7F" />
+          </Setter.Value>
+        </Setter>
+      </DataTrigger>
+    </DataTemplate.Triggers>
+  </DataTemplate>
+  <ImageBrush x:Key="NotificationRed" ImageSource="{ext:ASImage dot_red_16.svg}" />
+  <DataTemplate x:Key="NavigationTreeNodeTemplate">
+    <StackPanel Margin="3,0,0,0" Orientation="Horizontal">
+      <TextBlock Name="HeaderText" VerticalAlignment="Center" Text="{Binding RowData.Row.Header}" ToolTip="{Binding RowData.Row.FullHeader}">
+        <FrameworkElement.Style>
+          <Style TargetType="{x:Type TextBlock}">
+            <Style.Triggers>
+              <DataTrigger Value="True" Binding="{Binding RowData.Row.HasNotification}">
+                <Setter Property="FontWeight" Value="Bold" />
+              </DataTrigger>
+              <DataTrigger Value="False" Binding="{Binding RowData.Row.HasNotification}">
+                <Setter Property="FontWeight" Value="Regular" />
+              </DataTrigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </TextBlock>
+      <Rectangle Name="NotificationRed" Width="16" Height="16" Margin="2,2,0,0" VerticalAlignment="Top" Fill="{StaticResource NotificationRed}">
+        <FrameworkElement.Triggers>
+          <EventTrigger RoutedEvent="Rectangle.Loaded">
+            <BeginStoryboard>
+              <Storyboard Name="Anm">
+                <DoubleAnimation AutoReverse="True" RepeatBehavior="Forever" Storyboard.TargetName="NotificationRed" Storyboard.TargetProperty="Opacity" From="0.0" To="0.9" Duration="0:0:5" />
+                <DoubleAnimation AutoReverse="True" RepeatBehavior="Forever" Storyboard.TargetName="NotificationRed" Storyboard.TargetProperty="Opacity" From="0.9" To="0.0" Duration="0:0:5" />
+              </Storyboard>
+            </BeginStoryboard>
+          </EventTrigger>
+        </FrameworkElement.Triggers>
+        <FrameworkElement.Style>
+          <Style TargetType="{x:Type Rectangle}">
+            <Style.Triggers>
+              <DataTrigger Value="True" Binding="{Binding RowData.Row.HasNotification}">
+                <Setter Property="Visibility" Value="Visible" />
+              </DataTrigger>
+              <DataTrigger Value="False" Binding="{Binding RowData.Row.HasNotification}">
+                <Setter Property="Visibility" Value="Collapsed" />
+              </DataTrigger>
+              <DataTrigger Value="{x:Static Visibility.Collapsed}" Binding="{Binding Path=Visibility, Source={RelativeSource Self}}">
+                <TriggerBase.EnterActions>
+                  <StopStoryboard BeginStoryboardName="Anm" />
+                </TriggerBase.EnterActions>
+              </DataTrigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </Rectangle>
+      <Border Margin="8,0,0,0" Padding="4,2" VerticalAlignment="Center" CornerRadius="6" Background="{Binding RowData.Row.TreeNodeType.BadgeColor}">
+        <TextBlock VerticalAlignment="Center" FontSize="9" FontWeight="Regular" Foreground="#FFFFFFFF" LineHeight="12" FontFamily="{Binding Converter={StaticResource GetFontFamily}}" Text="{Binding RowData.Row.TreeNodeType.Caption}" />
+      </Border>
+    </StackPanel>
+  </DataTemplate>
+  <DataTemplate x:Key="ChartPreviewData">
+    <Grid>
+      <StackPanel>
+        <dxe:ImageEdit IsPrintingMode="True" Source="{Binding Content}" />
+      </StackPanel>
+    </Grid>
+  </DataTemplate>
+  <Style x:Key="WizardPath" TargetType="{x:Type Path}">
+    <Setter Property="Data" Value="F1 M66.3,31.5 L73,24.5 L74.6,26 L68,33 L66.3,31.5 M73.5,24 L71.5,24 L71.5,22 L73.5,22 L73.5,24 M77,24 L75,24 L75,22 L77,22 L77,24 M77,28 L75,28 L75,26 L77,26 L77,28 M75.5,31 L73.5,31 L73.5,29 L75.5,29 L75.5,31" />
+    <Setter Property="HorizontalAlignment" Value="Center" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+    <Setter Property="Width" Value="10" />
+    <Setter Property="Height" Value="10" />
+    <Setter Property="Shape.Stretch" Value="Fill" />
+  </Style>
+  <Style x:Key="PopupCalcEditStyle" TargetType="{x:Type dxe:PopupCalcEdit}">
+    <Setter Property="dxe:TextEdit.AllowSpinOnMouseWheel" Value="False" />
+    <Setter Property="Foreground">
+      <Setter.Value>
+        <MultiBinding Converter="{StaticResource NumericIsReadOnlyValueToIsNegative}">
+          <Binding Path="EditValue" RelativeSource="{RelativeSource Self}" />
+          <Binding Path="IsReadOnly" RelativeSource="{RelativeSource Self}" />
+        </MultiBinding>
+      </Setter.Value>
+    </Setter>
+    <Setter Property="Background">
+      <Setter.Value>
+        <MultiBinding Converter="{StaticResource NumericIsRequiredValueToIsNegative}">
+          <Binding Path="IsReadOnly" RelativeSource="{RelativeSource Self}" />
+          <Binding Path="IsRequired" RelativeSource="{RelativeSource Self}" />
+        </MultiBinding>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <ControlTemplate x:Key="DateEditCalendarMonth">
+    <controls:DateEditCalendarMonth />
+  </ControlTemplate>
+  <ControlTemplate x:Key="ColumnDisplayTemplate">
+    <TextBlock Name="PART_Editor" Padding="2,0,3,0" Foreground="{Binding Path=EditValue, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource NumericValueToIsNegative}}" />
+  </ControlTemplate>
+  <DataTemplate x:Key="CurrentTemplateComboTemplate">
+    <StackPanel Orientation="Horizontal">
+      <dx:DXImage Width="16" Height="16" Margin="5" Source="{Binding Path=FileFormat, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource TemplateTypeToImage}}" />
+      <Label Margin="0,5,5,5" VerticalAlignment="Center" Content="{Binding Path=Caption}" />
+    </StackPanel>
+  </DataTemplate>
+  <DataTemplate x:Key="CurrentTemplateComboSimplifiedTemplate">
+    <StackPanel Orientation="Horizontal">
+      <dx:DXImage Width="12" Height="12" Margin="5" Source="{Binding Path=FileFormat, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource TemplateTypeToImage}}" />
+      <Label Margin="4,0,0,0" VerticalAlignment="Center" Content="{Binding Path=Caption}" />
+    </StackPanel>
+  </DataTemplate>
+  <dx:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+  <conv:GetFeatureStatusBackgroundBrush x:Key="FeatureStatusBackgroundBrush" />
+  <conv:GetFeatureStatusText x:Key="FeatureStatusText" />
+  <DataTemplate x:Key="TabHeader">
+    <StackPanel Orientation="Horizontal">
+      <TextBlock Margin="0,0,5,0" Text="{Binding}" />
+      <Border Name="TabStatus" Margin="10,0,10,0" Padding="4,2" VerticalAlignment="Center" CornerRadius="6" Background="{Binding Path=Tag, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dx:DXTabItem}}, Converter={StaticResource FeatureStatusBackgroundBrush}}">
+        <FrameworkElement.Style>
+          <Style TargetType="{x:Type Border}">
+            <Setter Property="Visibility" Value="Visible" />
+            <Style.Triggers>
+              <DataTrigger Binding="{Binding Path=Tag, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dx:DXTabItem}}}" Value="{x:Null}">
+                <Setter Property="Visibility" Value="Collapsed" />
+              </DataTrigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+        <TextBlock VerticalAlignment="Center" FontSize="9" FontWeight="Regular" Foreground="#FFFFFFFF" LineHeight="12" FontFamily="{Binding Converter={StaticResource GetFontFamily}}" Text="{Binding Path=Tag, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dx:DXTabItem}}, Converter={StaticResource FeatureStatusText}}" />
+      </Border>
+      <ContentControl VerticalAlignment="Center" ContentTemplate="{DynamicResource {dxet:ErrorTypesThemeKey ResourceKey=Critical}}" Visibility="{Binding Path=(local:TabValidationHelper.TabHasValidationError), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dx:DXTabItem}}, Converter={StaticResource BoolToVisibilityConverter}}" />
+    </StackPanel>
+  </DataTemplate>
+  <DataTemplate x:Key="TabHeaderDialog">
+    <StackPanel Orientation="Horizontal">
+      <TextBlock Margin="0,0,5,0" Text="{Binding}" />
+      <ContentControl VerticalAlignment="Center" ContentTemplate="{DynamicResource {dxet:ErrorTypesThemeKey ResourceKey=Critical}}" Visibility="{Binding Path=(local:TabValidationHelper.TabHasValidationError), RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type dx:DXTabItem}}, Converter={StaticResource BoolToVisibilityConverter}}" />
+    </StackPanel>
+  </DataTemplate>
+  <ControlTemplate x:Key="ChartLegend" TargetType="{x:Type dxc:Legend}">
+    <Border Padding="{TemplateBinding Control.Padding}" Background="{TemplateBinding Control.Background}" BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="{TemplateBinding Control.BorderThickness}">
+      <dxc:LegendItemsControl ItemTemplate="{TemplateBinding dxc:LegendBase.ItemTemplate}" ItemsSource="{Binding Path=Items, RelativeSource={RelativeSource TemplatedParent}}">
+        <ItemsControl.ItemsPanel>
+          <ItemsPanelTemplate>
+            <StackPanel Orientation="Vertical" />
+          </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+      </dxc:LegendItemsControl>
+    </Border>
+  </ControlTemplate>
+  <DataTemplate x:Key="CustomNotificationTemplate">
+    <Border BorderBrush="#FF808080" BorderThickness="1" CornerRadius="10" Background="{Binding Converter={StaticResource ControlBackground}}">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <dx:DXImage Width="64" Height="64" Margin="10,0,0,0" Stretch="Uniform" UseLayoutRounding="True" Source="{Binding Image, Mode=OneWay}" />
+        <StackPanel Grid.Column="1">
+          <Label Margin="5" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Content="{Binding Caption, Mode=OneWay}" FontFamily="{Binding Converter={StaticResource GetFontFamily}}" Foreground="{Binding Converter={StaticResource ForegroundBrush}}" />
+          <TextBlock Margin="5,10,5,0" HorizontalAlignment="Center" FontSize="12" TextWrapping="Wrap" FontFamily="{Binding Converter={StaticResource GetFontFamily}}" Foreground="{Binding Converter={StaticResource ForegroundBrush}}" Text="{Binding Text, Mode=OneWay}" />
+        </StackPanel>
+      </Grid>
+    </Border>
+  </DataTemplate>
+  <DataTemplate x:Key="RibbonPageHeaderTemplate">
+    <TextBlock VerticalAlignment="Center" FontFamily="{Binding Converter={StaticResource GetFontFamily}}" FontSize="{Binding Converter={StaticResource GetFontSize}}" Text="{Binding}">
+      <FrameworkElement.Style>
+        <Style TargetType="{x:Type TextBlock}">
+          <Style.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="True">
+              <Setter Property="FontWeight" Value="Normal" />
+            </Trigger>
+            <Trigger Property="UIElement.IsMouseOver" Value="False">
+              <Setter Property="FontWeight" Value="Normal" />
+            </Trigger>
+          </Style.Triggers>
+        </Style>
+      </FrameworkElement.Style>
+    </TextBlock>
+  </DataTemplate>
+  <DataTemplate x:Key="RibbonFavoritePageHeaderTemplate">
+    <StackPanel Orientation="Horizontal">
+      <dx:DXImage Width="14" Height="14" Margin="0,0,2,0" Source="{Binding Converter={StaticResource GetFavoritesImage}}" />
+      <TextBlock Margin="0" VerticalAlignment="Bottom" FontFamily="{Binding Converter={StaticResource GetFontFamily}}" FontSize="{Binding Converter={StaticResource GetFontSize}}" Text="{Binding}">
+        <FrameworkElement.Style>
+          <Style TargetType="{x:Type TextBlock}">
+            <Style.Triggers>
+              <Trigger Property="UIElement.IsMouseOver" Value="True">
+                <Setter Property="FontWeight" Value="Normal" />
+              </Trigger>
+              <Trigger Property="UIElement.IsMouseOver" Value="False">
+                <Setter Property="FontWeight" Value="Normal" />
+              </Trigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </TextBlock>
+    </StackPanel>
+  </DataTemplate>
+  <DataTemplate x:Key="DemoTemplate">
+    <TextBlock Margin="0,-13,0,-14" Padding="7,6,7,5" Background="#F9E075" Foreground="#FF000000" TextAlignment="Center" Text="{Binding}" />
+  </DataTemplate>
+  <DataTemplate x:Key="CloudModeTemplate">
+    <StackPanel Margin="0,-13,0,-14" Background="#124078" Orientation="Horizontal">
+      <dx:DXImage Width="16" Height="16" Margin="0,-13,0,-14" VerticalAlignment="Center" Source="{ext:ASImage cloud_16_white.svg}" />
+      <TextBlock Margin="0,1,0,0" Padding="7,5,7,5" HorizontalAlignment="Center" Background="#124078" Foreground="#FFFFFFFF" TextAlignment="Center" Text="{Binding}" />
+    </StackPanel>
+  </DataTemplate>
+  <Style x:Key="NavBarGroupStyle" TargetType="{x:Type dxn:NavBarGroup}">
+    <Style.Triggers>
+      <Trigger Property="dxn:NavBarGroup.IsActive" Value="True">
+        <Setter Property="dxn:NavBarGroup.FontSettings">
+          <Setter.Value>
+            <dxn:FontSettings FontStyle="Normal" FontWeight="SemiBold" />
+          </Setter.Value>
+        </Setter>
+      </Trigger>
+      <Trigger Property="dxn:NavBarGroup.IsActive" Value="False">
+        <Setter Property="dxn:NavBarGroup.FontSettings">
+          <Setter.Value>
+            <dxn:FontSettings FontStyle="Normal" FontWeight="Normal" />
+          </Setter.Value>
+        </Setter>
+      </Trigger>
+    </Style.Triggers>
+  </Style>
+  <Style x:Key="AutoFilterRowCellStyle2" TargetType="{x:Type dxg:CellContentPresenter}">
+    <Setter Property="FontWeight" Value="Bold" />
+    <Setter Property="Padding" Value="2" />
+  </Style>
+  <DataTemplate x:Key="ColumnToImage">
+    <dx:DXImage Width="16" Height="16" Stretch="Fill" Source="{Binding Path=Value}" />
+  </DataTemplate>
+  <DataTemplate x:Key="GridSelectingColumnCellTemplate">
+    <dxe:CheckEdit Margin="2,-1,-1,-1" VerticalAlignment="Center" IsThreeState="False" IsChecked="{Binding Path=Data.Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+  </DataTemplate>
+  <DataTemplate x:Key="GridSelectingColumnCellWin11Template">
+    <dxe:CheckEdit Margin="-2,-1,-1,-1" HorizontalAlignment="Center" VerticalAlignment="Center" IsThreeState="False" IsChecked="{Binding Path=Data.Selected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+      <FrameworkElement.LayoutTransform>
+        <ScaleTransform ScaleX="0.9" ScaleY="0.9" />
+      </FrameworkElement.LayoutTransform>
+    </dxe:CheckEdit>
+  </DataTemplate>
+  <DataTemplate x:Key="DisabledBooleanCellTemplate">
+    <dxe:CheckEdit Name="PART_Editor" Margin="2,-1,-1,-1" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="{Binding RowData.Row.UserLoginEnabled}" />
+  </DataTemplate>
+  <DataTemplate x:Key="DisabledStringCellTemplate">
+    <dxe:TextEdit Name="PART_Editor" IsEnabled="{Binding RowData.Row.UserLoginEnabled}" />
+  </DataTemplate>
+  <DataTemplate x:Key="LinkFunctionTemplate">
+    <TextBlock MaxWidth="200" TextTrimming="CharacterEllipsis" Foreground="{Binding Converter={StaticResource ForegroundLinkBrush}}" Text="{Binding}" />
+  </DataTemplate>
+  <conv:ContentToString x:Key="ContentToString" />
+  <DataTemplate x:Key="DefButtonTemplate">
+    <TextBlock VerticalAlignment="Center" FontWeight="Bold" Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource ContentToString}}" />
+  </DataTemplate>
+  <DataTemplate x:Key="OverFlowGroupHeaderButtonTemplate">
+    <DockPanel Margin="0,0,0,0" LastChildFill="True">
+      <dx:DXImage Width="24" Height="24" Margin="4,3,1,3" VerticalAlignment="Center" DockPanel.Dock="Left" Source="{Binding Path=ImageSource}" ToolTip="{Binding Path=Header}" />
+    </DockPanel>
+  </DataTemplate>
+  <DataTemplate x:Key="EmptyContentTemplate">
+    <Grid Height="75">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="2*" />
+      </Grid.RowDefinitions>
+      <dx:DXImage Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Margin="0,0,18,32" Stretch="None" Source="{Binding Path=Glyph, RelativeSource={RelativeSource AncestorType=dx:SimpleButton}}" />
+      <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="16" FontWeight="Normal" Content="{Binding Path=Content, RelativeSource={RelativeSource AncestorType=dx:SimpleButton}}" FontFamily="{Binding Converter={StaticResource GetSystemFont}}" Foreground="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+      <TextBlock Grid.Row="1" Grid.Column="1" Margin="0,2,25,12" TextWrapping="Wrap" FontFamily="{Binding Converter={StaticResource GetSystemFont}}" Foreground="{Binding Converter={StaticResource ForegroundBrush}}" Text="{Binding Path=Tag, RelativeSource={RelativeSource AncestorType=dx:SimpleButton}}" />
+    </Grid>
+  </DataTemplate>
+  <DataTemplate x:Key="GridBooleanCellTemplate">
+    <dxe:CheckEdit Name="PART_Editor" Margin="2,-1,-1,-1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+  </DataTemplate>
+  <DataTemplate x:Key="GridBooleanCellWin11Template">
+    <dxe:CheckEdit Name="PART_Editor" HorizontalAlignment="Center" VerticalAlignment="Center">
+      <FrameworkElement.LayoutTransform>
+        <ScaleTransform ScaleX="0.8" ScaleY="0.8" />
+      </FrameworkElement.LayoutTransform>
+    </dxe:CheckEdit>
+  </DataTemplate>
+  <DataTemplate x:Key="ExtensionFieldCodeTemplate">
+    <dxe:TextEdit Name="PART_Editor" AllowNullInput="True" MaskPlaceHolder=" " MaskType="RegEx" MaskUseAsDisplayFormat="True" Mask="{Binding Row.Mask}" />
+  </DataTemplate>
+</ResourceDictionary>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Trade.UI.MetroNavigation.MainNavigationWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvmsample" xmlns:metronavigation="clr-namespace:ArmSoft.SME.Trade.UI.MetroNavigation;assembly=ArmSoft.SME.Trade.UI">
+  <dxmvvm:MvvmRoot Name="MvvmRoot">
+    <dxmvvm:MvvmRoot.Storyboards>
+      <Storyboard dxmvvm:ViewPresenter.StoryboardName="FromRight">
+        <DoubleAnimation Storyboard.TargetProperty="(dxmvvm:ViewPresenter.NewContent).(UIElement.Opacity)" To="1" Duration="0" />
+        <DoubleAnimation Storyboard.TargetProperty="OldContentTranslateX" From="0" To="-1" Duration="00:00:00.20" />
+        <DoubleAnimation Storyboard.TargetProperty="NewContentTranslateX" From="1" To="0" Duration="00:00:00.20" />
+      </Storyboard>
+      <Storyboard dxmvvm:ViewPresenter.StoryboardName="FromLeft">
+        <DoubleAnimation Storyboard.TargetProperty="(dxmvvm:ViewPresenter.NewContent).(UIElement.Opacity)" To="1" Duration="0" />
+        <DoubleAnimation Storyboard.TargetProperty="OldContentTranslateX" From="0" To="1" Duration="00:00:00.20" />
+        <DoubleAnimation Storyboard.TargetProperty="NewContentTranslateX" From="-1" To="0" Duration="00:00:00.20" />
+      </Storyboard>
+    </dxmvvm:MvvmRoot.Storyboards>
+  </dxmvvm:MvvmRoot>
+</UserControl>

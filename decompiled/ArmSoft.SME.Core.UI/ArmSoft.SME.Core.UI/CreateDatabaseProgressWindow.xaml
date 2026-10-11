@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dxc:ThemedWindow x:Class="ArmSoft.SME.Core.UI.CreateDatabaseProgressWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Title="CreateDatabaseProgressWindow" Width="450" ResizeMode="NoResize" ShowIcon="False" ShowInTaskbar="False" SizeToContent="Height" WindowStartupLocation="CenterOwner" WindowStyle="SingleBorderWindow" xmlns:ui="clr-namespace:ArmSoft.SME.Core.UI;assembly=ArmSoft.SME.Core.UI">
+  <DockPanel LastChildFill="True">
+    <Grid Name="ButtonsGrid" DockPanel.Dock="Bottom" IsSharedSizeScope="True">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Button Name="CloseButton" Grid.Row="0" Grid.Column="2" MinWidth="100" Margin="15,0,15,5" IsDefault="True" IsEnabled="False" UseLayoutRounding="True">Ok</Button>
+    </Grid>
+    <dxlc:LayoutControl Name="LayoutControl1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Vertical" StretchContentVertically="False" UseLayoutRounding="True">
+      <dxlc:LayoutItem Name="LProgressBar1" Margin="0,0,5,5" Label="ProgressBar1">
+        <dxe:ProgressBarEdit Name="ProgressBar1" Margin="15,0,0,0" ContentDisplayMode="Value" DisplayFormatString="p0" IsPercent="True" Maximum="100" Minimum="0" Value="0" />
+      </dxlc:LayoutItem>
+    </dxlc:LayoutControl>
+  </DockPanel>
+</dxc:ThemedWindow>

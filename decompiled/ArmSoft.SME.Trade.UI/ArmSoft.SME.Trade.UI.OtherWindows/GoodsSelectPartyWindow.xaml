@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dx:ThemedWindow x:Class="ArmSoft.SME.Trade.UI.OtherWindows.GoodsSelectPartyWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:lc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" Title="GoodsSelectPartyWindow" Width="515" Height="300" ShowInTaskbar="False" xmlns:otherwindows="clr-namespace:ArmSoft.SME.Trade.UI.OtherWindows;assembly=ArmSoft.SME.Trade.UI">
+  <DockPanel LastChildFill="True">
+    <Grid DockPanel.Dock="Bottom">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Button Name="NextButton" Grid.Row="0" Grid.Column="1" MinWidth="100" Margin="15,0,15,5" HorizontalContentAlignment="Center" UseLayoutRounding="True">Next</Button>
+      <Button Name="OkButton" Grid.Row="0" Grid.Column="2" MinWidth="100" Margin="15,0,15,5" HorizontalContentAlignment="Center" UseLayoutRounding="True">OK</Button>
+      <Button Name="CancelButton" Grid.Row="0" Grid.Column="3" MinWidth="100" Margin="15,0,15,5" IsCancel="True" UseLayoutRounding="True">Cancel</Button>
+    </Grid>
+    <lc:LayoutControl Name="LayoutControl" VerticalAlignment="Stretch" Orientation="Vertical" />
+  </DockPanel>
+</dx:ThemedWindow>

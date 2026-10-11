@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls.SamplePOSSaleTotalUserControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:coreCommon="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions;assembly=ArmSoft.SME.Core.UI" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:tradeCommon="clr-namespace:ArmSoft.SME.Trade.Common;assembly=ArmSoft.SME.Trade.Common" x:Name="SamplePOSTotalsControl" Padding="8,8" xmlns:usercontrols="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.UserControls;assembly=ArmSoft.SME.Trade.UI" Background="{ext:ThemeBasedColor #def0e0#49504b}">
+  <Grid Name="MainGrid">
+    <TextBlock Name="TB_DiscountCaption" VerticalAlignment="Center" Style="{StaticResource SamplePOSPrimarySumsCaptionTextBlockStyle}" Text="{x:Static tradeCommon:Resources.DiscountShort}" />
+    <TextBlock Name="TB_Discount" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource SamplePOSPrimarySumsTextBlockStyle}" Text="0.00" />
+    <TextBlock Name="TB_MustPayCaption" VerticalAlignment="Center" Style="{StaticResource SamplePOSNegativeSumsCaptionTextBlockStyle}" Text="{x:Static tradeCommon:Resources.ForPay}" />
+    <TextBlock Name="TB_MustPay" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource SamplePOSNegativeSumsTextBlockStyle}" Text="0.00" />
+    <TextBlock Name="TB_TotalCaption" HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource SamplePOSTotalSumsCaptionTextBlockStyle}" Text="{x:Static coreCommon:Resources.Total}" />
+    <Grid Name="TotalGrid" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="auto" />
+        <ColumnDefinition Width="auto" />
+      </Grid.ColumnDefinitions>
+      <TextBlock Name="TotalIntPartOfTextBlock" Grid.Column="0" VerticalAlignment="Center" Style="{StaticResource SamplePOSTotalSumsTextBlockStyle}" Text="0" />
+      <TextBlock Name="TotalDecimalPartOfTextBlock" Grid.Column="1" Margin="0,0,0,3" VerticalAlignment="Bottom" Style="{StaticResource SamplePOSTotalSumsDecimalPartTextBlockStyle}" Text=".00" />
+    </Grid>
+  </Grid>
+</UserControl>

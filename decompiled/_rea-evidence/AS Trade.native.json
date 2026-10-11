@@ -1,0 +1,116 @@
+{
+  "evidence_id": "ev_a4134b4a5eb33fb654991871ed5e4d4ac57241cedd45da7f1181aae6b6d08df2",
+  "subject": {
+    "name": "C:\\Program Files\\Armenian Software\\AS Trade\\AS Trade.dll",
+    "digest": {
+      "sha256": "287e1ccd249cf71fff2e583d7a631f18490e7e1e11cade6f4521d054c987fd67"
+    },
+    "format": "pe",
+    "architecture": "x86",
+    "local_path": "C:\\Program Files\\Armenian Software\\AS Trade\\AS Trade.dll"
+  },
+  "provider": {
+    "id": "rea-dotnet-static",
+    "name": "REA managed static analysis provider",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis",
+  "operation": "inspect_managed_native_boundaries",
+  "parameters": {},
+  "raw_result": null,
+  "normalized_result": {
+    "artifact": {
+      "path": "C:\\Program Files\\Armenian Software\\AS Trade\\AS Trade.dll",
+      "sha256": "287e1ccd249cf71fff2e583d7a631f18490e7e1e11cade6f4521d054c987fd67",
+      "byte_length": 2080256,
+      "format": "pe"
+    },
+    "module": {
+      "name": "AS Trade.dll",
+      "generation": 0,
+      "mvid": "c502d1a3-f79e-4493-a023-ad24c22bf5c5",
+      "enc_id": null,
+      "enc_base_id": null,
+      "token": "0x00000001",
+      "row_offset": 9252
+    },
+    "metadata": {
+      "status": "complete",
+      "version": "v4.0.30319",
+      "table_row_counts": {
+        "Module": 1,
+        "TypeRef": 254,
+        "TypeDef": 11,
+        "Field": 34,
+        "MethodDef": 94,
+        "Param": 53,
+        "InterfaceImpl": 2,
+        "MemberRef": 501,
+        "Constant": 4,
+        "CustomAttribute": 49,
+        "ClassLayout": 1,
+        "StandAloneSig": 26,
+        "PropertyMap": 2,
+        "Property": 14,
+        "MethodSemantics": 16,
+        "MethodImpl": 2,
+        "TypeSpec": 23,
+        "FieldRVA": 1,
+        "Assembly": 1,
+        "AssemblyRef": 30,
+        "ManifestResource": 1,
+        "NestedClass": 6,
+        "MethodSpec": 5
+      }
+    },
+    "identity_scope": {
+      "token_identity": "build-local",
+      "requires_artifact_sha256": "287e1ccd249cf71fff2e583d7a631f18490e7e1e11cade6f4521d054c987fd67",
+      "requires_mvid": "c502d1a3-f79e-4493-a023-ad24c22bf5c5"
+    },
+    "cli_native": {
+      "il_only": true,
+      "requires_32bit": false,
+      "strong_name_signed": true,
+      "native_entry_point": false,
+      "ready_to_run_signature": false,
+      "managed_native_header_rva": 0,
+      "managed_native_header_size": 0
+    },
+    "module_refs": [],
+    "pinvoke_imports": [],
+    "native_implementations": [],
+    "summary": {
+      "module_ref_count": 0,
+      "pinvoke_import_count": 0,
+      "native_implementation_count": 0,
+      "ready_to_run": false,
+      "mixed_mode_or_native_header": false
+    },
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "limitations": [
+      "P/Invoke rows prove managed import declarations only; this inspection does not verify that a native library, export, thunk, or provider-qualified function exists.",
+      "Managed metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+      "ReadyToRun, NativeAOT, C++/CLI, and IL2CPP native semantics require separately selected native-provider evidence; this tool does not translate managed tokens into native addresses."
+    ]
+  },
+  "confidence": "observed",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "P/Invoke rows prove managed import declarations only; this inspection does not verify that a native library, export, thunk, or provider-qualified function exists.",
+    "Managed metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+    "ReadyToRun, NativeAOT, C++/CLI, and IL2CPP native semantics require separately selected native-provider evidence; this tool does not translate managed tokens into native addresses."
+  ],
+  "locations": [
+    {
+      "kind": "file-offset",
+      "offset": 9252
+    }
+  ],
+  "evidence_links": []
+}

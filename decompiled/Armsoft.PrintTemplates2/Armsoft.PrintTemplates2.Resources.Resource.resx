@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="AdditionalColumnExceed" xml:space="preserve"><value>The number of additional columns exceeds {0}</value></data>
+  <data name="InvalidGridSubstitution" xml:space="preserve"><value>Incorrect table %{0} in template.</value></data>
+  <data name="InvalidSubstitutionElement" xml:space="preserve"><value>Incorrect code #{0} in template.</value></data>
+  <data name="ColumnNotExists" xml:space="preserve"><value>Column {0} does not exist in {1} grid</value></data>
+  <data name="InvalidColumn" xml:space="preserve"><value>Invalid column name {1} in grid {0}</value></data>
+  <data name="WrongFileExtension" xml:space="preserve"><value>File extension does not comply with the type of the template</value></data>
+  <data name="UnableToCastTimeSpan" xml:space="preserve"><value>Unable to cast object to TimeSpan</value></data>
+  <data name="InvalidConvertValue" xml:space="preserve"><value>Failed to cast value of type {0} to type {1}. Error message {2}.</value></data>
+  <data name="InvalidTextTemplateRow" xml:space="preserve"><value>Invalid text template row {0}.</value></data>
+  <data name="ColumnNameEmpty" xml:space="preserve"><value>Column Name is Empty</value></data>
+  <data name="ColumnExists" xml:space="preserve"><value>Column with '{0}' name already exists</value></data>
+  <data name="SideBySideTables" xml:space="preserve"><value>Side by side tables are not allowed.</value></data>
+  </root>

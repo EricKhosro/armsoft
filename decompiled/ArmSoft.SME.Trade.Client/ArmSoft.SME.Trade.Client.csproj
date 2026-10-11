@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>ArmSoft.SME.Trade.Client</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="ArmSoft.SME.Client">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.Logging.Abstractions\10.0.7\lib\net10.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Trade.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Trade.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ardalis.SmartEnum">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Ardalis.SmartEnum.StrongName\8.2.1\lib\net10.0\Ardalis.SmartEnum.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>ArmSoft.SME.Common</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Ardalis.SmartEnum.SystemTextJson">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Ardalis.SmartEnum.SystemTextJson.StrongName\8.2.2\lib\net10.0\Ardalis.SmartEnum.SystemTextJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Ardalis.SmartEnum">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Ardalis.SmartEnum.StrongName\8.2.1\lib\net10.0\Ardalis.SmartEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Ports">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\System.IO.Ports\10.0.7\lib\net10.0\System.IO.Ports.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.TaxService">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.TaxService\1.0.38\lib\net8.0\ArmSoft.TaxService.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

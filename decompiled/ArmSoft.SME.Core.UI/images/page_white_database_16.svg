@@ -1,0 +1,8 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 14.5H7.843L7.8 14.12V7.275L8.229 7.045L9.335 6.538L10.06 6.267L10.85 6.03L11.67 5.863L12.5 5.8V0.5H1.5V14.5Z" fill="white"/>
+<path d="M1 0.5V14.5V15H1.5H7.985L7.86 14.65L7.8 14.12V14H2V1H12V5.838L12.5 5.8L13 5.822V0.5V0H12.5H1.5H1V0.5Z" fill="#212121"/>
+<path d="M15.5 8.47498V14.121C15.5 14.883 14.157 15.5 12.5 15.5C10.843 15.5 9.5 14.882 9.5 14.121V8.47498" fill="#FFE1CE" class="Orange_Light"/>
+<path d="M15.5 8.47498V14.121C15.5 14.883 14.157 15.5 12.5 15.5C10.843 15.5 9.5 14.882 9.5 14.121V8.47498" stroke="#EC6206"  class="Orange_Dark" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M12.5 9.34C14.1569 9.34 15.5 8.9281 15.5 8.42C15.5 7.9119 14.1569 7.5 12.5 7.5C10.8431 7.5 9.5 7.9119 9.5 8.42C9.5 8.9281 10.8431 9.34 12.5 9.34Z" fill="#FFE1CE" class="Orange_Light"/>
+<path d="M12.5 9.34C14.1569 9.34 15.5 8.9281 15.5 8.42C15.5 7.9119 14.1569 7.5 12.5 7.5C10.8431 7.5 9.5 7.9119 9.5 8.42C9.5 8.9281 10.8431 9.34 12.5 9.34Z" fill="none" stroke="#EC6206" class="Orange_Dark" stroke-miterlimit="10" stroke-linecap="round"/>
+</svg>

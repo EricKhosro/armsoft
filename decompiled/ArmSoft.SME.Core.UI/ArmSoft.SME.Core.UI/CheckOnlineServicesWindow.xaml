@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dx:ThemedWindow x:Class="ArmSoft.SME.Core.UI.CheckOnlineServicesWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:conv="clr-namespace:ArmSoft.SME.Core.UI.Converters" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions" Title="CheckOnlineServicesWindow" Width="500" Height="435" ResizeMode="NoResize" ShowIcon="False" WindowStartupLocation="CenterOwner" WindowState="Normal" WindowStyle="SingleBorderWindow" xmlns:ui="clr-namespace:ArmSoft.SME.Core.UI">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <dx:DXTabControl Grid.Row="0" Margin="10">
+      <dx:DXTabItem Name="ServicesTab" Header="Services">
+        <Grid Background="#00FFFFFF">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <Label Name="VersionsUpdatesLabel" Grid.Row="0" Grid.Column="0" Height="22" Margin="15,6,0,24" HorizontalAlignment="Stretch" VerticalAlignment="Center" Content="Versions Updates" UseLayoutRounding="True" />
+          <TextBlock Name="VersionsUpdatesTextBlock" Grid.Row="0" Grid.Column="0" Height="16" Margin="15,24,0,12" HorizontalAlignment="Stretch" VerticalAlignment="Center" UseLayoutRounding="True">
+            <Hyperlink Name="VersionsUpdatesHyperlink" NavigateUri="https://update.armsoft.am" RequestNavigate="Hyperlink_RequestNavigate" />
+          </TextBlock>
+          <dx:DXImage Name="VersionsUpdatesImage" Grid.Row="0" Grid.Column="1" Width="32" Height="32" Margin="30,0" VerticalAlignment="Center" Stretch="None" UseLayoutRounding="True" Source="{ext:ASImage help_32.svg}" />
+          <Label Name="WCFServicesLabel" Grid.Row="2" Grid.Column="0" Height="22" Margin="15,5,0,22" HorizontalAlignment="Stretch" VerticalAlignment="Center" Content="WCF Services" UseLayoutRounding="True" />
+          <TextBlock Name="WCFServicesTextBlock" Grid.Row="2" Grid.Column="0" Height="16" Margin="15,23,0,10" HorizontalAlignment="Stretch" VerticalAlignment="Center" UseLayoutRounding="True">
+            <Hyperlink Name="WCFServicesHyperlink" NavigateUri="https://services.armsoft.am:4443" RequestNavigate="Hyperlink_RequestNavigate" />
+          </TextBlock>
+          <dx:DXImage Name="WCFServicesImage" Grid.Row="2" Grid.Column="1" Width="32" Height="32" Margin="30,0" VerticalAlignment="Center" Stretch="None" UseLayoutRounding="True" Source="{ext:ASImage help_32.svg}" />
+          <Label Name="RESTServicesLabel" Grid.Row="4" Grid.Column="0" Height="22" Margin="15,5,0,22" HorizontalAlignment="Stretch" VerticalAlignment="Center" Content="REST Services" UseLayoutRounding="True" />
+          <TextBlock Name="RESTServicesTextBlock" Grid.Row="4" Grid.Column="0" Height="16" Margin="15,23,0,10" HorizontalAlignment="Stretch" VerticalAlignment="Center" UseLayoutRounding="True">
+            <Hyperlink Name="RESTServicesHyperlink" NavigateUri="https://services.armsoft.am:5443" RequestNavigate="Hyperlink_RequestNavigate" />
+          </TextBlock>
+          <dx:DXImage Name="RESTServicesImage" Grid.Row="4" Grid.Column="1" Width="32" Height="32" Margin="30,0" VerticalAlignment="Center" Stretch="None" UseLayoutRounding="True" Source="{ext:ASImage help_32.svg}" />
+          <Label Name="CloudServicesLabel" Grid.Row="6" Grid.Column="0" Height="22" Margin="15,5,0,22" HorizontalAlignment="Stretch" VerticalAlignment="Center" Content="Cloud Services" UseLayoutRounding="True" />
+          <TextBlock Name="CloudServicesTextBlock" Grid.Row="6" Grid.Column="0" Height="16" Margin="15,23,0,10" HorizontalAlignment="Stretch" VerticalAlignment="Center" UseLayoutRounding="True">
+            <Hyperlink Name="CloudServicesHyperlink" NavigateUri="https://cloud.armsoft.am" RequestNavigate="Hyperlink_RequestNavigate" />
+          </TextBlock>
+          <dx:DXImage Name="CloudServicesImage" Grid.Row="6" Grid.Column="1" Width="32" Height="32" Margin="30,0" VerticalAlignment="Center" Stretch="None" UseLayoutRounding="True" Source="{ext:ASImage help_32.svg}" />
+          <Label Name="EdgeServicesLabel" Grid.Row="8" Grid.Column="0" Height="22" Margin="15,5,0,22" HorizontalAlignment="Stretch" VerticalAlignment="Center" Content="Edge Services" UseLayoutRounding="True" />
+          <TextBlock Name="EdgeServicesTextBlock" Grid.Row="8" Grid.Column="0" Height="16" Margin="15,23,0,10" HorizontalAlignment="Stretch" VerticalAlignment="Center" UseLayoutRounding="True">
+            <Hyperlink Name="EdgeServicesHyperlink" NavigateUri="https://dbservices.armsoft.am/probe.html" RequestNavigate="Hyperlink_RequestNavigate" />
+          </TextBlock>
+          <dx:DXImage Name="EdgeServicesImage" Grid.Row="8" Grid.Column="1" Width="32" Height="32" Margin="30,0" VerticalAlignment="Center" Stretch="None" UseLayoutRounding="True" Source="{ext:ASImage help_32.svg}" />
+          <Label Name="b2cLoginLabel" Grid.Row="9" Grid.Column="0" Height="22" Margin="15,5,0,22" HorizontalAlignment="Stretch" VerticalAlignment="Center" Content="Azure Active Directory B2C " UseLayoutRounding="True" />
+          <TextBlock Name="b2cLoginTextBlock" Grid.Row="9" Grid.Column="0" Height="16" Margin="15,23,0,10" HorizontalAlignment="Stretch" VerticalAlignment="Center" UseLayoutRounding="True">
+            <Hyperlink Name="b2cLoginHyperlink" NavigateUri="https://armsoftb2c.b2clogin.com/armsoftb2c.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_edit_profile&amp;client_id=33ec27fc-b41c-48da-b18a-0097297d4256&amp;nonce=defaultNonce&amp;redirect_uri=https%3A%2F%2Fcloud.armsoft.am&amp;scope=openid&amp;response_type=code&amp;prompt=login" RequestNavigate="Hyperlink_RequestNavigate">https://armsoftb2c.b2clogin.com/</Hyperlink>
+          </TextBlock>
+          <dx:DXImage Name="b2cLoginImage" Grid.Row="9" Grid.Column="1" Width="32" Height="32" Margin="30,0" VerticalAlignment="Center" Stretch="None" UseLayoutRounding="True" Source="{ext:ASImage help_32.svg}" />
+        </Grid>
+      </dx:DXTabItem>
+      <dx:DXTabItem Name="TokenTab" Header="Token">
+        <Grid Background="#00FFFFFF">
+          <dxe:TextEdit Name="TE_TokenPayload" VerticalContentAlignment="Top" AcceptsReturn="True" IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" />
+        </Grid>
+      </dx:DXTabItem>
+    </dx:DXTabControl>
+    <Grid Name="ButtonsPanel" Row="1" VerticalAlignment="Bottom">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Button Name="CheckButton" Grid.Column="1" MinWidth="100" Margin="15,0,15,10" HorizontalContentAlignment="Center" Content="Check" IsDefault="True" UseLayoutRounding="True" />
+      <Button Name="CancelButton" Grid.Column="2" MinWidth="100" Margin="15,0,15,10" Content="Cancel" IsCancel="True" UseLayoutRounding="True" />
+    </Grid>
+  </Grid>
+</dx:ThemedWindow>

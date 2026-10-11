@@ -1,0 +1,180 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>AS Trade</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net10.0-windows7.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Remove="ArmSoft.SME.Trade.Host\App.xaml" />
+    <ApplicationDefinition Include="ArmSoft.SME.Trade.Host\App.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="app.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.Host\MainWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.Host\SplashScreenWindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.Host\MainWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="mainwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.Host\SplashScreenWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="splashscreenwindow.xaml" />
+    <Resource Remove="images\about.png" />
+    <Resource Remove="images\astrade.ico" />
+    <Resource Remove="images\astrade_128.png" />
+    <Resource Remove="images\back.svg" />
+    <Resource Remove="images\back_70.svg" />
+    <Resource Remove="images\bill_background_am.svg" />
+    <Resource Remove="images\credit_card_32.svg" />
+    <Resource Remove="images\keyboard_switch_1_32.svg" />
+    <Resource Remove="images\keyboard_switch_2_32.svg" />
+    <Resource Remove="images\mobile_trd.png" />
+    <Resource Remove="images\pay_by_cash_qr.svg" />
+    <Resource Remove="images\pay_by_non_cash_qr.svg" />
+    <Resource Remove="images\pos_cash_in_32.svg" />
+    <Resource Remove="images\pos_cash_out_32.svg" />
+    <Resource Remove="images\pos_combobox_down_button.svg" />
+    <Resource Remove="images\pos_connect_32.svg" />
+    <Resource Remove="images\pos_customer_add_32.svg" />
+    <Resource Remove="images\pos_customer_card_32.svg" />
+    <Resource Remove="images\pos_customer_find.svg" />
+    <Resource Remove="images\pos_disconnect_32.svg" />
+    <Resource Remove="images\pos_down_32.svg" />
+    <Resource Remove="images\pos_ecrsetup_56.svg" />
+    <Resource Remove="images\pos_ecr_find_32.svg" />
+    <Resource Remove="images\pos_ecr_print_32.svg" />
+    <Resource Remove="images\pos_enter_32.svg" />
+    <Resource Remove="images\pos_favorites_32.svg" />
+    <Resource Remove="images\pos_hold_32.svg" />
+    <Resource Remove="images\pos_home_32.svg" />
+    <Resource Remove="images\pos_menu_32.svg" />
+    <Resource Remove="images\pos_pay_card_32.svg" />
+    <Resource Remove="images\pos_pay_cash_32.svg" />
+    <Resource Remove="images\pos_print_32.svg" />
+    <Resource Remove="images\pos_product_find_32.svg" />
+    <Resource Remove="images\pos_return_32.svg" />
+    <Resource Remove="images\pos_unhold_32.svg" />
+    <Resource Remove="images\pos_up_32.svg" />
+    <Resource Remove="images\pos_user_32.svg" />
+    <Resource Remove="images\qr_trade_mob_store.png" />
+    <Resource Remove="images\saless_32.svg" />
+    <Resource Remove="images\scales\scale_cas_cl.png" />
+    <Resource Remove="images\scales\scale_digi_sm.png" />
+    <Resource Remove="images\scales\scale_massa-k.png" />
+    <Resource Remove="images\scales\scale_mertech_m.png" />
+    <Resource Remove="images\scales\scale_tm_a.png" />
+    <Resource Remove="images\scanbarcode.svg" />
+    <Resource Remove="images\splashscreen.png" />
+    <Resource Remove="images\time_white_16.svg" />
+    <Resource Remove="images\trade_image.svg" />
+    <Resource Remove="images\trd_text_am.svg" />
+    <Resource Remove="images\user_white_16.svg" />
+    <Resource Remove="images\zoom_in_staticcolors.svg" />
+    <Resource Include="images\about.png" LogicalName="images/about.png" />
+    <Resource Include="images\astrade.ico" LogicalName="images/astrade.ico" />
+    <Resource Include="images\astrade_128.png" LogicalName="images/astrade_128.png" />
+    <Resource Include="images\back.svg" LogicalName="images/back.svg" />
+    <Resource Include="images\back_70.svg" LogicalName="images/back_70.svg" />
+    <Resource Include="images\bill_background_am.svg" LogicalName="images/bill_background_am.svg" />
+    <Resource Include="images\credit_card_32.svg" LogicalName="images/credit_card_32.svg" />
+    <Resource Include="images\keyboard_switch_1_32.svg" LogicalName="images/keyboard_switch_1_32.svg" />
+    <Resource Include="images\keyboard_switch_2_32.svg" LogicalName="images/keyboard_switch_2_32.svg" />
+    <Resource Include="images\mobile_trd.png" LogicalName="images/mobile_trd.png" />
+    <Resource Include="images\pay_by_cash_qr.svg" LogicalName="images/pay_by_cash_qr.svg" />
+    <Resource Include="images\pay_by_non_cash_qr.svg" LogicalName="images/pay_by_non_cash_qr.svg" />
+    <Resource Include="images\pos_cash_in_32.svg" LogicalName="images/pos_cash_in_32.svg" />
+    <Resource Include="images\pos_cash_out_32.svg" LogicalName="images/pos_cash_out_32.svg" />
+    <Resource Include="images\pos_combobox_down_button.svg" LogicalName="images/pos_combobox_down_button.svg" />
+    <Resource Include="images\pos_connect_32.svg" LogicalName="images/pos_connect_32.svg" />
+    <Resource Include="images\pos_customer_add_32.svg" LogicalName="images/pos_customer_add_32.svg" />
+    <Resource Include="images\pos_customer_card_32.svg" LogicalName="images/pos_customer_card_32.svg" />
+    <Resource Include="images\pos_customer_find.svg" LogicalName="images/pos_customer_find.svg" />
+    <Resource Include="images\pos_disconnect_32.svg" LogicalName="images/pos_disconnect_32.svg" />
+    <Resource Include="images\pos_down_32.svg" LogicalName="images/pos_down_32.svg" />
+    <Resource Include="images\pos_ecrsetup_56.svg" LogicalName="images/pos_ecrsetup_56.svg" />
+    <Resource Include="images\pos_ecr_find_32.svg" LogicalName="images/pos_ecr_find_32.svg" />
+    <Resource Include="images\pos_ecr_print_32.svg" LogicalName="images/pos_ecr_print_32.svg" />
+    <Resource Include="images\pos_enter_32.svg" LogicalName="images/pos_enter_32.svg" />
+    <Resource Include="images\pos_favorites_32.svg" LogicalName="images/pos_favorites_32.svg" />
+    <Resource Include="images\pos_hold_32.svg" LogicalName="images/pos_hold_32.svg" />
+    <Resource Include="images\pos_home_32.svg" LogicalName="images/pos_home_32.svg" />
+    <Resource Include="images\pos_menu_32.svg" LogicalName="images/pos_menu_32.svg" />
+    <Resource Include="images\pos_pay_card_32.svg" LogicalName="images/pos_pay_card_32.svg" />
+    <Resource Include="images\pos_pay_cash_32.svg" LogicalName="images/pos_pay_cash_32.svg" />
+    <Resource Include="images\pos_print_32.svg" LogicalName="images/pos_print_32.svg" />
+    <Resource Include="images\pos_product_find_32.svg" LogicalName="images/pos_product_find_32.svg" />
+    <Resource Include="images\pos_return_32.svg" LogicalName="images/pos_return_32.svg" />
+    <Resource Include="images\pos_unhold_32.svg" LogicalName="images/pos_unhold_32.svg" />
+    <Resource Include="images\pos_up_32.svg" LogicalName="images/pos_up_32.svg" />
+    <Resource Include="images\pos_user_32.svg" LogicalName="images/pos_user_32.svg" />
+    <Resource Include="images\qr_trade_mob_store.png" LogicalName="images/qr_trade_mob_store.png" />
+    <Resource Include="images\saless_32.svg" LogicalName="images/saless_32.svg" />
+    <Resource Include="images\scales\scale_cas_cl.png" LogicalName="images/scales/scale_cas_cl.png" />
+    <Resource Include="images\scales\scale_digi_sm.png" LogicalName="images/scales/scale_digi_sm.png" />
+    <Resource Include="images\scales\scale_massa-k.png" LogicalName="images/scales/scale_massa-k.png" />
+    <Resource Include="images\scales\scale_mertech_m.png" LogicalName="images/scales/scale_mertech_m.png" />
+    <Resource Include="images\scales\scale_tm_a.png" LogicalName="images/scales/scale_tm_a.png" />
+    <Resource Include="images\scanbarcode.svg" LogicalName="images/scanbarcode.svg" />
+    <Resource Include="images\splashscreen.png" LogicalName="images/splashscreen.png" />
+    <Resource Include="images\time_white_16.svg" LogicalName="images/time_white_16.svg" />
+    <Resource Include="images\trade_image.svg" LogicalName="images/trade_image.svg" />
+    <Resource Include="images\trd_text_am.svg" LogicalName="images/trd_text_am.svg" />
+    <Resource Include="images\user_white_16.svg" LogicalName="images/user_white_16.svg" />
+    <Resource Include="images\zoom_in_staticcolors.svg" LogicalName="images/zoom_in_staticcolors.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.PrintTemplates2\1.0.67\lib\net10.0\DevExpress.Data.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Core\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Core.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Trade.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Trade.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Mvvm\25.2.6\lib\net8.0-windows\DevExpress.Mvvm.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.DependencyInjection.Abstractions\10.0.7\lib\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Core.UI">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Core.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Trade.UI">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Trade.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Docking\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Docking.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Ports">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\System.IO.Ports\10.0.7\lib\net10.0\System.IO.Ports.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v25.2.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.PrintTemplates2\1.0.67\lib\net10.0\DevExpress.Spreadsheet.v25.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.Cloud.Client">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\bin\ArmSoft.Cloud.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Data.Desktop\25.2.6\lib\net8.0-windows\DevExpress.Data.Desktop.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Trade.Client">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Trade.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Serilog\4.3.1\lib\net10.0\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Ribbon.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Ribbon\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Ribbon.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Ardalis.SmartEnum">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Ardalis.SmartEnum.StrongName\8.2.1\lib\net10.0\Ardalis.SmartEnum.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

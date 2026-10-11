@@ -1,0 +1,304 @@
+{
+  "evidence_id": "ev_8d3fa2451a854c3e00de3dca532d5cc2b1206f75932aef660f2737d3da299440",
+  "subject": {
+    "name": "C:\\Program Files\\Armenian Software\\AS Trade\\lib\\ArmSoft.Arcus2Client\\1.2.1\\lib\\net8.0-windows7.0\\ArmSoft.Arcus2Client.dll",
+    "digest": {
+      "sha256": "574ddfe967b5a9674b8087aa0da8944ae71a7a35753416eb4b8cc67de143a906"
+    },
+    "format": "pe",
+    "architecture": "x86",
+    "local_path": "C:\\Program Files\\Armenian Software\\AS Trade\\lib\\ArmSoft.Arcus2Client\\1.2.1\\lib\\net8.0-windows7.0\\ArmSoft.Arcus2Client.dll"
+  },
+  "provider": {
+    "id": "rea-dotnet-static",
+    "name": "REA managed static analysis provider",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis",
+  "operation": "inspect_managed_native_boundaries",
+  "parameters": {},
+  "raw_result": null,
+  "normalized_result": {
+    "artifact": {
+      "path": "C:\\Program Files\\Armenian Software\\AS Trade\\lib\\ArmSoft.Arcus2Client\\1.2.1\\lib\\net8.0-windows7.0\\ArmSoft.Arcus2Client.dll",
+      "sha256": "574ddfe967b5a9674b8087aa0da8944ae71a7a35753416eb4b8cc67de143a906",
+      "byte_length": 19456,
+      "format": "pe"
+    },
+    "module": {
+      "name": "ArmSoft.Arcus2Client.dll",
+      "generation": 0,
+      "mvid": "8f04962a-ea31-4681-a1e9-15d8848f5738",
+      "enc_id": null,
+      "enc_base_id": null,
+      "token": "0x00000001",
+      "row_offset": 3844
+    },
+    "metadata": {
+      "status": "complete",
+      "version": "v4.0.30319",
+      "table_row_counts": {
+        "Module": 1,
+        "TypeRef": 46,
+        "TypeDef": 11,
+        "Field": 85,
+        "MethodDef": 83,
+        "Param": 46,
+        "InterfaceImpl": 1,
+        "MemberRef": 46,
+        "Constant": 69,
+        "CustomAttribute": 52,
+        "DeclSecurity": 1,
+        "StandAloneSig": 6,
+        "PropertyMap": 3,
+        "Property": 49,
+        "MethodSemantics": 54,
+        "ModuleRef": 1,
+        "TypeSpec": 1,
+        "ImplMap": 5,
+        "Assembly": 1,
+        "AssemblyRef": 2,
+        "ManifestResource": 1,
+        "NestedClass": 3,
+        "MethodSpec": 1
+      }
+    },
+    "identity_scope": {
+      "token_identity": "build-local",
+      "requires_artifact_sha256": "574ddfe967b5a9674b8087aa0da8944ae71a7a35753416eb4b8cc67de143a906",
+      "requires_mvid": "8f04962a-ea31-4681-a1e9-15d8848f5738"
+    },
+    "cli_native": {
+      "il_only": true,
+      "requires_32bit": false,
+      "strong_name_signed": false,
+      "native_entry_point": false,
+      "ready_to_run_signature": false,
+      "managed_native_header_rva": 0,
+      "managed_native_header_size": 0
+    },
+    "module_refs": [
+      {
+        "token": "0x1a000001",
+        "row_offset": 7886,
+        "name": "arccom.dll"
+      }
+    ],
+    "pinvoke_imports": [
+      {
+        "token": "0x1c000001",
+        "row_offset": 7890,
+        "mapping_flags": 257,
+        "mapping_flags_hex": "0x0101",
+        "member_token": "0x0600000a",
+        "member_kind": "method",
+        "member_name": "CreateITPos",
+        "import_name": "CreateITPos",
+        "import_scope_token": "0x1a000001",
+        "import_scope_name": "arccom.dll",
+        "no_mangle": true,
+        "char_set": "not-specified",
+        "call_convention": "winapi",
+        "supports_last_error": false,
+        "best_fit": "assembly-default",
+        "throw_on_unmappable_char": "assembly-default",
+        "verification": "managed-declaration-only"
+      },
+      {
+        "token": "0x1c000002",
+        "row_offset": 7898,
+        "mapping_flags": 257,
+        "mapping_flags_hex": "0x0101",
+        "member_token": "0x0600000b",
+        "member_kind": "method",
+        "member_name": "DeleteITPos",
+        "import_name": "DeleteITPos",
+        "import_scope_token": "0x1a000001",
+        "import_scope_name": "arccom.dll",
+        "no_mangle": true,
+        "char_set": "not-specified",
+        "call_convention": "winapi",
+        "supports_last_error": false,
+        "best_fit": "assembly-default",
+        "throw_on_unmappable_char": "assembly-default",
+        "verification": "managed-declaration-only"
+      },
+      {
+        "token": "0x1c000003",
+        "row_offset": 7906,
+        "mapping_flags": 257,
+        "mapping_flags_hex": "0x0101",
+        "member_token": "0x0600000e",
+        "member_kind": "method",
+        "member_name": "ITPosRun",
+        "import_name": "ITPosRun",
+        "import_scope_token": "0x1a000001",
+        "import_scope_name": "arccom.dll",
+        "no_mangle": true,
+        "char_set": "not-specified",
+        "call_convention": "winapi",
+        "supports_last_error": false,
+        "best_fit": "assembly-default",
+        "throw_on_unmappable_char": "assembly-default",
+        "verification": "managed-declaration-only"
+      },
+      {
+        "token": "0x1c000004",
+        "row_offset": 7914,
+        "mapping_flags": 257,
+        "mapping_flags_hex": "0x0101",
+        "member_token": "0x06000010",
+        "member_kind": "method",
+        "member_name": "<ITPosSet>g____PInvoke|12_0",
+        "import_name": "ITPosSet",
+        "import_scope_token": "0x1a000001",
+        "import_scope_name": "arccom.dll",
+        "no_mangle": true,
+        "char_set": "not-specified",
+        "call_convention": "winapi",
+        "supports_last_error": false,
+        "best_fit": "assembly-default",
+        "throw_on_unmappable_char": "assembly-default",
+        "verification": "managed-declaration-only"
+      },
+      {
+        "token": "0x1c000005",
+        "row_offset": 7922,
+        "mapping_flags": 257,
+        "mapping_flags_hex": "0x0101",
+        "member_token": "0x06000011",
+        "member_kind": "method",
+        "member_name": "<ITPosGet>g____PInvoke|13_0",
+        "import_name": "ITPosGet",
+        "import_scope_token": "0x1a000001",
+        "import_scope_name": "arccom.dll",
+        "no_mangle": true,
+        "char_set": "not-specified",
+        "call_convention": "winapi",
+        "supports_last_error": false,
+        "best_fit": "assembly-default",
+        "throw_on_unmappable_char": "assembly-default",
+        "verification": "managed-declaration-only"
+      }
+    ],
+    "native_implementations": [
+      {
+        "token": "0x0600000a",
+        "row_offset": 4920,
+        "name": "CreateITPos",
+        "rva": 0,
+        "flags": 8337,
+        "impl_flags": 128,
+        "code_type": "il",
+        "managed_kind": "managed",
+        "pinvoke_declared": true,
+        "boundary_kind": "pinvoke",
+        "body_interpretation": "not-file-backed"
+      },
+      {
+        "token": "0x0600000b",
+        "row_offset": 4934,
+        "name": "DeleteITPos",
+        "rva": 0,
+        "flags": 8337,
+        "impl_flags": 128,
+        "code_type": "il",
+        "managed_kind": "managed",
+        "pinvoke_declared": true,
+        "boundary_kind": "pinvoke",
+        "body_interpretation": "not-file-backed"
+      },
+      {
+        "token": "0x0600000e",
+        "row_offset": 4976,
+        "name": "ITPosRun",
+        "rva": 0,
+        "flags": 8337,
+        "impl_flags": 128,
+        "code_type": "il",
+        "managed_kind": "managed",
+        "pinvoke_declared": true,
+        "boundary_kind": "pinvoke",
+        "body_interpretation": "not-file-backed"
+      },
+      {
+        "token": "0x06000010",
+        "row_offset": 5004,
+        "name": "<ITPosSet>g____PInvoke|12_0",
+        "rva": 0,
+        "flags": 8339,
+        "impl_flags": 128,
+        "code_type": "il",
+        "managed_kind": "managed",
+        "pinvoke_declared": true,
+        "boundary_kind": "pinvoke",
+        "body_interpretation": "not-file-backed"
+      },
+      {
+        "token": "0x06000011",
+        "row_offset": 5018,
+        "name": "<ITPosGet>g____PInvoke|13_0",
+        "rva": 0,
+        "flags": 8339,
+        "impl_flags": 128,
+        "code_type": "il",
+        "managed_kind": "managed",
+        "pinvoke_declared": true,
+        "boundary_kind": "pinvoke",
+        "body_interpretation": "not-file-backed"
+      }
+    ],
+    "summary": {
+      "module_ref_count": 1,
+      "pinvoke_import_count": 5,
+      "native_implementation_count": 5,
+      "ready_to_run": false,
+      "mixed_mode_or_native_header": false
+    },
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "limitations": [
+      "P/Invoke rows prove managed import declarations only; this inspection does not verify that a native library, export, thunk, or provider-qualified function exists.",
+      "Managed metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+      "ReadyToRun, NativeAOT, C++/CLI, and IL2CPP native semantics require separately selected native-provider evidence; this tool does not translate managed tokens into native addresses."
+    ]
+  },
+  "confidence": "observed",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "P/Invoke rows prove managed import declarations only; this inspection does not verify that a native library, export, thunk, or provider-qualified function exists.",
+    "Managed metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+    "ReadyToRun, NativeAOT, C++/CLI, and IL2CPP native semantics require separately selected native-provider evidence; this tool does not translate managed tokens into native addresses."
+  ],
+  "locations": [
+    {
+      "kind": "file-offset",
+      "offset": 3844
+    },
+    {
+      "kind": "file-offset",
+      "offset": 7890
+    },
+    {
+      "kind": "file-offset",
+      "offset": 7898
+    },
+    {
+      "kind": "file-offset",
+      "offset": 7906
+    },
+    {
+      "kind": "file-offset",
+      "offset": 7914
+    },
+    {
+      "kind": "file-offset",
+      "offset": 7922
+    }
+  ],
+  "evidence_links": []
+}

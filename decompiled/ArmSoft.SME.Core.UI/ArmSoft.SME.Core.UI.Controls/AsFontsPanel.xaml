@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Core.UI.Controls.AsFontsPanel" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxl="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:ArmSoft.SME.Core.UI.Controls;assembly=ArmSoft.SME.Core.UI">
+  <Control.Background>
+    <SolidColorBrush />
+  </Control.Background>
+  <dxl:LayoutControl Grid.Row="0" Grid.Column="0" Margin="-5" Orientation="Vertical">
+    <dxl:LayoutGroup Orientation="Vertical">
+      <dxl:LayoutItem Name="liDarkThemeCheckBox" Label="DarkTheme">
+        <ContentControl>
+          <dxe:CheckEdit Name="DarkThemeCheckBox" />
+        </ContentControl>
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="ThemeLayoutItem" HorizontalContentAlignment="Left" Label="Theme">
+        <dxe:ComboBoxEdit Name="ThemeComboBox" FocusPopupOnOpen="True" IsTextEditable="False" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="FontSizeLayoutItem" HorizontalContentAlignment="Left" Label="Font Size">
+        <dxe:ComboBoxEdit Name="FontSizeComboBox" FocusPopupOnOpen="True" IsTextEditable="False" />
+      </dxl:LayoutItem>
+    </dxl:LayoutGroup>
+  </dxl:LayoutControl>
+</UserControl>

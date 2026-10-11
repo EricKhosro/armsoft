@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>ArmSoft.InternetBank.APIClient.Core</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="RestSharp">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\RestSharp\106.12.0\lib\netstandard2.0\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.OnlineBanking.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OnlineBanking.Common\8.16.1\lib\net8.0\ArmSoft.OnlineBanking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.InternetBank.APIClient.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OnlineBanking.APIClient\8.16.1\lib\net8.0\ArmSoft.InternetBank.APIClient.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

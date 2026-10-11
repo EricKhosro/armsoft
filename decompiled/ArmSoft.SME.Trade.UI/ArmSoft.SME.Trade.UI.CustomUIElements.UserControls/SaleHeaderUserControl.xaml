@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls.SaleHeaderUserControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:coreCommon="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:customWindowControls="clr-namespace:ArmSoft.SME.Core.UI.CustomWindowControls;assembly=ArmSoft.SME.Core.UI" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions;assembly=ArmSoft.SME.Core.UI" xmlns:tradeCommon="clr-namespace:ArmSoft.SME.Trade.Common;assembly=ArmSoft.SME.Trade.Common" xmlns:usercontrols="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.UserControls;assembly=ArmSoft.SME.Trade.UI">
+  <Grid Name="ControlGrid">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryFieldsSeparatorLineColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModeConnectionIndicatorColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryFieldsSeparatorLineColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModeCloseButtonColumnDefintionStyle}" />
+    </Grid.ColumnDefinitions>
+    <StackPanel Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Center" Style="{StaticResource TouchModeHorizontalStackPanelStyle}">
+      <TextBlock Name="TB_SaleNumCaption" Style="{StaticResource TouchModeHeaderTextBlockStyle}" Text="{Binding Converter={StaticResource TextWithTwoDotsConverter}, ConverterParameter={x:Static tradeCommon:Resources.SaleNumber}}" />
+      <TextBlock Name="TB_SaleNum" Style="{StaticResource TouchModeHeaderTextBlockStyle}" />
+      <TextBlock Name="TB_Separator" Style="{StaticResource TouchModeHeaderTextBlockStyle}" />
+      <TextBlock Name="TB_BaseDoc" Style="{StaticResource TouchModeHeaderTextBlockStyle}" />
+    </StackPanel>
+    <Border Name="ConnectionIndicatorBorder" Grid.Column="2" Style="{StaticResource ConnectionIndicatorBorderStyle}">
+      <TextBlock Name="ConnectionIndicatorTextBlock" Style="{StaticResource ConnectionIndicatorTextBlockStyle}" />
+    </Border>
+    <customWindowControls:CWCSimpleButton Name="CloseTitleButton" Grid.Column="4" Style="{StaticResource HeaderCloseButtonStyle}" ToolTip="{x:Static coreCommon:Resources.ExitWord}" Visibility="Collapsed" Click="CloseTitleButton_Click">
+      <dx:DXImage Source="{Binding Converter={StaticResource ImageByNameConverter}, ConverterParameter=delete_20.svg}" />
+    </customWindowControls:CWCSimpleButton>
+  </Grid>
+</UserControl>

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dx:ThemedWindow x:Class="ArmSoft.SME.Trade.UI.CustomUIElements.Windows.PrintPrePaymentTouchWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:coreCommon="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:customWindowControls="clr-namespace:ArmSoft.SME.Core.UI.CustomWindowControls;assembly=ArmSoft.SME.Core.UI" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions;assembly=ArmSoft.SME.Core.UI" xmlns:tradeCommon="clr-namespace:ArmSoft.SME.Trade.Common;assembly=ArmSoft.SME.Trade.Common" xmlns:tradeUserControls="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.UserControls" Title="{x:Static tradeCommon:Resources.PrintECRPrepayment}" Width="560" Height="600" MinWidth="540" MinHeight="580" Style="{StaticResource TouchModeBaseThemedWindowStyle}" WindowStartupLocation="CenterOwner" xmlns:windows="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.Windows" KeyDown="PrintPrePaymentTouchWindow_KeyDown">
+  <Grid Style="{StaticResource TouchModeSingleWindowContainerGridStyle}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="auto" />
+    </Grid.RowDefinitions>
+    <Grid Row="0" Style="{StaticResource TouchModeBaseContainerGridStyle}">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextBlockRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextBlockRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextBlockRowDefintionStyle}" />
+      </Grid.RowDefinitions>
+      <StackPanel Grid.Row="0" Style="{StaticResource TouchModeHorizontalStackPanelStyle}">
+        <TextBlock Name="TB_CardCaption" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{Binding Converter={StaticResource TextWithTwoDotsConverter}, ConverterParameter={x:Static tradeCommon:Resources.CardCapitalLetter}}" />
+        <TextBlock Name="TB_CardNumber" Style="{StaticResource TouchModePrimaryTextBlockStyle}" />
+      </StackPanel>
+      <StackPanel Grid.Row="2" Style="{StaticResource TouchModeHorizontalStackPanelStyle}">
+        <TextBlock Name="TB_CardHolderCaption" Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{Binding Converter={StaticResource TextWithTwoDotsConverter}, ConverterParameter={x:Static coreCommon:Resources.Name}}" />
+        <TextBlock Name="TB_CardHolderName" Grid.Row="1" Style="{StaticResource TouchModePrimaryTextBlockStyle}" />
+      </StackPanel>
+      <StackPanel Grid.Row="4" Style="{StaticResource TouchModeHorizontalStackPanelStyle}">
+        <TextBlock Name="TB_PartSummaCaption" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{Binding Converter={StaticResource TextWithTwoDotsConverter}, ConverterParameter={x:Static tradeCommon:Resources.PartnerRem}}" />
+        <TextBlock Name="TB_PartSumma" Style="{StaticResource TouchModePrimaryTextBlockStyle}" />
+      </StackPanel>
+    </Grid>
+    <Grid Name="TouchPadPanelGrid" Row="1" Style="{StaticResource TouchModeBaseContainerGridStyle}">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+      </Grid.RowDefinitions>
+      <Grid Row="0" Column="0" ColumnSpan="9" Style="{StaticResource TouchModeBaseContainerGridStyle}">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Style="{StaticResource TouchModeInsideControlRadioButtonsColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource TouchModeInsideControlRadioButtonsColumnDefintionStyle}" />
+        </Grid.ColumnDefinitions>
+        <RadioButton Name="CashMode" Grid.Column="0" GroupName="PrintMode" IsChecked="True" Style="{StaticResource TouchModeTabModeRadioButtonStyle}" Checked="CashMode_Checked">
+          <TextBlock Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.CashPaymentForPrint}" />
+        </RadioButton>
+        <RadioButton Name="NonCashMode" Grid.Column="1" GroupName="PrintMode" Style="{StaticResource TouchModeTabModeRadioButtonStyle}" Checked="NonCashMode_Checked">
+          <TextBlock Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.PlasticCartPaymentDialog}" />
+        </RadioButton>
+      </Grid>
+      <dxe:TextEdit Name="TE_Code" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="9" Style="{StaticResource TouchModeSearchTextEditStyle}" />
+      <tradeUserControls:NumericTouchPadControl ButtonClick="NumericTouchPadButton_Click" Grid.Row="4" Grid.RowSpan="9" Grid.Column="0" Grid.ColumnSpan="5" RedesignedHideLastRow="False" />
+      <customWindowControls:CWCSimpleButton Name="BankCardWithPOS1" Grid.Row="4" Grid.Column="6" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="POSTerminalButton_Click">
+        <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="POS_N1" Grid.Row="0" Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.POS_N}" />
+          <TextBlock Name="POS1Caption" Grid.Row="1" Style="{StaticResource TouchModePrimaryHideableTextBlockStyle}" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+      <customWindowControls:CWCSimpleButton Name="BankCardWithPOS2" Grid.Row="6" Grid.Column="6" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="POSTerminalButton_Click">
+        <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="POS_N2" Grid.Row="0" Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.POS_N}" />
+          <TextBlock Name="POS2Caption" Grid.Row="1" Style="{StaticResource TouchModePrimaryHideableTextBlockStyle}" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+      <customWindowControls:CWCSimpleButton Name="BankCardWithPOS3" Grid.Row="8" Grid.Column="6" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="POSTerminalButton_Click">
+        <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="POS_N3" Grid.Row="0" Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.POS_N}" />
+          <TextBlock Name="POS3Caption" Grid.Row="1" Style="{StaticResource TouchModePrimaryHideableTextBlockStyle}" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+      <customWindowControls:CWCSimpleButton Name="BankCardWithPOS4" Grid.Row="10" Grid.Column="6" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="POSTerminalButton_Click">
+        <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="POS_N4" Grid.Row="0" Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.POS_N}" />
+          <TextBlock Name="POS4Caption" Grid.Row="1" Style="{StaticResource TouchModePrimaryHideableTextBlockStyle}" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+      <customWindowControls:CWCSimpleButton Name="ButtonOK1" Grid.Row="4" Grid.RowSpan="3" Grid.Column="8" IsDefault="True" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="OKButton_Click">
+        <Grid Style="{StaticResource TouchModeButtonWithBottomLineContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonContentRowDefintion}" />
+            <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonBottomLineRowDefintion}" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="TB_ButtonOK1" Grid.Row="0" Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.PrintCheck}" />
+          <dx:DXImage Name="OKButtonImage" Grid.Row="0" Style="{StaticResource TouchModeInsideButtonImageStyle}" Visibility="Collapsed" Source="{Binding Converter={StaticResource ImageByNameConverter}, ConverterParameter=accept_32_bold.svg}" />
+          <Rectangle Style="{StaticResource TouchModeApplyButtonBottomLineRectangleStyle}" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+      <customWindowControls:CWCSimpleButton Name="CardButton" Grid.Row="8" Grid.Column="8" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="CardButton_Click">
+        <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="CardButtonCaption1" Grid.Row="0" Style="{StaticResource TouchModeSecondarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.DiscountBonusCard}" />
+          <TextBlock Name="CardButtonCaption2" Grid.Row="1" Style="{StaticResource TouchModeSecondarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.Card}" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+      <customWindowControls:CWCSimpleButton Name="ClearCardButton" Grid.Row="10" Grid.Column="8" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ClearCardButton_Click">
+        <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <TextBlock Name="ClearCardButtonCaption1" Grid.Row="0" Style="{StaticResource TouchModeSecondaryClearButtonTextBlockStyle}" Text="{x:Static coreCommon:Resources.ClearWord}" />
+          <TextBlock Name="ClearCardButtonCaption2" Grid.Row="1" Style="{StaticResource TouchModeSecondaryClearButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.TheCard}" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+      <customWindowControls:CWCSimpleButton Name="ExitButton" Grid.Row="12" Grid.Column="8" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ExitButton_Click">
+        <Grid Style="{StaticResource TouchModeButtonWithBottomLineContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonContentRowDefintion}" />
+            <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonBottomLineRowDefintion}" />
+          </Grid.RowDefinitions>
+          <dx:DXImage Style="{StaticResource TouchModeInsideButtonImageStyle}" Source="{Binding Converter={StaticResource ImageByNameConverter}, ConverterParameter=cancel_32_bold.svg}" />
+          <Rectangle Style="{StaticResource TouchModeCancelButtonBottomLineRectangleStyle}" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+    </Grid>
+    <Grid Row="2" Style="{StaticResource TouchModeBaseContainerGridStyle}">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextBlockRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextBlockRowDefintionStyle}" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="POSTerminal" Grid.Row="0" VerticalAlignment="Bottom" Style="{StaticResource TouchModePrimaryTextBlockStyle}" />
+      <TextBlock Name="AcquaringInfo" Grid.Row="2" VerticalAlignment="Top" Style="{StaticResource TouchModeImportantPrimaryTextBlockStyle}" />
+    </Grid>
+  </Grid>
+</dx:ThemedWindow>

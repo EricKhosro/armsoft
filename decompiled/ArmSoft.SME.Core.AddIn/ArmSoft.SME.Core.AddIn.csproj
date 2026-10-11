@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>ArmSoft.SME.Core.AddIn</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.Identity.Client">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\bin\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\bin\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Text.Json">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\bin\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.Cloud.Client">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\bin\ArmSoft.Cloud.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Text.Encodings.Web">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\bin\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

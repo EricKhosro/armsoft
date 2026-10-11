@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Trade.UI.MetroNavigation.MetroNavigationPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:coreconv="clr-namespace:ArmSoft.SME.Core.UI.Converters;assembly=ArmSoft.SME.Core.UI" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:metronavigation="clr-namespace:ArmSoft.SME.Trade.UI.MetroNavigation;assembly=ArmSoft.SME.Trade.UI">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <coreconv:FontFamilyConverter x:Key="GetSystemFont" />
+      <DataTemplate x:Key="ListViewWithImage">
+        <Grid Background="#FFFFFFFF">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+          </Grid.ColumnDefinitions>
+          <dx:DXImage Grid.Column="0" HorizontalAlignment="Center" Source="{Binding Image}" />
+          <TextBlock Grid.Column="1" Text="{Binding Header}" />
+        </Grid>
+      </DataTemplate>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <ScrollViewer Name="sp" Grid.Column="0">
+      <dxlc:FlowLayoutControl Name="FlowList" BreakFlowToFit="False" ItemSpace="12" LayerSpace="12" MaximizedElementPosition="Left" Orientation="Horizontal" ShowLayerSeparators="False">
+        <dxlc:FlowLayoutControl.ItemTemplate>
+          <DataTemplate>
+            <dxlc:GroupBox Width="200" Height="250" Padding="0" Cursor="Hand" FontSize="14" MaximizeElementVisibility="Collapsed" Content="{Binding}" FontFamily="{Binding Converter={StaticResource GetSystemFont}}" Header="{Binding}" />
+          </DataTemplate>
+        </dxlc:FlowLayoutControl.ItemTemplate>
+      </dxlc:FlowLayoutControl>
+    </ScrollViewer>
+  </Grid>
+</UserControl>

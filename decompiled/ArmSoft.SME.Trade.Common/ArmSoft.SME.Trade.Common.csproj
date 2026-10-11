@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>ArmSoft.SME.Trade.Common</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="ArmSoft.SME.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ardalis.SmartEnum">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Ardalis.SmartEnum.StrongName\8.2.1\lib\net10.0\Ardalis.SmartEnum.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

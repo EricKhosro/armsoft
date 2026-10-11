@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dx:ThemedWindow x:Class="ArmSoft.SME.Trade.UI.CustomUIElements.Windows.NewBuyerWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:coreCommon="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:customWindowControls="clr-namespace:ArmSoft.SME.Core.UI.CustomWindowControls;assembly=ArmSoft.SME.Core.UI" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions;assembly=ArmSoft.SME.Core.UI" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:tradeCommon="clr-namespace:ArmSoft.SME.Trade.Common;assembly=ArmSoft.SME.Trade.Common" xmlns:tradeUserControls="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.UserControls" Title="{x:Static tradeCommon:Resources.NewBuyer}" Width="800" Height="760" MinWidth="800" MinHeight="760" Style="{StaticResource TouchModeBaseThemedWindowStyle}" WindowStartupLocation="CenterOwner" xmlns:windows="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.Windows" PreviewKeyDown="ThemedWindow_PreviewKeyDown">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveBorderBrush}" Color="{ext:ThemeBasedNotBrushedColor #206f37#206f37}" />
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Style="{StaticResource TouchModeSingleWindowContainerGridStyle}">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Style="{StaticResource TouchModeWithFieldsWindowFieldsColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryFieldsSeparatorLineColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModeWithFieldsWindowNumPadColumnDefintionStyle}" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModeImportantEmptyContentRowDefintionStyle}" />
+    </Grid.RowDefinitions>
+    <Grid Row="0" Column="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="TB_Name" Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static coreCommon:Resources.Name}" />
+      <customWindowControls:CWCTextEditControl Name="TE_Name" Grid.Row="1" MaxLength="50" Style="{StaticResource TouchModePrimaryTextEditStyle}" LostFocus="TE_Name_LostFocus" />
+    </Grid>
+    <Grid Row="2" Column="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="TB_Phone" Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static coreCommon:Resources.PhoneNumber}" />
+      <customWindowControls:CWCTextEditControl Name="TE_PhoneNumber" Grid.Row="1" MaskShowPlaceHolders="False" MaxLength="50" Style="{StaticResource TouchModePrimaryTextEditStyle}" LostFocus="TE_PhoneNumber_LostFocus" />
+    </Grid>
+    <Grid Row="4" Column="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="TB_EmailAddress" Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static coreCommon:Resources.Email}" />
+      <customWindowControls:CWCTextEditControl Name="TE_EmailAddress" Grid.Row="1" Mask="" MaskShowPlaceHolders="False" MaxLength="50" Style="{StaticResource TouchModePrimaryTextEditStyle}" LostFocus="TE_EmailAddress_LostFocus" />
+    </Grid>
+    <Grid Row="6" Column="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="TB_DiscountCardCode" Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static tradeCommon:Resources.DiscountCardCode}" />
+      <customWindowControls:CWCTextEditControl Name="TE_CardCode" Grid.Row="1" MaxLength="20" Style="{StaticResource TouchModePrimaryTextEditStyle}" LostFocus="TE_CardCode_LostFocus" />
+    </Grid>
+    <Grid Row="8" Column="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static coreCommon:Resources.Group}" />
+      <Grid Row="1">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Style="{StaticResource TouchModeWithButtonFieldColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource TouchModePrimaryFieldsSeparatorLineColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource TouchModeWithFieldButtonColumnDefintionStyle}" />
+        </Grid.ColumnDefinitions>
+        <dxe:TextEdit Name="TE_Group" Grid.Column="0" Style="{StaticResource TouchModePrimaryReadonlyTextEditStyle}" />
+        <customWindowControls:CWCSimpleButton Name="BE_Group" Grid.Column="2" Style="{StaticResource TouchModeWithFieldButtonStyle}" Click="BE_Group_Click" LostFocus="BE_Group_LostFocus">
+          <TextBlock Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static coreCommon:Resources.ChooseWord}" />
+        </customWindowControls:CWCSimpleButton>
+      </Grid>
+    </Grid>
+    <Grid Row="10" Column="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="TB_Birthday" Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static coreCommon:Resources.DateOfBirth}" />
+      <customWindowControls:CWCTextEditControl Name="TE_Birthday" Grid.Row="1" NullText="{x:Static coreCommon:Resources.DateFormat}" ShowNullText="True" Style="{StaticResource TouchModePrimaryTextEditStyle}" LostFocus="TE_Birthday_LostFocus" />
+    </Grid>
+    <Grid Row="12" Column="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="TB_DiscountPercent" Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static coreCommon:Resources.DiscountPercent}" />
+      <customWindowControls:CWCTextEditControl Name="DiscountPercentTextEdit" Grid.Row="1" Style="{StaticResource TouchModePrimaryTextEditStyle}" LostFocus="DiscountPercentTextEdit_LostFocus" />
+    </Grid>
+    <Grid Row="14" Column="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <dxe:ToggleSwitch Name="TW_IsBonusCard" Grid.Row="1" Style="{StaticResource TouchModePrimaryToggleSwitchStyle}" Checked="TW_IsBonusCard_Checked" Unchecked="TW_IsBonusCard_Unchecked" />
+      <TextBlock Name="TB_ISBonusCard" Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static tradeCommon:Resources.BonusCard}" />
+    </Grid>
+    <Grid Row="16" Column="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="TB_BonusPercent" Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static tradeCommon:Resources.Bonus}" />
+      <customWindowControls:CWCTextEditControl Name="TE_BonusPercent" Grid.Row="1" Style="{StaticResource TouchModePrimaryTextEditStyle}" LostFocus="TE_BonusPercent_LostFocus" />
+    </Grid>
+    <Grid Row="0" RowSpan="9" Column="3">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+      </Grid.RowDefinitions>
+      <tradeUserControls:NumericTouchPadControl ButtonClick="NumericTouchPadControlButton_Click" Grid.Row="0" Grid.RowSpan="9" Grid.Column="0" Grid.ColumnSpan="5" RedesignedHideLastRow="false" />
+      <customWindowControls:CWCSimpleButton Name="OKButton" Grid.Row="0" Grid.RowSpan="3" Grid.Column="6" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="OKButton_Click">
+        <Grid Style="{StaticResource TouchModeButtonWithBottomLineContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonContentRowDefintion}" />
+            <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonBottomLineRowDefintion}" />
+          </Grid.RowDefinitions>
+          <dx:DXImage Grid.Row="0" Style="{StaticResource TouchModeInsideButtonImageStyle}" Source="{Binding Converter={StaticResource ImageByNameConverter}, ConverterParameter=accept_32_bold.svg}" />
+          <Rectangle Style="{StaticResource TouchModeApplyButtonBottomLineRectangleStyle}" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+      <customWindowControls:CWCSimpleButton Name="TabButton" Grid.Row="4" Grid.Column="6" IsDefault="True" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="TabButton_Click">
+        <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+          <TextBlock Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="Tab" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+      <customWindowControls:CWCSimpleButton Name="ButtonSlash" Grid.Row="6" Grid.Column="6" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="SlashButton_Click">
+        <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+          <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="/" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+      <customWindowControls:CWCSimpleButton Name="ExitButton" Grid.Row="8" Grid.Column="6" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ExitButton_Click">
+        <Grid Style="{StaticResource TouchModeButtonWithBottomLineContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonContentRowDefintion}" />
+            <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonBottomLineRowDefintion}" />
+          </Grid.RowDefinitions>
+          <dx:DXImage Style="{StaticResource TouchModeInsideButtonImageStyle}" Source="{Binding Converter={StaticResource ImageByNameConverter}, ConverterParameter=cancel_32_bold.svg}" />
+          <Rectangle Style="{StaticResource TouchModeCancelButtonBottomLineRectangleStyle}" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+    </Grid>
+  </Grid>
+</dx:ThemedWindow>

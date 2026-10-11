@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Core.UI.Extensions.ExtensionEdit" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:common="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:controls="clr-namespace:ArmSoft.SME.Core.UI.Controls" xmlns:extensions="clr-namespace:ArmSoft.SME.Core.UI.Extensions">
+  <dxlc:LayoutControl Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <dxlc:LayoutGroup Header="{x:Static common:Resources.Fields}" View="GroupBox" IsCollapsible="True">
+      <controls:DocumentGridControl x:Name="_extensionFieldsGrid" MinHeight="150" />
+    </dxlc:LayoutGroup>
+    <dxlc:LayoutGroup Name="_extensionTabsLayout" Header="{x:Static common:Resources.Pages}" View="GroupBox" IsCollapsible="True">
+      <controls:DocumentGridControl x:Name="_extensionTabsGrid" MinHeight="150" />
+    </dxlc:LayoutGroup>
+    <dxlc:LayoutGroup Header="{x:Static common:Resources.Groups}" View="GroupBox" IsCollapsible="True">
+      <controls:DocumentGridControl x:Name="_extensionGroupsGrid" MinHeight="150" />
+    </dxlc:LayoutGroup>
+  </dxlc:LayoutControl>
+</UserControl>

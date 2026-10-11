@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<baseDocWindows:BasePOSSaleWindow x:Class="ArmSoft.SME.Trade.UI.Documents.Goods.SamplePOSSaleWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:baseDocWindows="clr-namespace:ArmSoft.SME.Trade.UI.Documents.Base" xmlns:coreCommon="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:coreConverters="clr-namespace:ArmSoft.SME.Core.UI.Converters;assembly=ArmSoft.SME.Core.UI" xmlns:customWindowControls="clr-namespace:ArmSoft.SME.Core.UI.CustomWindowControls;assembly=ArmSoft.SME.Core.UI" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxgt="http://schemas.devexpress.com/winfx/2008/xaml/grid/themekeys" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions;assembly=ArmSoft.SME.Core.UI" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:tradeCommon="clr-namespace:ArmSoft.SME.Trade.Common;assembly=ArmSoft.SME.Trade.Common" xmlns:tradeUserControls="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.UserControls" x:Name="POSSaleWindow" Activated="ModernSaleWindow_Activated" Closed="ModernSaleWindow_Closed" PreviewKeyDown="SaleWindow_PreviewKeyDown" BorderThickness="2" FontFamily="Tahoma" ResizeMode="NoResize" WindowState="Normal" WindowStyle="None" xmlns:goods="clr-namespace:ArmSoft.SME.Trade.UI.Documents.Goods" Background="{ext:ThemeBasedColor #f8f8f8#212121}" BorderBrush="{ext:ThemeBasedColor #217346#606862}">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <Style x:Key="GridCellTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextBlock.Padding" Value="2,2,2,2" />
+      </Style>
+      <Style x:Key="GridColumnTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Text" Value="Right" />
+      </Style>
+      <Style x:Key="CellStyle" TargetType="{x:Type dxg:LightweightCellEditor}" BasedOn="{StaticResource {dxgt:GridRowThemeKey ResourceKey=LightweightCellStyle}}">
+        <Setter Property="FrameworkElement.Tag" Value="{Binding Column.Name}" />
+      </Style>
+      <Style x:Key="AutoFilterCellStyle" TargetType="{x:Type dxg:FilterCellContentPresenter}" BasedOn="{StaticResource {dxgt:GridRowThemeKey ResourceKey=CellStyle}}">
+        <Setter Property="FrameworkElement.Tag" Value="{Binding Column.Name}" />
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Name="WholePageGrid">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="25" />
+    </Grid.RowDefinitions>
+    <Grid Name="MainGrid" Row="0" Margin="6,4">
+      <tradeUserControls:SamplePOSSaleHeaderUserControl x:Name="SamplePOSSaleHeader" ButtonClick="SamplePOSSaleHeader_ButtonClick" />
+      <dxg:GridControl Name="MaterialsGridControl" AllowLiveDataShaping="True" AutoGenerateColumns="None" SelectionMode="Cell">
+        <FrameworkElement.Resources>
+          <ResourceDictionary>
+            <coreConverters:DeletedRowTextStyle x:Key="DeletedRowTextStyle" />
+            <coreConverters:DeletedClickableRowTextStyle x:Key="DeletedClickableRowTextStyle" />
+            <ControlTemplate x:Key="ColumnTemplate">
+              <TextBlock Name="PART_Editor" Style="{StaticResource GridCellTextBlockStyle}" TextDecorations="{Binding Path=DataContext.RowData.Row.IsDeleted, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeletedRowTextStyle}}" />
+            </ControlTemplate>
+            <ControlTemplate x:Key="ClickableColumnTemplate">
+              <TextBlock Name="PART_Editor" Style="{StaticResource GridCellTextBlockStyle}" Foreground="{ext:ThemeBasedColor MediumBlue#58b8fe}" TextDecorations="{Binding Path=DataContext.RowData.Row.IsDeleted, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeletedClickableRowTextStyle}}" />
+            </ControlTemplate>
+          </ResourceDictionary>
+        </FrameworkElement.Resources>
+        <dxg:GridControl.View>
+          <dxg:TableView Name="MaterialsGridTableView" dx:ScrollBarExtensions.ScrollBarMode="TouchOverlap" AllowBestFit="True" AllowColumnFiltering="False" AllowColumnMoving="False" AllowEditing="False" AllowFormatConditionFiltersMenu="False" AllowGrouping="False" AllowLeaveFocusOnTab="True" AllowMoveColumnToDropArea="False" AllowSorting="False" AutoFilterRowCellStyle="{StaticResource AutoFilterCellStyle}" AutoWidth="True" CellStyle="{StaticResource CellStyle}" EditorButtonShowMode="ShowForFocusedCell" EditorShowMode="MouseDown" EnterMoveNextColumn="True" IsGroupPanelMenuEnabled="False" IsRowCellMenuEnabled=" True" IsTotalSummaryMenuEnabled="False" NavigationStyle="Row" NewItemRowPosition="None" RowMinHeight="35" ShowEmptyText="True" ShowFocusedRectangle="False" ShowGroupPanel="False" ShowGroupedColumns="False" ShowTotalSummary="False" ShowVerticalLines="False" UseEvenRowBackground="False" VerticalScrollbarVisibility="Auto">
+            <dxg:DataViewBase.RuntimeLocalizationStrings>
+              <dxg:GridRuntimeStringCollection>
+                <dxg:RuntimeStringIdInfo Id="NoRecords" Value="{x:Static tradeCommon:Resources.ValidateEmptyMtList}" />
+              </dxg:GridRuntimeStringCollection>
+            </dxg:DataViewBase.RuntimeLocalizationStrings>
+          </dxg:TableView>
+        </dxg:GridControl.View>
+        <dxg:GridColumn Name="ItemCode" Width="50" DisplayTemplate="{StaticResource ColumnTemplate}" FieldName="ItemCode" Header="Կոդ">
+          <dxg:BaseColumn.HeaderTemplate>
+            <DataTemplate>
+              <TextBlock Style="{StaticResource GridColumnTextBlockStyle}" Text="{x:Static coreCommon:Resources.Code}" />
+            </DataTemplate>
+          </dxg:BaseColumn.HeaderTemplate>
+        </dxg:GridColumn>
+        <dxg:GridColumn Name="ItemName" Width="200" DisplayTemplate="{StaticResource ColumnTemplate}" FieldName="ItemName" Header="Անվանում">
+          <dxg:BaseColumn.HeaderTemplate>
+            <DataTemplate>
+              <TextBlock Style="{StaticResource GridColumnTextBlockStyle}" Text="{x:Static coreCommon:Resources.Name}" />
+            </DataTemplate>
+          </dxg:BaseColumn.HeaderTemplate>
+        </dxg:GridColumn>
+        <dxg:GridColumn Name="Quantity" Width="60" DisplayTemplate="{StaticResource ClickableColumnTemplate}" FieldName="Quantity">
+          <dxg:ColumnBase.EditSettings>
+            <dxe:TextEditSettings AllowNullInput="False" AllowSpinOnMouseWheel="False" Mask="#,###,###,###,##0.000" MaskType="Numeric" MaskUseAsDisplayFormat="True" ValidateOnTextInput="False" />
+          </dxg:ColumnBase.EditSettings>
+          <dxg:BaseColumn.HeaderTemplate>
+            <DataTemplate>
+              <TextBlock Style="{StaticResource GridColumnTextBlockStyle}" Text="{x:Static coreCommon:Resources.Quantity}" />
+            </DataTemplate>
+          </dxg:BaseColumn.HeaderTemplate>
+        </dxg:GridColumn>
+        <dxg:GridColumn Name="Price" Width="80" DisplayTemplate="{StaticResource ClickableColumnTemplate}" FieldName="Price">
+          <dxg:ColumnBase.EditSettings>
+            <dxe:TextEditSettings AllowNullInput="False" AllowSpinOnMouseWheel="False" Mask="#,###,###,###,##0.00" MaskType="Numeric" MaskUseAsDisplayFormat="True" ValidateOnTextInput="False" />
+          </dxg:ColumnBase.EditSettings>
+          <dxg:BaseColumn.HeaderTemplate>
+            <DataTemplate>
+              <TextBlock Style="{StaticResource GridColumnTextBlockStyle}" Text="{x:Static coreCommon:Resources.Price}" />
+            </DataTemplate>
+          </dxg:BaseColumn.HeaderTemplate>
+        </dxg:GridColumn>
+        <dxg:GridColumn Name="Summa" Width="80" DisplayTemplate="{StaticResource ClickableColumnTemplate}" FieldName="Summa">
+          <dxg:ColumnBase.EditSettings>
+            <dxe:TextEditSettings AllowNullInput="False" AllowSpinOnMouseWheel="False" Mask="#,###,###,###,##0.00" MaskType="Numeric" MaskUseAsDisplayFormat="True" ValidateOnTextInput="False" />
+          </dxg:ColumnBase.EditSettings>
+          <dxg:BaseColumn.HeaderTemplate>
+            <DataTemplate>
+              <TextBlock Style="{StaticResource GridColumnTextBlockStyle}" Text="{x:Static tradeCommon:Resources.DiscountedSumm}" />
+            </DataTemplate>
+          </dxg:BaseColumn.HeaderTemplate>
+        </dxg:GridColumn>
+        <dxg:GridColumn Name="DeleteRowButton" Width="70" MinWidth="70" MaxWidth="70" FieldName="DeleteButton" Header=" ">
+          <dxg:ColumnBase.CellTemplate>
+            <DataTemplate>
+              <Button Width="40" Click="OnDeleteRowButtonClick">
+                <FrameworkElement.Style>
+                  <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                      <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                          <StackPanel Name="BtnStackPanel">
+                            <ContentPresenter Width="{TemplateBinding FrameworkElement.Width}" Height="{TemplateBinding FrameworkElement.Width}" />
+                          </StackPanel>
+                        </ControlTemplate>
+                      </Setter.Value>
+                    </Setter>
+                  </Style>
+                </FrameworkElement.Style>
+                <dx:DXImage Source="{ext:ASImage DeleteRowButton_24.svg}" />
+              </Button>
+            </DataTemplate>
+          </dxg:ColumnBase.CellTemplate>
+        </dxg:GridColumn>
+      </dxg:GridControl>
+    </Grid>
+    <tradeUserControls:SamplePOSSaleStatusBarUserControl x:Name="StatusBar" Grid.Row="1" />
+  </Grid>
+</baseDocWindows:BasePOSSaleWindow>

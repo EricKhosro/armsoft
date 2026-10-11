@@ -1,0 +1,13 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 26.51L5.575 30.5H28.5V16.5H15.5V3.5H1.5V26.51Z" fill="#F3D7FD" class="Purple_Light"/>
+<path d="M1 3.5V26.51V26.72L1.15 26.86L5.225 30.86L5.371 31H5.575H28.5H29V30.5V16.5H28V30H5.779L2 26.3V4H15.5V3H1.5H1V3.5Z" fill="#9900CC" class="Purple_Dark"/>
+<path d="M8.5 30.5H21.5V21.5H8.5V30.5Z" fill="white" class="White"/>
+<path d="M8 21.5V30.5V31H8.5H21.5H22V30.5V21.5V21H21.5H8.5H8V21.5ZM21 22V30H9V22H21Z" fill="#9900CC" class="Purple_Dark"/>
+<path d="M11 28H12V24H11V28Z" fill="#878787"/>
+<path d="M5.5 15.5H15.5V3.5H5.5V15.5Z" fill="white" class="White"/>
+<path d="M5 3.5V15.5V16H5.5H15.5V15H6V4H15.5V3H5.5H5V3.5Z" fill="#9900CC" class="Purple_Dark"/>
+<path d="M31.5 0.5H17.5V14.5H31.5V0.5Z" fill="white" class="White"/>
+<path d="M31.5 0.5H17.5V14.5H31.5V0.5Z" fill="none" stroke="#212121" class="Black" stroke-miterlimit="10"/>
+<path d="M20 3.5H29H20ZM20 5.5H29H20ZM20 7.5H29H20ZM20 9.5H29H20ZM20 11.5H29H20Z" fill="white" class="White"/>
+<path d="M20 3.5H29M20 5.5H29M20 7.5H29M20 9.5H29M20 11.5H29" stroke="#0070CB" class="Blue_Dark2" stroke-miterlimit="10"/>
+</svg>

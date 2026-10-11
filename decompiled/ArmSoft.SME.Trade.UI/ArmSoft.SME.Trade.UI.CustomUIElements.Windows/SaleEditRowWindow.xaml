@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dx:ThemedWindow x:Class="ArmSoft.SME.Trade.UI.CustomUIElements.Windows.SaleEditRowWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:coreCommon="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:customWindowControls="clr-namespace:ArmSoft.SME.Core.UI.CustomWindowControls;assembly=ArmSoft.SME.Core.UI" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions;assembly=ArmSoft.SME.Core.UI" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:tradeCommon="clr-namespace:ArmSoft.SME.Trade.Common;assembly=ArmSoft.SME.Trade.Common" xmlns:tradeUserControls="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.UserControls" Title="{x:Static coreCommon:Resources.Edit}" Width="680" Height="720" MinWidth="680" MinHeight="720" Style="{StaticResource TouchModeBaseThemedWindowStyle}" WindowStartupLocation="CenterOwner" xmlns:windows="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.Windows" PreviewKeyDown="ThemedWindow_PreviewKeyDown">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <Style x:Key="MarkingDXGridControlStyle" TargetType="{x:Type dxg:GridControl}">
+        <Setter Property="dxg:DataControlBase.SelectionMode" Value="Cell" />
+        <Setter Property="dxg:DataControlBase.AutoGenerateColumns" Value="None" />
+      </Style>
+      <Style x:Key="MarkingDXGridTableViewStyle" TargetType="{x:Type dxg:TableView}">
+        <Setter Property="dxg:TableView.AllowBestFit" Value="True" />
+        <Setter Property="dxg:DataViewBase.AllowColumnFiltering" Value="True" />
+        <Setter Property="dxg:DataViewBase.AllowColumnMoving" Value="False" />
+        <Setter Property="dxg:DataViewBase.AllowEditing" Value="False" />
+        <Setter Property="dxg:GridViewBase.AllowGrouping" Value="False" />
+        <Setter Property="dxg:DataViewBase.AllowLeaveFocusOnTab" Value="True" />
+        <Setter Property="dxg:DataViewBase.AllowMoveColumnToDropArea" Value="False" />
+        <Setter Property="dxg:DataViewBase.AllowSorting" Value="False" />
+        <Setter Property="dxg:TableView.AutoWidth" Value="True" />
+        <Setter Property="dxg:DataViewBase.EditorButtonShowMode" Value="ShowForFocusedCell" />
+        <Setter Property="dxg:DataViewBase.EditorShowMode" Value="MouseDown" />
+        <Setter Property="dxg:DataViewBase.EnterMoveNextColumn" Value="True" />
+        <Setter Property="dxg:GridViewBase.IsGroupPanelMenuEnabled" Value="False" />
+        <Setter Property="dxg:DataViewBase.IsRowCellMenuEnabled" Value="True" />
+        <Setter Property="dxg:DataViewBase.IsTotalSummaryMenuEnabled" Value="False" />
+        <Setter Property="dxg:DataViewBase.NavigationStyle" Value="Row" />
+        <Setter Property="dxg:TableView.NewItemRowPosition" Value="None" />
+        <Setter Property="dxg:TableView.RowMinHeight" Value="30" />
+        <Setter Property="dxg:DataViewBase.ShowFocusedRectangle" Value="False" />
+        <Setter Property="dxg:GridViewBase.ShowGroupPanel" Value="False" />
+        <Setter Property="dxg:GridViewBase.ShowGroupedColumns" Value="False" />
+        <Setter Property="dxg:DataViewBase.ShowTotalSummary" Value="False" />
+        <Setter Property="dxg:TableView.UseEvenRowBackground" Value="False" />
+        <Setter Property="dxg:TableView.VerticalScrollbarVisibility" Value="Auto" />
+      </Style>
+      <Style x:Key="CloseImageButtonColumnStyle" TargetType="{x:Type dxg:GridColumn}">
+        <Setter Property="dxg:BaseColumn.Width" Value="70" />
+        <Setter Property="dxg:BaseColumn.MinWidth" Value="70" />
+        <Setter Property="dxg:BaseColumn.MaxWidth" Value="70" />
+        <Setter Property="dxg:BaseColumn.Header" Value=" " />
+      </Style>
+      <Style x:Key="MarkingDXGridColumnHeaderTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FrameworkElement.UseLayoutRounding" Value="True" />
+        <Setter Property="Text" Value="Right" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="Bold" />
+      </Style>
+      <Style x:Key="InsideColumnImageButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="40" />
+        <Setter Property="Template">
+          <Setter.Value>
+            <ControlTemplate TargetType="{x:Type Button}">
+              <StackPanel Name="BtnStackPanel">
+                <ContentPresenter Width="{TemplateBinding FrameworkElement.Width}" Height="{TemplateBinding FrameworkElement.Width}" />
+              </StackPanel>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+      <SolidColorBrush x:Key="{dxt:ThemedWindowThemeKey ResourceKey=WindowActiveBorderBrush}" Color="{ext:ThemeBasedNotBrushedColor #206f37#206f37}" />
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Style="{StaticResource TouchModeSingleWindowContainerGridStyle}">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Style="{StaticResource TouchModeWithFieldsWindowFieldsColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryFieldsSeparatorLineColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModeWithFieldsWindowNumPadColumnDefintionStyle}" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditWithCaptionRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModeImportantEmptyContentRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextEditsSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModeFooterImportantInfoRowDefintionStyle}" />
+    </Grid.RowDefinitions>
+    <Grid Row="0" Column="0" ColumnSpan="3">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static tradeCommon:Resources.MaterialOrService}" />
+      <dxe:TextEdit Name="TE_Item" Grid.Row="1" Style="{StaticResource TouchModePrimaryReadonlyTextEditStyle}" />
+    </Grid>
+    <Grid Row="2" Column="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static coreCommon:Resources.Quantity}" />
+      <TextBlock Name="ScaleProcessText" Grid.Row="0" HorizontalAlignment="Right" Style="{StaticResource TouchModePrimaryTextBlockStyle}" />
+      <Grid Row="1">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Style="{StaticResource TouchModeWithFieldOperationButtonColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource TouchModePrimaryFieldsSeparatorLineColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource TouchModeWithButtonFieldColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource TouchModePrimaryFieldsSeparatorLineColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource TouchModeWithFieldOperationButtonColumnDefintionStyle}" />
+        </Grid.ColumnDefinitions>
+        <customWindowControls:CWCSimpleButton Name="QuantityDecreaseButton" Grid.Column="0" IsTabStop="False" Style="{StaticResource TouchModeWithFieldButtonStyle}" Click="QuantityDecreaseButton_Click">
+          <TextBlock Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="-" />
+        </customWindowControls:CWCSimpleButton>
+        <dxe:PopupCalcEdit Name="QuantityTextEdit" Grid.Column="2" Mask="#,###,###,###,##0.000" Precision="3" Style="{StaticResource TouchModePrimaryPopupCalcEditStyle}" EditValueChanged="QuantityTextEdit_EditValueChanged" GotFocus="QuantityTextEdit_GotFocus" />
+        <customWindowControls:CWCSimpleButton Name="QuantityIncreaseButton" Grid.Column="4" IsTabStop="False" Style="{StaticResource TouchModeWithFieldButtonStyle}" Click="QuantityIncreaseButton_Click">
+          <TextBlock Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="+" />
+        </customWindowControls:CWCSimpleButton>
+      </Grid>
+    </Grid>
+    <Grid Row="4" Column="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="SalePriceTitleTextBlock" Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static coreCommon:Resources.MTTAccSalePrice}" />
+      <dxe:PopupCalcEdit Name="PriceTextEdit" Grid.Row="1" Style="{StaticResource TouchModePrimaryPopupCalcEditStyle}" EditValueChanged="PriceTextEdit_EditValueChanged" GotFocus="PriceTextEdit_GotFocus" />
+    </Grid>
+    <Grid Row="6" Column="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static coreCommon:Resources.Unit}" />
+      <Grid Row="1">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Style="{StaticResource TouchModeWithButtonFieldColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource TouchModePrimaryFieldsSeparatorLineColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource TouchModeWithFieldButtonColumnDefintionStyle}" />
+        </Grid.ColumnDefinitions>
+        <dxe:TextEdit Name="TE_Unit" Grid.Column="0" Style="{StaticResource TouchModePrimaryReadonlyTextEditStyle}" />
+        <customWindowControls:CWCSimpleButton Name="UnitButton" Grid.Column="2" Style="{StaticResource TouchModeWithFieldButtonStyle}" Click="UnitButton_Click">
+          <TextBlock Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static coreCommon:Resources.ChooseWord}" />
+        </customWindowControls:CWCSimpleButton>
+      </Grid>
+    </Grid>
+    <Grid Row="8" Column="0">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="SummTextEditLabel" Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static tradeCommon:Resources.DiscountedSumm}" />
+      <dxe:PopupCalcEdit Name="SummTextEdit" Grid.Row="1" Style="{StaticResource TouchModePrimaryPopupCalcEditStyle}" EditValueChanged="SummTextEdit_EditValueChanged" GotFocus="SummTextEdit_GotFocus" />
+    </Grid>
+    <Grid Row="2" RowSpan="7" Column="3">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+        <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+      </Grid.RowDefinitions>
+      <tradeUserControls:NumericTouchPadControl ButtonClick="NumericTouchPadControlButton_Click" Grid.Row="0" Grid.RowSpan="9" Grid.Column="0" Grid.ColumnSpan="5" KeyboardNavigation.TabNavigation="None" RedesignedHideLastRow="False" />
+      <customWindowControls:CWCSimpleButton Name="OKButton" Grid.Row="0" Grid.RowSpan="3" Grid.Column="6" IsDefault="True" IsTabStop="false" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="OKButton_Click">
+        <Grid Style="{StaticResource TouchModeButtonWithBottomLineContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonContentRowDefintion}" />
+            <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonBottomLineRowDefintion}" />
+          </Grid.RowDefinitions>
+          <dx:DXImage Grid.Row="0" Style="{StaticResource TouchModeInsideButtonImageStyle}" Source="{Binding Converter={StaticResource ImageByNameConverter}, ConverterParameter=accept_32_bold.svg}" />
+          <Rectangle Style="{StaticResource TouchModeApplyButtonBottomLineRectangleStyle}" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+      <customWindowControls:CWCSimpleButton Name="TabButton" Grid.Row="4" Grid.RowSpan="3" Grid.Column="6" IsDefault="True" IsTabStop="false" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="TabButton_Click">
+        <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+          <TextBlock Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="Tab" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+      <customWindowControls:CWCSimpleButton Name="ExitButton" Grid.Row="8" Grid.Column="6" IsTabStop="false" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ExitButton_Click">
+        <Grid Style="{StaticResource TouchModeButtonWithBottomLineContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonContentRowDefintion}" />
+            <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonBottomLineRowDefintion}" />
+          </Grid.RowDefinitions>
+          <dx:DXImage Style="{StaticResource TouchModeInsideButtonImageStyle}" Source="{Binding Converter={StaticResource ImageByNameConverter}, ConverterParameter=cancel_32_bold.svg}" />
+          <Rectangle Style="{StaticResource TouchModeCancelButtonBottomLineRectangleStyle}" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+    </Grid>
+    <Grid Row="10" Column="0" ColumnSpan="3">
+      <Grid.RowDefinitions>
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditCaptionRowDefintionStyle}" />
+        <RowDefinition Style="{StaticResource TouchModePrimaryTextEditRowDefintion}" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="TB_Marking" Grid.Row="0" Style="{StaticResource TouchModePrimaryTextBlockStyle}" Text="{x:Static coreCommon:Resources.Marking}" />
+      <Grid Name="MarkingContainerGrid" Row="1">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Style="{StaticResource TouchModeWithButtonFieldColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource TouchModePrimaryFieldsSeparatorLineColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource TouchModeWithFieldButtonColumnDefintionStyle}" />
+        </Grid.ColumnDefinitions>
+        <dxe:TextEdit Name="MarkingTextEdit" Grid.Column="0" Style="{StaticResource TouchModePrimaryTextEditStyle}" GotFocus="MarkingTextEdit_GotFocus" PreviewTextInput="MarkingTextEdit_PreviewTextInput" />
+        <customWindowControls:CWCSimpleButton Name="MarkingButton" Grid.Column="2" Style="{StaticResource TouchModeWithFieldButtonStyle}" Click="MarkingButton_Click">
+          <TextBlock Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static coreCommon:Resources.Add}" />
+        </customWindowControls:CWCSimpleButton>
+      </Grid>
+    </Grid>
+    <dxg:GridControl Name="MarkingGrid" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource MarkingDXGridControlStyle}">
+      <dxg:GridControl.View>
+        <dxg:TableView Name="MarkingTableView" Style="{StaticResource MarkingDXGridTableViewStyle}" />
+      </dxg:GridControl.View>
+      <dxg:GridColumn Name="Marking" FieldName="Column">
+        <dxg:BaseColumn.HeaderTemplate>
+          <DataTemplate>
+            <TextBlock Style="{StaticResource MarkingDXGridColumnHeaderTextBlockStyle}" Text="{x:Static coreCommon:Resources.MarkingCodes}" />
+          </DataTemplate>
+        </dxg:BaseColumn.HeaderTemplate>
+      </dxg:GridColumn>
+      <dxg:GridColumn Name="DeleteButton" FieldName="DeleteButton" Style="{StaticResource CloseImageButtonColumnStyle}">
+        <dxg:ColumnBase.CellTemplate>
+          <DataTemplate>
+            <Button Style="{StaticResource InsideColumnImageButtonStyle}" Click="DeleteRowButton_Click">
+              <dx:DXImage Source="{Binding Converter={StaticResource ImageByNameConverter}, ConverterParameter=DeleteRowButton_24.svg}" />
+            </Button>
+          </DataTemplate>
+        </dxg:ColumnBase.CellTemplate>
+      </dxg:GridColumn>
+    </dxg:GridControl>
+    <TextBlock Name="CalcInfoTextBlock" Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource TouchModeBigImportantPrimaryFooterTextBlockStyle}" />
+  </Grid>
+</dx:ThemedWindow>

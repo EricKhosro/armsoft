@@ -1,0 +1,2205 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>ArmSoft.SME.Core.UI</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWPF>True</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net10.0-windows7.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="ArmSoft.SME.Core.UI.MetaData.SysDefs.xsd" />
+    <EmbeddedResource Include="ArmSoft.SME.Core.UI.MetaData.SysDefs.xsd" LogicalName="ArmSoft.SME.Core.UI.MetaData.SysDefs.xsd" />
+    <Page Remove="ArmSoft.SME.Core.UI.Caches\CacheLoadingWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\AsFontsPanel.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\AsPageSetup.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\DataViewColumnsGroupingControl.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\DataViewColumnsOrderControl.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\DataViewColumnsSelectionControl.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\DateMultiFilterControl.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\DocumentGridControl.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\DropDownCommentControl.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\DropDownControl.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\ECRPrintCheckWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\ExchangeRateControl.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\InfoMessageControl.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\MemoWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\MultiFilterControl.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Controls\MultiSelectDropDownControl.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.DataViews\DataViewManage.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.DataViews\DataViewPanel.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.DataViews\DataViewSettingsWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Exchange\ExportWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Exchange\ImportWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Extensions\ExtensionEdit.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Progress\MultilineProgressPhaseControl.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Progress\MultilineProgressWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Progress\MultilineProgressWindowInside.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Progress\ProgressWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Report\AsColors.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Report\AsReportViewer.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.Report\AsSpreadSheet.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI.StandartWindow\HistoryPanel.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\AppTokenViewerWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\AppUpdateWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\BackgroundBackupWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\BackupRestoreProgressWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\CheckOnlineServicesWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\CloudLoginWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\ContractInformationWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\CreateDatabaseProgressWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\DropBoxBrowserLoginWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\DropBoxTransferProgressWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\ErrorWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\FileTransferProgressWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\FinalizeTracer.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\InformationWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\MapDialogWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\MapWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\MessageBoxWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\OfflineLoginWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\SelectDialogFieldsToSaveWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\TaxServiceLoginWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Core.UI\WndPageSetup.xaml" />
+    <Page Remove="generic.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Caches\CacheLoadingWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="cache/cacheloadingwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\AsFontsPanel.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/asfontspanel.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\AsPageSetup.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/aspagesetup.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\DataViewColumnsGroupingControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/dataviewcolumnsgroupingcontrol.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\DataViewColumnsOrderControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/dataviewcolumnsordercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\DataViewColumnsSelectionControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/dataviewcolumnsselectioncontrol.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\DateMultiFilterControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/multifiltercontrols/datemultifiltercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\DocumentGridControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/documentgridcontrol.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\DropDownCommentControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/dropdowncommentcontrol.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\DropDownControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/dropdowncontrol.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\ECRPrintCheckWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/ecrprintcheckwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\ExchangeRateControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/exchangeratecontrol.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\InfoMessageControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/infomessagecontrol.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\MemoWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/memowindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\MultiFilterControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/multifiltercontrols/multifiltercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Controls\MultiSelectDropDownControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="controls/multiselectdropdowncontrol.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.DataViews\DataViewManage.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="dataviewdefinition/dataviewmanage.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.DataViews\DataViewPanel.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="dataviewdefinition/dataviewpanel.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.DataViews\DataViewSettingsWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="dataviewdefinition/dataviewsettingswindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Exchange\ExportWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="exchange/exportwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Exchange\ImportWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="exchange/importwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Extensions\ExtensionEdit.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metadata/extensionedit.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Progress\MultilineProgressPhaseControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="progress/multilineprogressphaseusercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Progress\MultilineProgressWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="progress/multilineprogresswindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Progress\MultilineProgressWindowInside.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="progress/multilineprogresswindowinside.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Progress\ProgressWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="progress/progresswindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Report\AsColors.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="report/ascolors.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Report\AsReportViewer.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="report/asreportviewer.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.Report\AsSpreadSheet.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="report/asspreadsheet.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI.StandartWindow\HistoryPanel.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/historypanel/historypanel.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\AppTokenViewerWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/apptokenviewerwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\AppUpdateWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/appupdatewindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\BackgroundBackupWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/backups/backgroundbackupwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\BackupRestoreProgressWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/backups/backuprestoreprogresswindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\CheckOnlineServicesWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/checkonlineserviceswindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\CloudLoginWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/cloudloginwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\ContractInformationWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/contractinformationwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\CreateDatabaseProgressWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/backups/createdatabaseprogresswindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\DropBoxBrowserLoginWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/backups/dropboxbrowserloginwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\DropBoxTransferProgressWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/backups/dropboxtransferprogresswindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\ErrorWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="error/errorwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\FileTransferProgressWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/backups/filetransferprogresswindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\FinalizeTracer.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="finalizetracer.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\InformationWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/informationwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\MapDialogWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/mapdialogwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\MapWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/mapcontrol.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\MessageBoxWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/messageboxwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\OfflineLoginWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/offlineloginwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\SelectDialogFieldsToSaveWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/selectdialogfieldstosavewindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\TaxServiceLoginWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/taxserviceloginwindow.xaml" />
+    <Page Include="ArmSoft.SME.Core.UI\WndPageSetup.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="standartwindow/wndpagesetup.xaml" />
+    <Page Include="generic.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="generic.xaml" />
+    <Resource Remove="images\accept_16.svg" />
+    <Resource Remove="images\accept_32.svg" />
+    <Resource Remove="images\accept_32_bold.svg" />
+    <Resource Remove="images\accounting_16.svg" />
+    <Resource Remove="images\accounting_24.svg" />
+    <Resource Remove="images\accounting_32.svg" />
+    <Resource Remove="images\acc_balance_acc_blue_32.svg" />
+    <Resource Remove="images\acc_balance_acc_gray_32.svg" />
+    <Resource Remove="images\acs_160x80.svg" />
+    <Resource Remove="images\acs_check_16.svg" />
+    <Resource Remove="images\acs_check_32.svg" />
+    <Resource Remove="images\action_16.svg" />
+    <Resource Remove="images\action_16_new.svg" />
+    <Resource Remove="images\action_16_new_en.svg" />
+    <Resource Remove="images\action_32.svg" />
+    <Resource Remove="images\action_32_new.svg" />
+    <Resource Remove="images\action_32_new_en.svg" />
+    <Resource Remove="images\add_16.svg" />
+    <Resource Remove="images\add_32.svg" />
+    <Resource Remove="images\add_item_to_chartofacc_acc_blue_32.svg" />
+    <Resource Remove="images\add_item_to_chartofacc_acc_gray_32.svg" />
+    <Resource Remove="images\add_services_acc_blue_32.svg" />
+    <Resource Remove="images\add_services_acc_gray_32.svg" />
+    <Resource Remove="images\add_small_32.svg" />
+    <Resource Remove="images\admin-tools_16.svg" />
+    <Resource Remove="images\admin-tools_24.svg" />
+    <Resource Remove="images\admin-tools_32.svg" />
+    <Resource Remove="images\admin-tools_green_16.svg" />
+    <Resource Remove="images\admin-tools_green_24.svg" />
+    <Resource Remove="images\admin-tools_green_32.svg" />
+    <Resource Remove="images\analysis_16.svg" />
+    <Resource Remove="images\analysis_24.svg" />
+    <Resource Remove="images\analysis_32.svg" />
+    <Resource Remove="images\analysis_green_24.svg" />
+    <Resource Remove="images\analysis_green_32.svg" />
+    <Resource Remove="images\anydesk_16.svg" />
+    <Resource Remove="images\anydesk_32.svg" />
+    <Resource Remove="images\apple_store.svg" />
+    <Resource Remove="images\arrows_16.svg" />
+    <Resource Remove="images\arrows_32.svg" />
+    <Resource Remove="images\arrows_green_16.svg" />
+    <Resource Remove="images\arrows_green_32.svg" />
+    <Resource Remove="images\arrows_red_16.svg" />
+    <Resource Remove="images\arrows_red_32.svg" />
+    <Resource Remove="images\arrow_down_16.svg" />
+    <Resource Remove="images\arrow_down_32.svg" />
+    <Resource Remove="images\arrow_left_16.svg" />
+    <Resource Remove="images\arrow_left_32.svg" />
+    <Resource Remove="images\arrow_right_16.svg" />
+    <Resource Remove="images\arrow_right_16_disabled.svg" />
+    <Resource Remove="images\arrow_right_32.svg" />
+    <Resource Remove="images\arrow_right_32_disabled.svg" />
+    <Resource Remove="images\arrow_up_16.svg" />
+    <Resource Remove="images\arrow_up_32.svg" />
+    <Resource Remove="images\as_cloudsolutions.svg" />
+    <Resource Remove="images\as_cloudsolutions_h.svg" />
+    <Resource Remove="images\as_logo.svg" />
+    <Resource Remove="images\as_logo_32.svg" />
+    <Resource Remove="images\as_logo_ge.svg" />
+    <Resource Remove="images\as_logo_ge_32.svg" />
+    <Resource Remove="images\as_logo_ge_h.svg" />
+    <Resource Remove="images\as_logo_h.svg" />
+    <Resource Remove="images\attach_16.svg" />
+    <Resource Remove="images\attach_32.svg" />
+    <Resource Remove="images\attach_cancel_16.svg" />
+    <Resource Remove="images\attach_cancel_32.svg" />
+    <Resource Remove="images\attach_document_link_16.svg" />
+    <Resource Remove="images\attach_document_link_32.svg" />
+    <Resource Remove="images\attach_file_16.svg" />
+    <Resource Remove="images\attach_file_32.svg" />
+    <Resource Remove="images\attach_link_16.svg" />
+    <Resource Remove="images\attach_link_32.svg" />
+    <Resource Remove="images\attach_pdf_16.svg" />
+    <Resource Remove="images\attach_pdf_32.svg" />
+    <Resource Remove="images\b2bline-blue.svg" />
+    <Resource Remove="images\b2b_16.svg" />
+    <Resource Remove="images\b2b_160x80.svg" />
+    <Resource Remove="images\b2b_24.svg" />
+    <Resource Remove="images\b2b_32.svg" />
+    <Resource Remove="images\b2b_48.svg" />
+    <Resource Remove="images\b2b_64.svg" />
+    <Resource Remove="images\b2b_check_16.svg" />
+    <Resource Remove="images\b2b_check_32.svg" />
+    <Resource Remove="images\b2b_green_24.svg" />
+    <Resource Remove="images\b2b_green_32.svg" />
+    <Resource Remove="images\backspace.svg" />
+    <Resource Remove="images\bank\aeb.svg" />
+    <Resource Remove="images\bank\ameria.svg" />
+    <Resource Remove="images\bank\amio.svg" />
+    <Resource Remove="images\bank\ararat.svg" />
+    <Resource Remove="images\bank\armswiss.svg" />
+    <Resource Remove="images\bank\ashib.svg" />
+    <Resource Remove="images\bank\byblos.svg" />
+    <Resource Remove="images\bank\converse.svg" />
+    <Resource Remove="images\bank\default.svg" />
+    <Resource Remove="images\bank\evoca.svg" />
+    <Resource Remove="images\bank_16.svg" />
+    <Resource Remove="images\bank_24.svg" />
+    <Resource Remove="images\bank_32.svg" />
+    <Resource Remove="images\bank_green_24.svg" />
+    <Resource Remove="images\bank_green_32.svg" />
+    <Resource Remove="images\books_stack_16.svg" />
+    <Resource Remove="images\books_stack_32.svg" />
+    <Resource Remove="images\building_coins_acc_blue_32.svg" />
+    <Resource Remove="images\building_coins_acc_gray_32.svg" />
+    <Resource Remove="images\building_coins_trade_gray_32.svg" />
+    <Resource Remove="images\building_coins_trade_green_32.svg" />
+    <Resource Remove="images\building_tools_acc_blue_32.svg" />
+    <Resource Remove="images\building_tools_acc_gray_32.svg" />
+    <Resource Remove="images\building_tools_trade_gray_32.svg" />
+    <Resource Remove="images\building_tools_trade_green_32.svg" />
+    <Resource Remove="images\bullet-arrow-right2.svg" />
+    <Resource Remove="images\bullet_yellow_16.svg" />
+    <Resource Remove="images\bullet_yellow_32.svg" />
+    <Resource Remove="images\calc-wf-blue.svg" />
+    <Resource Remove="images\calc-wf.svg" />
+    <Resource Remove="images\calculator_16.svg" />
+    <Resource Remove="images\calculator_32.svg" />
+    <Resource Remove="images\calendar\date_01_16.svg" />
+    <Resource Remove="images\calendar\date_01_32.svg" />
+    <Resource Remove="images\calendar\date_02_16.svg" />
+    <Resource Remove="images\calendar\date_02_32.svg" />
+    <Resource Remove="images\calendar\date_03_16.svg" />
+    <Resource Remove="images\calendar\date_03_32.svg" />
+    <Resource Remove="images\calendar\date_04_16.svg" />
+    <Resource Remove="images\calendar\date_04_32.svg" />
+    <Resource Remove="images\calendar\date_05_16.svg" />
+    <Resource Remove="images\calendar\date_05_32.svg" />
+    <Resource Remove="images\calendar\date_06_16.svg" />
+    <Resource Remove="images\calendar\date_06_32.svg" />
+    <Resource Remove="images\calendar\date_07_16.svg" />
+    <Resource Remove="images\calendar\date_07_32.svg" />
+    <Resource Remove="images\calendar\date_08_16.svg" />
+    <Resource Remove="images\calendar\date_08_32.svg" />
+    <Resource Remove="images\calendar\date_09_16.svg" />
+    <Resource Remove="images\calendar\date_09_32.svg" />
+    <Resource Remove="images\calendar\date_10_16.svg" />
+    <Resource Remove="images\calendar\date_10_32.svg" />
+    <Resource Remove="images\calendar\date_11_16.svg" />
+    <Resource Remove="images\calendar\date_11_32.svg" />
+    <Resource Remove="images\calendar\date_12_16.svg" />
+    <Resource Remove="images\calendar\date_12_32.svg" />
+    <Resource Remove="images\calendar\date_13_16.svg" />
+    <Resource Remove="images\calendar\date_13_32.svg" />
+    <Resource Remove="images\calendar\date_14_16.svg" />
+    <Resource Remove="images\calendar\date_14_32.svg" />
+    <Resource Remove="images\calendar\date_15_16.svg" />
+    <Resource Remove="images\calendar\date_15_32.svg" />
+    <Resource Remove="images\calendar\date_16_16.svg" />
+    <Resource Remove="images\calendar\date_16_32.svg" />
+    <Resource Remove="images\calendar\date_17_16.svg" />
+    <Resource Remove="images\calendar\date_17_32.svg" />
+    <Resource Remove="images\calendar\date_18_16.svg" />
+    <Resource Remove="images\calendar\date_18_32.svg" />
+    <Resource Remove="images\calendar\date_19_16.svg" />
+    <Resource Remove="images\calendar\date_19_32.svg" />
+    <Resource Remove="images\calendar\date_20_16.svg" />
+    <Resource Remove="images\calendar\date_20_32.svg" />
+    <Resource Remove="images\calendar\date_21_16.svg" />
+    <Resource Remove="images\calendar\date_21_32.svg" />
+    <Resource Remove="images\calendar\date_22_16.svg" />
+    <Resource Remove="images\calendar\date_22_32.svg" />
+    <Resource Remove="images\calendar\date_23_16.svg" />
+    <Resource Remove="images\calendar\date_23_32.svg" />
+    <Resource Remove="images\calendar\date_24_16.svg" />
+    <Resource Remove="images\calendar\date_24_32.svg" />
+    <Resource Remove="images\calendar\date_25_16.svg" />
+    <Resource Remove="images\calendar\date_25_32.svg" />
+    <Resource Remove="images\calendar\date_26_16.svg" />
+    <Resource Remove="images\calendar\date_26_32.svg" />
+    <Resource Remove="images\calendar\date_27_16.svg" />
+    <Resource Remove="images\calendar\date_27_32.svg" />
+    <Resource Remove="images\calendar\date_28_16.svg" />
+    <Resource Remove="images\calendar\date_28_32.svg" />
+    <Resource Remove="images\calendar\date_29_16.svg" />
+    <Resource Remove="images\calendar\date_29_32.svg" />
+    <Resource Remove="images\calendar\date_30_16.svg" />
+    <Resource Remove="images\calendar\date_30_32.svg" />
+    <Resource Remove="images\calendar\date_31_16.svg" />
+    <Resource Remove="images\calendar\date_31_32.svg" />
+    <Resource Remove="images\calendar_16.svg" />
+    <Resource Remove="images\calendar_32.svg" />
+    <Resource Remove="images\calendar_alert_16.svg" />
+    <Resource Remove="images\calendar_alert_32.svg" />
+    <Resource Remove="images\calendar_day_16.svg" />
+    <Resource Remove="images\calendar_day_32.svg" />
+    <Resource Remove="images\calendar_day_simple_16.svg" />
+    <Resource Remove="images\cancel_16.svg" />
+    <Resource Remove="images\cancel_32.svg" />
+    <Resource Remove="images\cancel_32_bold.svg" />
+    <Resource Remove="images\cancel_true_16.svg" />
+    <Resource Remove="images\cancel_true_32.svg" />
+    <Resource Remove="images\card_view_16.svg" />
+    <Resource Remove="images\card_view_32.svg" />
+    <Resource Remove="images\chart_bar_icon_16.svg" />
+    <Resource Remove="images\chart_bar_icon_32.svg" />
+    <Resource Remove="images\chart_pie_icon_16.svg" />
+    <Resource Remove="images\chart_pie_icon_32.svg" />
+    <Resource Remove="images\chart_stock_icon_16.svg" />
+    <Resource Remove="images\chart_stock_icon_32.svg" />
+    <Resource Remove="images\chat_16.svg" />
+    <Resource Remove="images\chat_32.svg" />
+    <Resource Remove="images\checking_update_16.svg" />
+    <Resource Remove="images\checking_update_32.svg" />
+    <Resource Remove="images\checking_update_48.svg" />
+    <Resource Remove="images\check_16.svg" />
+    <Resource Remove="images\check_20.png" />
+    <Resource Remove="images\check_20.svg" />
+    <Resource Remove="images\check_32.svg" />
+    <Resource Remove="images\check_80.svg" />
+    <Resource Remove="images\check_disable_20.svg" />
+    <Resource Remove="images\cheked_all_16.svg" />
+    <Resource Remove="images\cheked_all_32.svg" />
+    <Resource Remove="images\closed_filter_checked_16.svg" />
+    <Resource Remove="images\closed_filter_unchecked_16.svg" />
+    <Resource Remove="images\close_16.svg" />
+    <Resource Remove="images\close_32.svg" />
+    <Resource Remove="images\close_all_windows_16.svg" />
+    <Resource Remove="images\close_all_windows_32.svg" />
+    <Resource Remove="images\cloud_14_gray.svg" />
+    <Resource Remove="images\cloud_16.svg" />
+    <Resource Remove="images\cloud_16_blue.svg" />
+    <Resource Remove="images\cloud_16_green.svg" />
+    <Resource Remove="images\cloud_16_new.svg" />
+    <Resource Remove="images\cloud_16_new_en.svg" />
+    <Resource Remove="images\cloud_16_orange.svg" />
+    <Resource Remove="images\cloud_16_red.svg" />
+    <Resource Remove="images\cloud_16_white.svg" />
+    <Resource Remove="images\cloud_32.svg" />
+    <Resource Remove="images\cloud_add_16.svg" />
+    <Resource Remove="images\cloud_add_32.svg" />
+    <Resource Remove="images\cloud_update_16.svg" />
+    <Resource Remove="images\cloud_update_32.svg" />
+    <Resource Remove="images\collapse_16.svg" />
+    <Resource Remove="images\collapse_32.svg" />
+    <Resource Remove="images\computer_network_red_16.svg" />
+    <Resource Remove="images\computer_network_red_32.svg" />
+    <Resource Remove="images\connected_12.svg" />
+    <Resource Remove="images\connect_16.svg" />
+    <Resource Remove="images\connect_32.svg" />
+    <Resource Remove="images\copy_14.svg" />
+    <Resource Remove="images\copy_16.svg" />
+    <Resource Remove="images\copy_32.svg" />
+    <Resource Remove="images\creditcard_96.svg" />
+    <Resource Remove="images\databases_16.svg" />
+    <Resource Remove="images\databases_16_blue.svg" />
+    <Resource Remove="images\databases_16_green.svg" />
+    <Resource Remove="images\databases_16_orange.svg" />
+    <Resource Remove="images\databases_16_white.svg" />
+    <Resource Remove="images\databases_32.svg" />
+    <Resource Remove="images\databases_light_16.svg" />
+    <Resource Remove="images\databases_light_32.svg" />
+    <Resource Remove="images\database_backup_16.svg" />
+    <Resource Remove="images\database_backup_16_disabled.svg" />
+    <Resource Remove="images\database_backup_32.svg" />
+    <Resource Remove="images\database_backup_32_disabled.svg" />
+    <Resource Remove="images\database_connect_16.svg" />
+    <Resource Remove="images\database_connect_32.svg" />
+    <Resource Remove="images\database_error_16.svg" />
+    <Resource Remove="images\database_error_32.svg" />
+    <Resource Remove="images\database_error_light_16.svg" />
+    <Resource Remove="images\database_error_light_32.svg" />
+    <Resource Remove="images\database_lightning_16.svg" />
+    <Resource Remove="images\database_lightning_32.svg" />
+    <Resource Remove="images\database_open_16.svg" />
+    <Resource Remove="images\database_open_32.svg" />
+    <Resource Remove="images\database_save_16.svg" />
+    <Resource Remove="images\database_save_32.svg" />
+    <Resource Remove="images\database_save_light_16.svg" />
+    <Resource Remove="images\database_save_light_32.svg" />
+    <Resource Remove="images\datamatrix_16.svg" />
+    <Resource Remove="images\datamatrix_32.svg" />
+    <Resource Remove="images\datamatrix_blue_16.svg" />
+    <Resource Remove="images\datamatrix_blue_32.svg" />
+    <Resource Remove="images\datamatrix_blue_small_16.svg" />
+    <Resource Remove="images\datamatrix_red_16.svg" />
+    <Resource Remove="images\datamatrix_small_16.svg" />
+    <Resource Remove="images\data_merge_16.svg" />
+    <Resource Remove="images\data_merge_32.svg" />
+    <Resource Remove="images\deleterowbutton_24.svg" />
+    <Resource Remove="images\delete_16.svg" />
+    <Resource Remove="images\delete_20.svg" />
+    <Resource Remove="images\delete_32.svg" />
+    <Resource Remove="images\dialog_16.svg" />
+    <Resource Remove="images\dialog_32.svg" />
+    <Resource Remove="images\directory_info_24.svg" />
+    <Resource Remove="images\disconnected_12.svg" />
+    <Resource Remove="images\discountcard_96.svg" />
+    <Resource Remove="images\doc_16.svg" />
+    <Resource Remove="images\doc_32.svg" />
+    <Resource Remove="images\doc_accept_16.svg" />
+    <Resource Remove="images\doc_accept_32.svg" />
+    <Resource Remove="images\doc_based_on_16.svg" />
+    <Resource Remove="images\doc_based_on_32.svg" />
+    <Resource Remove="images\doc_cancel_16.svg" />
+    <Resource Remove="images\doc_cancel_32.svg" />
+    <Resource Remove="images\doc_copy_16.svg" />
+    <Resource Remove="images\doc_copy_32.svg" />
+    <Resource Remove="images\doc_delete_16.svg" />
+    <Resource Remove="images\doc_delete_32.svg" />
+    <Resource Remove="images\doc_edit_16.svg" />
+    <Resource Remove="images\doc_edit_32.svg" />
+    <Resource Remove="images\doc_export_16.svg" />
+    <Resource Remove="images\doc_export_32.svg" />
+    <Resource Remove="images\doc_export_excel_16.svg" />
+    <Resource Remove="images\doc_export_excel_16_new.svg" />
+    <Resource Remove="images\doc_export_excel_16_new_en.svg" />
+    <Resource Remove="images\doc_export_excel_32.svg" />
+    <Resource Remove="images\doc_export_pdf_16.svg" />
+    <Resource Remove="images\doc_export_pdf_32.svg" />
+    <Resource Remove="images\doc_export_word_16.svg" />
+    <Resource Remove="images\doc_export_word_32.svg" />
+    <Resource Remove="images\doc_export_xml_16.svg" />
+    <Resource Remove="images\doc_export_xml_32.svg" />
+    <Resource Remove="images\doc_jumpto_16.svg" />
+    <Resource Remove="images\doc_jumpto_32.svg" />
+    <Resource Remove="images\doc_new_16.svg" />
+    <Resource Remove="images\doc_new_16_new.svg" />
+    <Resource Remove="images\doc_new_16_new_en.svg" />
+    <Resource Remove="images\doc_new_32.svg" />
+    <Resource Remove="images\doc_new_32_new.svg" />
+    <Resource Remove="images\doc_new_32_new_en.svg" />
+    <Resource Remove="images\doc_preview_16.svg" />
+    <Resource Remove="images\doc_preview_32.svg" />
+    <Resource Remove="images\doc_update_16.svg" />
+    <Resource Remove="images\doc_update_32.svg" />
+    <Resource Remove="images\doc_view_16.svg" />
+    <Resource Remove="images\doc_view_32.svg" />
+    <Resource Remove="images\dot_16.svg" />
+    <Resource Remove="images\dot_orange_16.svg" />
+    <Resource Remove="images\dot_red_16.svg" />
+    <Resource Remove="images\download_16.svg" />
+    <Resource Remove="images\download_32.svg" />
+    <Resource Remove="images\down_16.svg" />
+    <Resource Remove="images\down_32.svg" />
+    <Resource Remove="images\draft_16.svg" />
+    <Resource Remove="images\draft_32.svg" />
+    <Resource Remove="images\dropbox_16.svg" />
+    <Resource Remove="images\dropbox_32.svg" />
+    <Resource Remove="images\dropbox_32_disabled.svg" />
+    <Resource Remove="images\edit_16.svg" />
+    <Resource Remove="images\edit_32.svg" />
+    <Resource Remove="images\emarkaccept_16.svg" />
+    <Resource Remove="images\emarkaccept_32.svg" />
+    <Resource Remove="images\emarkerror_16.svg" />
+    <Resource Remove="images\emarkerror_32.svg" />
+    <Resource Remove="images\emark_16.svg" />
+    <Resource Remove="images\emark_32.svg" />
+    <Resource Remove="images\employee_card_96.svg" />
+    <Resource Remove="images\eraser_16.svg" />
+    <Resource Remove="images\eraser_32.svg" />
+    <Resource Remove="images\error_16.svg" />
+    <Resource Remove="images\error_32.svg" />
+    <Resource Remove="images\error_go_16.svg" />
+    <Resource Remove="images\error_go_32.svg" />
+    <Resource Remove="images\exceladdin_16.svg" />
+    <Resource Remove="images\exceladdin_32.svg" />
+    <Resource Remove="images\expand_16.svg" />
+    <Resource Remove="images\expand_32.svg" />
+    <Resource Remove="images\export_16.svg" />
+    <Resource Remove="images\export_32.svg" />
+    <Resource Remove="images\eye_14.svg" />
+    <Resource Remove="images\favorite_16.svg" />
+    <Resource Remove="images\favorite_32.svg" />
+    <Resource Remove="images\favorite_delete_16.svg" />
+    <Resource Remove="images\favorite_delete_32.svg" />
+    <Resource Remove="images\file_16.svg" />
+    <Resource Remove="images\file_save_as_16.svg" />
+    <Resource Remove="images\file_save_as_32.svg" />
+    <Resource Remove="images\file_save_as_all_16.svg" />
+    <Resource Remove="images\file_save_as_all_32.svg" />
+    <Resource Remove="images\file_xml_16.svg" />
+    <Resource Remove="images\file_xml_32.svg" />
+    <Resource Remove="images\fill_cashes_trade_gray_32.svg" />
+    <Resource Remove="images\fill_cashes_trade_green_32.svg" />
+    <Resource Remove="images\fill_down_16.svg" />
+    <Resource Remove="images\fill_down_32.svg" />
+    <Resource Remove="images\fill_left_16.svg" />
+    <Resource Remove="images\fill_left_32.svg" />
+    <Resource Remove="images\fill_partners_info_acc_blue_32.svg" />
+    <Resource Remove="images\fill_partners_info_acc_gray_32.svg" />
+    <Resource Remove="images\fill_partners_info_trade_gray_32.svg" />
+    <Resource Remove="images\fill_partners_info_trade_green_32.svg" />
+    <Resource Remove="images\fill_partners_rem_acc_blue_32.svg" />
+    <Resource Remove="images\fill_partners_rem_acc_gray_32.svg" />
+    <Resource Remove="images\fill_partners_rem_trade_gray_32.svg" />
+    <Resource Remove="images\fill_partners_rem_trade_green_32.svg" />
+    <Resource Remove="images\fill_right_16.svg" />
+    <Resource Remove="images\fill_right_32.svg" />
+    <Resource Remove="images\filter\any_of.svg" />
+    <Resource Remove="images\filter\begins_with.svg" />
+    <Resource Remove="images\filter\between.svg" />
+    <Resource Remove="images\filter\blank.svg" />
+    <Resource Remove="images\filter\contains.svg" />
+    <Resource Remove="images\filter\does_not_contain.svg" />
+    <Resource Remove="images\filter\does_not_equal.svg" />
+    <Resource Remove="images\filter\ends_with.svg" />
+    <Resource Remove="images\filter\equals.svg" />
+    <Resource Remove="images\filter\greater.svg" />
+    <Resource Remove="images\filter\greater_or_equal.svg" />
+    <Resource Remove="images\filter\less.svg" />
+    <Resource Remove="images\filter\less_or_equal.svg" />
+    <Resource Remove="images\filter\like.svg" />
+    <Resource Remove="images\filter\none_of.svg" />
+    <Resource Remove="images\filter\not_begins_with.svg" />
+    <Resource Remove="images\filter\not_between.svg" />
+    <Resource Remove="images\filter\not_blank.svg" />
+    <Resource Remove="images\filter\not_ends_with.svg" />
+    <Resource Remove="images\filter\not_like.svg" />
+    <Resource Remove="images\filter\treeview.svg" />
+    <Resource Remove="images\filter_16.svg" />
+    <Resource Remove="images\filter_32.svg" />
+    <Resource Remove="images\filter_clear_16.svg" />
+    <Resource Remove="images\filter_clear_32.svg" />
+    <Resource Remove="images\filter_equal_16.svg" />
+    <Resource Remove="images\filter_equal_32.svg" />
+    <Resource Remove="images\filter_not_equal_16.svg" />
+    <Resource Remove="images\filter_not_equal_32.svg" />
+    <Resource Remove="images\filter_selected_16.svg" />
+    <Resource Remove="images\filter_selected_32.svg" />
+    <Resource Remove="images\filter_small_32.svg" />
+    <Resource Remove="images\find_16.svg" />
+    <Resource Remove="images\find_32.svg" />
+    <Resource Remove="images\fixed-assets_16.svg" />
+    <Resource Remove="images\fixed-assets_24.svg" />
+    <Resource Remove="images\fixed-assets_32.svg" />
+    <Resource Remove="images\flag_armenia_16.svg" />
+    <Resource Remove="images\flag_armenia_32.svg" />
+    <Resource Remove="images\flag_georgia_16.svg" />
+    <Resource Remove="images\flag_georgia_32.svg" />
+    <Resource Remove="images\flag_great_britain_16.svg" />
+    <Resource Remove="images\flag_great_britain_32.svg" />
+    <Resource Remove="images\flag_russia_16.svg" />
+    <Resource Remove="images\flag_russia_32.svg" />
+    <Resource Remove="images\folder_excel_16.svg" />
+    <Resource Remove="images\folder_excel_32.svg" />
+    <Resource Remove="images\folder_open_16_disabled.svg" />
+    <Resource Remove="images\folder_open_32.svg" />
+    <Resource Remove="images\folder_open_32_disabled.svg" />
+    <Resource Remove="images\functions_16.svg" />
+    <Resource Remove="images\functions_32.svg" />
+    <Resource Remove="images\gift_16.svg" />
+    <Resource Remove="images\gift_32.svg" />
+    <Resource Remove="images\gift_small_16.svg" />
+    <Resource Remove="images\google_play.svg" />
+    <Resource Remove="images\graph_24.svg" />
+    <Resource Remove="images\grid_fill_down_16.svg" />
+    <Resource Remove="images\grid_fill_down_32.svg" />
+    <Resource Remove="images\grid_row_16.svg" />
+    <Resource Remove="images\grid_row_32.svg" />
+    <Resource Remove="images\groupdelete_16.svg" />
+    <Resource Remove="images\groupdelete_32.svg" />
+    <Resource Remove="images\groupedit_16.svg" />
+    <Resource Remove="images\groupedit_32.svg" />
+    <Resource Remove="images\grouping_16.svg" />
+    <Resource Remove="images\grouping_32.svg" />
+    <Resource Remove="images\group_panel_16.svg" />
+    <Resource Remove="images\group_panel_32.svg" />
+    <Resource Remove="images\hamburger_horizontal_16.svg" />
+    <Resource Remove="images\help1-magicwand-24-283-1.svg" />
+    <Resource Remove="images\help2-prod-285-1.svg" />
+    <Resource Remove="images\help3-calendar-291-1.svg" />
+    <Resource Remove="images\help_16.svg" />
+    <Resource Remove="images\help_16_black.svg" />
+    <Resource Remove="images\help_32.svg" />
+    <Resource Remove="images\hint_16.svg" />
+    <Resource Remove="images\hint_32.svg" />
+    <Resource Remove="images\history_16.svg" />
+    <Resource Remove="images\history_32.svg" />
+    <Resource Remove="images\home_16.svg" />
+    <Resource Remove="images\home_32.svg" />
+    <Resource Remove="images\image-icon.svg" />
+    <Resource Remove="images\image-icon_32.svg" />
+    <Resource Remove="images\import_16.svg" />
+    <Resource Remove="images\import_32.svg" />
+    <Resource Remove="images\information_16.svg" />
+    <Resource Remove="images\information_32.svg" />
+    <Resource Remove="images\info_16_white.svg" />
+    <Resource Remove="images\info_32_white.svg" />
+    <Resource Remove="images\internet_16.svg" />
+    <Resource Remove="images\internet_32.svg" />
+    <Resource Remove="images\invoice_check_16.svg" />
+    <Resource Remove="images\invoice_check_32.svg" />
+    <Resource Remove="images\invoice_new_16.svg" />
+    <Resource Remove="images\invoice_new_32.svg" />
+    <Resource Remove="images\isn_16.svg" />
+    <Resource Remove="images\isn_32.svg" />
+    <Resource Remove="images\journal_16.svg" />
+    <Resource Remove="images\journal_16_delete.svg" />
+    <Resource Remove="images\journal_16_new.svg" />
+    <Resource Remove="images\journal_16_new_en.svg" />
+    <Resource Remove="images\journal_32.svg" />
+    <Resource Remove="images\journal_32_delete.svg" />
+    <Resource Remove="images\key_16.svg" />
+    <Resource Remove="images\key_32.svg" />
+    <Resource Remove="images\language_14.svg" />
+    <Resource Remove="images\layout_add16.svg" />
+    <Resource Remove="images\layout_add32.svg" />
+    <Resource Remove="images\layout_edit16.svg" />
+    <Resource Remove="images\layout_edit32.svg" />
+    <Resource Remove="images\layout_green_16.svg" />
+    <Resource Remove="images\layout_green_32.svg" />
+    <Resource Remove="images\layout_icon16.svg" />
+    <Resource Remove="images\layout_icon32.svg" />
+    <Resource Remove="images\list_check_16.svg" />
+    <Resource Remove="images\list_check_32.svg" />
+    <Resource Remove="images\location_map_24.svg" />
+    <Resource Remove="images\lock_16.svg" />
+    <Resource Remove="images\lock_32.svg" />
+    <Resource Remove="images\lock_open_16.svg" />
+    <Resource Remove="images\lock_open_32.svg" />
+    <Resource Remove="images\login_close_16.svg" />
+    <Resource Remove="images\login_history_16.svg" />
+    <Resource Remove="images\login_history_32.svg" />
+    <Resource Remove="images\map_red.svg" />
+    <Resource Remove="images\map_red_16.svg" />
+    <Resource Remove="images\materials_16.svg" />
+    <Resource Remove="images\materials_24.svg" />
+    <Resource Remove="images\materials_32.svg" />
+    <Resource Remove="images\materials_green_24.svg" />
+    <Resource Remove="images\materials_green_32.svg" />
+    <Resource Remove="images\merchandising_24.svg" />
+    <Resource Remove="images\minus_16.svg" />
+    <Resource Remove="images\minus_32.svg" />
+    <Resource Remove="images\network_cloud_16.svg" />
+    <Resource Remove="images\network_cloud_32.svg" />
+    <Resource Remove="images\node-tree_16.svg" />
+    <Resource Remove="images\node-tree_32.svg" />
+    <Resource Remove="images\none.png" />
+    <Resource Remove="images\notification_16.svg" />
+    <Resource Remove="images\notification_16_red.svg" />
+    <Resource Remove="images\notification_32.svg" />
+    <Resource Remove="images\notification_32_red.svg" />
+    <Resource Remove="images\open_16.svg" />
+    <Resource Remove="images\open_32.svg" />
+    <Resource Remove="images\open_link_16.svg" />
+    <Resource Remove="images\open_new_window_16.svg" />
+    <Resource Remove="images\open_new_window_32.svg" />
+    <Resource Remove="images\options_16.svg" />
+    <Resource Remove="images\options_32.svg" />
+    <Resource Remove="images\package_24.svg" />
+    <Resource Remove="images\package_front_acc_blue_32.svg" />
+    <Resource Remove="images\package_front_acc_gray_32.svg" />
+    <Resource Remove="images\package_front_trade_gray_32.svg" />
+    <Resource Remove="images\package_front_trade_green_32.svg" />
+    <Resource Remove="images\page_setup_16.svg" />
+    <Resource Remove="images\page_setup_32.svg" />
+    <Resource Remove="images\page_white_database_16.svg" />
+    <Resource Remove="images\page_white_database_32.svg" />
+    <Resource Remove="images\page_white_error_16.svg" />
+    <Resource Remove="images\page_white_error_32.svg" />
+    <Resource Remove="images\page_white_gear_16.svg" />
+    <Resource Remove="images\page_white_gear_32.svg" />
+    <Resource Remove="images\pane_expand_16.svg" />
+    <Resource Remove="images\pane_expand_32.svg" />
+    <Resource Remove="images\paste_16.svg" />
+    <Resource Remove="images\paste_32.svg" />
+    <Resource Remove="images\paymentsystems\amex_16.svg" />
+    <Resource Remove="images\paymentsystems\arca_16.svg" />
+    <Resource Remove="images\paymentsystems\creditcard_16.svg" />
+    <Resource Remove="images\paymentsystems\creditcard_32.svg" />
+    <Resource Remove="images\paymentsystems\fav_easypay_16.svg" />
+    <Resource Remove="images\paymentsystems\fav_idram_16.svg" />
+    <Resource Remove="images\paymentsystems\fav_inecopay_16.svg" />
+    <Resource Remove="images\paymentsystems\fav_payx_16.svg" />
+    <Resource Remove="images\paymentsystems\fav_telcell_16.svg" />
+    <Resource Remove="images\paymentsystems\logo_amex.svg" />
+    <Resource Remove="images\paymentsystems\logo_arca.svg" />
+    <Resource Remove="images\paymentsystems\logo_easypay.png" />
+    <Resource Remove="images\paymentsystems\logo_easypay.svg" />
+    <Resource Remove="images\paymentsystems\logo_idram.png" />
+    <Resource Remove="images\paymentsystems\logo_idram.svg" />
+    <Resource Remove="images\paymentsystems\logo_inecopay.png" />
+    <Resource Remove="images\paymentsystems\logo_inecopay.svg" />
+    <Resource Remove="images\paymentsystems\logo_mastercard.svg" />
+    <Resource Remove="images\paymentsystems\logo_mir.svg" />
+    <Resource Remove="images\paymentsystems\logo_payx.png" />
+    <Resource Remove="images\paymentsystems\logo_payx.svg" />
+    <Resource Remove="images\paymentsystems\logo_telcell.png" />
+    <Resource Remove="images\paymentsystems\logo_telcell.svg" />
+    <Resource Remove="images\paymentsystems\mastercard_16.svg" />
+    <Resource Remove="images\paymentsystems\mir_16.svg" />
+    <Resource Remove="images\paymentsystems\visa_16.svg" />
+    <Resource Remove="images\people-coins-wf-blue.svg" />
+    <Resource Remove="images\people-coins-wf.svg" />
+    <Resource Remove="images\phone_16.svg" />
+    <Resource Remove="images\phone_64.svg" />
+    <Resource Remove="images\pie_chart_icon_16.svg" />
+    <Resource Remove="images\pie_chart_icon_32.svg" />
+    <Resource Remove="images\play.svg" />
+    <Resource Remove="images\plus_16.svg" />
+    <Resource Remove="images\plus_32.svg" />
+    <Resource Remove="images\plus_minus_16.svg" />
+    <Resource Remove="images\plus_minus_32.svg" />
+    <Resource Remove="images\pos_closecashiershift_56.svg" />
+    <Resource Remove="images\pos_dataexchange_56.svg" />
+    <Resource Remove="images\pos_printecrreportshift_56.svg" />
+    <Resource Remove="images\pos_reports_56.svg" />
+    <Resource Remove="images\pos_saless_56.svg" />
+    <Resource Remove="images\pos_ss_16.svg" />
+    <Resource Remove="images\pos_ss_24.svg" />
+    <Resource Remove="images\pos_ss_green_32.svg" />
+    <Resource Remove="images\pos_ss_new_24.svg" />
+    <Resource Remove="images\pos_ss_new_24_en.svg" />
+    <Resource Remove="images\power_button_off_16.svg" />
+    <Resource Remove="images\power_button_off_32.svg" />
+    <Resource Remove="images\power_button_on_16.svg" />
+    <Resource Remove="images\power_button_on_32.svg" />
+    <Resource Remove="images\printer_default_16.svg" />
+    <Resource Remove="images\printer_default_32.svg" />
+    <Resource Remove="images\print_16.svg" />
+    <Resource Remove="images\print_32.svg" />
+    <Resource Remove="images\print_landscape_16.svg" />
+    <Resource Remove="images\print_landscape_32.svg" />
+    <Resource Remove="images\print_portrait_16.svg" />
+    <Resource Remove="images\print_portrait_32.svg" />
+    <Resource Remove="images\purchase_16.svg" />
+    <Resource Remove="images\purchase_24.svg" />
+    <Resource Remove="images\purchase_32.svg" />
+    <Resource Remove="images\pushpin_blue_16.svg" />
+    <Resource Remove="images\pushpin_blue_32.svg" />
+    <Resource Remove="images\pushpin_blue_green_16.svg" />
+    <Resource Remove="images\pushpin_blue_green_32.svg" />
+    <Resource Remove="images\pushpin_blue_location_16.svg" />
+    <Resource Remove="images\pushpin_blue_location_32.svg" />
+    <Resource Remove="images\pushpin_blue_yellow_16.svg" />
+    <Resource Remove="images\pushpin_blue_yellow_32.svg" />
+    <Resource Remove="images\pushpin_green_16.svg" />
+    <Resource Remove="images\pushpin_green_32.svg" />
+    <Resource Remove="images\pushpin_lightblue_32.svg" />
+    <Resource Remove="images\pushpin_orange_32.svg" />
+    <Resource Remove="images\pushpin_pink_16.svg" />
+    <Resource Remove="images\pushpin_pink_32.svg" />
+    <Resource Remove="images\pushpin_purple_32.svg" />
+    <Resource Remove="images\pushpin_red_16.svg" />
+    <Resource Remove="images\pushpin_red_32.svg" />
+    <Resource Remove="images\pushpin_yellow_16.svg" />
+    <Resource Remove="images\pushpin_yellow_32.svg" />
+    <Resource Remove="images\qrcode_16.svg" />
+    <Resource Remove="images\qrcode_32.svg" />
+    <Resource Remove="images\question_16.svg" />
+    <Resource Remove="images\question_48.svg" />
+    <Resource Remove="images\recent_16.svg" />
+    <Resource Remove="images\recent_32.svg" />
+    <Resource Remove="images\refresh_16.svg" />
+    <Resource Remove="images\refresh_32.svg" />
+    <Resource Remove="images\refresh_all_16.svg" />
+    <Resource Remove="images\refresh_all_32.svg" />
+    <Resource Remove="images\refresh_small_16.svg" />
+    <Resource Remove="images\reload_16.svg" />
+    <Resource Remove="images\reload_32.svg" />
+    <Resource Remove="images\report.svg" />
+    <Resource Remove="images\report_16.svg" />
+    <Resource Remove="images\report_16_new.svg" />
+    <Resource Remove="images\report_16_new_en.svg" />
+    <Resource Remove="images\report_32.svg" />
+    <Resource Remove="images\report_32_new.svg" />
+    <Resource Remove="images\report_32_new_en.svg" />
+    <Resource Remove="images\report_link_16.svg" />
+    <Resource Remove="images\report_link_32.svg" />
+    <Resource Remove="images\rs_logo_16.png" />
+    <Resource Remove="images\rs_logo_32.png" />
+    <Resource Remove="images\run_16.svg" />
+    <Resource Remove="images\run_20.svg" />
+    <Resource Remove="images\run_32.svg" />
+    <Resource Remove="images\salary_16.svg" />
+    <Resource Remove="images\salary_24.svg" />
+    <Resource Remove="images\salary_32.svg" />
+    <Resource Remove="images\saless_24.svg" />
+    <Resource Remove="images\save_16.svg" />
+    <Resource Remove="images\save_32.svg" />
+    <Resource Remove="images\save_as_16.svg" />
+    <Resource Remove="images\save_as_32.svg" />
+    <Resource Remove="images\save_close_16.svg" />
+    <Resource Remove="images\save_close_32.svg" />
+    <Resource Remove="images\save_new_16.svg" />
+    <Resource Remove="images\save_new_32.svg" />
+    <Resource Remove="images\scale_export_16.svg" />
+    <Resource Remove="images\scale_import_16.svg" />
+    <Resource Remove="images\scale_view_16.svg" />
+    <Resource Remove="images\select_all_16.svg" />
+    <Resource Remove="images\select_all_32.svg" />
+    <Resource Remove="images\select_column_16.svg" />
+    <Resource Remove="images\select_column_32.svg" />
+    <Resource Remove="images\select_row_condition_16.svg" />
+    <Resource Remove="images\select_row_condition_32.svg" />
+    <Resource Remove="images\send_mail_16.svg" />
+    <Resource Remove="images\send_mail_32.svg" />
+    <Resource Remove="images\server_network_16.svg" />
+    <Resource Remove="images\server_network_32.svg" />
+    <Resource Remove="images\server_network_off_16.svg" />
+    <Resource Remove="images\server_network_off_32.svg" />
+    <Resource Remove="images\short-life-items_16.svg" />
+    <Resource Remove="images\short-life-items_24.svg" />
+    <Resource Remove="images\short-life-items_32.svg" />
+    <Resource Remove="images\show_row_details_16.svg" />
+    <Resource Remove="images\show_row_details_32.svg" />
+    <Resource Remove="images\show_transactions_16.svg" />
+    <Resource Remove="images\show_transactions_32.svg" />
+    <Resource Remove="images\simplereload_16.svg" />
+    <Resource Remove="images\simplereload_32.svg" />
+    <Resource Remove="images\smartphone_16.svg" />
+    <Resource Remove="images\smartphone_32.svg" />
+    <Resource Remove="images\software_update_available_16.svg" />
+    <Resource Remove="images\software_update_available_24.svg" />
+    <Resource Remove="images\software_update_available_32.svg" />
+    <Resource Remove="images\software_update_available_48.svg" />
+    <Resource Remove="images\software_update_available_64.svg" />
+    <Resource Remove="images\sort_clear_all_16.svg" />
+    <Resource Remove="images\sort_clear_all_16_az.svg" />
+    <Resource Remove="images\sort_clear_all_32.svg" />
+    <Resource Remove="images\sort_clear_all_32_az.svg" />
+    <Resource Remove="images\spreadsheet_16.svg" />
+    <Resource Remove="images\spreadsheet_32.svg" />
+    <Resource Remove="images\table_16.svg" />
+    <Resource Remove="images\table_16_new.svg" />
+    <Resource Remove="images\table_16_new_en.svg" />
+    <Resource Remove="images\table_32.svg" />
+    <Resource Remove="images\table_32_new.svg" />
+    <Resource Remove="images\table_cloud_16.svg" />
+    <Resource Remove="images\table_cloud_32.svg" />
+    <Resource Remove="images\table_delete_all_rows_16.svg" />
+    <Resource Remove="images\table_delete_all_rows_32.svg" />
+    <Resource Remove="images\table_discount_16.svg" />
+    <Resource Remove="images\table_discount_32.svg" />
+    <Resource Remove="images\table_export_b2b_16.svg" />
+    <Resource Remove="images\table_export_b2b_32.svg" />
+    <Resource Remove="images\table_export_excel_16.svg" />
+    <Resource Remove="images\table_export_excel_32.svg" />
+    <Resource Remove="images\table_export_pdf_16.svg" />
+    <Resource Remove="images\table_export_pdf_32.svg" />
+    <Resource Remove="images\table_filter_row_16.svg" />
+    <Resource Remove="images\table_filter_row_32.svg" />
+    <Resource Remove="images\table_functions_16.svg" />
+    <Resource Remove="images\table_functions_32.svg" />
+    <Resource Remove="images\table_preview_16.svg" />
+    <Resource Remove="images\table_preview_32.svg" />
+    <Resource Remove="images\table_red_16.svg" />
+    <Resource Remove="images\table_red_16_new.svg" />
+    <Resource Remove="images\table_red_16_new_en.svg" />
+    <Resource Remove="images\table_refresh_16.svg" />
+    <Resource Remove="images\table_refresh_32.svg" />
+    <Resource Remove="images\table_row_insert.svg" />
+    <Resource Remove="images\table_row_insert_32.svg" />
+    <Resource Remove="images\table_show_details_16.svg" />
+    <Resource Remove="images\table_show_details_32.svg" />
+    <Resource Remove="images\table_show_rowdetails_16.svg" />
+    <Resource Remove="images\table_show_rowdetails_32.svg" />
+    <Resource Remove="images\tag_price_percent_24.svg" />
+    <Resource Remove="images\taxservice.png" />
+    <Resource Remove="images\taxservice.svg" />
+    <Resource Remove="images\taxservice_16.svg" />
+    <Resource Remove="images\taxservice_16_white.svg" />
+    <Resource Remove="images\taxservice_24.svg" />
+    <Resource Remove="images\taxservice_32.png" />
+    <Resource Remove="images\taxservice_32.svg" />
+    <Resource Remove="images\taxservice_line_16.svg" />
+    <Resource Remove="images\taxservice_line_24.svg" />
+    <Resource Remove="images\taxservice_line_32.svg" />
+    <Resource Remove="images\taxservice_small.png" />
+    <Resource Remove="images\teamviewer_16.svg" />
+    <Resource Remove="images\teamviewer_32.svg" />
+    <Resource Remove="images\telegram_16.svg" />
+    <Resource Remove="images\telegram_32.svg" />
+    <Resource Remove="images\test_16.svg" />
+    <Resource Remove="images\test_32.svg" />
+    <Resource Remove="images\themes\office2010black.svg" />
+    <Resource Remove="images\themes\office2010blue.svg" />
+    <Resource Remove="images\themes\office2010silver.svg" />
+    <Resource Remove="images\themes\office2013.svg" />
+    <Resource Remove="images\themes\office2013darkgray.svg" />
+    <Resource Remove="images\themes\office2013lightgray.svg" />
+    <Resource Remove="images\tiles\abacus_128.png" />
+    <Resource Remove="images\tiles\analysis_128.png" />
+    <Resource Remove="images\tiles\availability_128.png" />
+    <Resource Remove="images\tiles\availability_128.svg" />
+    <Resource Remove="images\tiles\b2b_128.png" />
+    <Resource Remove="images\tiles\back.png" />
+    <Resource Remove="images\tiles\back.svg" />
+    <Resource Remove="images\tiles\bank_128.png" />
+    <Resource Remove="images\tiles\bank_32.png" />
+    <Resource Remove="images\tiles\bulldozer_128.png" />
+    <Resource Remove="images\tiles\cash_32.png" />
+    <Resource Remove="images\tiles\chartofacc_32.png" />
+    <Resource Remove="images\tiles\chartofacc_edit_32.png" />
+    <Resource Remove="images\tiles\loan_128.png" />
+    <Resource Remove="images\tiles\materials_32.png" />
+    <Resource Remove="images\tiles\materials_edit_32.png" />
+    <Resource Remove="images\tiles\office_128.png" />
+    <Resource Remove="images\tiles\options_32.png" />
+    <Resource Remove="images\tiles\partners_32.png" />
+    <Resource Remove="images\tiles\partners_edit_32.png" />
+    <Resource Remove="images\tiles\pointofsale_128.png" />
+    <Resource Remove="images\tiles\pointofsale_150_new.png" />
+    <Resource Remove="images\tiles\pointofsale_150_new_eng.png" />
+    <Resource Remove="images\tiles\pointofsale_64.png" />
+    <Resource Remove="images\tiles\purchase_128.png" />
+    <Resource Remove="images\tiles\salary_128.svg" />
+    <Resource Remove="images\tiles\sale_128.png" />
+    <Resource Remove="images\tiles\services_32.png" />
+    <Resource Remove="images\tiles\tv_play_red_32.png" />
+    <Resource Remove="images\tiles\tv_play_red_48.png" />
+    <Resource Remove="images\tiles\webmaster_100.png" />
+    <Resource Remove="images\tiles\webmaster_128.png" />
+    <Resource Remove="images\tiles\wizard_32.png" />
+    <Resource Remove="images\tiles\wizard_b2b_32.png" />
+    <Resource Remove="images\tiles\youtube_white2_32.png" />
+    <Resource Remove="images\tools-16wl.svg" />
+    <Resource Remove="images\tools_sm_24.svg" />
+    <Resource Remove="images\trash_16.svg" />
+    <Resource Remove="images\trash_32.svg" />
+    <Resource Remove="images\treeview16.svg" />
+    <Resource Remove="images\treeview32.svg" />
+    <Resource Remove="images\tv_16.svg" />
+    <Resource Remove="images\tv_32.svg" />
+    <Resource Remove="images\t_action_16.svg" />
+    <Resource Remove="images\t_add_16.svg" />
+    <Resource Remove="images\t_attach_16.svg" />
+    <Resource Remove="images\t_close_all_windows_16.svg" />
+    <Resource Remove="images\t_delete_16.svg" />
+    <Resource Remove="images\t_doc_accept_16.svg" />
+    <Resource Remove="images\t_doc_based_on_16.svg" />
+    <Resource Remove="images\t_doc_cancel_16.svg" />
+    <Resource Remove="images\t_doc_copy_16.svg" />
+    <Resource Remove="images\t_doc_delete_16.svg" />
+    <Resource Remove="images\t_doc_export_16.svg" />
+    <Resource Remove="images\t_doc_export_excel_16.svg" />
+    <Resource Remove="images\t_doc_jumpto_16.svg" />
+    <Resource Remove="images\t_doc_preview_16.svg" />
+    <Resource Remove="images\t_doc_update_16.svg" />
+    <Resource Remove="images\t_draft_16.svg" />
+    <Resource Remove="images\t_edit_16.svg" />
+    <Resource Remove="images\t_export_16.svg" />
+    <Resource Remove="images\t_file_save_as_16.svg" />
+    <Resource Remove="images\t_file_save_as_all_16.svg" />
+    <Resource Remove="images\t_history_16.svg" />
+    <Resource Remove="images\t_home_16.svg" />
+    <Resource Remove="images\t_import_16.svg" />
+    <Resource Remove="images\t_journal_16.svg" />
+    <Resource Remove="images\t_layout_icon16.svg" />
+    <Resource Remove="images\t_open_16.svg" />
+    <Resource Remove="images\t_page_white_gear_16.svg" />
+    <Resource Remove="images\t_pane_expand_16.svg" />
+    <Resource Remove="images\t_print_16.svg" />
+    <Resource Remove="images\t_refresh_16.svg" />
+    <Resource Remove="images\t_report_16.svg" />
+    <Resource Remove="images\t_report_link_16.svg" />
+    <Resource Remove="images\t_save_16.svg" />
+    <Resource Remove="images\t_save_close_16.svg" />
+    <Resource Remove="images\t_save_new_16.svg" />
+    <Resource Remove="images\t_table_16.svg" />
+    <Resource Remove="images\t_table_export_excel_16.svg" />
+    <Resource Remove="images\t_table_preview_16.svg" />
+    <Resource Remove="images\t_table_refresh_16.svg" />
+    <Resource Remove="images\t_taxservice_16.svg" />
+    <Resource Remove="images\uncheked_all_16.svg" />
+    <Resource Remove="images\uncheked_all_32.svg" />
+    <Resource Remove="images\ungroup_16.svg" />
+    <Resource Remove="images\ungroup_32.svg" />
+    <Resource Remove="images\updatedownload\01.png" />
+    <Resource Remove="images\updatedownload\01.svg" />
+    <Resource Remove="images\updatedownload\02.png" />
+    <Resource Remove="images\updatedownload\02.svg" />
+    <Resource Remove="images\updatedownload\03.png" />
+    <Resource Remove="images\updatedownload\03.svg" />
+    <Resource Remove="images\updatedownload\04.png" />
+    <Resource Remove="images\updatedownload\04.svg" />
+    <Resource Remove="images\updatedownload\05.png" />
+    <Resource Remove="images\updatedownload\05.svg" />
+    <Resource Remove="images\updatedownload\06.png" />
+    <Resource Remove="images\updatedownload\06.svg" />
+    <Resource Remove="images\updatedownload\07.png" />
+    <Resource Remove="images\updatedownload\07.svg" />
+    <Resource Remove="images\updatedownload\08.png" />
+    <Resource Remove="images\updatedownload\08.svg" />
+    <Resource Remove="images\updatedownload\09.png" />
+    <Resource Remove="images\updatedownload\09.svg" />
+    <Resource Remove="images\updatedownload\10.png" />
+    <Resource Remove="images\updatedownload\10.svg" />
+    <Resource Remove="images\updatedownload\11.png" />
+    <Resource Remove="images\updatedownload\11.svg" />
+    <Resource Remove="images\updatedownload\12.png" />
+    <Resource Remove="images\updatedownload\12.svg" />
+    <Resource Remove="images\updatedownload\13.png" />
+    <Resource Remove="images\updatedownload\13.svg" />
+    <Resource Remove="images\updatedownload\14.png" />
+    <Resource Remove="images\updatedownload\14.svg" />
+    <Resource Remove="images\updatedownload\15.png" />
+    <Resource Remove="images\updatedownload\15.svg" />
+    <Resource Remove="images\updatedownload\16.png" />
+    <Resource Remove="images\updatedownload\16.svg" />
+    <Resource Remove="images\updatedownload\17.png" />
+    <Resource Remove="images\updatedownload\17.svg" />
+    <Resource Remove="images\updatedownload\18.png" />
+    <Resource Remove="images\updatedownload\18.svg" />
+    <Resource Remove="images\updatedownload\19.png" />
+    <Resource Remove="images\updatedownload\19.svg" />
+    <Resource Remove="images\updatedownload\20.png" />
+    <Resource Remove="images\updatedownload\20.svg" />
+    <Resource Remove="images\updatedownload\21.png" />
+    <Resource Remove="images\updatedownload\21.svg" />
+    <Resource Remove="images\updatedownload\22.png" />
+    <Resource Remove="images\updatedownload\22.svg" />
+    <Resource Remove="images\update_16.svg" />
+    <Resource Remove="images\update_32.svg" />
+    <Resource Remove="images\up_16.svg" />
+    <Resource Remove="images\up_32.svg" />
+    <Resource Remove="images\usb_flash_drive_16.svg" />
+    <Resource Remove="images\usb_flash_drive_32.svg" />
+    <Resource Remove="images\users_16.svg" />
+    <Resource Remove="images\users_24in32.svg" />
+    <Resource Remove="images\users_32.svg" />
+    <Resource Remove="images\user_16.svg" />
+    <Resource Remove="images\user_24in32.svg" />
+    <Resource Remove="images\user_32.svg" />
+    <Resource Remove="images\wand_16.svg" />
+    <Resource Remove="images\wand_32.svg" />
+    <Resource Remove="images\warning_16.svg" />
+    <Resource Remove="images\warning_16_white.svg" />
+    <Resource Remove="images\warning_32.svg" />
+    <Resource Remove="images\warning_circle_16.svg" />
+    <Resource Remove="images\warning_circle_32.svg" />
+    <Resource Remove="images\widgets_16.svg" />
+    <Resource Remove="images\widgets_32.svg" />
+    <Resource Remove="images\wingear_16.svg" />
+    <Resource Remove="images\wingear_32.svg" />
+    <Resource Remove="images\youtube_16.svg" />
+    <Resource Remove="images\youtube_32.svg" />
+    <Resource Remove="images\youtube_light_16.svg" />
+    <Resource Remove="images\youtube_light_32.svg" />
+    <Resource Remove="images\zip_16.svg" />
+    <Resource Remove="images\zip_16_disabled.svg" />
+    <Resource Remove="images\zip_32.svg" />
+    <Resource Remove="images\zip_32_disabled.svg" />
+    <Resource Include="images\accept_16.svg" LogicalName="images/accept_16.svg" />
+    <Resource Include="images\accept_32.svg" LogicalName="images/accept_32.svg" />
+    <Resource Include="images\accept_32_bold.svg" LogicalName="images/accept_32_bold.svg" />
+    <Resource Include="images\accounting_16.svg" LogicalName="images/accounting_16.svg" />
+    <Resource Include="images\accounting_24.svg" LogicalName="images/accounting_24.svg" />
+    <Resource Include="images\accounting_32.svg" LogicalName="images/accounting_32.svg" />
+    <Resource Include="images\acc_balance_acc_blue_32.svg" LogicalName="images/acc_balance_acc_blue_32.svg" />
+    <Resource Include="images\acc_balance_acc_gray_32.svg" LogicalName="images/acc_balance_acc_gray_32.svg" />
+    <Resource Include="images\acs_160x80.svg" LogicalName="images/acs_160x80.svg" />
+    <Resource Include="images\acs_check_16.svg" LogicalName="images/acs_check_16.svg" />
+    <Resource Include="images\acs_check_32.svg" LogicalName="images/acs_check_32.svg" />
+    <Resource Include="images\action_16.svg" LogicalName="images/action_16.svg" />
+    <Resource Include="images\action_16_new.svg" LogicalName="images/action_16_new.svg" />
+    <Resource Include="images\action_16_new_en.svg" LogicalName="images/action_16_new_en.svg" />
+    <Resource Include="images\action_32.svg" LogicalName="images/action_32.svg" />
+    <Resource Include="images\action_32_new.svg" LogicalName="images/action_32_new.svg" />
+    <Resource Include="images\action_32_new_en.svg" LogicalName="images/action_32_new_en.svg" />
+    <Resource Include="images\add_16.svg" LogicalName="images/add_16.svg" />
+    <Resource Include="images\add_32.svg" LogicalName="images/add_32.svg" />
+    <Resource Include="images\add_item_to_chartofacc_acc_blue_32.svg" LogicalName="images/add_item_to_chartofacc_acc_blue_32.svg" />
+    <Resource Include="images\add_item_to_chartofacc_acc_gray_32.svg" LogicalName="images/add_item_to_chartofacc_acc_gray_32.svg" />
+    <Resource Include="images\add_services_acc_blue_32.svg" LogicalName="images/add_services_acc_blue_32.svg" />
+    <Resource Include="images\add_services_acc_gray_32.svg" LogicalName="images/add_services_acc_gray_32.svg" />
+    <Resource Include="images\add_small_32.svg" LogicalName="images/add_small_32.svg" />
+    <Resource Include="images\admin-tools_16.svg" LogicalName="images/admin tools_16.svg" />
+    <Resource Include="images\admin-tools_24.svg" LogicalName="images/admin tools_24.svg" />
+    <Resource Include="images\admin-tools_32.svg" LogicalName="images/admin tools_32.svg" />
+    <Resource Include="images\admin-tools_green_16.svg" LogicalName="images/admin tools_green_16.svg" />
+    <Resource Include="images\admin-tools_green_24.svg" LogicalName="images/admin tools_green_24.svg" />
+    <Resource Include="images\admin-tools_green_32.svg" LogicalName="images/admin tools_green_32.svg" />
+    <Resource Include="images\analysis_16.svg" LogicalName="images/analysis_16.svg" />
+    <Resource Include="images\analysis_24.svg" LogicalName="images/analysis_24.svg" />
+    <Resource Include="images\analysis_32.svg" LogicalName="images/analysis_32.svg" />
+    <Resource Include="images\analysis_green_24.svg" LogicalName="images/analysis_green_24.svg" />
+    <Resource Include="images\analysis_green_32.svg" LogicalName="images/analysis_green_32.svg" />
+    <Resource Include="images\anydesk_16.svg" LogicalName="images/anydesk_16.svg" />
+    <Resource Include="images\anydesk_32.svg" LogicalName="images/anydesk_32.svg" />
+    <Resource Include="images\apple_store.svg" LogicalName="images/apple_store.svg" />
+    <Resource Include="images\arrows_16.svg" LogicalName="images/arrows_16.svg" />
+    <Resource Include="images\arrows_32.svg" LogicalName="images/arrows_32.svg" />
+    <Resource Include="images\arrows_green_16.svg" LogicalName="images/arrows_green_16.svg" />
+    <Resource Include="images\arrows_green_32.svg" LogicalName="images/arrows_green_32.svg" />
+    <Resource Include="images\arrows_red_16.svg" LogicalName="images/arrows_red_16.svg" />
+    <Resource Include="images\arrows_red_32.svg" LogicalName="images/arrows_red_32.svg" />
+    <Resource Include="images\arrow_down_16.svg" LogicalName="images/arrow_down_16.svg" />
+    <Resource Include="images\arrow_down_32.svg" LogicalName="images/arrow_down_32.svg" />
+    <Resource Include="images\arrow_left_16.svg" LogicalName="images/arrow_left_16.svg" />
+    <Resource Include="images\arrow_left_32.svg" LogicalName="images/arrow_left_32.svg" />
+    <Resource Include="images\arrow_right_16.svg" LogicalName="images/arrow_right_16.svg" />
+    <Resource Include="images\arrow_right_16_disabled.svg" LogicalName="images/arrow_right_16_disabled.svg" />
+    <Resource Include="images\arrow_right_32.svg" LogicalName="images/arrow_right_32.svg" />
+    <Resource Include="images\arrow_right_32_disabled.svg" LogicalName="images/arrow_right_32_disabled.svg" />
+    <Resource Include="images\arrow_up_16.svg" LogicalName="images/arrow_up_16.svg" />
+    <Resource Include="images\arrow_up_32.svg" LogicalName="images/arrow_up_32.svg" />
+    <Resource Include="images\as_cloudsolutions.svg" LogicalName="images/as_cloudsolutions.svg" />
+    <Resource Include="images\as_cloudsolutions_h.svg" LogicalName="images/as_cloudsolutions_h.svg" />
+    <Resource Include="images\as_logo.svg" LogicalName="images/as_logo.svg" />
+    <Resource Include="images\as_logo_32.svg" LogicalName="images/as_logo_32.svg" />
+    <Resource Include="images\as_logo_ge.svg" LogicalName="images/as_logo_ge.svg" />
+    <Resource Include="images\as_logo_ge_32.svg" LogicalName="images/as_logo_ge_32.svg" />
+    <Resource Include="images\as_logo_ge_h.svg" LogicalName="images/as_logo_ge_h.svg" />
+    <Resource Include="images\as_logo_h.svg" LogicalName="images/as_logo_h.svg" />
+    <Resource Include="images\attach_16.svg" LogicalName="images/attach_16.svg" />
+    <Resource Include="images\attach_32.svg" LogicalName="images/attach_32.svg" />
+    <Resource Include="images\attach_cancel_16.svg" LogicalName="images/attach_cancel_16.svg" />
+    <Resource Include="images\attach_cancel_32.svg" LogicalName="images/attach_cancel_32.svg" />
+    <Resource Include="images\attach_document_link_16.svg" LogicalName="images/attach_document_link_16.svg" />
+    <Resource Include="images\attach_document_link_32.svg" LogicalName="images/attach_document_link_32.svg" />
+    <Resource Include="images\attach_file_16.svg" LogicalName="images/attach_file_16.svg" />
+    <Resource Include="images\attach_file_32.svg" LogicalName="images/attach_file_32.svg" />
+    <Resource Include="images\attach_link_16.svg" LogicalName="images/attach_link_16.svg" />
+    <Resource Include="images\attach_link_32.svg" LogicalName="images/attach_link_32.svg" />
+    <Resource Include="images\attach_pdf_16.svg" LogicalName="images/attach_pdf_16.svg" />
+    <Resource Include="images\attach_pdf_32.svg" LogicalName="images/attach_pdf_32.svg" />
+    <Resource Include="images\b2bline-blue.svg" LogicalName="images/b2bline-blue.svg" />
+    <Resource Include="images\b2b_16.svg" LogicalName="images/b2b_16.svg" />
+    <Resource Include="images\b2b_160x80.svg" LogicalName="images/b2b_160x80.svg" />
+    <Resource Include="images\b2b_24.svg" LogicalName="images/b2b_24.svg" />
+    <Resource Include="images\b2b_32.svg" LogicalName="images/b2b_32.svg" />
+    <Resource Include="images\b2b_48.svg" LogicalName="images/b2b_48.svg" />
+    <Resource Include="images\b2b_64.svg" LogicalName="images/b2b_64.svg" />
+    <Resource Include="images\b2b_check_16.svg" LogicalName="images/b2b_check_16.svg" />
+    <Resource Include="images\b2b_check_32.svg" LogicalName="images/b2b_check_32.svg" />
+    <Resource Include="images\b2b_green_24.svg" LogicalName="images/b2b_green_24.svg" />
+    <Resource Include="images\b2b_green_32.svg" LogicalName="images/b2b_green_32.svg" />
+    <Resource Include="images\backspace.svg" LogicalName="images/backspace.svg" />
+    <Resource Include="images\bank\aeb.svg" LogicalName="images/bank/aeb.svg" />
+    <Resource Include="images\bank\ameria.svg" LogicalName="images/bank/ameria.svg" />
+    <Resource Include="images\bank\amio.svg" LogicalName="images/bank/amio.svg" />
+    <Resource Include="images\bank\ararat.svg" LogicalName="images/bank/ararat.svg" />
+    <Resource Include="images\bank\armswiss.svg" LogicalName="images/bank/armswiss.svg" />
+    <Resource Include="images\bank\ashib.svg" LogicalName="images/bank/ashib.svg" />
+    <Resource Include="images\bank\byblos.svg" LogicalName="images/bank/byblos.svg" />
+    <Resource Include="images\bank\converse.svg" LogicalName="images/bank/converse.svg" />
+    <Resource Include="images\bank\default.svg" LogicalName="images/bank/default.svg" />
+    <Resource Include="images\bank\evoca.svg" LogicalName="images/bank/evoca.svg" />
+    <Resource Include="images\bank_16.svg" LogicalName="images/bank_16.svg" />
+    <Resource Include="images\bank_24.svg" LogicalName="images/bank_24.svg" />
+    <Resource Include="images\bank_32.svg" LogicalName="images/bank_32.svg" />
+    <Resource Include="images\bank_green_24.svg" LogicalName="images/bank_green_24.svg" />
+    <Resource Include="images\bank_green_32.svg" LogicalName="images/bank_green_32.svg" />
+    <Resource Include="images\books_stack_16.svg" LogicalName="images/books_stack_16.svg" />
+    <Resource Include="images\books_stack_32.svg" LogicalName="images/books_stack_32.svg" />
+    <Resource Include="images\building_coins_acc_blue_32.svg" LogicalName="images/building_coins_acc_blue_32.svg" />
+    <Resource Include="images\building_coins_acc_gray_32.svg" LogicalName="images/building_coins_acc_gray_32.svg" />
+    <Resource Include="images\building_coins_trade_gray_32.svg" LogicalName="images/building_coins_trade_gray_32.svg" />
+    <Resource Include="images\building_coins_trade_green_32.svg" LogicalName="images/building_coins_trade_green_32.svg" />
+    <Resource Include="images\building_tools_acc_blue_32.svg" LogicalName="images/building_tools_acc_blue_32.svg" />
+    <Resource Include="images\building_tools_acc_gray_32.svg" LogicalName="images/building_tools_acc_gray_32.svg" />
+    <Resource Include="images\building_tools_trade_gray_32.svg" LogicalName="images/building_tools_trade_gray_32.svg" />
+    <Resource Include="images\building_tools_trade_green_32.svg" LogicalName="images/building_tools_trade_green_32.svg" />
+    <Resource Include="images\bullet-arrow-right2.svg" LogicalName="images/bullet-arrow-right2.svg" />
+    <Resource Include="images\bullet_yellow_16.svg" LogicalName="images/bullet_yellow_16.svg" />
+    <Resource Include="images\bullet_yellow_32.svg" LogicalName="images/bullet_yellow_32.svg" />
+    <Resource Include="images\calc-wf-blue.svg" LogicalName="images/calc-wf-blue.svg" />
+    <Resource Include="images\calc-wf.svg" LogicalName="images/calc-wf.svg" />
+    <Resource Include="images\calculator_16.svg" LogicalName="images/calculator_16.svg" />
+    <Resource Include="images\calculator_32.svg" LogicalName="images/calculator_32.svg" />
+    <Resource Include="images\calendar\date_01_16.svg" LogicalName="images/calendar/date_01_16.svg" />
+    <Resource Include="images\calendar\date_01_32.svg" LogicalName="images/calendar/date_01_32.svg" />
+    <Resource Include="images\calendar\date_02_16.svg" LogicalName="images/calendar/date_02_16.svg" />
+    <Resource Include="images\calendar\date_02_32.svg" LogicalName="images/calendar/date_02_32.svg" />
+    <Resource Include="images\calendar\date_03_16.svg" LogicalName="images/calendar/date_03_16.svg" />
+    <Resource Include="images\calendar\date_03_32.svg" LogicalName="images/calendar/date_03_32.svg" />
+    <Resource Include="images\calendar\date_04_16.svg" LogicalName="images/calendar/date_04_16.svg" />
+    <Resource Include="images\calendar\date_04_32.svg" LogicalName="images/calendar/date_04_32.svg" />
+    <Resource Include="images\calendar\date_05_16.svg" LogicalName="images/calendar/date_05_16.svg" />
+    <Resource Include="images\calendar\date_05_32.svg" LogicalName="images/calendar/date_05_32.svg" />
+    <Resource Include="images\calendar\date_06_16.svg" LogicalName="images/calendar/date_06_16.svg" />
+    <Resource Include="images\calendar\date_06_32.svg" LogicalName="images/calendar/date_06_32.svg" />
+    <Resource Include="images\calendar\date_07_16.svg" LogicalName="images/calendar/date_07_16.svg" />
+    <Resource Include="images\calendar\date_07_32.svg" LogicalName="images/calendar/date_07_32.svg" />
+    <Resource Include="images\calendar\date_08_16.svg" LogicalName="images/calendar/date_08_16.svg" />
+    <Resource Include="images\calendar\date_08_32.svg" LogicalName="images/calendar/date_08_32.svg" />
+    <Resource Include="images\calendar\date_09_16.svg" LogicalName="images/calendar/date_09_16.svg" />
+    <Resource Include="images\calendar\date_09_32.svg" LogicalName="images/calendar/date_09_32.svg" />
+    <Resource Include="images\calendar\date_10_16.svg" LogicalName="images/calendar/date_10_16.svg" />
+    <Resource Include="images\calendar\date_10_32.svg" LogicalName="images/calendar/date_10_32.svg" />
+    <Resource Include="images\calendar\date_11_16.svg" LogicalName="images/calendar/date_11_16.svg" />
+    <Resource Include="images\calendar\date_11_32.svg" LogicalName="images/calendar/date_11_32.svg" />
+    <Resource Include="images\calendar\date_12_16.svg" LogicalName="images/calendar/date_12_16.svg" />
+    <Resource Include="images\calendar\date_12_32.svg" LogicalName="images/calendar/date_12_32.svg" />
+    <Resource Include="images\calendar\date_13_16.svg" LogicalName="images/calendar/date_13_16.svg" />
+    <Resource Include="images\calendar\date_13_32.svg" LogicalName="images/calendar/date_13_32.svg" />
+    <Resource Include="images\calendar\date_14_16.svg" LogicalName="images/calendar/date_14_16.svg" />
+    <Resource Include="images\calendar\date_14_32.svg" LogicalName="images/calendar/date_14_32.svg" />
+    <Resource Include="images\calendar\date_15_16.svg" LogicalName="images/calendar/date_15_16.svg" />
+    <Resource Include="images\calendar\date_15_32.svg" LogicalName="images/calendar/date_15_32.svg" />
+    <Resource Include="images\calendar\date_16_16.svg" LogicalName="images/calendar/date_16_16.svg" />
+    <Resource Include="images\calendar\date_16_32.svg" LogicalName="images/calendar/date_16_32.svg" />
+    <Resource Include="images\calendar\date_17_16.svg" LogicalName="images/calendar/date_17_16.svg" />
+    <Resource Include="images\calendar\date_17_32.svg" LogicalName="images/calendar/date_17_32.svg" />
+    <Resource Include="images\calendar\date_18_16.svg" LogicalName="images/calendar/date_18_16.svg" />
+    <Resource Include="images\calendar\date_18_32.svg" LogicalName="images/calendar/date_18_32.svg" />
+    <Resource Include="images\calendar\date_19_16.svg" LogicalName="images/calendar/date_19_16.svg" />
+    <Resource Include="images\calendar\date_19_32.svg" LogicalName="images/calendar/date_19_32.svg" />
+    <Resource Include="images\calendar\date_20_16.svg" LogicalName="images/calendar/date_20_16.svg" />
+    <Resource Include="images\calendar\date_20_32.svg" LogicalName="images/calendar/date_20_32.svg" />
+    <Resource Include="images\calendar\date_21_16.svg" LogicalName="images/calendar/date_21_16.svg" />
+    <Resource Include="images\calendar\date_21_32.svg" LogicalName="images/calendar/date_21_32.svg" />
+    <Resource Include="images\calendar\date_22_16.svg" LogicalName="images/calendar/date_22_16.svg" />
+    <Resource Include="images\calendar\date_22_32.svg" LogicalName="images/calendar/date_22_32.svg" />
+    <Resource Include="images\calendar\date_23_16.svg" LogicalName="images/calendar/date_23_16.svg" />
+    <Resource Include="images\calendar\date_23_32.svg" LogicalName="images/calendar/date_23_32.svg" />
+    <Resource Include="images\calendar\date_24_16.svg" LogicalName="images/calendar/date_24_16.svg" />
+    <Resource Include="images\calendar\date_24_32.svg" LogicalName="images/calendar/date_24_32.svg" />
+    <Resource Include="images\calendar\date_25_16.svg" LogicalName="images/calendar/date_25_16.svg" />
+    <Resource Include="images\calendar\date_25_32.svg" LogicalName="images/calendar/date_25_32.svg" />
+    <Resource Include="images\calendar\date_26_16.svg" LogicalName="images/calendar/date_26_16.svg" />
+    <Resource Include="images\calendar\date_26_32.svg" LogicalName="images/calendar/date_26_32.svg" />
+    <Resource Include="images\calendar\date_27_16.svg" LogicalName="images/calendar/date_27_16.svg" />
+    <Resource Include="images\calendar\date_27_32.svg" LogicalName="images/calendar/date_27_32.svg" />
+    <Resource Include="images\calendar\date_28_16.svg" LogicalName="images/calendar/date_28_16.svg" />
+    <Resource Include="images\calendar\date_28_32.svg" LogicalName="images/calendar/date_28_32.svg" />
+    <Resource Include="images\calendar\date_29_16.svg" LogicalName="images/calendar/date_29_16.svg" />
+    <Resource Include="images\calendar\date_29_32.svg" LogicalName="images/calendar/date_29_32.svg" />
+    <Resource Include="images\calendar\date_30_16.svg" LogicalName="images/calendar/date_30_16.svg" />
+    <Resource Include="images\calendar\date_30_32.svg" LogicalName="images/calendar/date_30_32.svg" />
+    <Resource Include="images\calendar\date_31_16.svg" LogicalName="images/calendar/date_31_16.svg" />
+    <Resource Include="images\calendar\date_31_32.svg" LogicalName="images/calendar/date_31_32.svg" />
+    <Resource Include="images\calendar_16.svg" LogicalName="images/calendar_16.svg" />
+    <Resource Include="images\calendar_32.svg" LogicalName="images/calendar_32.svg" />
+    <Resource Include="images\calendar_alert_16.svg" LogicalName="images/calendar_alert_16.svg" />
+    <Resource Include="images\calendar_alert_32.svg" LogicalName="images/calendar_alert_32.svg" />
+    <Resource Include="images\calendar_day_16.svg" LogicalName="images/calendar_day_16.svg" />
+    <Resource Include="images\calendar_day_32.svg" LogicalName="images/calendar_day_32.svg" />
+    <Resource Include="images\calendar_day_simple_16.svg" LogicalName="images/calendar_day_simple_16.svg" />
+    <Resource Include="images\cancel_16.svg" LogicalName="images/cancel_16.svg" />
+    <Resource Include="images\cancel_32.svg" LogicalName="images/cancel_32.svg" />
+    <Resource Include="images\cancel_32_bold.svg" LogicalName="images/cancel_32_bold.svg" />
+    <Resource Include="images\cancel_true_16.svg" LogicalName="images/cancel_true_16.svg" />
+    <Resource Include="images\cancel_true_32.svg" LogicalName="images/cancel_true_32.svg" />
+    <Resource Include="images\card_view_16.svg" LogicalName="images/card_view_16.svg" />
+    <Resource Include="images\card_view_32.svg" LogicalName="images/card_view_32.svg" />
+    <Resource Include="images\chart_bar_icon_16.svg" LogicalName="images/chart_bar_icon_16.svg" />
+    <Resource Include="images\chart_bar_icon_32.svg" LogicalName="images/chart_bar_icon_32.svg" />
+    <Resource Include="images\chart_pie_icon_16.svg" LogicalName="images/chart_pie_icon_16.svg" />
+    <Resource Include="images\chart_pie_icon_32.svg" LogicalName="images/chart_pie_icon_32.svg" />
+    <Resource Include="images\chart_stock_icon_16.svg" LogicalName="images/chart_stock_icon_16.svg" />
+    <Resource Include="images\chart_stock_icon_32.svg" LogicalName="images/chart_stock_icon_32.svg" />
+    <Resource Include="images\chat_16.svg" LogicalName="images/chat_16.svg" />
+    <Resource Include="images\chat_32.svg" LogicalName="images/chat_32.svg" />
+    <Resource Include="images\checking_update_16.svg" LogicalName="images/checking_update_16.svg" />
+    <Resource Include="images\checking_update_32.svg" LogicalName="images/checking_update_32.svg" />
+    <Resource Include="images\checking_update_48.svg" LogicalName="images/checking_update_48.svg" />
+    <Resource Include="images\check_16.svg" LogicalName="images/check_16.svg" />
+    <Resource Include="images\check_20.png" LogicalName="images/check_20.png" />
+    <Resource Include="images\check_20.svg" LogicalName="images/check_20.svg" />
+    <Resource Include="images\check_32.svg" LogicalName="images/check_32.svg" />
+    <Resource Include="images\check_80.svg" LogicalName="images/check_80.svg" />
+    <Resource Include="images\check_disable_20.svg" LogicalName="images/check_disable_20.svg" />
+    <Resource Include="images\cheked_all_16.svg" LogicalName="images/cheked_all_16.svg" />
+    <Resource Include="images\cheked_all_32.svg" LogicalName="images/cheked_all_32.svg" />
+    <Resource Include="images\closed_filter_checked_16.svg" LogicalName="images/closed_filter_checked_16.svg" />
+    <Resource Include="images\closed_filter_unchecked_16.svg" LogicalName="images/closed_filter_unchecked_16.svg" />
+    <Resource Include="images\close_16.svg" LogicalName="images/close_16.svg" />
+    <Resource Include="images\close_32.svg" LogicalName="images/close_32.svg" />
+    <Resource Include="images\close_all_windows_16.svg" LogicalName="images/close_all_windows_16.svg" />
+    <Resource Include="images\close_all_windows_32.svg" LogicalName="images/close_all_windows_32.svg" />
+    <Resource Include="images\cloud_14_gray.svg" LogicalName="images/cloud_14_gray.svg" />
+    <Resource Include="images\cloud_16.svg" LogicalName="images/cloud_16.svg" />
+    <Resource Include="images\cloud_16_blue.svg" LogicalName="images/cloud_16_blue.svg" />
+    <Resource Include="images\cloud_16_green.svg" LogicalName="images/cloud_16_green.svg" />
+    <Resource Include="images\cloud_16_new.svg" LogicalName="images/cloud_16_new.svg" />
+    <Resource Include="images\cloud_16_new_en.svg" LogicalName="images/cloud_16_new_en.svg" />
+    <Resource Include="images\cloud_16_orange.svg" LogicalName="images/cloud_16_orange.svg" />
+    <Resource Include="images\cloud_16_red.svg" LogicalName="images/cloud_16_red.svg" />
+    <Resource Include="images\cloud_16_white.svg" LogicalName="images/cloud_16_white.svg" />
+    <Resource Include="images\cloud_32.svg" LogicalName="images/cloud_32.svg" />
+    <Resource Include="images\cloud_add_16.svg" LogicalName="images/cloud_add_16.svg" />
+    <Resource Include="images\cloud_add_32.svg" LogicalName="images/cloud_add_32.svg" />
+    <Resource Include="images\cloud_update_16.svg" LogicalName="images/cloud_update_16.svg" />
+    <Resource Include="images\cloud_update_32.svg" LogicalName="images/cloud_update_32.svg" />
+    <Resource Include="images\collapse_16.svg" LogicalName="images/collapse_16.svg" />
+    <Resource Include="images\collapse_32.svg" LogicalName="images/collapse_32.svg" />
+    <Resource Include="images\computer_network_red_16.svg" LogicalName="images/computer_network_red_16.svg" />
+    <Resource Include="images\computer_network_red_32.svg" LogicalName="images/computer_network_red_32.svg" />
+    <Resource Include="images\connected_12.svg" LogicalName="images/connected_12.svg" />
+    <Resource Include="images\connect_16.svg" LogicalName="images/connect_16.svg" />
+    <Resource Include="images\connect_32.svg" LogicalName="images/connect_32.svg" />
+    <Resource Include="images\copy_14.svg" LogicalName="images/copy_14.svg" />
+    <Resource Include="images\copy_16.svg" LogicalName="images/copy_16.svg" />
+    <Resource Include="images\copy_32.svg" LogicalName="images/copy_32.svg" />
+    <Resource Include="images\creditcard_96.svg" LogicalName="images/creditcard_96.svg" />
+    <Resource Include="images\databases_16.svg" LogicalName="images/databases_16.svg" />
+    <Resource Include="images\databases_16_blue.svg" LogicalName="images/databases_16_blue.svg" />
+    <Resource Include="images\databases_16_green.svg" LogicalName="images/databases_16_green.svg" />
+    <Resource Include="images\databases_16_orange.svg" LogicalName="images/databases_16_orange.svg" />
+    <Resource Include="images\databases_16_white.svg" LogicalName="images/databases_16_white.svg" />
+    <Resource Include="images\databases_32.svg" LogicalName="images/databases_32.svg" />
+    <Resource Include="images\databases_light_16.svg" LogicalName="images/databases_light_16.svg" />
+    <Resource Include="images\databases_light_32.svg" LogicalName="images/databases_light_32.svg" />
+    <Resource Include="images\database_backup_16.svg" LogicalName="images/database_backup_16.svg" />
+    <Resource Include="images\database_backup_16_disabled.svg" LogicalName="images/database_backup_16_disabled.svg" />
+    <Resource Include="images\database_backup_32.svg" LogicalName="images/database_backup_32.svg" />
+    <Resource Include="images\database_backup_32_disabled.svg" LogicalName="images/database_backup_32_disabled.svg" />
+    <Resource Include="images\database_connect_16.svg" LogicalName="images/database_connect_16.svg" />
+    <Resource Include="images\database_connect_32.svg" LogicalName="images/database_connect_32.svg" />
+    <Resource Include="images\database_error_16.svg" LogicalName="images/database_error_16.svg" />
+    <Resource Include="images\database_error_32.svg" LogicalName="images/database_error_32.svg" />
+    <Resource Include="images\database_error_light_16.svg" LogicalName="images/database_error_light_16.svg" />
+    <Resource Include="images\database_error_light_32.svg" LogicalName="images/database_error_light_32.svg" />
+    <Resource Include="images\database_lightning_16.svg" LogicalName="images/database_lightning_16.svg" />
+    <Resource Include="images\database_lightning_32.svg" LogicalName="images/database_lightning_32.svg" />
+    <Resource Include="images\database_open_16.svg" LogicalName="images/database_open_16.svg" />
+    <Resource Include="images\database_open_32.svg" LogicalName="images/database_open_32.svg" />
+    <Resource Include="images\database_save_16.svg" LogicalName="images/database_save_16.svg" />
+    <Resource Include="images\database_save_32.svg" LogicalName="images/database_save_32.svg" />
+    <Resource Include="images\database_save_light_16.svg" LogicalName="images/database_save_light_16.svg" />
+    <Resource Include="images\database_save_light_32.svg" LogicalName="images/database_save_light_32.svg" />
+    <Resource Include="images\datamatrix_16.svg" LogicalName="images/datamatrix_16.svg" />
+    <Resource Include="images\datamatrix_32.svg" LogicalName="images/datamatrix_32.svg" />
+    <Resource Include="images\datamatrix_blue_16.svg" LogicalName="images/datamatrix_blue_16.svg" />
+    <Resource Include="images\datamatrix_blue_32.svg" LogicalName="images/datamatrix_blue_32.svg" />
+    <Resource Include="images\datamatrix_blue_small_16.svg" LogicalName="images/datamatrix_blue_small_16.svg" />
+    <Resource Include="images\datamatrix_red_16.svg" LogicalName="images/datamatrix_red_16.svg" />
+    <Resource Include="images\datamatrix_small_16.svg" LogicalName="images/datamatrix_small_16.svg" />
+    <Resource Include="images\data_merge_16.svg" LogicalName="images/data_merge_16.svg" />
+    <Resource Include="images\data_merge_32.svg" LogicalName="images/data_merge_32.svg" />
+    <Resource Include="images\deleterowbutton_24.svg" LogicalName="images/deleterowbutton_24.svg" />
+    <Resource Include="images\delete_16.svg" LogicalName="images/delete_16.svg" />
+    <Resource Include="images\delete_20.svg" LogicalName="images/delete_20.svg" />
+    <Resource Include="images\delete_32.svg" LogicalName="images/delete_32.svg" />
+    <Resource Include="images\dialog_16.svg" LogicalName="images/dialog_16.svg" />
+    <Resource Include="images\dialog_32.svg" LogicalName="images/dialog_32.svg" />
+    <Resource Include="images\directory_info_24.svg" LogicalName="images/directory_info_24.svg" />
+    <Resource Include="images\disconnected_12.svg" LogicalName="images/disconnected_12.svg" />
+    <Resource Include="images\discountcard_96.svg" LogicalName="images/discountcard_96.svg" />
+    <Resource Include="images\doc_16.svg" LogicalName="images/doc_16.svg" />
+    <Resource Include="images\doc_32.svg" LogicalName="images/doc_32.svg" />
+    <Resource Include="images\doc_accept_16.svg" LogicalName="images/doc_accept_16.svg" />
+    <Resource Include="images\doc_accept_32.svg" LogicalName="images/doc_accept_32.svg" />
+    <Resource Include="images\doc_based_on_16.svg" LogicalName="images/doc_based_on_16.svg" />
+    <Resource Include="images\doc_based_on_32.svg" LogicalName="images/doc_based_on_32.svg" />
+    <Resource Include="images\doc_cancel_16.svg" LogicalName="images/doc_cancel_16.svg" />
+    <Resource Include="images\doc_cancel_32.svg" LogicalName="images/doc_cancel_32.svg" />
+    <Resource Include="images\doc_copy_16.svg" LogicalName="images/doc_copy_16.svg" />
+    <Resource Include="images\doc_copy_32.svg" LogicalName="images/doc_copy_32.svg" />
+    <Resource Include="images\doc_delete_16.svg" LogicalName="images/doc_delete_16.svg" />
+    <Resource Include="images\doc_delete_32.svg" LogicalName="images/doc_delete_32.svg" />
+    <Resource Include="images\doc_edit_16.svg" LogicalName="images/doc_edit_16.svg" />
+    <Resource Include="images\doc_edit_32.svg" LogicalName="images/doc_edit_32.svg" />
+    <Resource Include="images\doc_export_16.svg" LogicalName="images/doc_export_16.svg" />
+    <Resource Include="images\doc_export_32.svg" LogicalName="images/doc_export_32.svg" />
+    <Resource Include="images\doc_export_excel_16.svg" LogicalName="images/doc_export_excel_16.svg" />
+    <Resource Include="images\doc_export_excel_16_new.svg" LogicalName="images/doc_export_excel_16_new.svg" />
+    <Resource Include="images\doc_export_excel_16_new_en.svg" LogicalName="images/doc_export_excel_16_new_en.svg" />
+    <Resource Include="images\doc_export_excel_32.svg" LogicalName="images/doc_export_excel_32.svg" />
+    <Resource Include="images\doc_export_pdf_16.svg" LogicalName="images/doc_export_pdf_16.svg" />
+    <Resource Include="images\doc_export_pdf_32.svg" LogicalName="images/doc_export_pdf_32.svg" />
+    <Resource Include="images\doc_export_word_16.svg" LogicalName="images/doc_export_word_16.svg" />
+    <Resource Include="images\doc_export_word_32.svg" LogicalName="images/doc_export_word_32.svg" />
+    <Resource Include="images\doc_export_xml_16.svg" LogicalName="images/doc_export_xml_16.svg" />
+    <Resource Include="images\doc_export_xml_32.svg" LogicalName="images/doc_export_xml_32.svg" />
+    <Resource Include="images\doc_jumpto_16.svg" LogicalName="images/doc_jumpto_16.svg" />
+    <Resource Include="images\doc_jumpto_32.svg" LogicalName="images/doc_jumpto_32.svg" />
+    <Resource Include="images\doc_new_16.svg" LogicalName="images/doc_new_16.svg" />
+    <Resource Include="images\doc_new_16_new.svg" LogicalName="images/doc_new_16_new.svg" />
+    <Resource Include="images\doc_new_16_new_en.svg" LogicalName="images/doc_new_16_new_en.svg" />
+    <Resource Include="images\doc_new_32.svg" LogicalName="images/doc_new_32.svg" />
+    <Resource Include="images\doc_new_32_new.svg" LogicalName="images/doc_new_32_new.svg" />
+    <Resource Include="images\doc_new_32_new_en.svg" LogicalName="images/doc_new_32_new_en.svg" />
+    <Resource Include="images\doc_preview_16.svg" LogicalName="images/doc_preview_16.svg" />
+    <Resource Include="images\doc_preview_32.svg" LogicalName="images/doc_preview_32.svg" />
+    <Resource Include="images\doc_update_16.svg" LogicalName="images/doc_update_16.svg" />
+    <Resource Include="images\doc_update_32.svg" LogicalName="images/doc_update_32.svg" />
+    <Resource Include="images\doc_view_16.svg" LogicalName="images/doc_view_16.svg" />
+    <Resource Include="images\doc_view_32.svg" LogicalName="images/doc_view_32.svg" />
+    <Resource Include="images\dot_16.svg" LogicalName="images/dot_16.svg" />
+    <Resource Include="images\dot_orange_16.svg" LogicalName="images/dot_orange_16.svg" />
+    <Resource Include="images\dot_red_16.svg" LogicalName="images/dot_red_16.svg" />
+    <Resource Include="images\download_16.svg" LogicalName="images/download_16.svg" />
+    <Resource Include="images\download_32.svg" LogicalName="images/download_32.svg" />
+    <Resource Include="images\down_16.svg" LogicalName="images/down_16.svg" />
+    <Resource Include="images\down_32.svg" LogicalName="images/down_32.svg" />
+    <Resource Include="images\draft_16.svg" LogicalName="images/draft_16.svg" />
+    <Resource Include="images\draft_32.svg" LogicalName="images/draft_32.svg" />
+    <Resource Include="images\dropbox_16.svg" LogicalName="images/dropbox_16.svg" />
+    <Resource Include="images\dropbox_32.svg" LogicalName="images/dropbox_32.svg" />
+    <Resource Include="images\dropbox_32_disabled.svg" LogicalName="images/dropbox_32_disabled.svg" />
+    <Resource Include="images\edit_16.svg" LogicalName="images/edit_16.svg" />
+    <Resource Include="images\edit_32.svg" LogicalName="images/edit_32.svg" />
+    <Resource Include="images\emarkaccept_16.svg" LogicalName="images/emarkaccept_16.svg" />
+    <Resource Include="images\emarkaccept_32.svg" LogicalName="images/emarkaccept_32.svg" />
+    <Resource Include="images\emarkerror_16.svg" LogicalName="images/emarkerror_16.svg" />
+    <Resource Include="images\emarkerror_32.svg" LogicalName="images/emarkerror_32.svg" />
+    <Resource Include="images\emark_16.svg" LogicalName="images/emark_16.svg" />
+    <Resource Include="images\emark_32.svg" LogicalName="images/emark_32.svg" />
+    <Resource Include="images\employee_card_96.svg" LogicalName="images/employee_card_96.svg" />
+    <Resource Include="images\eraser_16.svg" LogicalName="images/eraser_16.svg" />
+    <Resource Include="images\eraser_32.svg" LogicalName="images/eraser_32.svg" />
+    <Resource Include="images\error_16.svg" LogicalName="images/error_16.svg" />
+    <Resource Include="images\error_32.svg" LogicalName="images/error_32.svg" />
+    <Resource Include="images\error_go_16.svg" LogicalName="images/error_go_16.svg" />
+    <Resource Include="images\error_go_32.svg" LogicalName="images/error_go_32.svg" />
+    <Resource Include="images\exceladdin_16.svg" LogicalName="images/exceladdin_16.svg" />
+    <Resource Include="images\exceladdin_32.svg" LogicalName="images/exceladdin_32.svg" />
+    <Resource Include="images\expand_16.svg" LogicalName="images/expand_16.svg" />
+    <Resource Include="images\expand_32.svg" LogicalName="images/expand_32.svg" />
+    <Resource Include="images\export_16.svg" LogicalName="images/export_16.svg" />
+    <Resource Include="images\export_32.svg" LogicalName="images/export_32.svg" />
+    <Resource Include="images\eye_14.svg" LogicalName="images/eye_14.svg" />
+    <Resource Include="images\favorite_16.svg" LogicalName="images/favorite_16.svg" />
+    <Resource Include="images\favorite_32.svg" LogicalName="images/favorite_32.svg" />
+    <Resource Include="images\favorite_delete_16.svg" LogicalName="images/favorite_delete_16.svg" />
+    <Resource Include="images\favorite_delete_32.svg" LogicalName="images/favorite_delete_32.svg" />
+    <Resource Include="images\file_16.svg" LogicalName="images/file_16.svg" />
+    <Resource Include="images\file_save_as_16.svg" LogicalName="images/file_save_as_16.svg" />
+    <Resource Include="images\file_save_as_32.svg" LogicalName="images/file_save_as_32.svg" />
+    <Resource Include="images\file_save_as_all_16.svg" LogicalName="images/file_save_as_all_16.svg" />
+    <Resource Include="images\file_save_as_all_32.svg" LogicalName="images/file_save_as_all_32.svg" />
+    <Resource Include="images\file_xml_16.svg" LogicalName="images/file_xml_16.svg" />
+    <Resource Include="images\file_xml_32.svg" LogicalName="images/file_xml_32.svg" />
+    <Resource Include="images\fill_cashes_trade_gray_32.svg" LogicalName="images/fill_cashes_trade_gray_32.svg" />
+    <Resource Include="images\fill_cashes_trade_green_32.svg" LogicalName="images/fill_cashes_trade_green_32.svg" />
+    <Resource Include="images\fill_down_16.svg" LogicalName="images/fill_down_16.svg" />
+    <Resource Include="images\fill_down_32.svg" LogicalName="images/fill_down_32.svg" />
+    <Resource Include="images\fill_left_16.svg" LogicalName="images/fill_left_16.svg" />
+    <Resource Include="images\fill_left_32.svg" LogicalName="images/fill_left_32.svg" />
+    <Resource Include="images\fill_partners_info_acc_blue_32.svg" LogicalName="images/fill_partners_info_acc_blue_32.svg" />
+    <Resource Include="images\fill_partners_info_acc_gray_32.svg" LogicalName="images/fill_partners_info_acc_gray_32.svg" />
+    <Resource Include="images\fill_partners_info_trade_gray_32.svg" LogicalName="images/fill_partners_info_trade_gray_32.svg" />
+    <Resource Include="images\fill_partners_info_trade_green_32.svg" LogicalName="images/fill_partners_info_trade_green_32.svg" />
+    <Resource Include="images\fill_partners_rem_acc_blue_32.svg" LogicalName="images/fill_partners_rem_acc_blue_32.svg" />
+    <Resource Include="images\fill_partners_rem_acc_gray_32.svg" LogicalName="images/fill_partners_rem_acc_gray_32.svg" />
+    <Resource Include="images\fill_partners_rem_trade_gray_32.svg" LogicalName="images/fill_partners_rem_trade_gray_32.svg" />
+    <Resource Include="images\fill_partners_rem_trade_green_32.svg" LogicalName="images/fill_partners_rem_trade_green_32.svg" />
+    <Resource Include="images\fill_right_16.svg" LogicalName="images/fill_right_16.svg" />
+    <Resource Include="images\fill_right_32.svg" LogicalName="images/fill_right_32.svg" />
+    <Resource Include="images\filter\any_of.svg" LogicalName="images/filter/any_of.svg" />
+    <Resource Include="images\filter\begins_with.svg" LogicalName="images/filter/begins_with.svg" />
+    <Resource Include="images\filter\between.svg" LogicalName="images/filter/between.svg" />
+    <Resource Include="images\filter\blank.svg" LogicalName="images/filter/blank.svg" />
+    <Resource Include="images\filter\contains.svg" LogicalName="images/filter/contains.svg" />
+    <Resource Include="images\filter\does_not_contain.svg" LogicalName="images/filter/does_not_contain.svg" />
+    <Resource Include="images\filter\does_not_equal.svg" LogicalName="images/filter/does_not_equal.svg" />
+    <Resource Include="images\filter\ends_with.svg" LogicalName="images/filter/ends_with.svg" />
+    <Resource Include="images\filter\equals.svg" LogicalName="images/filter/equals.svg" />
+    <Resource Include="images\filter\greater.svg" LogicalName="images/filter/greater.svg" />
+    <Resource Include="images\filter\greater_or_equal.svg" LogicalName="images/filter/greater_or_equal.svg" />
+    <Resource Include="images\filter\less.svg" LogicalName="images/filter/less.svg" />
+    <Resource Include="images\filter\less_or_equal.svg" LogicalName="images/filter/less_or_equal.svg" />
+    <Resource Include="images\filter\like.svg" LogicalName="images/filter/like.svg" />
+    <Resource Include="images\filter\none_of.svg" LogicalName="images/filter/none_of.svg" />
+    <Resource Include="images\filter\not_begins_with.svg" LogicalName="images/filter/not_begins_with.svg" />
+    <Resource Include="images\filter\not_between.svg" LogicalName="images/filter/not_between.svg" />
+    <Resource Include="images\filter\not_blank.svg" LogicalName="images/filter/not_blank.svg" />
+    <Resource Include="images\filter\not_ends_with.svg" LogicalName="images/filter/not_ends_with.svg" />
+    <Resource Include="images\filter\not_like.svg" LogicalName="images/filter/not_like.svg" />
+    <Resource Include="images\filter\treeview.svg" LogicalName="images/filter/treeview.svg" />
+    <Resource Include="images\filter_16.svg" LogicalName="images/filter_16.svg" />
+    <Resource Include="images\filter_32.svg" LogicalName="images/filter_32.svg" />
+    <Resource Include="images\filter_clear_16.svg" LogicalName="images/filter_clear_16.svg" />
+    <Resource Include="images\filter_clear_32.svg" LogicalName="images/filter_clear_32.svg" />
+    <Resource Include="images\filter_equal_16.svg" LogicalName="images/filter_equal_16.svg" />
+    <Resource Include="images\filter_equal_32.svg" LogicalName="images/filter_equal_32.svg" />
+    <Resource Include="images\filter_not_equal_16.svg" LogicalName="images/filter_not_equal_16.svg" />
+    <Resource Include="images\filter_not_equal_32.svg" LogicalName="images/filter_not_equal_32.svg" />
+    <Resource Include="images\filter_selected_16.svg" LogicalName="images/filter_selected_16.svg" />
+    <Resource Include="images\filter_selected_32.svg" LogicalName="images/filter_selected_32.svg" />
+    <Resource Include="images\filter_small_32.svg" LogicalName="images/filter_small_32.svg" />
+    <Resource Include="images\find_16.svg" LogicalName="images/find_16.svg" />
+    <Resource Include="images\find_32.svg" LogicalName="images/find_32.svg" />
+    <Resource Include="images\fixed-assets_16.svg" LogicalName="images/fixed assets_16.svg" />
+    <Resource Include="images\fixed-assets_24.svg" LogicalName="images/fixed assets_24.svg" />
+    <Resource Include="images\fixed-assets_32.svg" LogicalName="images/fixed assets_32.svg" />
+    <Resource Include="images\flag_armenia_16.svg" LogicalName="images/flag_armenia_16.svg" />
+    <Resource Include="images\flag_armenia_32.svg" LogicalName="images/flag_armenia_32.svg" />
+    <Resource Include="images\flag_georgia_16.svg" LogicalName="images/flag_georgia_16.svg" />
+    <Resource Include="images\flag_georgia_32.svg" LogicalName="images/flag_georgia_32.svg" />
+    <Resource Include="images\flag_great_britain_16.svg" LogicalName="images/flag_great_britain_16.svg" />
+    <Resource Include="images\flag_great_britain_32.svg" LogicalName="images/flag_great_britain_32.svg" />
+    <Resource Include="images\flag_russia_16.svg" LogicalName="images/flag_russia_16.svg" />
+    <Resource Include="images\flag_russia_32.svg" LogicalName="images/flag_russia_32.svg" />
+    <Resource Include="images\folder_excel_16.svg" LogicalName="images/folder_excel_16.svg" />
+    <Resource Include="images\folder_excel_32.svg" LogicalName="images/folder_excel_32.svg" />
+    <Resource Include="images\folder_open_16_disabled.svg" LogicalName="images/folder_open_16_disabled.svg" />
+    <Resource Include="images\folder_open_32.svg" LogicalName="images/folder_open_32.svg" />
+    <Resource Include="images\folder_open_32_disabled.svg" LogicalName="images/folder_open_32_disabled.svg" />
+    <Resource Include="images\functions_16.svg" LogicalName="images/functions_16.svg" />
+    <Resource Include="images\functions_32.svg" LogicalName="images/functions_32.svg" />
+    <Resource Include="images\gift_16.svg" LogicalName="images/gift_16.svg" />
+    <Resource Include="images\gift_32.svg" LogicalName="images/gift_32.svg" />
+    <Resource Include="images\gift_small_16.svg" LogicalName="images/gift_small_16.svg" />
+    <Resource Include="images\google_play.svg" LogicalName="images/google_play.svg" />
+    <Resource Include="images\graph_24.svg" LogicalName="images/graph_24.svg" />
+    <Resource Include="images\grid_fill_down_16.svg" LogicalName="images/grid_fill_down_16.svg" />
+    <Resource Include="images\grid_fill_down_32.svg" LogicalName="images/grid_fill_down_32.svg" />
+    <Resource Include="images\grid_row_16.svg" LogicalName="images/grid_row_16.svg" />
+    <Resource Include="images\grid_row_32.svg" LogicalName="images/grid_row_32.svg" />
+    <Resource Include="images\groupdelete_16.svg" LogicalName="images/groupdelete_16.svg" />
+    <Resource Include="images\groupdelete_32.svg" LogicalName="images/groupdelete_32.svg" />
+    <Resource Include="images\groupedit_16.svg" LogicalName="images/groupedit_16.svg" />
+    <Resource Include="images\groupedit_32.svg" LogicalName="images/groupedit_32.svg" />
+    <Resource Include="images\grouping_16.svg" LogicalName="images/grouping_16.svg" />
+    <Resource Include="images\grouping_32.svg" LogicalName="images/grouping_32.svg" />
+    <Resource Include="images\group_panel_16.svg" LogicalName="images/group_panel_16.svg" />
+    <Resource Include="images\group_panel_32.svg" LogicalName="images/group_panel_32.svg" />
+    <Resource Include="images\hamburger_horizontal_16.svg" LogicalName="images/hamburger_horizontal_16.svg" />
+    <Resource Include="images\help1-magicwand-24-283-1.svg" LogicalName="images/help1-magicwand-24-283 1.svg" />
+    <Resource Include="images\help2-prod-285-1.svg" LogicalName="images/help2-prod-285 1.svg" />
+    <Resource Include="images\help3-calendar-291-1.svg" LogicalName="images/help3-calendar-291 1.svg" />
+    <Resource Include="images\help_16.svg" LogicalName="images/help_16.svg" />
+    <Resource Include="images\help_16_black.svg" LogicalName="images/help_16_black.svg" />
+    <Resource Include="images\help_32.svg" LogicalName="images/help_32.svg" />
+    <Resource Include="images\hint_16.svg" LogicalName="images/hint_16.svg" />
+    <Resource Include="images\hint_32.svg" LogicalName="images/hint_32.svg" />
+    <Resource Include="images\history_16.svg" LogicalName="images/history_16.svg" />
+    <Resource Include="images\history_32.svg" LogicalName="images/history_32.svg" />
+    <Resource Include="images\home_16.svg" LogicalName="images/home_16.svg" />
+    <Resource Include="images\home_32.svg" LogicalName="images/home_32.svg" />
+    <Resource Include="images\image-icon.svg" LogicalName="images/image-icon.svg" />
+    <Resource Include="images\image-icon_32.svg" LogicalName="images/image-icon_32.svg" />
+    <Resource Include="images\import_16.svg" LogicalName="images/import_16.svg" />
+    <Resource Include="images\import_32.svg" LogicalName="images/import_32.svg" />
+    <Resource Include="images\information_16.svg" LogicalName="images/information_16.svg" />
+    <Resource Include="images\information_32.svg" LogicalName="images/information_32.svg" />
+    <Resource Include="images\info_16_white.svg" LogicalName="images/info_16_white.svg" />
+    <Resource Include="images\info_32_white.svg" LogicalName="images/info_32_white.svg" />
+    <Resource Include="images\internet_16.svg" LogicalName="images/internet_16.svg" />
+    <Resource Include="images\internet_32.svg" LogicalName="images/internet_32.svg" />
+    <Resource Include="images\invoice_check_16.svg" LogicalName="images/invoice_check_16.svg" />
+    <Resource Include="images\invoice_check_32.svg" LogicalName="images/invoice_check_32.svg" />
+    <Resource Include="images\invoice_new_16.svg" LogicalName="images/invoice_new_16.svg" />
+    <Resource Include="images\invoice_new_32.svg" LogicalName="images/invoice_new_32.svg" />
+    <Resource Include="images\isn_16.svg" LogicalName="images/isn_16.svg" />
+    <Resource Include="images\isn_32.svg" LogicalName="images/isn_32.svg" />
+    <Resource Include="images\journal_16.svg" LogicalName="images/journal_16.svg" />
+    <Resource Include="images\journal_16_delete.svg" LogicalName="images/journal_16_delete.svg" />
+    <Resource Include="images\journal_16_new.svg" LogicalName="images/journal_16_new.svg" />
+    <Resource Include="images\journal_16_new_en.svg" LogicalName="images/journal_16_new_en.svg" />
+    <Resource Include="images\journal_32.svg" LogicalName="images/journal_32.svg" />
+    <Resource Include="images\journal_32_delete.svg" LogicalName="images/journal_32_delete.svg" />
+    <Resource Include="images\key_16.svg" LogicalName="images/key_16.svg" />
+    <Resource Include="images\key_32.svg" LogicalName="images/key_32.svg" />
+    <Resource Include="images\language_14.svg" LogicalName="images/language_14.svg" />
+    <Resource Include="images\layout_add16.svg" LogicalName="images/layout_add16.svg" />
+    <Resource Include="images\layout_add32.svg" LogicalName="images/layout_add32.svg" />
+    <Resource Include="images\layout_edit16.svg" LogicalName="images/layout_edit16.svg" />
+    <Resource Include="images\layout_edit32.svg" LogicalName="images/layout_edit32.svg" />
+    <Resource Include="images\layout_green_16.svg" LogicalName="images/layout_green_16.svg" />
+    <Resource Include="images\layout_green_32.svg" LogicalName="images/layout_green_32.svg" />
+    <Resource Include="images\layout_icon16.svg" LogicalName="images/layout_icon16.svg" />
+    <Resource Include="images\layout_icon32.svg" LogicalName="images/layout_icon32.svg" />
+    <Resource Include="images\list_check_16.svg" LogicalName="images/list_check_16.svg" />
+    <Resource Include="images\list_check_32.svg" LogicalName="images/list_check_32.svg" />
+    <Resource Include="images\location_map_24.svg" LogicalName="images/location_map_24.svg" />
+    <Resource Include="images\lock_16.svg" LogicalName="images/lock_16.svg" />
+    <Resource Include="images\lock_32.svg" LogicalName="images/lock_32.svg" />
+    <Resource Include="images\lock_open_16.svg" LogicalName="images/lock_open_16.svg" />
+    <Resource Include="images\lock_open_32.svg" LogicalName="images/lock_open_32.svg" />
+    <Resource Include="images\login_close_16.svg" LogicalName="images/login_close_16.svg" />
+    <Resource Include="images\login_history_16.svg" LogicalName="images/login_history_16.svg" />
+    <Resource Include="images\login_history_32.svg" LogicalName="images/login_history_32.svg" />
+    <Resource Include="images\map_red.svg" LogicalName="images/map_red.svg" />
+    <Resource Include="images\map_red_16.svg" LogicalName="images/map_red_16.svg" />
+    <Resource Include="images\materials_16.svg" LogicalName="images/materials_16.svg" />
+    <Resource Include="images\materials_24.svg" LogicalName="images/materials_24.svg" />
+    <Resource Include="images\materials_32.svg" LogicalName="images/materials_32.svg" />
+    <Resource Include="images\materials_green_24.svg" LogicalName="images/materials_green_24.svg" />
+    <Resource Include="images\materials_green_32.svg" LogicalName="images/materials_green_32.svg" />
+    <Resource Include="images\merchandising_24.svg" LogicalName="images/merchandising_24.svg" />
+    <Resource Include="images\minus_16.svg" LogicalName="images/minus_16.svg" />
+    <Resource Include="images\minus_32.svg" LogicalName="images/minus_32.svg" />
+    <Resource Include="images\network_cloud_16.svg" LogicalName="images/network_cloud_16.svg" />
+    <Resource Include="images\network_cloud_32.svg" LogicalName="images/network_cloud_32.svg" />
+    <Resource Include="images\node-tree_16.svg" LogicalName="images/node-tree_16.svg" />
+    <Resource Include="images\node-tree_32.svg" LogicalName="images/node-tree_32.svg" />
+    <Resource Include="images\none.png" LogicalName="images/none.png" />
+    <Resource Include="images\notification_16.svg" LogicalName="images/notification_16.svg" />
+    <Resource Include="images\notification_16_red.svg" LogicalName="images/notification_16_red.svg" />
+    <Resource Include="images\notification_32.svg" LogicalName="images/notification_32.svg" />
+    <Resource Include="images\notification_32_red.svg" LogicalName="images/notification_32_red.svg" />
+    <Resource Include="images\open_16.svg" LogicalName="images/open_16.svg" />
+    <Resource Include="images\open_32.svg" LogicalName="images/open_32.svg" />
+    <Resource Include="images\open_link_16.svg" LogicalName="images/open_link_16.svg" />
+    <Resource Include="images\open_new_window_16.svg" LogicalName="images/open_new_window_16.svg" />
+    <Resource Include="images\open_new_window_32.svg" LogicalName="images/open_new_window_32.svg" />
+    <Resource Include="images\options_16.svg" LogicalName="images/options_16.svg" />
+    <Resource Include="images\options_32.svg" LogicalName="images/options_32.svg" />
+    <Resource Include="images\package_24.svg" LogicalName="images/package_24.svg" />
+    <Resource Include="images\package_front_acc_blue_32.svg" LogicalName="images/package_front_acc_blue_32.svg" />
+    <Resource Include="images\package_front_acc_gray_32.svg" LogicalName="images/package_front_acc_gray_32.svg" />
+    <Resource Include="images\package_front_trade_gray_32.svg" LogicalName="images/package_front_trade_gray_32.svg" />
+    <Resource Include="images\package_front_trade_green_32.svg" LogicalName="images/package_front_trade_green_32.svg" />
+    <Resource Include="images\page_setup_16.svg" LogicalName="images/page_setup_16.svg" />
+    <Resource Include="images\page_setup_32.svg" LogicalName="images/page_setup_32.svg" />
+    <Resource Include="images\page_white_database_16.svg" LogicalName="images/page_white_database_16.svg" />
+    <Resource Include="images\page_white_database_32.svg" LogicalName="images/page_white_database_32.svg" />
+    <Resource Include="images\page_white_error_16.svg" LogicalName="images/page_white_error_16.svg" />
+    <Resource Include="images\page_white_error_32.svg" LogicalName="images/page_white_error_32.svg" />
+    <Resource Include="images\page_white_gear_16.svg" LogicalName="images/page_white_gear_16.svg" />
+    <Resource Include="images\page_white_gear_32.svg" LogicalName="images/page_white_gear_32.svg" />
+    <Resource Include="images\pane_expand_16.svg" LogicalName="images/pane_expand_16.svg" />
+    <Resource Include="images\pane_expand_32.svg" LogicalName="images/pane_expand_32.svg" />
+    <Resource Include="images\paste_16.svg" LogicalName="images/paste_16.svg" />
+    <Resource Include="images\paste_32.svg" LogicalName="images/paste_32.svg" />
+    <Resource Include="images\paymentsystems\amex_16.svg" LogicalName="images/paymentsystems/amex_16.svg" />
+    <Resource Include="images\paymentsystems\arca_16.svg" LogicalName="images/paymentsystems/arca_16.svg" />
+    <Resource Include="images\paymentsystems\creditcard_16.svg" LogicalName="images/paymentsystems/creditcard_16.svg" />
+    <Resource Include="images\paymentsystems\creditcard_32.svg" LogicalName="images/paymentsystems/creditcard_32.svg" />
+    <Resource Include="images\paymentsystems\fav_easypay_16.svg" LogicalName="images/paymentsystems/fav_easypay_16.svg" />
+    <Resource Include="images\paymentsystems\fav_idram_16.svg" LogicalName="images/paymentsystems/fav_idram_16.svg" />
+    <Resource Include="images\paymentsystems\fav_inecopay_16.svg" LogicalName="images/paymentsystems/fav_inecopay_16.svg" />
+    <Resource Include="images\paymentsystems\fav_payx_16.svg" LogicalName="images/paymentsystems/fav_payx_16.svg" />
+    <Resource Include="images\paymentsystems\fav_telcell_16.svg" LogicalName="images/paymentsystems/fav_telcell_16.svg" />
+    <Resource Include="images\paymentsystems\logo_amex.svg" LogicalName="images/paymentsystems/logo_amex.svg" />
+    <Resource Include="images\paymentsystems\logo_arca.svg" LogicalName="images/paymentsystems/logo_arca.svg" />
+    <Resource Include="images\paymentsystems\logo_easypay.png" LogicalName="images/paymentsystems/logo_easypay.png" />
+    <Resource Include="images\paymentsystems\logo_easypay.svg" LogicalName="images/paymentsystems/logo_easypay.svg" />
+    <Resource Include="images\paymentsystems\logo_idram.png" LogicalName="images/paymentsystems/logo_idram.png" />
+    <Resource Include="images\paymentsystems\logo_idram.svg" LogicalName="images/paymentsystems/logo_idram.svg" />
+    <Resource Include="images\paymentsystems\logo_inecopay.png" LogicalName="images/paymentsystems/logo_inecopay.png" />
+    <Resource Include="images\paymentsystems\logo_inecopay.svg" LogicalName="images/paymentsystems/logo_inecopay.svg" />
+    <Resource Include="images\paymentsystems\logo_mastercard.svg" LogicalName="images/paymentsystems/logo_mastercard.svg" />
+    <Resource Include="images\paymentsystems\logo_mir.svg" LogicalName="images/paymentsystems/logo_mir.svg" />
+    <Resource Include="images\paymentsystems\logo_payx.png" LogicalName="images/paymentsystems/logo_payx.png" />
+    <Resource Include="images\paymentsystems\logo_payx.svg" LogicalName="images/paymentsystems/logo_payx.svg" />
+    <Resource Include="images\paymentsystems\logo_telcell.png" LogicalName="images/paymentsystems/logo_telcell.png" />
+    <Resource Include="images\paymentsystems\logo_telcell.svg" LogicalName="images/paymentsystems/logo_telcell.svg" />
+    <Resource Include="images\paymentsystems\mastercard_16.svg" LogicalName="images/paymentsystems/mastercard_16.svg" />
+    <Resource Include="images\paymentsystems\mir_16.svg" LogicalName="images/paymentsystems/mir_16.svg" />
+    <Resource Include="images\paymentsystems\visa_16.svg" LogicalName="images/paymentsystems/visa_16.svg" />
+    <Resource Include="images\people-coins-wf-blue.svg" LogicalName="images/people-coins-wf-blue.svg" />
+    <Resource Include="images\people-coins-wf.svg" LogicalName="images/people-coins-wf.svg" />
+    <Resource Include="images\phone_16.svg" LogicalName="images/phone_16.svg" />
+    <Resource Include="images\phone_64.svg" LogicalName="images/phone_64.svg" />
+    <Resource Include="images\pie_chart_icon_16.svg" LogicalName="images/pie_chart_icon_16.svg" />
+    <Resource Include="images\pie_chart_icon_32.svg" LogicalName="images/pie_chart_icon_32.svg" />
+    <Resource Include="images\play.svg" LogicalName="images/play.svg" />
+    <Resource Include="images\plus_16.svg" LogicalName="images/plus_16.svg" />
+    <Resource Include="images\plus_32.svg" LogicalName="images/plus_32.svg" />
+    <Resource Include="images\plus_minus_16.svg" LogicalName="images/plus_minus_16.svg" />
+    <Resource Include="images\plus_minus_32.svg" LogicalName="images/plus_minus_32.svg" />
+    <Resource Include="images\pos_closecashiershift_56.svg" LogicalName="images/pos_closecashiershift_56.svg" />
+    <Resource Include="images\pos_dataexchange_56.svg" LogicalName="images/pos_dataexchange_56.svg" />
+    <Resource Include="images\pos_printecrreportshift_56.svg" LogicalName="images/pos_printecrreportshift_56.svg" />
+    <Resource Include="images\pos_reports_56.svg" LogicalName="images/pos_reports_56.svg" />
+    <Resource Include="images\pos_saless_56.svg" LogicalName="images/pos_saless_56.svg" />
+    <Resource Include="images\pos_ss_16.svg" LogicalName="images/pos_ss_16.svg" />
+    <Resource Include="images\pos_ss_24.svg" LogicalName="images/pos_ss_24.svg" />
+    <Resource Include="images\pos_ss_green_32.svg" LogicalName="images/pos_ss_green_32.svg" />
+    <Resource Include="images\pos_ss_new_24.svg" LogicalName="images/pos_ss_new_24.svg" />
+    <Resource Include="images\pos_ss_new_24_en.svg" LogicalName="images/pos_ss_new_24_en.svg" />
+    <Resource Include="images\power_button_off_16.svg" LogicalName="images/power_button_off_16.svg" />
+    <Resource Include="images\power_button_off_32.svg" LogicalName="images/power_button_off_32.svg" />
+    <Resource Include="images\power_button_on_16.svg" LogicalName="images/power_button_on_16.svg" />
+    <Resource Include="images\power_button_on_32.svg" LogicalName="images/power_button_on_32.svg" />
+    <Resource Include="images\printer_default_16.svg" LogicalName="images/printer_default_16.svg" />
+    <Resource Include="images\printer_default_32.svg" LogicalName="images/printer_default_32.svg" />
+    <Resource Include="images\print_16.svg" LogicalName="images/print_16.svg" />
+    <Resource Include="images\print_32.svg" LogicalName="images/print_32.svg" />
+    <Resource Include="images\print_landscape_16.svg" LogicalName="images/print_landscape_16.svg" />
+    <Resource Include="images\print_landscape_32.svg" LogicalName="images/print_landscape_32.svg" />
+    <Resource Include="images\print_portrait_16.svg" LogicalName="images/print_portrait_16.svg" />
+    <Resource Include="images\print_portrait_32.svg" LogicalName="images/print_portrait_32.svg" />
+    <Resource Include="images\purchase_16.svg" LogicalName="images/purchase_16.svg" />
+    <Resource Include="images\purchase_24.svg" LogicalName="images/purchase_24.svg" />
+    <Resource Include="images\purchase_32.svg" LogicalName="images/purchase_32.svg" />
+    <Resource Include="images\pushpin_blue_16.svg" LogicalName="images/pushpin_blue_16.svg" />
+    <Resource Include="images\pushpin_blue_32.svg" LogicalName="images/pushpin_blue_32.svg" />
+    <Resource Include="images\pushpin_blue_green_16.svg" LogicalName="images/pushpin_blue_green_16.svg" />
+    <Resource Include="images\pushpin_blue_green_32.svg" LogicalName="images/pushpin_blue_green_32.svg" />
+    <Resource Include="images\pushpin_blue_location_16.svg" LogicalName="images/pushpin_blue_location_16.svg" />
+    <Resource Include="images\pushpin_blue_location_32.svg" LogicalName="images/pushpin_blue_location_32.svg" />
+    <Resource Include="images\pushpin_blue_yellow_16.svg" LogicalName="images/pushpin_blue_yellow_16.svg" />
+    <Resource Include="images\pushpin_blue_yellow_32.svg" LogicalName="images/pushpin_blue_yellow_32.svg" />
+    <Resource Include="images\pushpin_green_16.svg" LogicalName="images/pushpin_green_16.svg" />
+    <Resource Include="images\pushpin_green_32.svg" LogicalName="images/pushpin_green_32.svg" />
+    <Resource Include="images\pushpin_lightblue_32.svg" LogicalName="images/pushpin_lightblue_32.svg" />
+    <Resource Include="images\pushpin_orange_32.svg" LogicalName="images/pushpin_orange_32.svg" />
+    <Resource Include="images\pushpin_pink_16.svg" LogicalName="images/pushpin_pink_16.svg" />
+    <Resource Include="images\pushpin_pink_32.svg" LogicalName="images/pushpin_pink_32.svg" />
+    <Resource Include="images\pushpin_purple_32.svg" LogicalName="images/pushpin_purple_32.svg" />
+    <Resource Include="images\pushpin_red_16.svg" LogicalName="images/pushpin_red_16.svg" />
+    <Resource Include="images\pushpin_red_32.svg" LogicalName="images/pushpin_red_32.svg" />
+    <Resource Include="images\pushpin_yellow_16.svg" LogicalName="images/pushpin_yellow_16.svg" />
+    <Resource Include="images\pushpin_yellow_32.svg" LogicalName="images/pushpin_yellow_32.svg" />
+    <Resource Include="images\qrcode_16.svg" LogicalName="images/qrcode_16.svg" />
+    <Resource Include="images\qrcode_32.svg" LogicalName="images/qrcode_32.svg" />
+    <Resource Include="images\question_16.svg" LogicalName="images/question_16.svg" />
+    <Resource Include="images\question_48.svg" LogicalName="images/question_48.svg" />
+    <Resource Include="images\recent_16.svg" LogicalName="images/recent_16.svg" />
+    <Resource Include="images\recent_32.svg" LogicalName="images/recent_32.svg" />
+    <Resource Include="images\refresh_16.svg" LogicalName="images/refresh_16.svg" />
+    <Resource Include="images\refresh_32.svg" LogicalName="images/refresh_32.svg" />
+    <Resource Include="images\refresh_all_16.svg" LogicalName="images/refresh_all_16.svg" />
+    <Resource Include="images\refresh_all_32.svg" LogicalName="images/refresh_all_32.svg" />
+    <Resource Include="images\refresh_small_16.svg" LogicalName="images/refresh_small_16.svg" />
+    <Resource Include="images\reload_16.svg" LogicalName="images/reload_16.svg" />
+    <Resource Include="images\reload_32.svg" LogicalName="images/reload_32.svg" />
+    <Resource Include="images\report.svg" LogicalName="images/report.svg" />
+    <Resource Include="images\report_16.svg" LogicalName="images/report_16.svg" />
+    <Resource Include="images\report_16_new.svg" LogicalName="images/report_16_new.svg" />
+    <Resource Include="images\report_16_new_en.svg" LogicalName="images/report_16_new_en.svg" />
+    <Resource Include="images\report_32.svg" LogicalName="images/report_32.svg" />
+    <Resource Include="images\report_32_new.svg" LogicalName="images/report_32_new.svg" />
+    <Resource Include="images\report_32_new_en.svg" LogicalName="images/report_32_new_en.svg" />
+    <Resource Include="images\report_link_16.svg" LogicalName="images/report_link_16.svg" />
+    <Resource Include="images\report_link_32.svg" LogicalName="images/report_link_32.svg" />
+    <Resource Include="images\rs_logo_16.png" LogicalName="images/rs_logo_16.png" />
+    <Resource Include="images\rs_logo_32.png" LogicalName="images/rs_logo_32.png" />
+    <Resource Include="images\run_16.svg" LogicalName="images/run_16.svg" />
+    <Resource Include="images\run_20.svg" LogicalName="images/run_20.svg" />
+    <Resource Include="images\run_32.svg" LogicalName="images/run_32.svg" />
+    <Resource Include="images\salary_16.svg" LogicalName="images/salary_16.svg" />
+    <Resource Include="images\salary_24.svg" LogicalName="images/salary_24.svg" />
+    <Resource Include="images\salary_32.svg" LogicalName="images/salary_32.svg" />
+    <Resource Include="images\saless_24.svg" LogicalName="images/saless_24.svg" />
+    <Resource Include="images\save_16.svg" LogicalName="images/save_16.svg" />
+    <Resource Include="images\save_32.svg" LogicalName="images/save_32.svg" />
+    <Resource Include="images\save_as_16.svg" LogicalName="images/save_as_16.svg" />
+    <Resource Include="images\save_as_32.svg" LogicalName="images/save_as_32.svg" />
+    <Resource Include="images\save_close_16.svg" LogicalName="images/save_close_16.svg" />
+    <Resource Include="images\save_close_32.svg" LogicalName="images/save_close_32.svg" />
+    <Resource Include="images\save_new_16.svg" LogicalName="images/save_new_16.svg" />
+    <Resource Include="images\save_new_32.svg" LogicalName="images/save_new_32.svg" />
+    <Resource Include="images\scale_export_16.svg" LogicalName="images/scale_export_16.svg" />
+    <Resource Include="images\scale_import_16.svg" LogicalName="images/scale_import_16.svg" />
+    <Resource Include="images\scale_view_16.svg" LogicalName="images/scale_view_16.svg" />
+    <Resource Include="images\select_all_16.svg" LogicalName="images/select_all_16.svg" />
+    <Resource Include="images\select_all_32.svg" LogicalName="images/select_all_32.svg" />
+    <Resource Include="images\select_column_16.svg" LogicalName="images/select_column_16.svg" />
+    <Resource Include="images\select_column_32.svg" LogicalName="images/select_column_32.svg" />
+    <Resource Include="images\select_row_condition_16.svg" LogicalName="images/select_row_condition_16.svg" />
+    <Resource Include="images\select_row_condition_32.svg" LogicalName="images/select_row_condition_32.svg" />
+    <Resource Include="images\send_mail_16.svg" LogicalName="images/send_mail_16.svg" />
+    <Resource Include="images\send_mail_32.svg" LogicalName="images/send_mail_32.svg" />
+    <Resource Include="images\server_network_16.svg" LogicalName="images/server_network_16.svg" />
+    <Resource Include="images\server_network_32.svg" LogicalName="images/server_network_32.svg" />
+    <Resource Include="images\server_network_off_16.svg" LogicalName="images/server_network_off_16.svg" />
+    <Resource Include="images\server_network_off_32.svg" LogicalName="images/server_network_off_32.svg" />
+    <Resource Include="images\short-life-items_16.svg" LogicalName="images/short life items_16.svg" />
+    <Resource Include="images\short-life-items_24.svg" LogicalName="images/short life items_24.svg" />
+    <Resource Include="images\short-life-items_32.svg" LogicalName="images/short life items_32.svg" />
+    <Resource Include="images\show_row_details_16.svg" LogicalName="images/show_row_details_16.svg" />
+    <Resource Include="images\show_row_details_32.svg" LogicalName="images/show_row_details_32.svg" />
+    <Resource Include="images\show_transactions_16.svg" LogicalName="images/show_transactions_16.svg" />
+    <Resource Include="images\show_transactions_32.svg" LogicalName="images/show_transactions_32.svg" />
+    <Resource Include="images\simplereload_16.svg" LogicalName="images/simplereload_16.svg" />
+    <Resource Include="images\simplereload_32.svg" LogicalName="images/simplereload_32.svg" />
+    <Resource Include="images\smartphone_16.svg" LogicalName="images/smartphone_16.svg" />
+    <Resource Include="images\smartphone_32.svg" LogicalName="images/smartphone_32.svg" />
+    <Resource Include="images\software_update_available_16.svg" LogicalName="images/software_update_available_16.svg" />
+    <Resource Include="images\software_update_available_24.svg" LogicalName="images/software_update_available_24.svg" />
+    <Resource Include="images\software_update_available_32.svg" LogicalName="images/software_update_available_32.svg" />
+    <Resource Include="images\software_update_available_48.svg" LogicalName="images/software_update_available_48.svg" />
+    <Resource Include="images\software_update_available_64.svg" LogicalName="images/software_update_available_64.svg" />
+    <Resource Include="images\sort_clear_all_16.svg" LogicalName="images/sort_clear_all_16.svg" />
+    <Resource Include="images\sort_clear_all_16_az.svg" LogicalName="images/sort_clear_all_16_az.svg" />
+    <Resource Include="images\sort_clear_all_32.svg" LogicalName="images/sort_clear_all_32.svg" />
+    <Resource Include="images\sort_clear_all_32_az.svg" LogicalName="images/sort_clear_all_32_az.svg" />
+    <Resource Include="images\spreadsheet_16.svg" LogicalName="images/spreadsheet_16.svg" />
+    <Resource Include="images\spreadsheet_32.svg" LogicalName="images/spreadsheet_32.svg" />
+    <Resource Include="images\table_16.svg" LogicalName="images/table_16.svg" />
+    <Resource Include="images\table_16_new.svg" LogicalName="images/table_16_new.svg" />
+    <Resource Include="images\table_16_new_en.svg" LogicalName="images/table_16_new_en.svg" />
+    <Resource Include="images\table_32.svg" LogicalName="images/table_32.svg" />
+    <Resource Include="images\table_32_new.svg" LogicalName="images/table_32_new.svg" />
+    <Resource Include="images\table_cloud_16.svg" LogicalName="images/table_cloud_16.svg" />
+    <Resource Include="images\table_cloud_32.svg" LogicalName="images/table_cloud_32.svg" />
+    <Resource Include="images\table_delete_all_rows_16.svg" LogicalName="images/table_delete_all_rows_16.svg" />
+    <Resource Include="images\table_delete_all_rows_32.svg" LogicalName="images/table_delete_all_rows_32.svg" />
+    <Resource Include="images\table_discount_16.svg" LogicalName="images/table_discount_16.svg" />
+    <Resource Include="images\table_discount_32.svg" LogicalName="images/table_discount_32.svg" />
+    <Resource Include="images\table_export_b2b_16.svg" LogicalName="images/table_export_b2b_16.svg" />
+    <Resource Include="images\table_export_b2b_32.svg" LogicalName="images/table_export_b2b_32.svg" />
+    <Resource Include="images\table_export_excel_16.svg" LogicalName="images/table_export_excel_16.svg" />
+    <Resource Include="images\table_export_excel_32.svg" LogicalName="images/table_export_excel_32.svg" />
+    <Resource Include="images\table_export_pdf_16.svg" LogicalName="images/table_export_pdf_16.svg" />
+    <Resource Include="images\table_export_pdf_32.svg" LogicalName="images/table_export_pdf_32.svg" />
+    <Resource Include="images\table_filter_row_16.svg" LogicalName="images/table_filter_row_16.svg" />
+    <Resource Include="images\table_filter_row_32.svg" LogicalName="images/table_filter_row_32.svg" />
+    <Resource Include="images\table_functions_16.svg" LogicalName="images/table_functions_16.svg" />
+    <Resource Include="images\table_functions_32.svg" LogicalName="images/table_functions_32.svg" />
+    <Resource Include="images\table_preview_16.svg" LogicalName="images/table_preview_16.svg" />
+    <Resource Include="images\table_preview_32.svg" LogicalName="images/table_preview_32.svg" />
+    <Resource Include="images\table_red_16.svg" LogicalName="images/table_red_16.svg" />
+    <Resource Include="images\table_red_16_new.svg" LogicalName="images/table_red_16_new.svg" />
+    <Resource Include="images\table_red_16_new_en.svg" LogicalName="images/table_red_16_new_en.svg" />
+    <Resource Include="images\table_refresh_16.svg" LogicalName="images/table_refresh_16.svg" />
+    <Resource Include="images\table_refresh_32.svg" LogicalName="images/table_refresh_32.svg" />
+    <Resource Include="images\table_row_insert.svg" LogicalName="images/table_row_insert.svg" />
+    <Resource Include="images\table_row_insert_32.svg" LogicalName="images/table_row_insert_32.svg" />
+    <Resource Include="images\table_show_details_16.svg" LogicalName="images/table_show_details_16.svg" />
+    <Resource Include="images\table_show_details_32.svg" LogicalName="images/table_show_details_32.svg" />
+    <Resource Include="images\table_show_rowdetails_16.svg" LogicalName="images/table_show_rowdetails_16.svg" />
+    <Resource Include="images\table_show_rowdetails_32.svg" LogicalName="images/table_show_rowdetails_32.svg" />
+    <Resource Include="images\tag_price_percent_24.svg" LogicalName="images/tag_price_percent_24.svg" />
+    <Resource Include="images\taxservice.png" LogicalName="images/taxservice.png" />
+    <Resource Include="images\taxservice.svg" LogicalName="images/taxservice.svg" />
+    <Resource Include="images\taxservice_16.svg" LogicalName="images/taxservice_16.svg" />
+    <Resource Include="images\taxservice_16_white.svg" LogicalName="images/taxservice_16_white.svg" />
+    <Resource Include="images\taxservice_24.svg" LogicalName="images/taxservice_24.svg" />
+    <Resource Include="images\taxservice_32.png" LogicalName="images/taxservice_32.png" />
+    <Resource Include="images\taxservice_32.svg" LogicalName="images/taxservice_32.svg" />
+    <Resource Include="images\taxservice_line_16.svg" LogicalName="images/taxservice_line_16.svg" />
+    <Resource Include="images\taxservice_line_24.svg" LogicalName="images/taxservice_line_24.svg" />
+    <Resource Include="images\taxservice_line_32.svg" LogicalName="images/taxservice_line_32.svg" />
+    <Resource Include="images\taxservice_small.png" LogicalName="images/taxservice_small.png" />
+    <Resource Include="images\teamviewer_16.svg" LogicalName="images/teamviewer_16.svg" />
+    <Resource Include="images\teamviewer_32.svg" LogicalName="images/teamviewer_32.svg" />
+    <Resource Include="images\telegram_16.svg" LogicalName="images/telegram_16.svg" />
+    <Resource Include="images\telegram_32.svg" LogicalName="images/telegram_32.svg" />
+    <Resource Include="images\test_16.svg" LogicalName="images/test_16.svg" />
+    <Resource Include="images\test_32.svg" LogicalName="images/test_32.svg" />
+    <Resource Include="images\themes\office2010black.svg" LogicalName="images/themes/office2010black.svg" />
+    <Resource Include="images\themes\office2010blue.svg" LogicalName="images/themes/office2010blue.svg" />
+    <Resource Include="images\themes\office2010silver.svg" LogicalName="images/themes/office2010silver.svg" />
+    <Resource Include="images\themes\office2013.svg" LogicalName="images/themes/office2013.svg" />
+    <Resource Include="images\themes\office2013darkgray.svg" LogicalName="images/themes/office2013darkgray.svg" />
+    <Resource Include="images\themes\office2013lightgray.svg" LogicalName="images/themes/office2013lightgray.svg" />
+    <Resource Include="images\tiles\abacus_128.png" LogicalName="images/tiles/abacus_128.png" />
+    <Resource Include="images\tiles\analysis_128.png" LogicalName="images/tiles/analysis_128.png" />
+    <Resource Include="images\tiles\availability_128.png" LogicalName="images/tiles/availability_128.png" />
+    <Resource Include="images\tiles\availability_128.svg" LogicalName="images/tiles/availability_128.svg" />
+    <Resource Include="images\tiles\b2b_128.png" LogicalName="images/tiles/b2b_128.png" />
+    <Resource Include="images\tiles\back.png" LogicalName="images/tiles/back.png" />
+    <Resource Include="images\tiles\back.svg" LogicalName="images/tiles/back.svg" />
+    <Resource Include="images\tiles\bank_128.png" LogicalName="images/tiles/bank_128.png" />
+    <Resource Include="images\tiles\bank_32.png" LogicalName="images/tiles/bank_32.png" />
+    <Resource Include="images\tiles\bulldozer_128.png" LogicalName="images/tiles/bulldozer_128.png" />
+    <Resource Include="images\tiles\cash_32.png" LogicalName="images/tiles/cash_32.png" />
+    <Resource Include="images\tiles\chartofacc_32.png" LogicalName="images/tiles/chartofacc_32.png" />
+    <Resource Include="images\tiles\chartofacc_edit_32.png" LogicalName="images/tiles/chartofacc_edit_32.png" />
+    <Resource Include="images\tiles\loan_128.png" LogicalName="images/tiles/loan_128.png" />
+    <Resource Include="images\tiles\materials_32.png" LogicalName="images/tiles/materials_32.png" />
+    <Resource Include="images\tiles\materials_edit_32.png" LogicalName="images/tiles/materials_edit_32.png" />
+    <Resource Include="images\tiles\office_128.png" LogicalName="images/tiles/office_128.png" />
+    <Resource Include="images\tiles\options_32.png" LogicalName="images/tiles/options_32.png" />
+    <Resource Include="images\tiles\partners_32.png" LogicalName="images/tiles/partners_32.png" />
+    <Resource Include="images\tiles\partners_edit_32.png" LogicalName="images/tiles/partners_edit_32.png" />
+    <Resource Include="images\tiles\pointofsale_128.png" LogicalName="images/tiles/pointofsale_128.png" />
+    <Resource Include="images\tiles\pointofsale_150_new.png" LogicalName="images/tiles/pointofsale_150_new.png" />
+    <Resource Include="images\tiles\pointofsale_150_new_eng.png" LogicalName="images/tiles/pointofsale_150_new_eng.png" />
+    <Resource Include="images\tiles\pointofsale_64.png" LogicalName="images/tiles/pointofsale_64.png" />
+    <Resource Include="images\tiles\purchase_128.png" LogicalName="images/tiles/purchase_128.png" />
+    <Resource Include="images\tiles\salary_128.svg" LogicalName="images/tiles/salary_128.svg" />
+    <Resource Include="images\tiles\sale_128.png" LogicalName="images/tiles/sale_128.png" />
+    <Resource Include="images\tiles\services_32.png" LogicalName="images/tiles/services_32.png" />
+    <Resource Include="images\tiles\tv_play_red_32.png" LogicalName="images/tiles/tv_play_red_32.png" />
+    <Resource Include="images\tiles\tv_play_red_48.png" LogicalName="images/tiles/tv_play_red_48.png" />
+    <Resource Include="images\tiles\webmaster_100.png" LogicalName="images/tiles/webmaster_100.png" />
+    <Resource Include="images\tiles\webmaster_128.png" LogicalName="images/tiles/webmaster_128.png" />
+    <Resource Include="images\tiles\wizard_32.png" LogicalName="images/tiles/wizard_32.png" />
+    <Resource Include="images\tiles\wizard_b2b_32.png" LogicalName="images/tiles/wizard_b2b_32.png" />
+    <Resource Include="images\tiles\youtube_white2_32.png" LogicalName="images/tiles/youtube_white2_32.png" />
+    <Resource Include="images\tools-16wl.svg" LogicalName="images/tools-16wl.svg" />
+    <Resource Include="images\tools_sm_24.svg" LogicalName="images/tools_sm_24.svg" />
+    <Resource Include="images\trash_16.svg" LogicalName="images/trash_16.svg" />
+    <Resource Include="images\trash_32.svg" LogicalName="images/trash_32.svg" />
+    <Resource Include="images\treeview16.svg" LogicalName="images/treeview16.svg" />
+    <Resource Include="images\treeview32.svg" LogicalName="images/treeview32.svg" />
+    <Resource Include="images\tv_16.svg" LogicalName="images/tv_16.svg" />
+    <Resource Include="images\tv_32.svg" LogicalName="images/tv_32.svg" />
+    <Resource Include="images\t_action_16.svg" LogicalName="images/t_action_16.svg" />
+    <Resource Include="images\t_add_16.svg" LogicalName="images/t_add_16.svg" />
+    <Resource Include="images\t_attach_16.svg" LogicalName="images/t_attach_16.svg" />
+    <Resource Include="images\t_close_all_windows_16.svg" LogicalName="images/t_close_all_windows_16.svg" />
+    <Resource Include="images\t_delete_16.svg" LogicalName="images/t_delete_16.svg" />
+    <Resource Include="images\t_doc_accept_16.svg" LogicalName="images/t_doc_accept_16.svg" />
+    <Resource Include="images\t_doc_based_on_16.svg" LogicalName="images/t_doc_based_on_16.svg" />
+    <Resource Include="images\t_doc_cancel_16.svg" LogicalName="images/t_doc_cancel_16.svg" />
+    <Resource Include="images\t_doc_copy_16.svg" LogicalName="images/t_doc_copy_16.svg" />
+    <Resource Include="images\t_doc_delete_16.svg" LogicalName="images/t_doc_delete_16.svg" />
+    <Resource Include="images\t_doc_export_16.svg" LogicalName="images/t_doc_export_16.svg" />
+    <Resource Include="images\t_doc_export_excel_16.svg" LogicalName="images/t_doc_export_excel_16.svg" />
+    <Resource Include="images\t_doc_jumpto_16.svg" LogicalName="images/t_doc_jumpto_16.svg" />
+    <Resource Include="images\t_doc_preview_16.svg" LogicalName="images/t_doc_preview_16.svg" />
+    <Resource Include="images\t_doc_update_16.svg" LogicalName="images/t_doc_update_16.svg" />
+    <Resource Include="images\t_draft_16.svg" LogicalName="images/t_draft_16.svg" />
+    <Resource Include="images\t_edit_16.svg" LogicalName="images/t_edit_16.svg" />
+    <Resource Include="images\t_export_16.svg" LogicalName="images/t_export_16.svg" />
+    <Resource Include="images\t_file_save_as_16.svg" LogicalName="images/t_file_save_as_16.svg" />
+    <Resource Include="images\t_file_save_as_all_16.svg" LogicalName="images/t_file_save_as_all_16.svg" />
+    <Resource Include="images\t_history_16.svg" LogicalName="images/t_history_16.svg" />
+    <Resource Include="images\t_home_16.svg" LogicalName="images/t_home_16.svg" />
+    <Resource Include="images\t_import_16.svg" LogicalName="images/t_import_16.svg" />
+    <Resource Include="images\t_journal_16.svg" LogicalName="images/t_journal_16.svg" />
+    <Resource Include="images\t_layout_icon16.svg" LogicalName="images/t_layout_icon16.svg" />
+    <Resource Include="images\t_open_16.svg" LogicalName="images/t_open_16.svg" />
+    <Resource Include="images\t_page_white_gear_16.svg" LogicalName="images/t_page_white_gear_16.svg" />
+    <Resource Include="images\t_pane_expand_16.svg" LogicalName="images/t_pane_expand_16.svg" />
+    <Resource Include="images\t_print_16.svg" LogicalName="images/t_print_16.svg" />
+    <Resource Include="images\t_refresh_16.svg" LogicalName="images/t_refresh_16.svg" />
+    <Resource Include="images\t_report_16.svg" LogicalName="images/t_report_16.svg" />
+    <Resource Include="images\t_report_link_16.svg" LogicalName="images/t_report_link_16.svg" />
+    <Resource Include="images\t_save_16.svg" LogicalName="images/t_save_16.svg" />
+    <Resource Include="images\t_save_close_16.svg" LogicalName="images/t_save_close_16.svg" />
+    <Resource Include="images\t_save_new_16.svg" LogicalName="images/t_save_new_16.svg" />
+    <Resource Include="images\t_table_16.svg" LogicalName="images/t_table_16.svg" />
+    <Resource Include="images\t_table_export_excel_16.svg" LogicalName="images/t_table_export_excel_16.svg" />
+    <Resource Include="images\t_table_preview_16.svg" LogicalName="images/t_table_preview_16.svg" />
+    <Resource Include="images\t_table_refresh_16.svg" LogicalName="images/t_table_refresh_16.svg" />
+    <Resource Include="images\t_taxservice_16.svg" LogicalName="images/t_taxservice_16.svg" />
+    <Resource Include="images\uncheked_all_16.svg" LogicalName="images/uncheked_all_16.svg" />
+    <Resource Include="images\uncheked_all_32.svg" LogicalName="images/uncheked_all_32.svg" />
+    <Resource Include="images\ungroup_16.svg" LogicalName="images/ungroup_16.svg" />
+    <Resource Include="images\ungroup_32.svg" LogicalName="images/ungroup_32.svg" />
+    <Resource Include="images\updatedownload\01.png" LogicalName="images/updatedownload/01.png" />
+    <Resource Include="images\updatedownload\01.svg" LogicalName="images/updatedownload/01.svg" />
+    <Resource Include="images\updatedownload\02.png" LogicalName="images/updatedownload/02.png" />
+    <Resource Include="images\updatedownload\02.svg" LogicalName="images/updatedownload/02.svg" />
+    <Resource Include="images\updatedownload\03.png" LogicalName="images/updatedownload/03.png" />
+    <Resource Include="images\updatedownload\03.svg" LogicalName="images/updatedownload/03.svg" />
+    <Resource Include="images\updatedownload\04.png" LogicalName="images/updatedownload/04.png" />
+    <Resource Include="images\updatedownload\04.svg" LogicalName="images/updatedownload/04.svg" />
+    <Resource Include="images\updatedownload\05.png" LogicalName="images/updatedownload/05.png" />
+    <Resource Include="images\updatedownload\05.svg" LogicalName="images/updatedownload/05.svg" />
+    <Resource Include="images\updatedownload\06.png" LogicalName="images/updatedownload/06.png" />
+    <Resource Include="images\updatedownload\06.svg" LogicalName="images/updatedownload/06.svg" />
+    <Resource Include="images\updatedownload\07.png" LogicalName="images/updatedownload/07.png" />
+    <Resource Include="images\updatedownload\07.svg" LogicalName="images/updatedownload/07.svg" />
+    <Resource Include="images\updatedownload\08.png" LogicalName="images/updatedownload/08.png" />
+    <Resource Include="images\updatedownload\08.svg" LogicalName="images/updatedownload/08.svg" />
+    <Resource Include="images\updatedownload\09.png" LogicalName="images/updatedownload/09.png" />
+    <Resource Include="images\updatedownload\09.svg" LogicalName="images/updatedownload/09.svg" />
+    <Resource Include="images\updatedownload\10.png" LogicalName="images/updatedownload/10.png" />
+    <Resource Include="images\updatedownload\10.svg" LogicalName="images/updatedownload/10.svg" />
+    <Resource Include="images\updatedownload\11.png" LogicalName="images/updatedownload/11.png" />
+    <Resource Include="images\updatedownload\11.svg" LogicalName="images/updatedownload/11.svg" />
+    <Resource Include="images\updatedownload\12.png" LogicalName="images/updatedownload/12.png" />
+    <Resource Include="images\updatedownload\12.svg" LogicalName="images/updatedownload/12.svg" />
+    <Resource Include="images\updatedownload\13.png" LogicalName="images/updatedownload/13.png" />
+    <Resource Include="images\updatedownload\13.svg" LogicalName="images/updatedownload/13.svg" />
+    <Resource Include="images\updatedownload\14.png" LogicalName="images/updatedownload/14.png" />
+    <Resource Include="images\updatedownload\14.svg" LogicalName="images/updatedownload/14.svg" />
+    <Resource Include="images\updatedownload\15.png" LogicalName="images/updatedownload/15.png" />
+    <Resource Include="images\updatedownload\15.svg" LogicalName="images/updatedownload/15.svg" />
+    <Resource Include="images\updatedownload\16.png" LogicalName="images/updatedownload/16.png" />
+    <Resource Include="images\updatedownload\16.svg" LogicalName="images/updatedownload/16.svg" />
+    <Resource Include="images\updatedownload\17.png" LogicalName="images/updatedownload/17.png" />
+    <Resource Include="images\updatedownload\17.svg" LogicalName="images/updatedownload/17.svg" />
+    <Resource Include="images\updatedownload\18.png" LogicalName="images/updatedownload/18.png" />
+    <Resource Include="images\updatedownload\18.svg" LogicalName="images/updatedownload/18.svg" />
+    <Resource Include="images\updatedownload\19.png" LogicalName="images/updatedownload/19.png" />
+    <Resource Include="images\updatedownload\19.svg" LogicalName="images/updatedownload/19.svg" />
+    <Resource Include="images\updatedownload\20.png" LogicalName="images/updatedownload/20.png" />
+    <Resource Include="images\updatedownload\20.svg" LogicalName="images/updatedownload/20.svg" />
+    <Resource Include="images\updatedownload\21.png" LogicalName="images/updatedownload/21.png" />
+    <Resource Include="images\updatedownload\21.svg" LogicalName="images/updatedownload/21.svg" />
+    <Resource Include="images\updatedownload\22.png" LogicalName="images/updatedownload/22.png" />
+    <Resource Include="images\updatedownload\22.svg" LogicalName="images/updatedownload/22.svg" />
+    <Resource Include="images\update_16.svg" LogicalName="images/update_16.svg" />
+    <Resource Include="images\update_32.svg" LogicalName="images/update_32.svg" />
+    <Resource Include="images\up_16.svg" LogicalName="images/up_16.svg" />
+    <Resource Include="images\up_32.svg" LogicalName="images/up_32.svg" />
+    <Resource Include="images\usb_flash_drive_16.svg" LogicalName="images/usb_flash_drive_16.svg" />
+    <Resource Include="images\usb_flash_drive_32.svg" LogicalName="images/usb_flash_drive_32.svg" />
+    <Resource Include="images\users_16.svg" LogicalName="images/users_16.svg" />
+    <Resource Include="images\users_24in32.svg" LogicalName="images/users_24in32.svg" />
+    <Resource Include="images\users_32.svg" LogicalName="images/users_32.svg" />
+    <Resource Include="images\user_16.svg" LogicalName="images/user_16.svg" />
+    <Resource Include="images\user_24in32.svg" LogicalName="images/user_24in32.svg" />
+    <Resource Include="images\user_32.svg" LogicalName="images/user_32.svg" />
+    <Resource Include="images\wand_16.svg" LogicalName="images/wand_16.svg" />
+    <Resource Include="images\wand_32.svg" LogicalName="images/wand_32.svg" />
+    <Resource Include="images\warning_16.svg" LogicalName="images/warning_16.svg" />
+    <Resource Include="images\warning_16_white.svg" LogicalName="images/warning_16_white.svg" />
+    <Resource Include="images\warning_32.svg" LogicalName="images/warning_32.svg" />
+    <Resource Include="images\warning_circle_16.svg" LogicalName="images/warning_circle_16.svg" />
+    <Resource Include="images\warning_circle_32.svg" LogicalName="images/warning_circle_32.svg" />
+    <Resource Include="images\widgets_16.svg" LogicalName="images/widgets_16.svg" />
+    <Resource Include="images\widgets_32.svg" LogicalName="images/widgets_32.svg" />
+    <Resource Include="images\wingear_16.svg" LogicalName="images/wingear_16.svg" />
+    <Resource Include="images\wingear_32.svg" LogicalName="images/wingear_32.svg" />
+    <Resource Include="images\youtube_16.svg" LogicalName="images/youtube_16.svg" />
+    <Resource Include="images\youtube_32.svg" LogicalName="images/youtube_32.svg" />
+    <Resource Include="images\youtube_light_16.svg" LogicalName="images/youtube_light_16.svg" />
+    <Resource Include="images\youtube_light_32.svg" LogicalName="images/youtube_light_32.svg" />
+    <Resource Include="images\zip_16.svg" LogicalName="images/zip_16.svg" />
+    <Resource Include="images\zip_16_disabled.svg" LogicalName="images/zip_16_disabled.svg" />
+    <Resource Include="images\zip_32.svg" LogicalName="images/zip_32.svg" />
+    <Resource Include="images\zip_32_disabled.svg" LogicalName="images/zip_32_disabled.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.PrintTemplates2\1.0.67\lib\net10.0\DevExpress.Data.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\System.ServiceModel.Primitives\8.1.2\lib\net8.0\System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Http">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\System.ServiceModel.Http\8.1.2\lib\net8.0\System.ServiceModel.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\bin\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\bin\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Core\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Core.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Grid.Core\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Grid.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v25.2.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Grid.Core\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Grid.v25.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Ribbon.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Ribbon\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Ribbon.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.Cloud.Client">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\bin\ArmSoft.Cloud.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Docking\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Docking.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Ports">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\System.IO.Ports\10.0.7\lib\net10.0\System.IO.Ports.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v25.2.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.PrintTemplates2\1.0.67\lib\net10.0\DevExpress.Spreadsheet.v25.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Mvvm\25.2.6\lib\net8.0-windows\DevExpress.Mvvm.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Client">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Spreadsheet.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Spreadsheet\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Spreadsheet.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.DependencyInjection.Abstractions\10.0.7\lib\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.DependencyInjection\10.0.0\lib\net10.0\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="b2bClient.V2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\b2bClient.V2\1.0.5\lib\net8.0\b2bClient.V2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.Configuration.Abstractions\10.0.7\lib\net10.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Serilog\4.3.1\lib\net10.0\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.InternetBank.APIClient.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OnlineBanking.APIClient\8.16.1\lib\net8.0\ArmSoft.InternetBank.APIClient.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.OpenBanking.Api.Client.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OpenBanking.Api.Client.Core\26.4.0\lib\net8.0\ArmSoft.OpenBanking.Api.Client.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.ECRConnector">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.ECRConnector\1.0.5\lib\net8.0\ArmSoft.ECRConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.Logging.Abstractions\10.0.7\lib\net10.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="AppLife.Api">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AppLife.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.LayoutControl.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.LayoutControl\25.2.6\lib\net8.0-windows\DevExpress.Xpf.LayoutControl.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Dropbox.Api">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Dropbox.Api\7.0.0\lib\netstandard2.0\Dropbox.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ardalis.SmartEnum">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Ardalis.SmartEnum.StrongName\8.2.1\lib\net10.0\Ardalis.SmartEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Map.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Map\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Map.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Printing\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Printing.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.InternetBank.APIClient">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OnlineBanking.APIClient\8.16.1\lib\net8.0\ArmSoft.InternetBank.APIClient.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Reporting.Core\25.2.6\lib\net8.0\DevExpress.XtraReports.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v25.2.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.PrintTemplates2\1.0.67\lib\net10.0\DevExpress.Printing.v25.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.PrintTemplates2\1.0.67\lib\net10.0\DevExpress.Drawing.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Armsoft.PrintTemplates2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.PrintTemplates2\1.0.67\lib\net10.0\Armsoft.PrintTemplates2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.NavBar.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.NavBar\25.2.6\lib\net8.0-windows\DevExpress.Xpf.NavBar.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.CodeAnalysis.Common\5.3.0\lib\net10.0\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.CodeAnalysis.CSharp\5.3.0\lib\net10.0\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Office.Interop.Outlook\15.0.4797.1004\lib\netstandard2.0\Microsoft.Office.Interop.Outlook.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.TaxService">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.TaxService\1.0.38\lib\net8.0\ArmSoft.TaxService.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.OpenBanking.Api.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OpenBanking.Api.Common\26.4.0\lib\net8.0\ArmSoft.OpenBanking.Api.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.InternetBank.APIClient.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OnlineBanking.APIClient\8.16.1\lib\net8.0\ArmSoft.InternetBank.APIClient.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.OnlineBanking.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OnlineBanking.Common\8.16.1\lib\net8.0\ArmSoft.OnlineBanking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Stub.System.Data.SQLite.Core.NetStandard\1.0.119\lib\netstandard2.1\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="CommunityToolkit.Mvvm">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\CommunityToolkit.Mvvm\8.4.2\lib\net8.0\CommunityToolkit.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.ExpressionEditor.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.ExpressionEditor\25.2.6\lib\net8.0-windows\DevExpress.Xpf.ExpressionEditor.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v25.2.Extensions">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Grid.Core\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Grid.v25.2.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Charts.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Charts\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Charts.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.OpenBanking.Api.Client">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OpenBanking.Api.Client\26.4.0\lib\net8.0\ArmSoft.OpenBanking.Api.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v25.2.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.PrintTemplates2\1.0.67\lib\net10.0\DevExpress.RichEdit.v25.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.IdentityModel.JsonWebTokens\8.17.0\lib\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Layout.v25.2.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Docking\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Layout.v25.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Data.Desktop\25.2.6\lib\net8.0-windows\DevExpress.Data.Desktop.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.Configuration\10.0.7\lib\net10.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.Configuration.FileExtensions\10.0.7\lib\net10.0\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.Configuration.Json\10.0.7\lib\net10.0\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Settings.Configuration">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Serilog.Settings.Configuration\10.0.0\lib\net10.0\Serilog.Settings.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Seq">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Serilog.Sinks.Seq\9.0.0\lib\net6.0\Serilog.Sinks.Seq.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Enrichers.Environment">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Serilog.Enrichers.Environment\3.0.1\lib\net8.0\Serilog.Enrichers.Environment.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Map.v25.2.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Map.Core\25.2.6\lib\net8.0\DevExpress.Map.v25.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.DocumentViewer.v25.2.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.DocumentViewer.Core\25.2.6\lib\net8.0-windows\DevExpress.Xpf.DocumentViewer.v25.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v25.2.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.PrintTemplates2\1.0.67\lib\net10.0\DevExpress.Office.v25.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.Configuration.Binder\10.0.0\lib\net10.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.ReportDesigner.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Reporting\25.2.6\lib\net8.0-windows\DevExpress.Xpf.ReportDesigner.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Desktop">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Identity.Client.Desktop\4.83.3\lib\netcoreapp3.1\Microsoft.Identity.Client.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Extensions.Logging">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Serilog.Extensions.Logging\10.0.0\lib\net10.0\Serilog.Extensions.Logging.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

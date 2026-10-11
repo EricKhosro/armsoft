@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls.POSSearchPanelControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:coreCommon="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:customwindowcontrols="clr-namespace:ArmSoft.SME.Core.UI.CustomWindowControls;assembly=ArmSoft.SME.Core.UI" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions;assembly=ArmSoft.SME.Core.UI" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:tradeCommon="clr-namespace:ArmSoft.SME.Trade.Common;assembly=ArmSoft.SME.Trade.Common" x:Name="SamplePOSTotalsControl" xmlns:usercontrols="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.UserControls;assembly=ArmSoft.SME.Trade.UI">
+  <Grid Name="CodeSearchControlGrid">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Style="{StaticResource SamplePOSControlSeparatorColumnsDefintionStyle}" />
+      <ColumnDefinition Width="60" />
+    </Grid.ColumnDefinitions>
+  </Grid>
+</UserControl>

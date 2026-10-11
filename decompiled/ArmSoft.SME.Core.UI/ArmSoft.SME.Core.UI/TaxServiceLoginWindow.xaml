@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dxc:ThemedWindow x:Class="ArmSoft.SME.Core.UI.TaxServiceLoginWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions" xmlns:conv="clr-namespace:ArmSoft.SME.Core.UI.Converters" xmlns:coreCommon="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" x:Name="TaxServiceLogin" Title="Login to TaxService" Width="450" Height="350" ResizeMode="NoResize" ShowIcon="False" ShowInTaskbar="False" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner" xmlns:ui="clr-namespace:ArmSoft.SME.Core.UI">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <conv:HyperlinkBackgroundColor x:Key="HyperlinkBackgroundColor" />
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid HorizontalAlignment="Left">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" SharedSizeGroup="Buttons" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid Row="0" Column="0" Width="150">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <dxc:DXImage Grid.Row="1" HorizontalAlignment="Center" Stretch="None" Source="{ext:ASImage TaxService.svg}" />
+    </Grid>
+    <Grid Row="0" Column="1">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <TextBlock Name="TinCaption" Grid.Row="1" Margin="15,5,10,0" Text="TIN" />
+      <dxe:TextEdit Name="TIN" Grid.Row="2" Margin="15,3,15,0" />
+      <TextBlock Name="LoginCaption" Grid.Row="3" Margin="15,10,15,0" Text="Login" />
+      <dxe:TextEdit Name="LoginName" Grid.Row="4" Margin="15,3,15,0" EditValueChanged="Fields_EditValueChanged" />
+      <TextBlock Name="PasswordCaption" Grid.Row="5" Margin="15,10,15,0" Text="Password" />
+      <TextBlock Name="CapsLockOn" Grid.Row="5" Margin="15,10,20,0" HorizontalAlignment="Right" Foreground="#FFFF0000" Text="Caps Lock On" />
+      <dxe:PasswordBoxEdit Name="Password" Grid.Row="6" Width=" 250" Margin="15,3,15,0" EditValueChanged="Fields_EditValueChanged" />
+      <dxe:CheckEdit Name="SaveUserControl" Grid.Row="7" Margin="15,10,15,0" VerticalAlignment="Center" VerticalContentAlignment="Center" Content="{x:Static coreCommon:Resources.SaveUser}" CornerRadius="2" UseLayoutRounding="True" Foreground="{Binding Converter={StaticResource HyperlinkBackgroundColor}}" />
+    </Grid>
+    <Grid Row="1" Column="0" ColumnSpan="2" Margin="0,15,10,0" IsSharedSizeScope="True">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" SharedSizeGroup="Buttons" />
+        <ColumnDefinition Width="Auto" SharedSizeGroup="Buttons" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <dxc:SimpleButton Name="LoginButton" Grid.Row="0" Grid.Column="1" MinWidth="100" Margin="15,0,15,5" HorizontalContentAlignment="Center" IsDefault="True" IsEnabled="False" UseLayoutRounding="True" Click="LoginButton_Click">Login</dxc:SimpleButton>
+      <dxc:SimpleButton Name="CancelButton" Grid.Row="0" Grid.Column="2" MinWidth="100" Margin="15,0,15,5" IsCancel="True" UseLayoutRounding="True">Cancel</dxc:SimpleButton>
+    </Grid>
+  </Grid>
+</dxc:ThemedWindow>

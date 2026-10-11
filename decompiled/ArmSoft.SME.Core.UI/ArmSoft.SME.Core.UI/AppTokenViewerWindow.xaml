@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dxc:ThemedWindow x:Class="ArmSoft.SME.Core.UI.AppTokenViewerWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:local="clr-namespace:ArmSoft.SME.Core.UI" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" ShowIcon="False" ShowInTaskbar="False" Title="Tokens" Height="580" Width="900" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <dxc:DXTabControl Grid.Row="0" Margin="10">
+      <dxc:DXTabItem Name="ServiceTokenTab" Header="Appliction service">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <TextBlock Text="Token" Grid.Row="0" Margin="5" />
+          <dxe:TextEdit Name="TE_ServiceToken" Grid.Row="1" Margin="5,0,5,5" IsReadOnly="True" Height="150" TextWrapping="Wrap" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" />
+          <TextBlock Text="Token Payload" Grid.Row="2" Margin="5" />
+          <dxe:TextEdit Name="TE_ServiceTokenPayload" Grid.Row="3" Margin="5,0,5,5" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" />
+          <Button Name="ButtonCopyService" Height="30" Width="130" Content="Copy" Grid.Row="4" Margin="5,5,5,0" />
+        </Grid>
+      </dxc:DXTabItem>
+      <dxc:DXTabItem Name="CloudTokenTab" Header="cloud.armsoft.am">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <TextBlock Text="Request" Grid.Row="0" Grid.Column="0" Margin="5" />
+          <dxe:TextEdit Name="TE_TokenRequest" Grid.Row="1" Margin="5,0,5,5" IsReadOnly="True" Height="110" TextWrapping="Wrap" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" />
+          <TextBlock Text="Token" Grid.Row="2" Margin="5" />
+          <dxe:TextEdit Name="TE_Token" Grid.Row="3" Margin="5,0,5,5" IsReadOnly="True" Height="70" TextWrapping="Wrap" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" />
+          <TextBlock Text="Token Payload" Grid.Row="4" Margin="5" />
+          <dxe:TextEdit Name="TE_TokenPayload" Grid.Row="5" Margin="5,0,5,5" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" />
+          <Grid Row="6">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="30" />
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Name="ButtonGetToken" Height="30" Width="130" Content="Get new token" Grid.Column="1" Margin="5,5,5,0" />
+            <Button Name="ButtonCopy" Height="30" Width="130" Content="Copy token" Grid.Column="3" Margin="5,5,5,0" />
+          </Grid>
+        </Grid>
+      </dxc:DXTabItem>
+      <dxc:DXTabItem Name="UserTokenTab" Header="Azure AD B2C">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <TextBlock Text="Token" Grid.Row="0" Margin="5" />
+          <dxe:TextEdit Name="TE_UserToken" Grid.Row="1" Margin="5,0,5,5" IsReadOnly="True" Height="150" TextWrapping="Wrap" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" />
+          <TextBlock Text="Token Payload" Grid.Row="2" Margin="5" />
+          <dxe:TextEdit Name="TE_UserTokenPayload" Grid.Row="3" Margin="5,0,5,5" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" />
+          <Button Name="ButtonCopyUser" Height="30" Width="130" Content="Copy" Grid.Row="4" Margin="5,5,5,0" />
+        </Grid>
+      </dxc:DXTabItem>
+    </dxc:DXTabControl>
+  </Grid>
+</dxc:ThemedWindow>

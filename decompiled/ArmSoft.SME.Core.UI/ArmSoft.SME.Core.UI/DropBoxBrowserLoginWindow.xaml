@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dxc:ThemedWindow x:Class="ArmSoft.SME.Core.UI.DropBoxBrowserLoginWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core" Title="Authenticate with Dropbox" Width="400" Height="150" WindowStartupLocation="CenterOwner" xmlns:ui="clr-namespace:ArmSoft.SME.Core.UI;assembly=ArmSoft.SME.Core.UI">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Label Name="lblMessage" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Waiting response from browser." />
+    <Button Name="cmdCancel" Grid.Row="1" Width="100" Height="25" Margin="20,6" HorizontalAlignment="Center" UseLayoutRounding="True" Click="CancelClick">Cancel</Button>
+  </Grid>
+</dxc:ThemedWindow>

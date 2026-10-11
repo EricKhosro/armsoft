@@ -1,0 +1,6 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.5 1.5V10H22V20.944L26.5 24V18.5H30.5V1.5H6.5Z" fill="white"/>
+<path d="M6 1V10H7V2H30V18H26V23.056L22 20.34V21.549L27 24.944V19H31V1H6Z" fill="#212121"/>
+<path d="M1.5 11.5V26.5H5.5V30L10.863 26.5H20.5V11.5H1.5Z" fill="white" stroke="#212121" stroke-miterlimit="10"/>
+<path d="M15 18H17V20H15V18ZM10 20H12V18H10V20ZM5 20H7V18H5V20Z" fill="#0070CB" class="Blue_Dark2"/>
+</svg>

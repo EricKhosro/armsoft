@@ -1,0 +1,22 @@
+ <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_93_982)">
+<path d="M10.2 10.2H1.5V12.5H15.5V1.5H10.2V10.2Z" fill="white" class="White"/>
+<path d="M10.2 2H15V12H2V10.2H1V12.5V13H1.5H15.5H16V12.5V1.5V1H15.5H10.2V2Z" fill="#212121" class="Black"/>
+<path d="M1.5 15.5H6.533L9.5 12.5H1.5V15.5Z" fill="#D6E7FD" class="Blue_Light"/>
+<path d="M1 12.5V15.5V16H1.5H6.533H6.742L6.888 15.85L9.855 12.85L9.5 12H1.5H1V12.5ZM8.302 13L6.324 15H2V13H8.302Z" fill="#0070CB" class="Blue_Dark"/>
+<path opacity="0.2" d="M8.039 16H12.73L15.11 13.6H10.41L8.039 16Z" fill="#878787"/>
+<path opacity="0.3" d="M12.33 15H9.031L8.039 16H12.74L15.12 13.6H13.71L12.33 15Z" fill="#878787"/>
+<path d="M9.5 13H16V12H9.5V13Z" fill="#0070CB" class="Blue_Dark"/>
+<path opacity="0.6" d="M10.2 10.2H10V12H11V9H15V8H11V6H15V5H11V2H10.2V10.2ZM6 12H7V10.2H6V12Z" fill="#878787"/>
+<path opacity="0.5" d="M10.2 3H14V11H3V10.2H2V11.5V12H2.5H14.5H15V11.5V2.5V2H14.5H10.2V3Z" fill="white" class="White"/>
+<path d="M8.5 0.5H0.5V8.5H8.5V0.5Z" fill="white" />
+<path d="M8.5 0.5H0.5V8.5H8.5V0.5Z" fill="none" stroke="#0C8D0C" class="Green_Dark" stroke-miterlimit="10"/>
+<path d="M2.556 1.69995L6.45 7.34995ZM6.45 1.69995L2.556 7.34995Z" fill="white" class="White"/>
+<path d="M2.556 1.69995L6.45 7.34995M6.45 1.69995L2.556 7.34995" stroke="#0C8D0C" class="Green_Dark" stroke-miterlimit="10"/>
+</g>
+<defs>
+<clipPath id="clip0_93_982">
+<rect width="16" height="16" fill="white" class="White"/>
+</clipPath>
+</defs>
+</svg>

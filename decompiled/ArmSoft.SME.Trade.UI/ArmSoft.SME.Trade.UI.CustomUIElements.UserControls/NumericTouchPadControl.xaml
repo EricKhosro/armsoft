@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls.NumericTouchPadControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:customWindowControls="clr-namespace:ArmSoft.SME.Core.UI.CustomWindowControls;assembly=ArmSoft.SME.Core.UI" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:usercontrols="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.UserControls;assembly=ArmSoft.SME.Trade.UI">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+      <RowDefinition Name="GridLastSpacingRowRow" Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+      <RowDefinition Name="GridLastRow" Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+    </Grid.RowDefinitions>
+    <customWindowControls:CWCSimpleButton Name="Button7" Grid.Row="0" Grid.Column="0" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="Button7_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="7" />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="Button8" Grid.Row="0" Grid.Column="2" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="Button8_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="8" />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="Button9" Grid.Row="0" Grid.Column="4" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="Button9_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="9" />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="Button4" Grid.Row="2" Grid.Column="0" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="Button4_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="4" />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="Button5" Grid.Row="2" Grid.Column="2" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="Button5_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="5" />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="Button6" Grid.Row="2" Grid.Column="4" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="Button6_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="6" />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="Button1" Grid.Row="4" Grid.Column="0" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="Button1_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="1" />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="Button2" Grid.Row="4" Grid.Column="2" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="Button2_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="2" />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="Button3" Grid.Row="4" Grid.Column="4" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="Button3_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="3" />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="ButtonC" Grid.Row="6" Grid.Column="0" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonC_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="C" />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="Button0" Grid.Row="6" Grid.Column="2" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="Button0_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="0" />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="ButtonDot" Grid.Row="6" Grid.Column="4" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonDot_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="." />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="Button00" Grid.Row="8" Grid.Column="0" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="Button00_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="00" />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="Button000" Grid.Row="8" Grid.Column="2" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="Button000_Click">
+      <TextBlock Style="{StaticResource TouchModeImportantButtonTextBlockStyle}" Text="000" />
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="ButtonBack" Grid.Row="8" Grid.Column="4" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonBack_Click">
+      <dx:DXImage Style="{StaticResource TouchModeInsideButtonImageStyle}" Source="{Binding Converter={StaticResource ImageByNameConverter}, ConverterParameter=backspace.svg}" />
+    </customWindowControls:CWCSimpleButton>
+  </Grid>
+</UserControl>

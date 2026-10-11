@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dx:SplashScreenWindow x:Class="ArmSoft.SME.Trade.Host.SplashScreenWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" WindowStyle="None" xmlns:host="clr-namespace:ArmSoft.SME.Trade.Host;assembly=AS Trade">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <Storyboard x:Key="Preloader">
+        <ThicknessAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetName="PreloaderFront" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+          <EasingThicknessKeyFrame KeyTime="0" Value="71,285,511,142" />
+          <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="71,285,447,142" />
+          <EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="188,285,330,142" />
+          <EasingThicknessKeyFrame KeyTime="0:0:1.5" Value="252,285,330,142" />
+        </ThicknessAnimationUsingKeyFrames>
+      </Storyboard>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <FrameworkElement.Triggers>
+    <EventTrigger RoutedEvent="Window.Loaded">
+      <BeginStoryboard Storyboard="{StaticResource Preloader}" />
+    </EventTrigger>
+  </FrameworkElement.Triggers>
+  <Grid Name="LayoutRoot">
+    <Grid Name="Splash" HorizontalAlignment="Center" VerticalAlignment="Top">
+      <Grid Name="Content_Area" Width="582" Height="431">
+        <Image Name="Image" Width="582" Height="431" Margin="0,0,0,0" Source="pack://application:,,,/Images/SplashScreen.png" Stretch="Fill" />
+        <StackPanel Width="447" Height="43" Margin="54,229,81,159" Orientation="Vertical">
+          <TextBlock Name="Info" Width="417" Height="17" Margin="18,20,12,8" FontFamily="Tahoma" FontSize="10.5" Foreground="#FF095697" TextAlignment="Left" Text="{Binding Status}" />
+        </StackPanel>
+        <TextBlock Name="AppInfo" Margin="73,220,283,182" FontFamily="Tahoma" FontSize="11" Foreground="#8c9093" Text="տարբերակ 7.x.x" TextAlignment="Left" />
+        <TextBlock Name="YearNumber" Margin="499,373,40,31" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Tahoma" FontSize="17" FontWeight="Bold" Foreground="#FF3E8052" TextAlignment="Center" />
+        <Rectangle Name="PreloaderBack" Margin="71,285,330,142" Fill="#FFD3D3D3" RadiusX="1.812" RadiusY="1.812" RenderTransformOrigin="0.493,2.714" />
+        <Rectangle Name="PreloaderFront" Margin="71,285,447,142" Fill="#0A8668" RadiusX="1.812" RadiusY="1.812" RenderTransformOrigin="0.493,2.714">
+          <UIElement.RenderTransform>
+            <TransformGroup>
+              <ScaleTransform />
+              <SkewTransform />
+              <RotateTransform />
+              <TranslateTransform />
+            </TransformGroup>
+          </UIElement.RenderTransform>
+        </Rectangle>
+        <Image Margin="73,148,348,188" Source="{dx:SvgImageSource Uri=/Images/trd_text_am.svg}" />
+        <Image Margin="73,30,337,274" Source="{dx:SvgImageSource Uri='pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/AS_Logo_H.svg'}" />
+        <Image Margin="71,332,380,26" Source="{dx:SvgImageSource Uri='pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/AS_CloudSolutions_H.svg'}" />
+      </Grid>
+    </Grid>
+  </Grid>
+</dx:SplashScreenWindow>

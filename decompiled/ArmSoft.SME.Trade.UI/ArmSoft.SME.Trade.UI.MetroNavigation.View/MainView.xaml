@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dxmvvm:ModuleView x:Class="ArmSoft.SME.Trade.UI.MetroNavigation.View.MainView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:coreCommon="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:coreconv="clr-namespace:ArmSoft.SME.Core.UI.Converters;assembly=ArmSoft.SME.Core.UI" xmlns:customWindowControls="clr-namespace:ArmSoft.SME.Core.UI.CustomWindowControls;assembly=ArmSoft.SME.Core.UI" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvmsample" xmlns:dxrt="http://schemas.devexpress.com/winfx/2008/xaml/ribbon/themekeys" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions;assembly=ArmSoft.SME.Core.UI" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:tradeCommon="clr-namespace:ArmSoft.SME.Trade.Common;assembly=ArmSoft.SME.Trade.Common" x:Name="ModuleView" xmlns:view="clr-namespace:ArmSoft.SME.Trade.UI.MetroNavigation.View;assembly=ArmSoft.SME.Trade.UI">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <coreconv:FontFamilyConverter x:Key="GetSystemFont" />
+      <coreconv:SystemSpecificButtonBackgroundColor x:Key="SystemSpecificButtonBackgroundColor" />
+      <coreconv:GetCurrentBackgroundBrush x:Key="GetCurrentBackgroundBrush" />
+      <coreconv:GetCurrentForegroundBrush x:Key="GetCurrentForegroundBrush" />
+      <Style x:Key="WithShadowEffectMainSectionTileStyle" BasedOn="{StaticResource MainSectionsTileStyle}" TargetType="{x:Type dxlc:Tile}">
+        <Setter Property="UIElement.Effect">
+          <Setter.Value>
+            <DropShadowEffect BlurRadius="12" Direction="-90" Opacity="0.2" ShadowDepth="1" Color="{Binding Converter={StaticResource ControlShadowColor}, Source={x:Reference ModuleView}}" />
+          </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+          <Trigger Property="UIElement.IsMouseOver" Value="True">
+            <Setter Property="UIElement.Effect">
+              <Setter.Value>
+                <DropShadowEffect BlurRadius="20" Direction="-90" Opacity="0.2" ShadowDepth="3" Color="{Binding Converter={StaticResource HoveredControlShadowColor}, Source={x:Reference ModuleView}}" />
+              </Setter.Value>
+            </Setter>
+          </Trigger>
+        </Style.Triggers>
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid ScrollViewer.CanContentScroll="True">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="65" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="4*" MinWidth="400" MaxWidth="719" />
+      <ColumnDefinition Width="*" MinWidth="350" />
+    </Grid.ColumnDefinitions>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+      <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical">
+        <Grid ScrollViewer.CanContentScroll="True">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="2" />
+            <RowDefinition Height="2" />
+            <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          <StackPanel Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Orientation="Vertical">
+            <Label Name="AS_Trade_Header" Margin="59,10,0,10" FontSize="17" FontFamily="{Binding Converter={StaticResource GetSystemFont}}" Foreground="{Binding Converter={StaticResource GetCurrentForegroundBrush}}" />
+          </StackPanel>
+          <Border Grid.Row="1" Width="124" Margin="51,0,0,0" HorizontalAlignment="Left" Opacity="1" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+          <Border Grid.Row="2" Margin="0,0,42,0" Opacity="0.1" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+          <dxlc:TileLayoutControl Grid.Row="3" Style="{StaticResource MainSectionsTileLayoutControlStyle}">
+            <dxlc:Tile Name="PurchasesTile" Style="{StaticResource WithShadowEffectMainSectionTileStyle}" ToolTip="{x:Static tradeCommon:Resources.Purchases}">
+              <Border Style="{StaticResource MainSectionsTileBorderStyle}">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileIndicatorColumnDefiniton}" />
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridColumnDefiniton}" />
+                  </Grid.ColumnDefinitions>
+                  <Rectangle Style="{StaticResource MainSectionsTileIndicatorRectangleStyle}" />
+                  <Grid Style="{StaticResource MainSectionsTileContentGridStyle}">
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridImageColumnDefiniton}" />
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridTextColumnDefiniton}" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Style="{StaticResource MainSectionsTileTitleGridRowDefiniton}" />
+                      <RowDefinition Style="{StaticResource MainSectionsTileContentGridRowDefiniton}" />
+                    </Grid.RowDefinitions>
+                    <dx:DXImage Name="PurchasesTileImage" Style="{StaticResource MainSectionsTileImageStyle}" Source="{ext:ASImage Purchase_32.svg}" />
+                    <Label Name="PurchasesTileTitleLabel" Style="{StaticResource MainSectionsTileTitleLabelStyle}" Content="{Binding Source={x:Static tradeCommon:Resources.Purchases}, Converter={StaticResource UppercaseConverter}}" />
+                    <TextBlock Name="PurchasesTileContentTextBlock" Style="{StaticResource MainSectionsTileContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.PurchasesText}" />
+                  </Grid>
+                </Grid>
+              </Border>
+            </dxlc:Tile>
+            <dxlc:Tile Name="SalesTile" Style="{StaticResource WithShadowEffectMainSectionTileStyle}" ToolTip="{x:Static coreCommon:Resources.Sales}">
+              <Border Style="{StaticResource MainSectionsTileBorderStyle}">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileIndicatorColumnDefiniton}" />
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridColumnDefiniton}" />
+                  </Grid.ColumnDefinitions>
+                  <Rectangle Style="{StaticResource MainSectionsTileIndicatorRectangleStyle}" />
+                  <Grid Style="{StaticResource MainSectionsTileContentGridStyle}">
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridImageColumnDefiniton}" />
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridTextColumnDefiniton}" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Style="{StaticResource MainSectionsTileTitleGridRowDefiniton}" />
+                      <RowDefinition Style="{StaticResource MainSectionsTileContentGridRowDefiniton}" />
+                    </Grid.RowDefinitions>
+                    <dx:DXImage Name="SalesTileImage" Style="{StaticResource MainSectionsTileImageStyle}" Source="{ext:ASImage SaleSS_32.svg}" />
+                    <Label Name="SalesTileTitleLabel" Style="{StaticResource MainSectionsTileTitleLabelStyle}" Content="{Binding Source={x:Static coreCommon:Resources.Sales}, Converter={StaticResource UppercaseConverter}}" />
+                    <TextBlock Name="SalesTileContentTextBlock" Style="{StaticResource MainSectionsTileContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.SaleText}" />
+                  </Grid>
+                </Grid>
+              </Border>
+            </dxlc:Tile>
+            <dxlc:Tile Name="POSTile" Style="{StaticResource WithShadowEffectMainSectionTileStyle}" ToolTip="{x:Static tradeCommon:Resources.PointOfSalePOS}">
+              <Border Style="{StaticResource MainSectionsTileBorderStyle}">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileIndicatorColumnDefiniton}" />
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridColumnDefiniton}" />
+                  </Grid.ColumnDefinitions>
+                  <Rectangle Style="{StaticResource MainSectionsTileIndicatorRectangleStyle}" />
+                  <Grid Style="{StaticResource MainSectionsTileContentGridStyle}">
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridImageColumnDefiniton}" />
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridTextColumnDefiniton}" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Style="{StaticResource MainSectionsTileTitleGridRowDefiniton}" />
+                      <RowDefinition Style="{StaticResource MainSectionsTileContentGridRowDefiniton}" />
+                    </Grid.RowDefinitions>
+                    <dx:DXImage Name="POSTileImage" Style="{StaticResource MainSectionsTileImageStyle}" Source="{ext:ASImage POS_SS_green_32.svg}" />
+                    <Label Name="POSTileTitleLabel" Style="{StaticResource MainSectionsTileTitleLabelStyle}" Content="{Binding Source={x:Static tradeCommon:Resources.PointOfSale}, Converter={StaticResource UppercaseConverter}}" />
+                    <TextBlock Name="POSTileContentTextBlock" Style="{StaticResource MainSectionsTileContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.PointOfSaleText}" />
+                  </Grid>
+                </Grid>
+              </Border>
+            </dxlc:Tile>
+            <dxlc:Tile Name="StorageSectionTile" Style="{StaticResource WithShadowEffectMainSectionTileStyle}" ToolTip="{x:Static coreCommon:Resources.Storage}">
+              <Border Style="{StaticResource MainSectionsTileBorderStyle}">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileIndicatorColumnDefiniton}" />
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridColumnDefiniton}" />
+                  </Grid.ColumnDefinitions>
+                  <Rectangle Style="{StaticResource MainSectionsTileIndicatorRectangleStyle}" />
+                  <Grid Style="{StaticResource MainSectionsTileContentGridStyle}">
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridImageColumnDefiniton}" />
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridTextColumnDefiniton}" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Style="{StaticResource MainSectionsTileTitleGridRowDefiniton}" />
+                      <RowDefinition Style="{StaticResource MainSectionsTileContentGridRowDefiniton}" />
+                    </Grid.RowDefinitions>
+                    <dx:DXImage Name="StorageSectionTileImage" Style="{StaticResource MainSectionsTileImageStyle}" Source="{ext:ASImage Materials_green_32.svg}" />
+                    <Label Name="StorageSectionTileTitleLabel" Style="{StaticResource MainSectionsTileTitleLabelStyle}" Content="{Binding Source={x:Static coreCommon:Resources.Storage}, Converter={StaticResource UppercaseConverter}}" />
+                    <TextBlock Name="StorageSectionTileContentTextBlock" Style="{StaticResource MainSectionsTileContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.StorageText}" />
+                  </Grid>
+                </Grid>
+              </Border>
+            </dxlc:Tile>
+            <dxlc:Tile Name="CashBankSectionTile" Style="{StaticResource WithShadowEffectMainSectionTileStyle}" ToolTip="{x:Static tradeCommon:Resources.CashBank}">
+              <Border Style="{StaticResource MainSectionsTileBorderStyle}">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileIndicatorColumnDefiniton}" />
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridColumnDefiniton}" />
+                  </Grid.ColumnDefinitions>
+                  <Rectangle Style="{StaticResource MainSectionsTileIndicatorRectangleStyle}" />
+                  <Grid Style="{StaticResource MainSectionsTileContentGridStyle}">
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridImageColumnDefiniton}" />
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridTextColumnDefiniton}" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Style="{StaticResource MainSectionsTileTitleGridRowDefiniton}" />
+                      <RowDefinition Style="{StaticResource MainSectionsTileContentGridRowDefiniton}" />
+                    </Grid.RowDefinitions>
+                    <dx:DXImage Name="CashBankSectionTileTitleImage" Style="{StaticResource MainSectionsTileImageStyle}" Source="{ext:ASImage bank_green_32.svg}" />
+                    <Label Name="CashBankSectionTileTitleLabel" Style="{StaticResource MainSectionsTileTitleLabelStyle}" Content="{Binding Source={x:Static tradeCommon:Resources.CashBank}, Converter={StaticResource UppercaseConverter}}" />
+                    <TextBlock Name="CashBankSectionTileContentTextBlock" Style="{StaticResource MainSectionsTileContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.CashBankText}" />
+                  </Grid>
+                </Grid>
+              </Border>
+            </dxlc:Tile>
+            <dxlc:Tile Name="AnalysisSectionTile" Style="{StaticResource WithShadowEffectMainSectionTileStyle}" ToolTip="{x:Static coreCommon:Resources.AnalysisCaption}">
+              <Border Style="{StaticResource MainSectionsTileBorderStyle}">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileIndicatorColumnDefiniton}" />
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridColumnDefiniton}" />
+                  </Grid.ColumnDefinitions>
+                  <Rectangle Style="{StaticResource MainSectionsTileIndicatorRectangleStyle}" />
+                  <Grid Style="{StaticResource MainSectionsTileContentGridStyle}">
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridImageColumnDefiniton}" />
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridTextColumnDefiniton}" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Style="{StaticResource MainSectionsTileTitleGridRowDefiniton}" />
+                      <RowDefinition Style="{StaticResource MainSectionsTileContentGridRowDefiniton}" />
+                    </Grid.RowDefinitions>
+                    <dx:DXImage Name="AnalysisSectionTileImage" Style="{StaticResource MainSectionsTileImageStyle}" Source="{ext:ASImage analysis_green_32.svg}" />
+                    <Label Name="AnalysisSectionTileTitleLabel" Style="{StaticResource MainSectionsTileTitleLabelStyle}" Content="{Binding Source={x:Static coreCommon:Resources.AnalysisCaption}, Converter={StaticResource UppercaseConverter}}" />
+                    <TextBlock Name="AnalysisSectionTileContentTextBlock" Style="{StaticResource MainSectionsTileContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.AnalysisText}" />
+                  </Grid>
+                </Grid>
+              </Border>
+            </dxlc:Tile>
+            <dxlc:Tile Name="EInvoicingSectionTile" Style="{StaticResource WithShadowEffectMainSectionTileStyle}" ToolTip="{x:Static coreCommon:Resources.EInvoicing}">
+              <Border Style="{StaticResource MainSectionsTileBorderStyle}">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileIndicatorColumnDefiniton}" />
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridColumnDefiniton}" />
+                  </Grid.ColumnDefinitions>
+                  <Rectangle Style="{StaticResource MainSectionsTileIndicatorRectangleStyle}" />
+                  <Grid Style="{StaticResource MainSectionsTileContentGridStyle}">
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridImageColumnDefiniton}" />
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridTextColumnDefiniton}" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Style="{StaticResource MainSectionsTileTitleGridRowDefiniton}" />
+                      <RowDefinition Style="{StaticResource MainSectionsTileContentGridRowDefiniton}" />
+                    </Grid.RowDefinitions>
+                    <dx:DXImage Name="EInvoicingSectionTileImage" Style="{StaticResource MainSectionsTileImageStyle}" Source="{ext:ASImage TaxService_line_32.svg}" />
+                    <Label Name="EInvoicingSectionTileTitleLabel" Style="{StaticResource MainSectionsTileTitleLabelStyle}" Content="{Binding Source={x:Static coreCommon:Resources.EInvoicing}}" />
+                    <TextBlock Name="EInvoicingSectionTileContentTextBlock" Style="{StaticResource MainSectionsTileContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.EInvoicingText}" />
+                  </Grid>
+                </Grid>
+              </Border>
+            </dxlc:Tile>
+            <dxlc:Tile Name="AdminToolsSectionTile" Grid.Column="1" Style="{StaticResource WithShadowEffectMainSectionTileStyle}" ToolTip="{x:Static coreCommon:Resources.AdministrativeTools}">
+              <Border Style="{StaticResource MainSectionsTileBorderStyle}">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileIndicatorColumnDefiniton}" />
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridColumnDefiniton}" />
+                  </Grid.ColumnDefinitions>
+                  <Rectangle Style="{StaticResource MainSectionsTileIndicatorRectangleStyle}" />
+                  <Grid Style="{StaticResource MainSectionsTileContentGridStyle}">
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridImageColumnDefiniton}" />
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridTextColumnDefiniton}" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Style="{StaticResource MainSectionsTileTitleGridRowDefiniton}" />
+                      <RowDefinition Style="{StaticResource MainSectionsTileContentGridRowDefiniton}" />
+                    </Grid.RowDefinitions>
+                    <dx:DXImage Name="AdminToolsSectionTileImage" Style="{StaticResource MainSectionsTileImageStyle}" Source="{ext:ASImage admin tools_green_32.svg}" />
+                    <Label Name="AdminToolsSectionTileTitleLabel" Style="{StaticResource MainSectionsTileTitleLabelStyle}" Content="{Binding Source={x:Static coreCommon:Resources.AdministrativeTools}, Converter={StaticResource UppercaseConverter}}" />
+                    <TextBlock Name="AdminToolsTileTextBlock" Style="{StaticResource MainSectionsTileContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.AdminToolsText}" />
+                  </Grid>
+                </Grid>
+              </Border>
+            </dxlc:Tile>
+            <dxlc:Tile Name="UserAWPSSTile" Style="{StaticResource WithShadowEffectMainSectionTileStyle}" ToolTip="{x:Static coreCommon:Resources.UserAWP}">
+              <Border Style="{StaticResource MainSectionsTileBorderStyle}">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileIndicatorColumnDefiniton}" />
+                    <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridColumnDefiniton}" />
+                  </Grid.ColumnDefinitions>
+                  <Rectangle Style="{StaticResource MainSectionsTileIndicatorRectangleStyle}" />
+                  <Grid Style="{StaticResource MainSectionsTileContentGridStyle}">
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridImageColumnDefiniton}" />
+                      <ColumnDefinition Style="{StaticResource MainSectionsTileContentGridTextColumnDefiniton}" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                      <RowDefinition Style="{StaticResource MainSectionsTileTitleGridRowDefiniton}" />
+                      <RowDefinition Style="{StaticResource MainSectionsTileContentGridRowDefiniton}" />
+                    </Grid.RowDefinitions>
+                    <dx:DXImage Name="UserAWPSSTileImage" Style="{StaticResource MainSectionsTileImageStyle}" Source="{ext:ASImage user_32.svg}" />
+                    <Label Name="UserAWPSSTileLabel" Style="{StaticResource MainSectionsTileTitleLabelStyle}" Content="{Binding Source={x:Static coreCommon:Resources.UserAWP}, Converter={StaticResource UppercaseConverter}}" />
+                    <TextBlock Name="UserAWPSSContentTextBlock" Style="{StaticResource MainSectionsTileContentTextBlockStyle}" Text="{x:Static coreCommon:Resources.UserAWP}" />
+                  </Grid>
+                </Grid>
+              </Border>
+            </dxlc:Tile>
+          </dxlc:TileLayoutControl>
+        </Grid>
+      </StackPanel>
+    </ScrollViewer>
+    <StackPanel Name="CloudStackPanel" Grid.Row="1" Margin="60,0,0,0" HorizontalAlignment="Left" Background="#00FFFFFF" Orientation="Horizontal">
+      <dxlc:Tile Name="CloudLogoTile" Width="142" Height="39" VerticalAlignment="Center" Background="#00FFFFFF" BorderBrush="#00FFFFFF">
+        <dx:DXImage Width="142" Height="39" HorizontalAlignment="Left" Source="{ext:ASImage AS_CloudSolutions_H.svg}" />
+        <FrameworkElement.Style>
+          <Style TargetType="{x:Type dxlc:Tile}">
+            <Style.Triggers>
+              <Trigger Property="UIElement.IsMouseOver" Value="True">
+                <Setter Property="UIElement.Effect">
+                  <Setter.Value>
+                    <DropShadowEffect BlurRadius="20" Direction="-90" Opacity="0.2" ShadowDepth="3" Color="#66676a" />
+                  </Setter.Value>
+                </Setter>
+              </Trigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </dxlc:Tile>
+      <TextBlock Name="CloudLogoText" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" TextDecorations="Underline" Foreground="{Binding Converter={StaticResource GetCurrentForegroundBrush}}">
+        <FrameworkElement.Style>
+          <Style TargetType="{x:Type TextBlock}">
+            <Style.Triggers>
+              <Trigger Property="UIElement.IsMouseOver" Value="True">
+                <Setter Property="UIElement.Effect">
+                  <Setter.Value>
+                    <DropShadowEffect BlurRadius="20" Direction="-90" Opacity="0.2" ShadowDepth="3" Color="#66676a" />
+                  </Setter.Value>
+                </Setter>
+              </Trigger>
+            </Style.Triggers>
+          </Style>
+        </FrameworkElement.Style>
+      </TextBlock>
+    </StackPanel>
+    <Grid Row="0" RowSpan="2" Column="1">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="auto" />
+        <RowDefinition Height="auto" />
+        <RowDefinition Height="auto" />
+        <RowDefinition Height="auto" />
+      </Grid.RowDefinitions>
+      <Grid Row="0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+          <RowDefinition Height="2" />
+          <RowDefinition Height="2" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Row="0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+          </Grid.ColumnDefinitions>
+          <Label Name="AS_Trade_MobileApp_Header" Grid.Column="0" Margin="59,10,0,10" HorizontalAlignment="Left" FontSize="17" FontFamily="{Binding Converter={StaticResource GetSystemFont}}" Foreground="{Binding Converter={StaticResource GetCurrentForegroundBrush}}" />
+          <customWindowControls:CWCSimpleButton Grid.Column="1" Style="{StaticResource WithoutBackgroundSimpleButtonStyle}" Click="CollapseMobileAppSection_Clicked">
+            <Image Name="MobileAppSectionColapseImage" Style="{StaticResource WithoutBackgroundSmallButtonImageStyle}" />
+          </customWindowControls:CWCSimpleButton>
+        </Grid>
+        <Border Grid.Row="1" Grid.RowSpan="2" Width="160" Margin="51,0,0,0" HorizontalAlignment="Left" Opacity="0.2" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+        <Border Grid.Row="2" Width="51" HorizontalAlignment="Left" Opacity="0.1" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+        <Border Grid.Row="2" Margin="191,0,0,0" Opacity="0.1" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+        <dx:ScrollViewerBase Name="MobileAppContentSectionScrollView" Grid.Row="3" Margin="60,10,60,10" HorizontalAlignment="Stretch" VerticalAlignment="Center" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="auto" />
+              <ColumnDefinition Width="10" />
+              <ColumnDefinition Width="200" />
+              <ColumnDefinition Width="10" />
+              <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <dx:DXImage Grid.Column="0" Height="220" RenderOptions.BitmapScalingMode="HighQuality" Source="{ext:ASImage Mobile_TRD.png}" />
+            <Grid Column="2" VerticalAlignment="Center">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="auto" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+              <TextBlock Name="MobileAppText" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap" />
+              <dx:DXImage Grid.Row="2" Grid.Column="0" Height="48" HorizontalAlignment="Right" Source="{ext:ASImage apple_store.svg}" />
+              <dx:DXImage Grid.Row="2" Grid.Column="1" Height="48" HorizontalAlignment="Left" Source="{ext:ASImage google_play.svg}" />
+            </Grid>
+            <dx:DXImage Grid.Column="4" Height="150" RenderOptions.BitmapScalingMode="HighQuality" Stretch="Fill" Source="{ext:ASImage QR_trade_mob_store.png}" />
+          </Grid>
+        </dx:ScrollViewerBase>
+      </Grid>
+      <Grid Name="AS_Trade_QuickStart_Grid" Row="1">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+          <RowDefinition Height="2" />
+          <RowDefinition Height="2" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Row="0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+          </Grid.ColumnDefinitions>
+          <Label Name="AS_Trade_QuickStart_Header" Grid.Column="0" Margin="59,5,0,10" FontSize="17" FontFamily="{Binding Converter={StaticResource GetSystemFont}}" Foreground="{Binding Converter={StaticResource GetCurrentForegroundBrush}}" />
+          <customWindowControls:CWCSimpleButton Grid.Column="1" Style="{StaticResource WithoutBackgroundSimpleButtonStyle}" Click="CollapseQuickStartSection_Clicked">
+            <Image Name="QuickStartSectionCollapseImage" Style="{StaticResource WithoutBackgroundSmallButtonImageStyle}" />
+          </customWindowControls:CWCSimpleButton>
+        </Grid>
+        <Border Grid.Row="1" Grid.RowSpan="2" Width="140" Margin="51,0,0,0" HorizontalAlignment="Left" Opacity="0.2" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+        <Border Grid.Row="2" Width="51" HorizontalAlignment="Left" Opacity="0.1" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+        <Border Grid.Row="2" Margin="191,0,0,0" Opacity="0.1" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+        <ScrollViewer Name="AS_Trade_QuickStart_Header_ScrollViewer" Grid.Row="3" VerticalScrollBarVisibility="Auto">
+          <dxlc:TileLayoutControl Name="AS_Trade_QuickStart_Tiles" Padding="51,14,0,0" AllowItemMoving="False" BreakFlowToFit="True" Orientation="Horizontal" Background="{Binding Converter={StaticResource GetCurrentBackgroundBrush}}">
+            <dxlc:Tile Name="CompanyTile" Style="{StaticResource QuickStartTileStyle}" MouseEnter="AS_Trade_QuickStart_Tiles_MouseEnter" MouseLeave="AS_Trade_QuickStart_Tiles_MouseLeave">
+              <StackPanel Style="{StaticResource QuickStartTileStackPanelStyle}">
+                <dx:DXImage Name="CompanyTileImage" Style="{StaticResource QuickStartTileImageStyle}" Source="{ext:ASImage building_tools_Trade_gray_32.svg}" />
+                <TextBlock Name="CompanyTileTextBlock" Style="{StaticResource QuickStartTileTextBlockStyle}" />
+              </StackPanel>
+            </dxlc:Tile>
+            <dxlc:Tile Name="GoodsTile" Style="{StaticResource QuickStartTileStyle}" MouseEnter="AS_Trade_QuickStart_Tiles_MouseEnter" MouseLeave="AS_Trade_QuickStart_Tiles_MouseLeave">
+              <StackPanel Style="{StaticResource QuickStartTileStackPanelStyle}">
+                <dx:DXImage Name="GoodsTileImage" Style="{StaticResource QuickStartTileImageStyle}" Source="{ext:ASImage package_front_Trade_gray_32.svg}" />
+                <TextBlock Name="GoodsTileTextBlock" Style="{StaticResource QuickStartTileTextBlockStyle}" />
+              </StackPanel>
+            </dxlc:Tile>
+            <dxlc:Tile Name="GoodRemainsTile" Style="{StaticResource QuickStartTileStyle}" MouseEnter="AS_Trade_QuickStart_Tiles_MouseEnter" MouseLeave="AS_Trade_QuickStart_Tiles_MouseLeave">
+              <StackPanel Style="{StaticResource QuickStartTileStackPanelStyle}">
+                <dx:DXImage Name="GoodRemainsTileImage" Style="{StaticResource QuickStartTileImageStyle}" Source="{ext:ASImage package_front_Trade_gray_32.svg}" />
+                <TextBlock Name="GoodRemainsTileTextBlock" Style="{StaticResource QuickStartTileTextBlockStyle}" />
+              </StackPanel>
+            </dxlc:Tile>
+            <dxlc:Tile Name="PartnersTile" Style="{StaticResource QuickStartTileStyle}" MouseEnter="AS_Trade_QuickStart_Tiles_MouseEnter" MouseLeave="AS_Trade_QuickStart_Tiles_MouseLeave">
+              <StackPanel Style="{StaticResource QuickStartTileStackPanelStyle}">
+                <dx:DXImage Name="PartnersTileImage" Style="{StaticResource QuickStartTileImageStyle}" Source="{ext:ASImage fill_partners_info_Trade_gray_32.svg}" />
+                <TextBlock Name="PartnersTileTextBlock" Style="{StaticResource QuickStartTileTextBlockStyle}" />
+              </StackPanel>
+            </dxlc:Tile>
+            <dxlc:Tile Name="PartnersRemCorrectTile" Style="{StaticResource QuickStartTileStyle}" MouseEnter="AS_Trade_QuickStart_Tiles_MouseEnter" MouseLeave="AS_Trade_QuickStart_Tiles_MouseLeave">
+              <StackPanel Style="{StaticResource QuickStartTileStackPanelStyle}">
+                <dx:DXImage Name="PartnersRemCorrectTileImage" Style="{StaticResource QuickStartTileImageStyle}" Source="{ext:ASImage fill_partners_rem_Trade_gray_32.svg}" />
+                <TextBlock Name="PartnersRemCorrectTextBlock" Style="{StaticResource QuickStartTileTextBlockStyle}" />
+              </StackPanel>
+            </dxlc:Tile>
+            <dxlc:Tile Name="CashesTile" Style="{StaticResource QuickStartTileStyle}" MouseEnter="AS_Trade_QuickStart_Tiles_MouseEnter" MouseLeave="AS_Trade_QuickStart_Tiles_MouseLeave">
+              <StackPanel Style="{StaticResource QuickStartTileStackPanelStyle}">
+                <dx:DXImage Name="CashesTileImage" Style="{StaticResource QuickStartTileImageStyle}" Source="{ext:ASImage fill_cashes_Trade_gray_32.svg}" />
+                <TextBlock Name="CashesTileTextBlock" Style="{StaticResource QuickStartTileTextBlockStyle}" />
+              </StackPanel>
+            </dxlc:Tile>
+            <dxlc:Tile Name="BankAccountsTile" Style="{StaticResource QuickStartTileStyle}" MouseEnter="AS_Trade_QuickStart_Tiles_MouseEnter" MouseLeave="AS_Trade_QuickStart_Tiles_MouseLeave">
+              <StackPanel Style="{StaticResource QuickStartTileStackPanelStyle}">
+                <dx:DXImage Name="BankAccountsTileImage" Style="{StaticResource QuickStartTileImageStyle}" Source="{ext:ASImage building_coins_Trade_gray_32.svg}" />
+                <TextBlock Name="BankAccountsTileTextBlock" Style="{StaticResource QuickStartTileTextBlockStyle}" />
+              </StackPanel>
+            </dxlc:Tile>
+          </dxlc:TileLayoutControl>
+        </ScrollViewer>
+      </Grid>
+      <Grid Row="2">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+          <RowDefinition Height="2" />
+          <RowDefinition Height="2" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Row="0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+          </Grid.ColumnDefinitions>
+          <Label Name="AS_Trade_Helper_Header" Margin="59,5,0,10" FontSize="17" FontFamily="{Binding Converter={StaticResource GetSystemFont}}" Foreground="{Binding Converter={StaticResource GetCurrentForegroundBrush}}" />
+          <customWindowControls:CWCSimpleButton Grid.Column="1" Style="{StaticResource WithoutBackgroundSimpleButtonStyle}" Click="CollapseHelperSection_Clicked">
+            <Image Name="WorkingHelperSectionCollapseImage" Style="{StaticResource WithoutBackgroundSmallButtonImageStyle}" Source="{Binding Converter={StaticResource ImageByNameConverter}, ConverterParameter=up_16.svg}" />
+          </customWindowControls:CWCSimpleButton>
+        </Grid>
+        <Border Grid.Row="2" Width="51" HorizontalAlignment="Left" Opacity="0.1" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+        <Border Grid.Row="2" Margin="291,0,0,0" Opacity="0.1" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+        <Border Grid.Row="1" Width="51" HorizontalAlignment="Left" Background="{Binding Converter={StaticResource GetCurrentBackgroundBrush}}" />
+        <Border Grid.Row="1" Grid.RowSpan="2" Width="240" Margin="51,0,0,0" HorizontalAlignment="Left" Opacity="0.2" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+        <Border Grid.Row="1" Margin="291,0,0,0" Background="{Binding Converter={StaticResource GetCurrentBackgroundBrush}}" />
+        <ScrollViewer Name="AS_Trade_Helper_Header_ScrollViewer" Grid.Row="3" VerticalScrollBarVisibility="Auto">
+          <Grid>
+            <dxlc:TileLayoutControl Name="AS_Trade_Helper_Tiles" Padding="51,14,0,0" AllowItemMoving="False" BreakFlowToFit="True" Orientation="Horizontal">
+              <dxlc:Tile Name="YouTubeLearningVideosLessonsTile" Style="{StaticResource WorkAssistantTileStyle}" MouseEnter="AS_Trade_Helper_Tiles_MouseEnter" MouseLeave="AS_Trade_Helper_Tiles_MouseLeave">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="46" />
+                    <ColumnDefinition Width="*" />
+                  </Grid.ColumnDefinitions>
+                  <Border Name="YouTubeLearningVideosLessonsTileBorder" Grid.Column="0" Style="{StaticResource WorkAssistantTileBorderStyle}">
+                    <dx:DXImage Name="YouTubeLearningVideosLessonsTileImage" Style="{StaticResource WorkAssistantTileImageStyle}" Source="{ext:ASImage play.svg}" />
+                  </Border>
+                  <StackPanel Name="YouTubeLearningVideosLessonsTileStack" Grid.Column="1" Style="{StaticResource WorkAssistantTileStackPanelStyle}">
+                    <TextBlock Name="YouTubeLearningVideosLessonsTileTextBlock" Grid.Column="1" Style="{StaticResource WorkAssistantTileTitleTextBlockStyle}" />
+                  </StackPanel>
+                </Grid>
+              </dxlc:Tile>
+              <dxlc:Tile Name="YouTubeLearningVideosTile" Style="{StaticResource WorkAssistantTileStyle}" MouseEnter="AS_Trade_Helper_Tiles_MouseEnter" MouseLeave="AS_Trade_Helper_Tiles_MouseLeave">
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="46" />
+                    <ColumnDefinition Width="*" />
+                  </Grid.ColumnDefinitions>
+                  <Border Name="YouTubeLearningVideosTileBorder" Grid.Column="0" Style="{StaticResource WorkAssistantTileBorderStyle}">
+                    <dx:DXImage Name="YouTubeLearningVideosTileImage" Style="{StaticResource WorkAssistantTileImageStyle}" Source="{ext:ASImage play.svg}" />
+                  </Border>
+                  <StackPanel Name="YouTubeLearningVideosTileStack" Grid.Column="1" Style="{StaticResource WorkAssistantTileStackPanelStyle}">
+                    <TextBlock Name="YouTubeLearningVideosTileTextBlock" Grid.Column="1" Style="{StaticResource WorkAssistantTileTitleTextBlockStyle}" />
+                  </StackPanel>
+                </Grid>
+              </dxlc:Tile>
+            </dxlc:TileLayoutControl>
+          </Grid>
+        </ScrollViewer>
+      </Grid>
+      <Grid Row="3">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="auto" />
+          <RowDefinition Height="2" />
+          <RowDefinition Height="2" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Row="0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+          </Grid.ColumnDefinitions>
+          <Label Name="AS_Accountant_Remote_Support" Margin="59,5,0,10" FontSize="17" FontFamily="{Binding Converter={StaticResource GetSystemFont}}" />
+          <customWindowControls:CWCSimpleButton Grid.Column="1" Style="{StaticResource WithoutBackgroundSimpleButtonStyle}" Click="CollapseRemoteSupportSection_Clicked">
+            <Image Name="RemoteSupportSectionColapseImage" Style="{StaticResource WithoutBackgroundSmallButtonImageStyle}" Source="{Binding Converter={StaticResource ImageByNameConverter}, ConverterParameter=up_16.svg}" />
+          </customWindowControls:CWCSimpleButton>
+        </Grid>
+        <Border Grid.Row="2" Width="51" HorizontalAlignment="Left" Opacity="0.1" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+        <Border Grid.Row="2" Margin="191,0,0,0" Opacity="0.1" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+        <Border Grid.Row="1" Width="51" HorizontalAlignment="Left" Background="{Binding Converter={StaticResource GetCurrentBackgroundBrush}}" />
+        <Border Grid.Row="1" Grid.RowSpan="2" Width="140" Margin="51,0,0,0" HorizontalAlignment="Left" Opacity="0.2" Background="{Binding Converter={StaticResource SystemSpecificButtonBackgroundColor}}" />
+        <Border Grid.Row="1" Margin="191,0,0,0" Background="{Binding Converter={StaticResource GetCurrentBackgroundBrush}}" />
+        <ScrollViewer Name="AS_Trade_Remote_Support_ScrollViewer" Grid.Row="3" VerticalScrollBarVisibility="Auto">
+          <dxlc:TileLayoutControl Name="Help_SupportTileControl" Padding="51,14,0,0" AllowItemMoving="False" BreakFlowToFit="True" Orientation="Horizontal" Background="{Binding Converter={StaticResource GetCurrentBackgroundBrush}}">
+            <dxlc:Tile Name="TeamViewerTile" Style="{StaticResource Help_SupportTileStyle}" MouseEnter="AS_Trade_Helper_Tiles_MouseEnter" MouseLeave="AS_Trade_Helper_Tiles_MouseLeave">
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="46" />
+                  <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <dx:DXImage Name="TeamViewerTileImage" Grid.Column="0" Style="{StaticResource Help_SupportTileImageStyle}" Source="{ext:ASImage TeamViewer_32.svg}" />
+                <StackPanel Grid.Column="1" Style="{StaticResource Help_SupportTileStackPanelStyle}">
+                  <Label Name="TeamViewerTileLabel" Style="{StaticResource Help_SupportTileTitleLabelStyle}" />
+                  <TextBlock Name="TeamViewerTileContentTextBlock" Style="{StaticResource Help_SupportTileContentTextBlockStyle}" />
+                </StackPanel>
+              </Grid>
+            </dxlc:Tile>
+            <dxlc:Tile Name="AnyDeskTile" Style="{StaticResource Help_SupportTileStyle}" MouseEnter="AS_Trade_Helper_Tiles_MouseEnter" MouseLeave="AS_Trade_Helper_Tiles_MouseLeave">
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="46" />
+                  <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <dx:DXImage Name="AnyDeskTileImage" Grid.Column="0" Style="{StaticResource Help_SupportTileImageStyle}" Source="{ext:ASImage AnyDesk_32.svg}" />
+                <StackPanel Grid.Column="1" Style="{StaticResource Help_SupportTileStackPanelStyle}">
+                  <Label Name="AnyDeskTileTitleLabel" Style="{StaticResource Help_SupportTileTitleLabelStyle}" />
+                  <TextBlock Name="AnyDeskTileContentTextBlock" Style="{StaticResource Help_SupportTileContentTextBlockStyle}" />
+                </StackPanel>
+              </Grid>
+            </dxlc:Tile>
+            <dxlc:Tile Name="TelegramTile" Style="{StaticResource Help_SupportTileStyle}" MouseEnter="AS_Trade_Helper_Tiles_MouseEnter" MouseLeave="AS_Trade_Helper_Tiles_MouseLeave">
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="46" />
+                  <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <dx:DXImage Name="TelegramTileImage" Grid.Column="0" Style="{StaticResource Help_SupportTileImageStyle}" Source="{ext:ASImage Telegram_32.svg}" />
+                <StackPanel Grid.Column="1" Style="{StaticResource Help_SupportTileStackPanelStyle}">
+                  <Label Name="TelegramTileLabel" Style="{StaticResource Help_SupportTileTitleLabelStyle}" />
+                  <TextBlock Name="TelegramTileTextBlock" Style="{StaticResource Help_SupportTileContentTextBlockStyle}" />
+                </StackPanel>
+              </Grid>
+            </dxlc:Tile>
+          </dxlc:TileLayoutControl>
+        </ScrollViewer>
+      </Grid>
+    </Grid>
+  </Grid>
+</dxmvvm:ModuleView>

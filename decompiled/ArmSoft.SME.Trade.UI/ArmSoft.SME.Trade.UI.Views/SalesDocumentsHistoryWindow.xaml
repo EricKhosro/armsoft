@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<baseWindows:BaseThemedWindow x:Class="ArmSoft.SME.Trade.UI.Views.SalesDocumentsHistoryWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:baseWindows="clr-namespace:ArmSoft.SME.Core.UI.OtherWindows;assembly=ArmSoft.SME.Core.UI" xmlns:coreCommon="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:customWindowControls="clr-namespace:ArmSoft.SME.Core.UI.CustomWindowControls;assembly=ArmSoft.SME.Core.UI" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dataViewModels="clr-namespace:ArmSoft.SME.Trade.UI.DataViewModels" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions;assembly=ArmSoft.SME.Core.UI" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:tradeCommon="clr-namespace:ArmSoft.SME.Trade.Common;assembly=ArmSoft.SME.Trade.Common" xmlns:tradeModels="clr-namespace:ArmSoft.SME.Trade.UI.Models;assembly=ArmSoft.SME.Trade.UI" Style="{StaticResource CustomWithSizeCalculationContentsWindowStyle}" WindowStartupLocation="CenterOwner" xmlns:views="clr-namespace:ArmSoft.SME.Trade.UI.Views" Loaded="BaseThemedWindow_Loaded" SizeChanged="BaseThemedWindow_SizeChanged">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <Style x:Key="DocumentsGridControlStyle" TargetType="{x:Type dxg:GridControl}">
+        <Setter Property="dxg:DataControlBase.AllowLiveDataShaping" Value="True" />
+        <Setter Property="dxg:DataControlBase.SelectionMode" Value="Cell" />
+      </Style>
+      <Style x:Key="DocumentsGridTableViewStyle" TargetType="{x:Type dxg:TableView}">
+        <Setter Property="dxg:TableView.AllowBestFit" Value="True" />
+        <Setter Property="dxg:DataViewBase.AllowColumnFiltering" Value="False" />
+        <Setter Property="dxg:DataViewBase.AllowColumnMoving" Value="False" />
+        <Setter Property="dxg:DataViewBase.AllowEditing" Value="False" />
+        <Setter Property="dxg:GridViewBase.AllowGrouping" Value="False" />
+        <Setter Property="dxg:DataViewBase.AllowLeaveFocusOnTab" Value="True" />
+        <Setter Property="dxg:DataViewBase.AllowMoveColumnToDropArea" Value="False" />
+        <Setter Property="dxg:DataViewBase.NavigationStyle" Value="Row" />
+        <Setter Property="dxg:TableView.NewItemRowPosition" Value="None" />
+        <Setter Property="dxg:TableView.AutoWidth" Value="True" />
+        <Setter Property="dxg:TableView.HeaderPanelMinHeight" Value="30" />
+        <Setter Property="dxg:TableView.RowMinHeight" Value="40" />
+        <Setter Property="dxg:TableView.VerticalScrollbarVisibility" Value="Auto" />
+        <Setter Property="dxg:DataViewBase.EditorButtonShowMode" Value="ShowForFocusedCell" />
+        <Setter Property="dxg:DataViewBase.EditorShowMode" Value="MouseDown" />
+        <Setter Property="dxg:DataViewBase.EnterMoveNextColumn" Value="True" />
+        <Setter Property="dxg:GridViewBase.IsGroupPanelMenuEnabled" Value="False" />
+        <Setter Property="dxg:DataViewBase.IsRowCellMenuEnabled" Value="True" />
+        <Setter Property="dxg:DataViewBase.IsTotalSummaryMenuEnabled" Value="False" />
+        <Setter Property="dxg:DataViewBase.SearchPanelAllowFilter" Value="True" />
+        <Setter Property="dxg:DataViewBase.SearchPanelHorizontalAlignment" Value="Stretch" />
+        <Setter Property="dxg:DataViewBase.SearchPanelNullText" Value="" />
+        <Setter Property="dxg:DataViewBase.ShowSearchPanelMode" Value="Always" />
+        <Setter Property="dxg:DataViewBase.ShowFocusedRectangle" Value="False" />
+        <Setter Property="dxg:GridViewBase.ShowGroupPanel" Value="False" />
+        <Setter Property="dxg:GridViewBase.ShowGroupedColumns" Value="False" />
+        <Setter Property="dxg:DataViewBase.ShowTotalSummary" Value="True" />
+        <Setter Property="dxg:TableView.UseEvenRowBackground" Value="True" />
+      </Style>
+      <Style x:Key="DocumentPrintViewBorderStyle" TargetType="{x:Type Border}">
+        <Setter Property="BorderBrush" Value="{ext:ThemeBasedColor #2e7b51#2e7b51}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Border.Padding" Value="4,6,4,6" />
+        <Setter Property="Background" Value="{ext:ThemeBasedColor #FFFFFF#000000}" />
+      </Style>
+      <Style x:Key="SeparatorLineStyle" TargetType="{x:Type Line}">
+        <Setter Property="Shape.Stretch" Value="Fill" />
+        <Setter Property="Stroke" Value="{ext:ThemeBasedColor #B5B5B5#B5B5B5}" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Line.X1" Value="0" />
+        <Setter Property="Line.X2" Value="1" />
+        <Setter Property="Line.Y1" Value="0" />
+        <Setter Property="Line.Y2" Value="0" />
+      </Style>
+      <Style x:Key="InsideReceiptKeyTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Foreground" Value="{ext:ThemeBasedColor #000000#000000}" />
+      </Style>
+      <Style x:Key="InsideReceiptValueTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="{ext:ThemeBasedColor #000000#000000}" />
+      </Style>
+      <Style x:Key="InsideReceiptImportantKeyTextBlockStyle" BasedOn="{StaticResource InsideReceiptKeyTextBlockStyle}" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontWeight" Value="SemiBold" />
+      </Style>
+      <Style x:Key="InsideReceiptImportantValueTextBlockStyle" BasedOn="{StaticResource InsideReceiptValueTextBlockStyle}" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontWeight" Value="SemiBold" />
+      </Style>
+      <Style x:Key="InsideReceiptTitleSubHeaderTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="{ext:ThemeBasedColor #000000#000000}" />
+      </Style>
+      <Style x:Key="InsideReceiptTitleHeaderTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{ext:ThemeBasedColor #3E7B55#3E7B55}" />
+      </Style>
+      <Style x:Key="InsideReceiptTitleValueTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="{ext:ThemeBasedColor #5566A0#5566A0}" />
+      </Style>
+      <Style x:Key="InsideReceiptListPrimaryTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Foreground" Value="{ext:ThemeBasedColor #000000#000000}" />
+        <Setter Property="TextTrimming" Value="WordEllipsis" />
+        <Setter Property="TextWrapping" Value="NoWrap" />
+      </Style>
+      <Style x:Key="InsideReceiptListSecondaryTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="Foreground" Value="{ext:ThemeBasedColor #A9A9A9#A9A9A9}" />
+      </Style>
+      <Style x:Key="InsideReceiptListImportantTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="{ext:ThemeBasedColor #000000#000000}" />
+      </Style>
+      <Style x:Key="InsideReceiptKeyValueRowGridStyle" TargetType="{x:Type Grid}">
+        <Setter Property="Margin" Value="6,6,6,6" />
+      </Style>
+      <Style x:Key="InsideReceiptTitleStackPanelStyle" TargetType="{x:Type StackPanel}">
+        <Setter Property="Background" Value="{ext:ThemeBasedColor #FAFAFA#FAFAFA}" />
+        <Setter Property="Height" Value="30" />
+      </Style>
+      <Style x:Key="InsideReceiptTitleGridStyle" TargetType="{x:Type Grid}">
+        <Setter Property="Margin" Value="8,2,8,8" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+      </Style>
+      <Style x:Key="ReceiptBottomButtonColumnDefinition" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="*" />
+      </Style>
+      <Style x:Key="ReceiptItemsListViewStyle" TargetType="{x:Type ListView}">
+        <Setter Property="Padding" Value="0,0,0,0" />
+        <Setter Property="Margin" Value="0,4,0,4" />
+        <Setter Property="BorderThickness" Value="0,0,0,0" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="VirtualizingPanel.IsVirtualizing" Value="True" />
+        <Setter Property="VirtualizingPanel.ScrollUnit" Value="Pixel" />
+      </Style>
+      <Style x:Key="CustomListViewItemStyle" TargetType="{x:Type ListViewItem}">
+        <Setter Property="Padding" Value="2,3,2,3" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Template">
+          <Setter.Value>
+            <ControlTemplate TargetType="{x:Type ListViewItem}">
+              <Border Name="ListViewItemBorder" Padding="{TemplateBinding Control.Padding}" Background="{TemplateBinding Control.Background}" BorderBrush="{TemplateBinding Control.BorderBrush}" BorderThickness="{TemplateBinding Control.BorderThickness}">
+                <ContentPresenter HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+              </Border>
+              <ControlTemplate.Triggers>
+                <Trigger Property="ListBoxItem.IsSelected" Value="True">
+                  <Setter TargetName="ListViewItemBorder" Property="Border.Background" Value="{ext:ThemeBasedColor #B8E9CD#B8E9CD}" />
+                </Trigger>
+                <Trigger Property="UIElement.IsMouseOver" Value="True">
+                  <Setter TargetName="ListViewItemBorder" Property="Border.Background" Value="{ext:ThemeBasedColor #E0f7Ea#E0f7Ea}" />
+                </Trigger>
+              </ControlTemplate.Triggers>
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <FrameworkElement.DataContext>
+    <dataViewModels:SalesDocumentsHistoryViewModel />
+  </FrameworkElement.DataContext>
+  <Grid Style="{StaticResource TouchModeSingleWindowContainerGridStyle}">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Style="{StaticResource InsideGridContainersSeparatorColumnDefintionStyle}" />
+      <ColumnDefinition Width="338" />
+    </Grid.ColumnDefinitions>
+    <Grid Column="0">
+      <dxg:GridControl Name="SalesDocumentsGridControl" Style="{StaticResource DocumentsGridControlStyle}" CustomRowFilter="Grid_CustomRowFilter" FilterChanged="SalesDocumentsGridControl_FilterChanged" PreviewKeyDown="Grid_PreviewKeyDown" SelectedItemChanged="SalesDocumentsGridControl_SelectedItemChanged">
+        <dxg:GridControl.TotalSummary>
+          <dxg:GridSummaryItem FieldName="Summ" ShowInColumn="Summ" SummaryType="Sum" />
+          <dxg:GridSummaryItem FieldName="SummaCash" ShowInColumn="SummaCash" SummaryType="Sum" />
+          <dxg:GridSummaryItem FieldName="SummaBank" ShowInColumn="SummaBank" SummaryType="Sum" />
+          <dxg:GridSummaryItem FieldName="SummaryOfOtherSums" ShowInColumn="SummaryOfOtherSums" SummaryType="Sum" />
+        </dxg:GridControl.TotalSummary>
+        <dxg:GridControl.SortInfo>
+          <dxg:GridSortInfo FieldName="DocDate" SortOrder="Descending" />
+        </dxg:GridControl.SortInfo>
+        <dxg:GridControl.View>
+          <dxg:TableView Name="SalesDocumentsTableView" Style="{StaticResource DocumentsGridTableViewStyle}" />
+        </dxg:GridControl.View>
+      </dxg:GridControl>
+    </Grid>
+    <Grid Column="2">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Style="{StaticResource SampleWindowInsideGridControlsSeparatorRowDefinition}" />
+        <RowDefinition Height="auto" />
+      </Grid.RowDefinitions>
+      <dx:LoadingDecorator Name="DocumentLoadingDecorator" Grid.Row="0" IsSplashScreenShown="{Binding ChangeSelectedDocumentCommand.IsRunning}">
+        <dx:LoadingDecorator.SplashScreenTemplate>
+          <DataTemplate>
+            <dx:WaitIndicator Style="{StaticResource CustomWindowsWaitIndicatorStyle}">
+              <ContentControl.ContentTemplate>
+                <DataTemplate>
+                  <TextBlock Style="{StaticResource ActivityIndicatorContentTextBlockStyle}" Text="{x:Static coreCommon:Resources.Loading}" />
+                </DataTemplate>
+              </ContentControl.ContentTemplate>
+            </dx:WaitIndicator>
+          </DataTemplate>
+        </dx:LoadingDecorator.SplashScreenTemplate>
+        <Grid Visibility="{Binding ChangeSelectedDocumentCommand.IsRunning, Converter={StaticResource BoolToInverseVisibilityConverter}}">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorRowDefintionStyle}" />
+            <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          <Grid Row="0" Style="{StaticResource InsideReceiptTitleGridStyle}">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="auto" />
+              <RowDefinition Style="{StaticResource TouchModeInsideTitleSeparatorRowDefintionStyle}" />
+              <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid Row="0">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Style="{StaticResource TouchModeInsideContainerSeparatorColumnDefintionStyle}" />
+                <ColumnDefinition Width="auto" />
+              </Grid.ColumnDefinitions>
+              <TextBlock Grid.Column="0" Style="{StaticResource InsideReceiptTitleHeaderTextBlockStyle}" Foreground="{Binding SelectedDocumentAsReceipt.DocTypeCode, Converter={StaticResource DocumentTypeColorConverter}}" Text="{Binding SelectedDocumentAsReceipt.DocTypeName}" />
+              <Grid Column="2" HorizontalAlignment="Right">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="auto" />
+                  <ColumnDefinition Style="{StaticResource TwoColumnedTextGridColumnDefintionStyle}" />
+                  <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Style="{StaticResource InsideReceiptTitleSubHeaderTextBlockStyle}" Text="N" />
+                <TextBlock Grid.Column="2" Style="{StaticResource InsideReceiptTitleSubHeaderTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.DocNum}" />
+              </Grid>
+            </Grid>
+            <Grid Row="2">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Style="{StaticResource TouchModeInsideContainerSeparatorColumnDefintionStyle}" />
+                <ColumnDefinition Width="auto" />
+              </Grid.ColumnDefinitions>
+              <TextBlock Grid.Column="0" HorizontalAlignment="Left" Style="{StaticResource InsideReceiptTitleSubHeaderTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.DocDate, StringFormat='{}{0:dd/MM/yyyy}'}" />
+              <Grid Column="2" HorizontalAlignment="Right" Visibility="{Binding SelectedDocumentAsReceipt.ECRCheckNumber, Converter={StaticResource TextToVisibilityConverter}}">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="auto" />
+                  <ColumnDefinition Style="{StaticResource TwoColumnedTextGridColumnDefintionStyle}" />
+                  <ColumnDefinition Width="auto" />
+                  <ColumnDefinition Style="{StaticResource TwoColumnedTextGridColumnDefintionStyle}" />
+                  <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Style="{StaticResource InsideReceiptTitleSubHeaderTextBlockStyle}" Text="{x:Static coreCommon:Resources.ECRC}" />
+                <TextBlock Grid.Column="2" Style="{StaticResource InsideReceiptTitleSubHeaderTextBlockStyle}" Text="N" />
+                <TextBlock Grid.Column="4" Style="{StaticResource InsideReceiptTitleSubHeaderTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.ECRCheckNumber}" />
+              </Grid>
+            </Grid>
+          </Grid>
+          <Border Grid.Row="2" Style="{StaticResource DocumentPrintViewBorderStyle}">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorRowDefintionStyle}" />
+                <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorLineRowDefintionStyle}" />
+                <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorRowDefintionStyle}" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorRowDefintionStyle}" />
+                <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorLineRowDefintionStyle}" />
+                <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorRowDefintionStyle}" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorRowDefintionStyle}" />
+                <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorLineRowDefintionStyle}" />
+                <RowDefinition Height="auto" />
+              </Grid.RowDefinitions>
+              <ListView Name="ReceiptItemsListView" Grid.Row="0" ItemContainerStyle="{StaticResource CustomListViewItemStyle}" Style="{StaticResource ReceiptItemsListViewStyle}" MaxHeight="{Binding ReceiptListViewMaxHeight}" ItemsSource="{Binding SelectedDocumentAsReceipt.MTList}">
+                <ItemsControl.ItemTemplate>
+                  <DataTemplate DataType="tradeModels:MTBillReceiptRowItem">
+                    <Grid>
+                      <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Style="{StaticResource InsideListRowGridColumnDefintionStyle}" />
+                        <ColumnDefinition Width="112" />
+                        <ColumnDefinition Style="{StaticResource InsideListRowGridColumnDefintionStyle}" />
+                        <ColumnDefinition Width="100" />
+                      </Grid.ColumnDefinitions>
+                      <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Style="{StaticResource InsideListRowGridRowDefintionStyle}" />
+                        <RowDefinition Height="Auto" />
+                      </Grid.RowDefinitions>
+                      <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource InsideReceiptListPrimaryTextBlockStyle}" Text="{Binding ItemCode}" />
+                      <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" Style="{StaticResource InsideReceiptListPrimaryTextBlockStyle}" Text="{Binding ItemName}" />
+                      <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource InsideReceiptListSecondaryTextBlockStyle}" Text="{Binding Quantity, StringFormat='{}{0:N0}'}" />
+                      <TextBlock Grid.Row="2" Grid.Column="2" Style="{StaticResource InsideReceiptListSecondaryTextBlockStyle}" Text="{Binding Price, StringFormat='{}{0:N2}'}" />
+                      <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Right" Style="{StaticResource InsideReceiptListImportantTextBlockStyle}" Text="{Binding Sum, StringFormat='{}{0:N2}'}" />
+                    </Grid>
+                  </DataTemplate>
+                </ItemsControl.ItemTemplate>
+              </ListView>
+              <Line Grid.Row="2" Style="{StaticResource SeparatorLineStyle}" />
+              <Grid Row="4" RowDefinitions="auto,*" Style="{StaticResource InsideReceiptKeyValueRowGridStyle}">
+                <Grid Row="0" ColumnDefinitions="*,*">
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Style="{StaticResource SamplePOSVerticalValueCaptionSeparatorRowDefinition}" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Style="{StaticResource SamplePOSVerticalValueCaptionSeparatorRowDefinition}" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Style="{StaticResource SamplePOSVerticalValueCaptionSeparatorRowDefinition}" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Style="{StaticResource SamplePOSVerticalValueCaptionSeparatorRowDefinition}" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Style="{StaticResource SamplePOSVerticalValueCaptionSeparatorRowDefinition}" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Style="{StaticResource SamplePOSVerticalValueCaptionSeparatorRowDefinition}" />
+                    <RowDefinition Height="auto" />
+                  </Grid.RowDefinitions>
+                  <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource InsideReceiptKeyTextBlockStyle}" Text="{x:Static tradeCommon:Resources.Discount}" />
+                  <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource InsideReceiptValueTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.DiscountSum, StringFormat='{}{0:N2}'}" />
+                  <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource InsideReceiptImportantKeyTextBlockStyle}" Text="{x:Static coreCommon:Resources.Total}" />
+                  <TextBlock Grid.Row="2" Grid.Column="1" Style="{StaticResource InsideReceiptImportantValueTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.TotalSum, StringFormat='{}{0:N2}'}" />
+                  <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource InsideReceiptKeyTextBlockStyle}" Text="{x:Static coreCommon:Resources.CashSum}" />
+                  <TextBlock Grid.Row="4" Grid.Column="1" Style="{StaticResource InsideReceiptValueTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.CashSum, StringFormat='{}{0:N2}'}" />
+                  <TextBlock Grid.Row="6" Grid.Column="0" Style="{StaticResource InsideReceiptKeyTextBlockStyle}" Text="{x:Static coreCommon:Resources.PlCardSum}" />
+                  <TextBlock Grid.Row="6" Grid.Column="1" Style="{StaticResource InsideReceiptValueTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.NonCashSum, StringFormat='{}{0:N2}'}" />
+                  <TextBlock Grid.Row="8" Grid.Column="0" Style="{StaticResource InsideReceiptKeyTextBlockStyle}" Text="{x:Static tradeCommon:Resources.PrePayment}" />
+                  <TextBlock Grid.Row="8" Grid.Column="1" Style="{StaticResource InsideReceiptValueTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.PrePaymentSum, StringFormat='{}{0:N2}'}" />
+                  <TextBlock Grid.Row="10" Grid.Column="0" Style="{StaticResource InsideReceiptKeyTextBlockStyle}" Text="{x:Static tradeCommon:Resources.CreditSale}" />
+                  <TextBlock Grid.Row="10" Grid.Column="1" Style="{StaticResource InsideReceiptValueTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.CreditSum, StringFormat='{}{0:N2}'}" />
+                  <TextBlock Grid.Row="12" Grid.Column="0" Style="{StaticResource InsideReceiptKeyTextBlockStyle}" Text="{x:Static tradeCommon:Resources.SummaChange}" />
+                  <TextBlock Grid.Row="12" Grid.Column="1" Style="{StaticResource InsideReceiptValueTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.ChangeSum, StringFormat='{}{0:N2}'}" />
+                </Grid>
+              </Grid>
+              <Line Grid.Row="6" Style="{StaticResource SeparatorLineStyle}" />
+              <Grid Row="8" RowDefinitions="auto,*" Style="{StaticResource InsideReceiptKeyValueRowGridStyle}">
+                <Grid Row="0">
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Style="{StaticResource SamplePOSHorizonatlValueCaptionSeparatorColumnDefinition}" />
+                    <ColumnDefinition Width="*" />
+                  </Grid.ColumnDefinitions>
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Style="{StaticResource SamplePOSVerticalValueCaptionSeparatorRowDefinition}" />
+                    <RowDefinition Height="auto" />
+                  </Grid.RowDefinitions>
+                  <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource InsideReceiptKeyTextBlockStyle}" Text="{x:Static coreCommon:Resources.Buyer}" />
+                  <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource InsideReceiptValueTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.BuyerName}" />
+                  <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource InsideReceiptKeyTextBlockStyle}" Text="{x:Static tradeCommon:Resources.CardCapitalLetter}" />
+                  <TextBlock Grid.Row="2" Grid.Column="2" Style="{StaticResource InsideReceiptValueTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.BuyerCardCode}" />
+                </Grid>
+              </Grid>
+              <Line Grid.Row="10" Style="{StaticResource SeparatorLineStyle}" />
+              <Grid Row="12" Style="{StaticResource InsideReceiptKeyValueRowGridStyle}">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="auto" />
+                  <ColumnDefinition Style="{StaticResource SamplePOSHorizonatlValueCaptionSeparatorColumnDefinition}" />
+                  <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="auto" />
+                  <RowDefinition Style="{StaticResource SamplePOSVerticalValueCaptionSeparatorRowDefinition}" />
+                  <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource InsideReceiptKeyTextBlockStyle}" Text="{x:Static tradeCommon:Resources.Cashier}" />
+                <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource InsideReceiptValueTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.CashierName}" />
+                <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource InsideReceiptKeyTextBlockStyle}" Text="{x:Static tradeCommon:Resources.SalesConsultant}" />
+                <TextBlock Grid.Row="2" Grid.Column="2" Style="{StaticResource InsideReceiptValueTextBlockStyle}" Text="{Binding SelectedDocumentAsReceipt.SalesConsultantName}" />
+              </Grid>
+            </Grid>
+          </Border>
+        </Grid>
+      </dx:LoadingDecorator>
+      <customWindowControls:CWCSimpleButton Name="PrintButton" Grid.Row="2" Style="{StaticResource SamplePOSImportantOperationButtonStyle}" Click="PrintDocumentButton_Clicked">
+        <Grid Style="{StaticResource SamplePOSButtonWithImageAndTextContentGridStyle}">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+            <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonTextColumnDefintionStyle}" />
+            <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+          </Grid.ColumnDefinitions>
+          <dx:DXImage Grid.Column="0" Style="{StaticResource SamplePOSButtonWithContentImageStyle}" Source="{ext:ASImage pos_print_32.svg}" />
+          <TextBlock Name="PrintButtonCaption" Grid.Column="1" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.PrintCheck}" />
+        </Grid>
+      </customWindowControls:CWCSimpleButton>
+    </Grid>
+  </Grid>
+</baseWindows:BaseThemedWindow>

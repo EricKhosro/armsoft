@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Core.UI.Controls.MultiFilterControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" HorizontalAlignment="Stretch" xmlns:controls="clr-namespace:ArmSoft.SME.Core.UI.Controls;assembly=ArmSoft.SME.Core.UI">
+  <Control.Background>
+    <SolidColorBrush />
+  </Control.Background>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Name="FirstColumn" Width="Auto" />
+      <ColumnDefinition Name="SecondColumn" Width="*" />
+    </Grid.ColumnDefinitions>
+    <dxe:ButtonEdit Name="CodeEdit" HorizontalAlignment="Stretch" VerticalAlignment="Top" AllowDefaultButton="False" Focusable="True" AllowNullInput="True" InvalidValueBehavior="AllowLeaveEditor" CausesValidation="True" ValidateOnEnterKeyPressed="True" ValidateOnTextInput="False" Grid.Column="0" MinWidth="150">
+      <dxe:ButtonInfo Name="MultiFilter" GlyphKind="User" IsLeft="True" Click="MultiFilter_Click">
+        <StackPanel>
+          <Image Name="FilterImage" Width="16" Height="16" />
+          <dxb:PopupMenu Name="Filters" GlyphSize="Small" Opening="Filters_Opening">
+            <dxb:PopupMenu.Items>
+              <dxb:BarCheckItem Name="TreeView" Tag="0" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="MultiSelectTreeView" Tag="1" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="IsEqual" Tag="2" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="NotEqual" Tag="3" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="Greater" Tag="4" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="GreaterOrEqual" Tag="5" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="Less" Tag="6" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="LessOrEqual" Tag="7" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="AnyOf" Tag="8" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="NoneOf" Tag="9" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="Contains" Tag="10" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="DoesNotContain" Tag="11" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="StartsWith" Tag="12" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="NotStartsWith" Tag="13" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="EndsWith" Tag="14" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="NotEndsWith" Tag="15" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="Like" Tag="16" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="NotLike" Tag="17" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="Blank" Tag="18" ItemClick="BarCheckItem_ItemClick" />
+              <dxb:BarCheckItem Name="NotBlank" Tag="19" ItemClick="BarCheckItem_ItemClick" />
+            </dxb:PopupMenu.Items>
+          </dxb:PopupMenu>
+        </StackPanel>
+      </dxe:ButtonInfo>
+      <dxe:ButtonInfo Name="DropDown" GlyphKind="DropDown" />
+    </dxe:ButtonEdit>
+    <dxe:TextEdit Name="CommentEdit" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" IsReadOnly="True" IsTabStop="False" ShowBorder="False" Grid.Column="1" Background="#00FFFFFF" />
+  </Grid>
+</UserControl>

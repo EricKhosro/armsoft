@@ -1,0 +1,730 @@
+﻿<xs:schema
+    targetNamespace="http://armsoft.am/META/6"
+    elementFormDefault="qualified"
+    xmlns="http://armsoft.am/META/6"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="Extensions">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="Resources" />
+				<xs:element ref="Tree" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="TreeExtension" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="View" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ContextFunction" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="DocumentExtension" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="UserReport" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="AWP" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="UserScript" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UserReport">
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element ref="UserReportDialog" minOccurs="0" maxOccurs="1"  />
+				<xs:element ref="CalculatedColumns" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="GroupByCalculatedColumns" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="GroupBy" minOccurs="0" maxOccurs="1" />
+				<xs:element ref="UserReportColumns" minOccurs="0" maxOccurs="1"  />
+				<xs:element ref="SortOrder" minOccurs="0" maxOccurs="1"  />
+				<xs:element ref="ExcelTransformation" minOccurs="0" maxOccurs="1"  />
+				<xs:element name="script" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence >
+			<xs:attribute name="Name" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[A-Za-z_][A-Za-z_0-9]*"/>
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="CaptionId" type="xs:string" use="required" />
+			<xs:attribute name="DataProvider" type="xs:string" use="required"/>
+			<xs:attribute name="System" type="xs:boolean" default ="false"/>
+			<xs:attribute name="ShowMode" type="UserReportShowMode" />
+			<xs:attribute name="ScriptFile" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ExcelTransformation">
+		<xs:complexType>
+			<xs:attribute name="Mode" type="UserRepExcelShowMode" default ="CreateNew"/>
+			<xs:attribute name="OutputFile" type="xs:string"  />
+			<xs:attribute name="CopyFile" type="xs:string"  />
+			<xs:attribute name="TemplateCode" type="xs:string"  />
+			<xs:attribute name="AddTimeToOutputFile" type="xs:boolean"  default ="false" />
+			<xs:attribute name="DateTimeFormat" type="UserRepExcelDateTimeFormat" default ="YYYYMMDD_HHMM" />
+			<xs:attribute name="Worksheet" type="xs:string" />
+			<xs:attribute name="Range" type="xs:string"  />
+			<xs:attribute name="InsertRows" type="xs:boolean"  default="false" />
+			<xs:attribute name="ShowCaption" type="xs:boolean"  default="false" />
+			<xs:attribute name="ShowColumnCaptions" type="xs:boolean"  default="false" />
+			<xs:attribute name="ShowBorders" type="xs:boolean"  default="false" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UserReportColumns">
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element ref="UserReportColumn" minOccurs="1" maxOccurs="unbounded"  />
+			</xs:sequence >
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UserReportColumn">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string"  />
+			<xs:attribute name="FooterSum" type="xs:boolean"  default ="false" />
+			<xs:attribute name="Visible" type="xs:boolean"  default="true" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GroupByColumn">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required"    />
+			<xs:attribute name="Source" type="xs:string"  use="required" />
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="Aggregate" type="AggregateFunction"  />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name="AggregateFunction">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Count" />
+			<xs:enumeration value="Sum" />
+			<xs:enumeration value="Min" />
+			<xs:enumeration value="Max" />
+			<xs:enumeration value="Avg" />
+			<xs:enumeration value="GroupBy" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UserRepExcelShowMode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CreateNew" />
+			<xs:enumeration value="FillFile" />
+			<xs:enumeration value="CopyFile" />
+			<xs:enumeration value="FillTemplate" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UserReportShowMode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Folder" />
+			<xs:enumeration value="Excel" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UserRepExcelDateTimeFormat">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DDMMYY" />
+			<xs:enumeration value="DDMMYYHHMM" />
+			<xs:enumeration value="DDMMYYHHMMSS" />
+			<xs:enumeration value="DDMMYYYY" />
+			<xs:enumeration value="DDMMYYYYHHMMSS" />
+			<xs:enumeration value="YYYYMMDD" />
+			<xs:enumeration value="YYYYMMDDHHMMSS" />
+			<xs:enumeration value="YYYYMMDD_HHMMSS" />
+			<xs:enumeration value="YYYYMMDD_HHMM" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="GroupBy">
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element ref="GroupByColumn" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence >
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UserReportDialog">
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element ref="Data" />
+				<xs:element ref="UI"   />
+				<!--<xs:element ref="TabedUI" minOccurs="0" maxOccurs="1"  />-->
+			</xs:sequence >
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="OnValidate" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AWP">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="AWPNode" minOccurs="0" maxOccurs="unbounded"  />
+				<xs:element ref="AWPLeaf" minOccurs="0" maxOccurs="unbounded"  />
+			</xs:choice>
+			<xs:attribute name="Name" use="required" >
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[A-Za-z_][A-Za-z_0-9]*"/>
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="CaptionId" type="xs:string"/>
+			<xs:attribute name="System" type="xs:boolean" default ="false"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AWPNode">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="AWPNode" minOccurs="0" maxOccurs="unbounded"  />
+				<xs:element ref="AWPLeaf" minOccurs="0" maxOccurs="unbounded"  />
+			</xs:choice>
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="TooltipId" type="xs:string" />
+			<xs:attribute name="Tooltip" type="xs:string" />
+			<xs:attribute name="Icon" type="xs:string" />
+			<xs:attribute name="Id" type="xs:short" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AWPLeaf">
+		<xs:complexType>
+			<xs:attribute name="CommandType" type="CommandType" default ="SystemCall" />
+			<xs:attribute name="Command" type="xs:string" use="required" />
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="TooltipId" type="xs:string" />
+			<xs:attribute name="Tooltip" type="xs:string" />
+			<xs:attribute name="Icon" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name="CommandType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SystemCall" />
+			<xs:enumeration value="UserReport" />
+			<xs:enumeration value="Tree" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="View">
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element ref="DialogExtension"  minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="CalculatedColumns" minOccurs="0" maxOccurs="1"  />
+				<xs:element ref="ViewColumns" minOccurs="0" maxOccurs="1"  />
+				<xs:element ref="SortOrder" minOccurs="0" maxOccurs="1"  />
+				<xs:element name="script" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence >
+			<xs:attribute name="Name"  use="required" >
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+						<xs:pattern value="[A-Za-z_][A-Za-z_0-9]*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="CaptionId" type="xs:string" use="required"/>
+			<xs:attribute name="Group" type="xs:string" use="required" />
+			<xs:attribute name="System" type="xs:boolean" default ="false"/>
+			<xs:attribute name="IsEnabled" type="xs:boolean" default ="true" />
+			<xs:attribute name="PreserveColumns" type="xs:boolean" default="true"/>
+			<xs:attribute name="Indication" type="LoadIndication" default="Default" />
+			<xs:attribute name="ScriptFile" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ContextFunction">
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element ref="DialogExtension"  minOccurs="0" maxOccurs="1"/>
+				<xs:element name="script" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence >
+			<xs:attribute name="Name"  use="required" >
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+						<xs:pattern value="[A-Za-z_][A-Za-z_0-9]*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="CaptionId" type="xs:string" use="required"/>
+			<xs:attribute name="Group" type="xs:string" use="required" />
+			<xs:attribute name="Order" type="xs:short" use="required"/>
+			<xs:attribute name="IsEnabled" type="xs:boolean" default="true" />
+			<xs:attribute name="ScriptFile" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DialogExtension">
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element ref="Data" />
+				<xs:element ref="UI"   />
+			</xs:sequence >
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="SortOrder">
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element ref="ColumnOrder" minOccurs="1" maxOccurs="unbounded"  />
+			</xs:sequence >
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ColumnOrder">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="Descending" type="xs:boolean" default ="false"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ViewColumns">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="AddColumn" minOccurs="1" maxOccurs="unbounded" />
+				<xs:element ref="RemoveColumn" minOccurs="1" maxOccurs="unbounded" />
+				<xs:element ref="ModifyColumn" minOccurs="1" maxOccurs="unbounded" />
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AddColumn">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="FooterSum" type="xs:boolean"  default ="false" />
+			<xs:attribute name="Visible" type="xs:boolean"  default="true" />
+			<xs:attribute name="After" type="xs:string" />
+			<xs:attribute name="Before" type="xs:string" />
+			<xs:attribute name="Format" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RemoveColumn">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ModifyColumn">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="FooterSum" type="xs:boolean"  default ="false" />
+			<xs:attribute name="Visible" type="xs:boolean"  default="true" />
+			<xs:attribute name="After" type="xs:string" />
+			<xs:attribute name="Before" type="xs:string" />
+			<xs:attribute name="Format" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="CalculatedColumns">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="CalculatedColumn" minOccurs="0" maxOccurs="unbounded"  />
+			</xs:choice >
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GroupByCalculatedColumns">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="CalculatedColumn" minOccurs="0" maxOccurs="unbounded"  />
+			</xs:choice >
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="CalculatedColumn">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Expression" minOccurs="0" maxOccurs="1"   />
+			</xs:choice >
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="Type" type="ColumnType" use ="required"/>
+			<xs:attribute name="Format" type="xs:string"/>
+			<xs:attribute name="Source" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:simpleType name="ColumnType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="String" />
+			<xs:enumeration value="Date" />
+			<xs:enumeration value="Decimal" />
+			<xs:enumeration value="Integer" />
+			<xs:enumeration value="Boolean" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="LoadIndication">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="None" />
+			<xs:enumeration value="Allways" />
+			<xs:enumeration value="LoadOnly" />
+			<xs:enumeration value="Default" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="AttachTypes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="None" />
+			<xs:enumeration value="File" />
+			<xs:enumeration value="Link" />
+			<xs:enumeration value="Doc" />
+			<xs:enumeration value="All" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="String">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Expression" minOccurs="0" maxOccurs="1"  />
+			</xs:choice >
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="Required" type="xs:boolean" default ="false"/>
+			<xs:attribute name="Length" type="xs:short" use="required"/>
+			<xs:attribute name="LeftAlign" type="xs:boolean" default ="true"/>
+			<xs:attribute name="AddTrailingSpaces" type="xs:boolean" default ="false"/>
+			<xs:attribute name="Validator" type="xs:string" />
+			<xs:attribute name="DefaultValue" type="xs:string" default ="" />
+			<xs:attribute name="SaveValueOnCopy" type="xs:boolean" default="false" />
+			<xs:attribute name="Source" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="TreeNode">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Expression" minOccurs="0" maxOccurs="1"  />
+			</xs:choice >
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="Tree" type="xs:string" use="required"/>
+			<xs:attribute name="Required" type="xs:boolean" default ="false"/>
+			<xs:attribute name="LeafsOnly" type="xs:boolean" default ="true"/>
+			<xs:attribute name="Validator" type="xs:string" />
+			<xs:attribute name="DefaultValue" type="xs:string" default ="" />
+			<xs:attribute name="SaveValueOnCopy" type="xs:boolean" default="false" />
+			<xs:attribute name="AllowAdditionButtons" type="xs:boolean" default ="false" />
+			<xs:attribute name="Source" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Boolean">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Expression" minOccurs="0" maxOccurs="1"  />
+			</xs:choice >
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="Validator" type="xs:string" />
+			<xs:attribute name="DefaultValue" type="xs:boolean" default ="false" />
+			<xs:attribute name="SaveValueOnCopy" type="xs:boolean" default="false" />
+			<xs:attribute name="Source" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Number">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Expression" minOccurs="0" maxOccurs="1"  />
+			</xs:choice >
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="Required" type="xs:boolean" default ="false"/>
+			<xs:attribute name="Length" type="xs:short" use="required"/>
+			<xs:attribute name="Precision" type="xs:short" default ="0" />
+			<xs:attribute name="AllowNegativeNumbers"  type="xs:boolean" default ="false" />
+			<xs:attribute name="UseCurrencyFormat"  type="xs:boolean" default ="true" />
+			<xs:attribute name="Validator" type="xs:string" />
+			<xs:attribute name="DefaultValue" type="xs:decimal" default ="0" />
+			<xs:attribute name="SaveValueOnCopy" type="xs:boolean" default="false" />
+			<xs:attribute name="Source" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Date">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Expression" minOccurs="0" maxOccurs="1"  />
+			</xs:choice >
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="Required" type="xs:boolean" default ="false"/>
+			<xs:attribute name="Validator" type="xs:string" />
+			<xs:attribute name="UseLongDate" type="xs:boolean" default ="false"/>
+			<xs:attribute name="SaveValueOnCopy" type="xs:boolean" default="false" />
+			<xs:attribute name="Source" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Time">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Expression" minOccurs="0" maxOccurs="1"  />
+			</xs:choice >
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="Required" type="xs:boolean" default ="false"/>
+			<xs:attribute name="Validator" type="xs:string" />
+			<xs:attribute name="ShowSeconds" type="xs:boolean" default ="false"/>
+			<xs:attribute name="SaveValueOnCopy" type="xs:boolean" default="false" />
+			<xs:attribute name="Source" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Data">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="String" minOccurs="0" maxOccurs="unbounded"  />
+				<xs:element ref="Boolean" minOccurs="0" maxOccurs="unbounded"  />
+				<xs:element ref="Number" minOccurs="0" maxOccurs="unbounded"  />
+				<xs:element ref="Date" minOccurs="0" maxOccurs="unbounded"  />
+				<xs:element ref="TreeNode" minOccurs="0" maxOccurs="unbounded"  />
+				<xs:element ref="Time" minOccurs="0" maxOccurs="unbounded"  />
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name="HorizontalAlignment">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Left" />
+			<xs:enumeration value="Stretch" />
+			<xs:enumeration value="Right" />
+			<xs:enumeration value="Center" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="UIField">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="1">
+				<xs:element name="ReadOnly" minOccurs="0" maxOccurs="1"  />
+				<xs:choice minOccurs="0" maxOccurs="1">
+					<xs:element ref="DropDown" minOccurs="0" maxOccurs="1" />
+					<xs:element ref="DropDownComment" minOccurs="0" maxOccurs="1" />
+					<xs:element ref="MultiSelect" minOccurs="0" maxOccurs="1" />
+					<xs:element ref="FileDialog" minOccurs="0" maxOccurs="1" />
+				</xs:choice>
+			</xs:choice>
+			<xs:attribute name="DataItem" type="xs:string" use="required" />
+			<xs:attribute name="HideCaption" type="xs:boolean" default ="false"/>
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="StoreValue" type="xs:boolean"  default ="true"/>
+			<xs:attribute name="HorizontalAlignment" type="HorizontalAlignment"  default ="Left"/>
+			<xs:attribute name="ReadOnlySource" type="xs:string" />
+			<xs:attribute name="ShowInMobile" type="xs:boolean" default ="false"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UIGroup">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="UIField" minOccurs="0" maxOccurs="unbounded"  />
+				<xs:element ref="UIGroup" minOccurs="0" maxOccurs="unbounded"  />
+			</xs:choice>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+			<xs:attribute name="isHorisontal" type="xs:boolean" default ="true" />
+			<xs:attribute name="IsCollapsible" type="xs:boolean" default ="false" />
+			<xs:attribute name="IsCollapsed" type="xs:boolean" default ="false" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DropDown">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="Group" type="xs:string" />
+			<xs:attribute name="CheckValue" type="xs:boolean" default ="true" />
+			<xs:attribute name="ShowComment" type="xs:boolean" default ="true" />
+			<xs:attribute name="AllowAdditionButtons" type="xs:boolean" default ="false" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DropDownComment">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="Group" type="xs:string" />
+			<xs:attribute name="IsTextEditable" type="xs:boolean" default ="true" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="MultiSelect">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="Group" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="FileDialog">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="Group" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UITab">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="UIField" minOccurs="0" maxOccurs="unbounded"  />
+				<xs:element ref="UIGroup" minOccurs="0" maxOccurs="unbounded"  />
+			</xs:choice>
+			<xs:attribute name="CaptionId" type="xs:string" />
+			<xs:attribute name="Caption" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="TabedUI">
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element ref="UITab" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UI">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="UIField" minOccurs="0" maxOccurs="unbounded"  />
+				<xs:element ref="UIGroup" minOccurs="0" maxOccurs="unbounded"  />
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="TreeExtension">
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element ref="Data" />
+				<xs:element ref="UI" minOccurs="0" maxOccurs="1"  />
+				<xs:element ref="TabedUI" minOccurs="0" maxOccurs="1"  />
+				<xs:element name="script" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence >
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="ScriptFile" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DocumentExtension">
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element ref="Data" />
+				<xs:element ref="UI" minOccurs="0" maxOccurs="1"  />
+				<xs:element ref="TabedUI" minOccurs="0" maxOccurs="1"  />
+				<xs:element ref="PrintSubstitutions" minOccurs="0" maxOccurs="1"  />
+				<xs:element name="script" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence >
+			<xs:attribute name="POTypeDef" type="xs:short" use="required"/>
+			<xs:attribute name="POType" type="xs:short" use="required"/>
+			<xs:attribute name="ScriptFile" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="PrintSubstitutions">
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element ref="PrintSubstitution" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="PrintSubstitution">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required" />
+			<xs:attribute name="CaptionId" type="xs:string"  />
+			<xs:attribute name="Caption" type="xs:string"    />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Tree">
+		<xs:complexType>
+			<xs:attribute name="Name"  use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[A-Za-z_][A-Za-z_0-9]*"/>
+						<xs:maxLength value="8"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="CaptionId" type="xs:string" use="required"/>
+			<xs:attribute name="NodeCaptionId" type="xs:string" use="required"/>
+			<xs:attribute name="CodeLen" type="xs:string" use="required"/>
+			<xs:attribute name="CodeCaptionId" type="xs:string"/>
+			<xs:attribute name="Multilevel" type="xs:boolean"  default ="false"/>
+			<xs:attribute name="PrefixBased" type="xs:boolean" default ="false"/>
+			<xs:attribute name="CaptionLen" type="xs:string" default ="50"/>
+			<xs:attribute name="DocumentBased" type="xs:boolean" default ="false"/>
+			<xs:attribute name="System" type="xs:boolean" default ="false"/>
+			<xs:attribute name="IsLogAvailable" type="xs:boolean" default ="false"/>
+			<xs:attribute name="IsClosedAvailable" type="xs:boolean" default ="false"/>
+			<xs:attribute name="SpecCaptionId" type="xs:string"/>
+			<xs:attribute name="SpecLen" type="xs:string"/>
+			<xs:attribute name="NextCodeParamId" type="xs:short"/>
+			<xs:attribute name="CacheId" type="xs:short" use="required"/>
+			<xs:attribute name="AttachmentsTypes" default ="None">
+				<xs:simpleType>
+					<xs:list itemType="AttachTypes"/>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Resources" >
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element ref="Constant" minOccurs="0" maxOccurs="unbounded"  />
+				<xs:element ref="StringResource" minOccurs="0" maxOccurs="unbounded"  />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Constant"   >
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="Value" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="StringResource"  >
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="HY-AM" type="xs:string" minOccurs ="0"  maxOccurs ="1" nillable ="false" />
+				<xs:element name="KA-GE" type="xs:string" minOccurs ="0"  maxOccurs ="1" nillable ="false" />
+				<xs:element name="EN-US" type="xs:string" minOccurs ="0"  maxOccurs ="1" nillable ="false" />
+				<xs:element name="RU-RU" type="xs:string" minOccurs ="0"  maxOccurs ="1" nillable ="false" />
+			</xs:sequence>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="UserScript">
+		<xs:complexType>
+			<xs:sequence >
+				<xs:element name="script" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence >
+			<xs:attribute name="Name"  use="required" >
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="32"/>
+						<xs:pattern value="[A-Za-z_][A-Za-z_0-9]*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="Caption" type="xs:string" use="required" />
+			<xs:attribute name="ScriptFile" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

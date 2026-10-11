@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Trade.UI.DeviceSettings" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:core="clr-namespace:ArmSoft.SME.Core.UI.Controls;assembly=ArmSoft.SME.Core.UI" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxl="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ui="clr-namespace:ArmSoft.SME.Trade.UI;assembly=ArmSoft.SME.Trade.UI">
+  <Control.Background>
+    <SolidColorBrush />
+  </Control.Background>
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <DataTemplate x:Key="MonitorsListComboTemplate">
+        <StackPanel Orientation="Horizontal">
+          <TextBlock Text="{Binding Path=Name}" />
+          <TextBlock Visibility="Hidden" Text="{Binding Path=DisplayDevice}" />
+        </StackPanel>
+      </DataTemplate>
+      <DataTemplate x:Key="DeviceSettingsCodeCaptionTemplate">
+        <StackPanel Orientation="Horizontal">
+          <TextBlock Text="{Binding Path=Name}" />
+          <TextBlock Visibility="Hidden" Text="{Binding Path=Code}" />
+        </StackPanel>
+      </DataTemplate>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <dxl:LayoutControl VerticalAlignment="Stretch" Orientation="Vertical">
+    <core:LayoutGroupExt Name="gbScanerOptions" HorizontalAlignment="Stretch" VerticalAlignment="Top" Header="Scaner Options" IsCollapsed="True" IsCollapsible="True" Orientation="Vertical" UseLayoutRounding="True" View="GroupBox">
+      <dxl:LayoutItem Name="Scaner" Label="Scaner on">
+        <ContentControl>
+          <dxe:CheckEdit Name="ScannerOn" Margin="15,0,0,0" Checked="ScannerOn_Checked" Unchecked="ScannerOn_Unchecked" />
+        </ContentControl>
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="lCtrComPort" Label="COM Port">
+        <ComboBox Name="COMPort" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="lCtrBaudRate" Label="Baud Rate">
+        <ComboBox Name="BaudRate" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="lCtrDataBits" Label="Data Bits">
+        <ComboBox Name="DataBits" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="lCtrParity" Label="Parity">
+        <ComboBox Name="Parity" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="lCtrStopBits" Label="Stop Bits">
+        <ComboBox Name="StopBits" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+    </core:LayoutGroupExt>
+    <core:LayoutGroupExt Name="gbMagneticCardReader" HorizontalAlignment="Stretch" VerticalAlignment="Top" Header="Magnetic Card Reader Options" IsCollapsed="True" IsCollapsible="True" Orientation="Vertical" UseLayoutRounding="True" View="GroupBox">
+      <dxl:LayoutItem Name="MCR" Label="Card Reader on">
+        <ContentControl>
+          <dxe:CheckEdit Name="MCROn" Margin="15,0,0,0" Checked="MCROn_Checked" Unchecked="MCROn_Unchecked" />
+        </ContentControl>
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="lCtrMCRComPort" Label="COM Port">
+        <ComboBox Name="MCRCOMPort" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="lCtrMCRBaudRate" Label="Baud Rate">
+        <ComboBox Name="MCRBaudRate" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="lCtrMCRDataBits" Label="Data Bits">
+        <ComboBox Name="MCRDataBits" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="lCtrMCRParity" Label="Parity">
+        <ComboBox Name="MCRParity" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="lCtrMCRStopBits" Label="Stop Bits">
+        <ComboBox Name="MCRStopBits" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="lCtrMCRSeperator">
+        <TextBlock Name="MCRSeperator" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="lCtrMCRPrefix" Label="Prefix">
+        <TextBox Name="MCRPrefix" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="lCtrMCRSuffix" Label="Suffix">
+        <TextBox Name="MCRSuffix" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+    </core:LayoutGroupExt>
+    <core:LayoutGroupExt Name="gbCheckPrinter" HorizontalAlignment="Stretch" VerticalAlignment="Top" Header="Check printer" IsCollapsed="True" IsCollapsible="True" Orientation="Vertical" UseLayoutRounding="True" View="GroupBox">
+      <dxl:LayoutItem>
+        <ComboBox Name="CheckPrinter" Margin="0,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+    </core:LayoutGroupExt>
+    <core:LayoutGroupExt Name="gbLabelPrinter" HorizontalAlignment="Stretch" VerticalAlignment="Top" Header="Label printer" IsCollapsed="True" IsCollapsible="True" Orientation="Vertical" UseLayoutRounding="True" View="GroupBox">
+      <dxl:LayoutItem>
+        <ComboBox Name="LabelPrinter" Margin="0,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+    </core:LayoutGroupExt>
+    <core:LayoutGroupExt Name="gbPoleDisplayOptions" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Top" Header="Pole Display Options" IsCollapsed="True" IsCollapsible="True" Orientation="Vertical" UseLayoutRounding="True" View="GroupBox">
+      <core:LayoutGroupExt Name="gpMonitors" HorizontalAlignment="Stretch" Orientation="Horizontal">
+        <dxl:LayoutItem Name="liPDMonitors" Label="Monitor">
+          <ContentControl>
+            <ComboBox Name="PDMonitors" Margin="3,3,3,3" HorizontalAlignment="Stretch" IsEditable="False" ItemTemplate="{StaticResource MonitorsListComboTemplate}" DataContext="{Binding}" />
+          </ContentControl>
+        </dxl:LayoutItem>
+      </core:LayoutGroupExt>
+      <core:LayoutGroupExt Orientation="Horizontal">
+        <dxl:LayoutItem Name="liPDHeader" HorizontalAlignment="Left" Label="Show Header">
+          <ContentControl HorizontalAlignment="Left">
+            <dxe:CheckEdit Name="PDShowHeader" Margin="3,3,3,3" HorizontalAlignment="Left" Checked="PDShowHeader_Checked" Unchecked="PDShowHeader_Unchecked" />
+          </ContentControl>
+        </dxl:LayoutItem>
+        <dxl:LayoutItem HorizontalAlignment="Stretch">
+          <dxe:TextEdit Name="PDHeaderText" Width="Auto" Height="Auto" Margin="3,3,3,3" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" />
+        </dxl:LayoutItem>
+      </core:LayoutGroupExt>
+      <core:LayoutGroupExt HorizontalAlignment="Left" Orientation="Horizontal">
+        <dxl:LayoutItem Name="liPDShowPicture" Label="Show Items Picture">
+          <ContentControl>
+            <dxe:CheckEdit Name="PDShowItemsPicture" Margin="3,3,3,3" />
+          </ContentControl>
+        </dxl:LayoutItem>
+      </core:LayoutGroupExt>
+      <core:LayoutGroupExt Name="gpBackground" HorizontalAlignment="Stretch" Orientation="Horizontal">
+        <dxl:LayoutItem Name="liPDShowBackGround" HorizontalAlignment="Left" Label="ShowBackground">
+          <ContentControl HorizontalAlignment="Left">
+            <dxe:CheckEdit Name="PDShowBackground" Margin="3,3,3,3" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Checked="PDShowBackground_Checked" Unchecked="PDShowBackground_Unchecked" />
+          </ContentControl>
+        </dxl:LayoutItem>
+        <dxl:LayoutItem>
+          <ContentControl HorizontalAlignment="Stretch">
+            <dxe:ButtonEdit Name="PDBackgroundImage" Margin="3,3,3,3" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" DefaultButtonClick="PDBackgroundImage_DefaultButtonClick" />
+          </ContentControl>
+        </dxl:LayoutItem>
+      </core:LayoutGroupExt>
+    </core:LayoutGroupExt>
+    <core:LayoutGroupExt Name="gbCashierDisplayOptions" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Top" Header="Cashier Display Options" IsCollapsed="True" IsCollapsible="True" Orientation="Vertical" UseLayoutRounding="True" View="GroupBox">
+      <dxl:LayoutItem Name="liResolution" Label="Resolution">
+        <ComboBox Name="Resolutions" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="liTouchMode" Label="Touch Mode">
+        <ComboBox Name="TouchModesComboBox" Margin="15,0,0,0" ItemTemplate="{StaticResource DeviceSettingsCodeCaptionTemplate}" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutGroup Name="InFavAndShowBarCodeLayoutGroup" Orientation="Vertical" View="GroupBox">
+        <dxl:LayoutGroup.GroupBoxStyle>
+          <Style TargetType="{x:Type dxl:GroupBox}">
+            <Setter Property="dxl:GroupBox.TitleVisibility" Value="Collapsed" />
+          </Style>
+        </dxl:LayoutGroup.GroupBoxStyle>
+        <dxl:LayoutItem Name="ShowBarCodeInAvailList" Label="ShowBarCodeInAvailLIst">
+          <ContentControl>
+            <dxe:CheckEdit Name="ShowBarCodeInAvailListCheck" Margin="15,0,0,0" />
+          </ContentControl>
+        </dxl:LayoutItem>
+        <dxl:LayoutItem Name="AllowSaleWithQRCodesLayoutItem" Label="AllowSaleWithQRCodes">
+          <ContentControl>
+            <dxe:CheckEdit Name="AllowSaleWithQRCodesCheckEdit" Margin="15,0,0,0" />
+          </ContentControl>
+        </dxl:LayoutItem>
+        <dxl:LayoutItem Name="AllowChangeCardSize" Label="AllowChangeCardSize">
+          <ContentControl>
+            <dxe:CheckEdit Name="AllowChangeCardSizeCheck" Margin="15,0,0,0" />
+          </ContentControl>
+        </dxl:LayoutItem>
+        <dxl:LayoutItem Name="InFavoritesFirtsGroups" Label="InFavoritesFirtsGroups">
+          <ContentControl>
+            <dxe:CheckEdit Name="InFavoritesFirtsGroupsCheck" Margin="15,0,0,0" />
+          </ContentControl>
+        </dxl:LayoutItem>
+      </dxl:LayoutGroup>
+    </core:LayoutGroupExt>
+    <core:LayoutGroupExt Name="gbElScaleOptions" HorizontalAlignment="Stretch" VerticalAlignment="Top" Header="El. Scale Options" IsCollapsed="True" IsCollapsible="True" Orientation="Vertical" UseLayoutRounding="True" View="GroupBox">
+      <dxl:LayoutItem Name="liScaleType" Label="Scale">
+        <ContentControl>
+          <ComboBox Name="ScaleTypes" Margin="15,0,0,0" HorizontalAlignment="Stretch" ItemTemplate="{StaticResource DeviceSettingsCodeCaptionTemplate}" DataContext="{Binding}" />
+        </ContentControl>
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="liScaleCOMPort" Label="COM Port">
+        <ComboBox Name="ScaleCOMPort" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="liScaleBaudRate" Label="Baud Rate">
+        <ComboBox Name="ScaleBaudRate" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="liScaleDataBits" Label="Data Bits">
+        <ComboBox Name="ScaleDataBits" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="liScaleParity" Label="Parity">
+        <ComboBox Name="ScaleParity" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+      <dxl:LayoutItem Name="liScaleStopBits" Label="Stop Bits">
+        <ComboBox Name="ScaleStopBits" Margin="15,0,0,0" DataContext="{Binding}" />
+      </dxl:LayoutItem>
+    </core:LayoutGroupExt>
+  </dxl:LayoutControl>
+</UserControl>

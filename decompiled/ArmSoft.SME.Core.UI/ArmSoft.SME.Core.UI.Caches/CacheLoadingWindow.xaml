@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dx:ThemedWindow x:Class="ArmSoft.SME.Core.UI.Caches.CacheLoadingWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:common="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:conv="clr-namespace:ArmSoft.SME.Core.UI.Converters" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Title="CacheLoadingWindow" Width="600" Height="350" ResizeMode="NoResize" ShowIcon="False" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" xmlns:caches="clr-namespace:ArmSoft.SME.Core.UI.Caches">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <dxg:GridControl Name="Caches">
+      <dxg:GridControl.Columns>
+        <dxg:GridColumn Width="30" AllowResizing="False" FixedWidth="True" Header="" CellToolTipBinding="{Binding ErrorMsg}">
+          <dxg:ColumnBase.CellTemplate>
+            <DataTemplate>
+              <Image Height="18" Margin="2" Source="{Binding RowData.Row.StateIcon}" />
+            </DataTemplate>
+          </dxg:ColumnBase.CellTemplate>
+        </dxg:GridColumn>
+        <dxg:GridColumn Name="Caption1Column" Width="*" FieldName="Caption" Header="" />
+        <dxg:GridColumn Name="TimeColumn" Width="100" FieldName="Time" Header="" />
+      </dxg:GridControl.Columns>
+      <dxg:GridControl.View>
+        <dxg:TableView AllowColumnFiltering="False" AllowSorting="False" EditorButtonShowMode="ShowOnlyInEditor" IsGroupPanelMenuEnabled="False" NavigationStyle="Row" ShowColumnHeaders="False" ShowGroupPanel="False" ShowIndicator="False" VerticalScrollbarVisibility="Auto" />
+      </dxg:GridControl.View>
+    </dxg:GridControl>
+    <Grid Row="1" ColumnSpan="2" IsSharedSizeScope="True" UseLayoutRounding="True">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" SharedSizeGroup="Buttons" />
+        <ColumnDefinition Width="Auto" SharedSizeGroup="Buttons" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <dx:SimpleButton Name="OkButton" Grid.Row="0" Grid.Column="1" Width="Auto" Height="Auto" MinWidth="100" Margin="15,10,15,5" HorizontalContentAlignment="Center" Content="{x:Static common:Resources.Ok}" UseLayoutRounding="True" Click="OkButton_Click" />
+      <dx:SimpleButton Name="CancelButton" Grid.Row="0" Grid.Column="2" Width="Auto" Height="Auto" MinWidth="100" Margin="15,10,15,5" HorizontalContentAlignment="Center" Content="{x:Static common:Resources.Cancel}" IsCancel="True" UseLayoutRounding="True" />
+      <TextBlock Name="TimeTextBlock" Grid.Row="0" Grid.Column="3" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" UseLayoutRounding="True" />
+    </Grid>
+  </Grid>
+</dx:ThemedWindow>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Core.UI.Controls.DropDownCommentControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="clr-namespace:ArmSoft.SME.Core.UI.Controls;assembly=ArmSoft.SME.Core.UI">
+  <Control.Background>
+    <SolidColorBrush />
+  </Control.Background>
+  <dxe:ButtonEdit Name="CodeEdit" HorizontalAlignment="Stretch" VerticalAlignment="Top" AllowDefaultButton="False" AllowNullInput="True" CausesValidation="True" Focusable="True" InvalidValueBehavior="AllowLeaveEditor" ValidateOnEnterKeyPressed="True" ValidateOnTextInput="False">
+    <dxe:ButtonInfo Name="btnSearch" ClickMode="Release" GlyphKind="Search" />
+    <dxe:ButtonInfo Name="btnClear" GlyphKind="Cancel" />
+    <dxe:ButtonInfo Name="DropDown" GlyphKind="DropDown" />
+  </dxe:ButtonEdit>
+  <FrameworkElement.Triggers />
+</UserControl>

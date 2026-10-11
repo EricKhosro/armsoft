@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls.SaleTouchModeWithFavoritesButtonsPadUserControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:coreCommon="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:customWindowControls="clr-namespace:ArmSoft.SME.Core.UI.CustomWindowControls;assembly=ArmSoft.SME.Core.UI" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:tradeCommon="clr-namespace:ArmSoft.SME.Trade.Common;assembly=ArmSoft.SME.Trade.Common" xmlns:userControls="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.UserControls" Style="{StaticResource BaseUserControlStyle}">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonsSeparatorRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+    </Grid.RowDefinitions>
+    <userControls:NumericTouchPadControl ButtonClick="NumericTouchPadButton_Click" Grid.Row="0" Grid.RowSpan="7" Grid.Column="0" Grid.ColumnSpan="5" RedesignedHideLastRow="true" />
+    <customWindowControls:CWCSimpleButton Name="ButtonQTY" Grid.Row="0" Grid.Column="6" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonQTY_Click">
+      <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+        <Grid.RowDefinitions>
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+        </Grid.RowDefinitions>
+        <TextBlock Name="ButtonQTYCaption" Grid.Row="0" Style="{StaticResource TouchModeSecondarySimpleButtonTextBlockStyle}" Text="{x:Static coreCommon:Resources.SummaryCnt}" />
+        <TextBlock Name="ButtonQTYKeyGesture" Grid.Row="1" Style="{StaticResource TouchModeSecondaryKeyGestureButtonTextBlockStyle}" Text="(Ctrl+F9)" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="ButtonCash" Grid.Row="0" Grid.Column="8" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonCash_Click">
+      <Grid Style="{StaticResource TouchModeButtonWithBottomLineContainerGridStyle}">
+        <Grid.RowDefinitions>
+          <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonContentRowDefintion}" />
+          <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonBottomLineRowDefintion}" />
+        </Grid.RowDefinitions>
+        <Grid Row="0" Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="ButtonCashCaption" Grid.Row="0" Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.CashShort}" />
+          <TextBlock Name="ButtonCashKeyGesture" Grid.Row="1" Style="{StaticResource TouchModePrimaryKeyGestureButtonTextBlockStyle}" Text="(F6)" />
+        </Grid>
+        <Rectangle Style="{StaticResource TouchModeApplyButtonBottomLineRectangleStyle}" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="ButtonName" Grid.Row="2" Grid.Column="6" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonSelectMT_Click">
+      <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+        <Grid.RowDefinitions>
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+        </Grid.RowDefinitions>
+        <TextBlock Name="ButtonNameCaption" Grid.Row="0" Style="{StaticResource TouchModeSecondarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.cmdNameEnter}" />
+        <TextBlock Name="ButtonNameKeyGesture" Grid.Row="1" Style="{StaticResource TouchModeSecondaryKeyGestureButtonTextBlockStyle}" Text="(F9)" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="ButtonNotCash" Grid.Row="2" Grid.Column="8" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonNotCash_Click">
+      <Grid Style="{StaticResource TouchModeButtonWithBottomLineContainerGridStyle}">
+        <Grid.RowDefinitions>
+          <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonContentRowDefintion}" />
+          <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonBottomLineRowDefintion}" />
+        </Grid.RowDefinitions>
+        <Grid Row="0" Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="ButtonNoCashCaption" Grid.Row="0" Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.NoCashShort}" />
+          <TextBlock Name="ButtonNoCashKeyGesture" Grid.Row="1" Style="{StaticResource TouchModePrimaryKeyGestureButtonTextBlockStyle}" Text="(F4)" />
+        </Grid>
+        <Rectangle Style="{StaticResource TouchModeApplyButtonBottomLineRectangleStyle}" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="ButtonCard" Grid.Row="4" Grid.Column="6" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonCard_Click">
+      <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+        <Grid.RowDefinitions>
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+        </Grid.RowDefinitions>
+        <TextBlock Name="ButtonCardCaption" Grid.Row="0" Style="{StaticResource TouchModeSecondarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.DiscountBonusCard}" />
+        <TextBlock Name="ButtonCardCaption1" Grid.Row="1" Style="{StaticResource TouchModeSecondarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.Card}" />
+        <TextBlock Name="ButtonCardKeyGesture" Grid.Row="2" Style="{StaticResource TouchModeSecondaryKeyGestureButtonTextBlockStyle}" Text="()" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="ButtonClearPayment" Grid.Row="4" Grid.Column="8" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonClearPayment_Click">
+      <Grid Style="{StaticResource TouchModeButtonWithBottomLineContainerGridStyle}">
+        <Grid.RowDefinitions>
+          <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonContentRowDefintion}" />
+          <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonBottomLineRowDefintion}" />
+        </Grid.RowDefinitions>
+        <Grid Row="0" Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="ButtonClearPaymentCaption" Grid.Row="0" Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static coreCommon:Resources.ClearWord}" />
+          <TextBlock Name="ButtonClearPaymentCaption1" Grid.Row="1" Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.PaymentShort}" />
+          <TextBlock Name="ButtonClearPaymentKeyGesture" Grid.Row="2" Style="{StaticResource TouchModePrimaryKeyGestureButtonTextBlockStyle}" Text="()" />
+        </Grid>
+        <Rectangle Style="{StaticResource TouchModeCancelButtonBottomLineRectangleStyle}" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="ButtonReturn" Grid.Row="6" Grid.Column="6" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonReturn_Click">
+      <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+        <Grid.RowDefinitions>
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+        </Grid.RowDefinitions>
+        <TextBlock Name="ButtonReturnCaption" Grid.Row="0" Style="{StaticResource TouchModeSecondarySimpleButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.ReturnWord}" />
+        <TextBlock Name="ButtonReturnKeyGesture" Grid.Row="1" Style="{StaticResource TouchModeSecondaryKeyGestureButtonTextBlockStyle}" Text="()" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="PrintECRCheckButton" Grid.Row="6" Grid.Column="8" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="PrintECRCheckButton_Click">
+      <Grid Style="{StaticResource TouchModeButtonWithBottomLineContainerGridStyle}">
+        <Grid.RowDefinitions>
+          <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonContentRowDefintion}" />
+          <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonBottomLineRowDefintion}" />
+        </Grid.RowDefinitions>
+        <Grid Row="0" Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+            <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="PrintECRCheckButtonCaption" Grid.Row="0" Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" Text="{x:Static coreCommon:Resources.ECRC}" />
+          <TextBlock Name="PrintECRCheckButtonKeyGesture" Grid.Row="1" Style="{StaticResource TouchModePrimaryKeyGestureButtonTextBlockStyle}" Text="(F3)" />
+        </Grid>
+        <Rectangle Style="{StaticResource TouchModeImportantOperationButtonBottomLineRectangleStyle}" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="ButtonOther" Grid.Row="8" Grid.Column="0" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonOther_Click">
+      <Grid Style="{StaticResource TouchModeButtonWithBottomLineContainerGridStyle}">
+        <Grid.RowDefinitions>
+          <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonContentRowDefintion}" />
+          <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonBottomLineRowDefintion}" />
+        </Grid.RowDefinitions>
+        <dx:DXImage Style="{StaticResource TouchModeInsideButtonImageStyle}" Source="{Binding Converter={StaticResource ImageByNameConverter}, ConverterParameter=hamburger_horizontal_16.svg}" />
+        <Rectangle Style="{StaticResource TouchModeOthersButtonBottomLineRectangleStyle}" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="ButtonDefer" Grid.Row="8" Grid.Column="2" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonDefer_Click">
+      <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+        <Grid.RowDefinitions>
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+        </Grid.RowDefinitions>
+        <TextBlock Name="ButtonDeferCaption" Grid.Row="0" Style="{StaticResource TouchModeSecondaryKeyGestureButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.DeferShort}" />
+        <TextBlock Name="ButtonDeferKeyGesture" Grid.Row="1" Style="{StaticResource TouchModeSecondaryKeyGestureButtonTextBlockStyle}" Text="" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="ButtonContinue" Grid.Row="8" Grid.Column="4" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonContinue_Click">
+      <Grid Style="{StaticResource TouchModePrimaryButtonContainerGridStyle}">
+        <Grid.RowDefinitions>
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+          <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+        </Grid.RowDefinitions>
+        <TextBlock Name="ButtonContinueCaption" Grid.Row="0" Style="{StaticResource TouchModeSecondaryKeyGestureButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.ContinueShort}" />
+        <TextBlock Name="ButtonContinueCaption1" Grid.Row="1" Style="{StaticResource TouchModeSecondaryKeyGestureButtonTextBlockStyle}" Text="{x:Static tradeCommon:Resources.SaleShort}" />
+        <TextBlock Name="ButtonContinueKeyGesture" Grid.Row="2" Style="{StaticResource TouchModeSecondaryKeyGestureButtonTextBlockStyle}" Text="()" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="ButtonSave" Grid.Row="8" Grid.Column="6" Grid.ColumnSpan="3" Style="{StaticResource TouchModePrimaryButtonStyle}" Click="ButtonSave_Click">
+      <Grid Style="{StaticResource TouchModeButtonWithBottomLineContainerGridStyle}">
+        <Grid.RowDefinitions>
+          <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonContentRowDefintion}" />
+          <RowDefinition Style="{StaticResource TouchModeUnderlinedButtonBottomLineRowDefintion}" />
+        </Grid.RowDefinitions>
+        <TextBlock Name="ButtonSaveCaption" Style="{StaticResource TouchModePrimarySimpleButtonTextBlockStyle}" />
+        <Rectangle Style="{StaticResource TouchModeApplyButtonBottomLineRectangleStyle}" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+  </Grid>
+</UserControl>

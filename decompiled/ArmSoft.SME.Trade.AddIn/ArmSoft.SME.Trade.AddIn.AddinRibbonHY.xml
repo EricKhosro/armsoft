@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="Ribbon_Load">
+	<ribbon>
+		<tabs>
+			<tab idMso="TabAddIns">
+				<group id="TradeGroup"
+					   label="ՀԾ-Առևտուր" >
+					<button id ="CalculateReport" imageMso ="Refresh" label="Հաշվարկել"   size ="large" supertip="Հաշվարկել հաշվետվությունը"
+						   onAction ="CalculateReport_Click" />
+					<button id ="Connect" imageMso ="ReviewPreviousComment" supertip="Հաստատել կապը տվյալների պահոցի հետ"
+							label="Աշխատանքի սկիզբ" onAction ="Connect_Click" />
+					<button id ="CloseConnection" label="Աշխատանքի ավարտ" imageMso ="ReviewNextComment" supertip="Անջատել կապը տվյալների պահոցի հետ"
+							 onAction ="Close_Click"  />
+					<button id ="PasteValues" label="Տեղադրել արժեքները"
+							supertip="Տեղադրել արժեքները բանաձևերի փոխարեն, այս գործողության արդյունքում բանաձևերը կորելու են անվերադարձ:"
+							imageMso="Paste" onAction ="PasteValues_Click" />
+					<button id ="EncodeFormulas" imageMso="PivotTableFormulasMenu" label="Կոդավորել" onAction ="EncodeFormulas_Click"
+							supertip="Կոդավորել բանաձևերը ֆայլը տեղափոխելու կամ հիշելու համար" />
+					<button id ="DecodeFormulas" imageMso="PivotTableOlapTools" label="Ապակոդավորել"
+							supertip="Ապակոդավորել բանաձևերը հաշվարկ կատարելու համար"  onAction ="DecodeFormulas_Click" />
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>

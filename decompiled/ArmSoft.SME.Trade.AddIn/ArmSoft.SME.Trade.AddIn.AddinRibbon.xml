@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="Ribbon_Load">
+	<ribbon>
+		<tabs>
+			<tab idMso="TabAddIns">
+				<group id="TradeGroup"
+					   label="AS-Trade" >
+					<button id ="CalculateReport" imageMso ="Refresh" label="Calculate report"   size ="large"
+						   onAction ="CalculateReport_Click" />
+					<button id ="Connect" imageMso ="ReviewPreviousComment" supertip ="Connect to AS-Trade database"
+							 label="Connect"  onAction ="Connect_Click" />
+					<button id ="CloseConnection" imageMso ="ReviewNextComment" supertip ="Close connection to AS-Trade database"
+							 label="Close connection" onAction ="Close_Click"  />
+					<button id ="PasteValues" imageMso="Paste" label="Paste values" onAction ="PasteValues_Click" />
+					<button id ="EncodeFormulas" imageMso="PivotTableFormulasMenu" label="Encode formulas" onAction ="EncodeFormulas_Click" />
+					<button id ="DecodeFormulas" imageMso="PivotTableOlapTools" label="Decode formulas" onAction ="DecodeFormulas_Click" />
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>
+

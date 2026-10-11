@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+  <g id="main">
+    <g id="icon">
+      <path d="M0.5,13.28L2.764,15.5L14.5,15.5L14.5,10.2L6.8,10.2L6.8,1.5L0.5,1.5zz" fill="#F3D7FD" class="Purple_Light" />
+      <path d="M0,1.5L0,13.28L0,13.49L0.15,13.64L2.414,15.86L2.56,16L2.764,16L14.5,16L15,16L15,15.5L15,10.2L14,10.2L14,15L2.968,15L1,13.07L1,2L6.8,2L6.8,1L0.5,1L0,1zz" fill="#9900CC" class="Purple_Dark"/>
+      <path d="M4.5,15.5L10.5,15.5L10.5,10.5L4.5,10.5zz" fill="#FFFFFF" class="White"/>
+      <path d="M4,10.5L4,15.5L4,16L4.5,16L10.5,16L11,16L11,15.5L11,10.5L11,10.2L6.8,10.2L6.8,10L4.5,10L4,10zM10,11L10,15L5,15L5,11zz" fill="#9900CC" class="Purple_Dark"/>
+      <path d="M6,14L7,14L7,12L6,12zz" fill="#787979"/>
+      <path d="M3.5,7.5L6.8,7.5L6.8,1.5L3.5,1.5zz" fill="#FFFFFF" class="White"/>
+      <path d="M3,1.5L3,7.5L3,8L3.5,8L6.8,8L6.8,7L4,7L4,2L6.8,2L6.8,1L3.5,1L3,1zz" fill="#9900CC" class="Purple_Dark"/>
+    </g>
+    <g id="overlay">
+      <rect x="8.5" y="0.5" width="7" height="8" fill="#FFFFFF" stroke="#212121" stroke-width="1" stroke-miterlimit="10"/>
+      <path d="M10,2.5h4M10,4.5h4M10,6.5h4" fill="none" stroke="#0070CB" class="Blue_Dark2" stroke-width="1" stroke-miterlimit="10"/>
+    </g>
+  </g>
+</svg>

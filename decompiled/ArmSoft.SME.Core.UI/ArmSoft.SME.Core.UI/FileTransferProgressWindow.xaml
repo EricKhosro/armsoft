@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dxc:ThemedWindow x:Class="ArmSoft.SME.Core.UI.FileTransferProgressWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Title="FileTransferProgressWindow" Width="350" ResizeMode="NoResize" ShowIcon="False" ShowInTaskbar="False" SizeToContent="Height" WindowStartupLocation="CenterOwner" WindowStyle="SingleBorderWindow" xmlns:ui="clr-namespace:ArmSoft.SME.Core.UI;assembly=ArmSoft.SME.Core.UI">
+  <DockPanel LastChildFill="True">
+    <Grid DockPanel.Dock="Bottom" IsSharedSizeScope="True">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" SharedSizeGroup="Buttons" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Button Name="OKButton" Grid.Row="0" Grid.Column="1" MinWidth="100" Margin="15,0,15,5" HorizontalContentAlignment="Center" IsDefault="True" IsEnabled="False">OK</Button>
+    </Grid>
+    <dxlc:LayoutControl Name="LayoutControl1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Vertical" StretchContentVertically="False">
+      <dxe:ProgressBarEdit Name="FileTransfer" Margin="15,0,0,0" ContentDisplayMode="Value" DisplayFormatString="p0" IsPercent="True" Maximum="100" Minimum="0" Value="0" />
+    </dxlc:LayoutControl>
+  </DockPanel>
+</dxc:ThemedWindow>

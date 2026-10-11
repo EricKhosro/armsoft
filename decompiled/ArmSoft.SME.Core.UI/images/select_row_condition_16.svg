@@ -1,0 +1,23 @@
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_93_802)">
+<path d="M15.5 8.5H5.5V15.5H15.5V8.5Z" fill="white" class="White"/>
+<path d="M0.5 14.5H4V7H14.5V3.5H0.5V14.5Z" fill="white" class="White"/>
+<path opacity="0.6" d="M4 8H1V9H4V8Z" fill="#878787"/>
+<path opacity="0.6" d="M4 11H1V12H4V11Z" fill="#878787"/>
+<path opacity="0.6" d="M11 4H10V7H11V4Z" fill="#878787"/>
+<path d="M0 3.5V15H4V14H1V4H14V7H15V3H0V3.5Z" fill="#212121" class="Black"/>
+<path d="M0.5 3.5H14.5V0.5H0.5V3.5Z" fill="#D6E7FD" class="Blue_Light"/>
+<path d="M0 0.5V4H15V0H0V0.5ZM14 1V3H1V1H14Z" fill="#0070CB" class="Blue_Dark"/>
+<path d="M9.31999 14.37L6.79999 12L9.37999 9.64001L10.05 10.38L8.26999 12.01L10.01 13.64L9.31999 14.37Z" fill="#0070CB"/>
+<path d="M14 13H11V14H14V13Z" fill="#0070CB"/>
+<path d="M14 11H11V12H14V11Z" fill="#0070CB"/>
+<path d="M8.3 0.0999756L4.61 3.76998L2.66 1.83998L1 3.51998V5.25998L4.62 8.82998L10.84 2.65998L8.3 0.0999756Z" fill="white" class="White"/>
+<path d="M8.65001 2.30005L4.61001 6.30005L2.32001 4.03005"  stroke="#d92a18" class="Red_Dark2" stroke-width="1.5" stroke-miterlimit="50"/>
+<path d="M16 16H5V8H16V16ZM6 15H15V9H6V15Z" fill="#212121" class="Black"/>
+</g>
+<defs>
+<clipPath id="clip0_93_802">
+<rect width="16" height="16" fill="white" class="White"/>
+</clipPath>
+</defs>
+</svg>

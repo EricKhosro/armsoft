@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dx:ThemedWindow x:Class="ArmSoft.SME.Core.UI.AppUpdateWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions" xmlns:local="clr-namespace:ArmSoft.SME.Core.UI" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Title="AppUpdateWindow" Width="550" Height="420" ShowIcon="False" WindowStartupLocation="CenterOwner">
+  <dxlc:LayoutControl Orientation="Vertical">
+    <dxlc:LayoutGroup>
+      <Grid Margin="5,0" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+        <dx:DXImage Name="popupStaticImage" Grid.Row="0" Grid.Column="0" Width="48" Height="48" VerticalAlignment="Top" Stretch="None" UseLayoutRounding="True" Source="{ext:ASImage checking_update_48.svg}" />
+        <dx:DXImage Name="checkingAnimation48" Grid.Row="0" Grid.Column="0" Width="48" Height="48" VerticalAlignment="Top" Stretch="None" UseLayoutRounding="True" Source="{ext:ASImage checking_update_48.svg}">
+          <FrameworkElement.Style>
+            <Style TargetType="{x:Type Image}">
+              <Setter Property="Visibility" Value="Collapsed" />
+            </Style>
+          </FrameworkElement.Style>
+          <UIElement.Clip>
+            <EllipseGeometry Center="24,48" RadiusX="0" RadiusY="0" />
+          </UIElement.Clip>
+          <FrameworkElement.Triggers>
+            <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+              <BeginStoryboard>
+                <Storyboard>
+                  <DoubleAnimation AutoReverse="False" RepeatBehavior="Forever" Storyboard.TargetProperty="(Clip).(EllipseGeometry.RadiusX)" From="0" To="48" Duration="0:0:1" />
+                  <DoubleAnimation AutoReverse="False" RepeatBehavior="Forever" Storyboard.TargetProperty="(Clip).(EllipseGeometry.RadiusY)" From="0" To="50" Duration="0:0:1" />
+                </Storyboard>
+              </BeginStoryboard>
+            </EventTrigger>
+          </FrameworkElement.Triggers>
+        </dx:DXImage>
+        <dx:DXImage Name="DownloadAnimation48" Grid.Row="0" Grid.Column="0" Width="48" Height="48" VerticalAlignment="Top" Stretch="None" UseLayoutRounding="True" Source="{ext:ASImage 01.png, AdditionalPath=UpdateDownload}">
+          <FrameworkElement.Style>
+            <Style TargetType="{x:Type Image}">
+              <Setter Property="Visibility" Value="Collapsed" />
+            </Style>
+          </FrameworkElement.Style>
+          <FrameworkElement.Triggers>
+            <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+              <BeginStoryboard>
+                <Storyboard RepeatBehavior="Forever">
+                  <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetProperty="(Image.Source)" Duration="00:00:3.30">
+                    <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/01.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:0.15">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/02.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:0.30">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/03.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:0.45">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/04.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:0.60">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/05.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:0.75">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/06.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:0.90">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/07.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:1.05">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/08.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:1.20">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/09.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:1.35">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/10.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:1.50">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/11.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:1.65">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/12.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:1.80">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/13.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:1.95">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/14.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:2.10">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/15.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:2.25">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/16.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:2.40">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/17.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:2.55">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/18.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:2.70">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/19.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:2.85">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/20.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:3.00">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/21.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="00:00:3.15">
+                      <ObjectKeyFrame.Value>
+                        <BitmapImage UriSource="pack://application:,,,/ArmSoft.SME.Core.UI;component/Images/UpdateDownload/22.png" />
+                      </ObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                  </ObjectAnimationUsingKeyFrames>
+                </Storyboard>
+              </BeginStoryboard>
+            </EventTrigger>
+          </FrameworkElement.Triggers>
+        </dx:DXImage>
+      </Grid>
+      <StackPanel VerticalAlignment="Top">
+        <TextBlock Name="TBApplicationName" Text="Application name" FontSize="14" FontWeight="Bold" UseLayoutRounding="True" />
+        <TextBlock Name="TBUpdateState" Padding="5,0,0,0" FontSize="12" TextWrapping="Wrap" UseLayoutRounding="True" />
+      </StackPanel>
+      <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
+        <TextBlock Name="TBCurrentVersion" HorizontalAlignment="Right" Text="Version 7.X.YY.Z" FontSize="11" UseLayoutRounding="True" />
+        <TextBlock Name="TBKey" HorizontalAlignment="Right" Text="Key xxxxxxxx" FontSize="11" UseLayoutRounding="True" />
+      </StackPanel>
+    </dxlc:LayoutGroup>
+    <TextBlock Name="TBUpdateInformation" Margin="0,5,0,0" VerticalAlignment="Top" Text="Update Information" FontSize="14" FontWeight="Bold" UseLayoutRounding="True" />
+    <Rectangle Name="Line1" Height="2" />
+    <dxlc:LayoutItem Name="LIVersion" Label="Version">
+      <TextBlock Name="TBVersion" Margin="10,0,0,0" HorizontalAlignment="Left" />
+    </dxlc:LayoutItem>
+    <dxlc:LayoutItem Name="LIPublished" Label="Published">
+      <TextBlock Name="TBPublished" Margin="10,0,0,0" HorizontalAlignment="Left" />
+    </dxlc:LayoutItem>
+    <dxlc:LayoutItem Name="LISize" Label="Size">
+      <TextBlock Name="TBSize" Margin="10,0,0,0" HorizontalAlignment="Left" />
+    </dxlc:LayoutItem>
+    <dxlc:LayoutItem Name="LISummary" VerticalAlignment="Stretch" Label="Summary" LabelPosition="Top">
+      <TextBox Name="TBSummary" AcceptsReturn="True" IsReadOnly="True" IsTabStop="False" TextWrapping="Wrap" UseLayoutRounding="True" VerticalScrollBarVisibility="Auto" />
+    </dxlc:LayoutItem>
+    <Grid Name="ButtonsPanel" VerticalAlignment="Bottom">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Button Name="OkButton" Grid.Row="0" Grid.Column="1" Height="26" MinWidth="100" Margin="15,2,15,-7" HorizontalContentAlignment="Center" UseLayoutRounding="True" Click="OkButton_Click">Check</Button>
+      <Button Name="CancelButton" Grid.Row="0" Grid.Column="2" Height="26" MinWidth="100" Margin="15,2,15,-7" IsCancel="True" UseLayoutRounding="True">Cancel</Button>
+    </Grid>
+  </dxlc:LayoutControl>
+</dx:ThemedWindow>

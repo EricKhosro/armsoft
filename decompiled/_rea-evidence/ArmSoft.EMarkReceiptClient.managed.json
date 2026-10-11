@@ -1,0 +1,2821 @@
+{
+  "evidence_id": "ev_11b4c3d223a661510340aabe29856797b44d9ede7f97dc8f16337c5d3652c3d1",
+  "subject": {
+    "name": "C:\\Program Files\\Armenian Software\\AS Trade\\lib\\ArmSoft.EMarkReceiptClient\\1.0.0-pre8\\lib\\net8.0\\ArmSoft.EMarkReceiptClient.dll",
+    "digest": {
+      "sha256": "ec2e94e920ee4382351002b413bad0541353d048e1f9e11f912239416f6bc299"
+    },
+    "format": "pe",
+    "architecture": "x86",
+    "local_path": "C:\\Program Files\\Armenian Software\\AS Trade\\lib\\ArmSoft.EMarkReceiptClient\\1.0.0-pre8\\lib\\net8.0\\ArmSoft.EMarkReceiptClient.dll"
+  },
+  "provider": {
+    "id": "rea-dotnet-static",
+    "name": "REA managed static analysis provider",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis",
+  "operation": "inspect_managed_artifact",
+  "parameters": {},
+  "raw_result": null,
+  "normalized_result": {
+    "artifact": {
+      "path": "C:\\Program Files\\Armenian Software\\AS Trade\\lib\\ArmSoft.EMarkReceiptClient\\1.0.0-pre8\\lib\\net8.0\\ArmSoft.EMarkReceiptClient.dll",
+      "sha256": "ec2e94e920ee4382351002b413bad0541353d048e1f9e11f912239416f6bc299",
+      "byte_length": 54784,
+      "format": "pe"
+    },
+    "pe": {
+      "machine": 332,
+      "machine_hex": "0x014c",
+      "architecture": "x86",
+      "optional_header": "pe32",
+      "section_count": 3,
+      "characteristics": 8226,
+      "cli": {
+        "header_offset": 520,
+        "header_size": 72,
+        "runtime_version": "2.5",
+        "flags": 1,
+        "flag_names": [
+          "il-only"
+        ],
+        "entry_point": {
+          "kind": "none",
+          "value": null
+        },
+        "metadata_rva": 24584,
+        "metadata_size": 36100,
+        "resources_rva": 0,
+        "resources_size": 0,
+        "strong_name_rva": 0,
+        "strong_name_size": 0,
+        "managed_native_header_rva": 0,
+        "managed_native_header_size": 0,
+        "ready_to_run_signature": false
+      }
+    },
+    "classification": {
+      "status": "managed",
+      "container": "pe",
+      "runtime_family": "modern-dotnet",
+      "implementation": "cil",
+      "managed_architecture": "anycpu",
+      "evidence": [
+        {
+          "code": "cli-header-observed",
+          "detail": "A file-backed PE CLI header and metadata root were admitted.",
+          "file_offset": 520
+        },
+        {
+          "code": "target-framework-observed",
+          "detail": "An assembly-level TargetFrameworkAttribute names modern .NET.",
+          "file_offset": 27082
+        },
+        {
+          "code": "managed-architecture-derived",
+          "detail": "Managed architecture anycpu is derived from PE machine and CLI flags.",
+          "file_offset": 536
+        }
+      ]
+    },
+    "metadata": {
+      "status": "complete",
+      "version": "v4.0.30319",
+      "stream_names": [
+        "#Blob",
+        "#GUID",
+        "#Strings",
+        "#US",
+        "#~"
+      ],
+      "table_row_counts": {
+        "Module": 1,
+        "TypeRef": 86,
+        "TypeDef": 58,
+        "Field": 310,
+        "MethodDef": 246,
+        "Param": 146,
+        "InterfaceImpl": 20,
+        "MemberRef": 277,
+        "Constant": 117,
+        "CustomAttribute": 253,
+        "StandAloneSig": 46,
+        "PropertyMap": 19,
+        "Property": 77,
+        "MethodSemantics": 126,
+        "MethodImpl": 38,
+        "TypeSpec": 57,
+        "Assembly": 1,
+        "AssemblyRef": 7,
+        "NestedClass": 29,
+        "GenericParam": 1,
+        "MethodSpec": 86
+      }
+    },
+    "module": {
+      "name": "ArmSoft.EMarkReceiptClient.dll",
+      "generation": 0,
+      "mvid": "f54124ef-2a74-4a38-ae5b-ac119fec1867",
+      "enc_id": null,
+      "enc_base_id": null,
+      "token": "0x00000001",
+      "row_offset": 17120
+    },
+    "assembly": {
+      "name": "ArmSoft.EMarkReceiptClient",
+      "version": "1.0.0.0",
+      "culture": null,
+      "flags": 0,
+      "hash_algorithm": 32772,
+      "public_key": {
+        "kind": "none",
+        "byte_length": 0,
+        "sha256": null,
+        "token": null
+      },
+      "token": "0x20000001",
+      "row_offset": 30328
+    },
+    "target_frameworks": [
+      ".NETCoreApp,Version=v8.0"
+    ],
+    "references": [
+      {
+        "name": "System.Runtime",
+        "version": "8.0.0.0",
+        "culture": null,
+        "flags": 0,
+        "public_key_or_token": {
+          "kind": "public-key-token",
+          "byte_length": 8,
+          "sha256": "971150dd73dc318e68a98cce9b91ac7dea2d43c562b4f5a9a2f4272c7e29477e",
+          "token": "b03f5f7f11d50a3a"
+        },
+        "hash_value_sha256": null,
+        "hash_value_length": 0,
+        "token": "0x23000001",
+        "row_offset": 30350
+      },
+      {
+        "name": "System.Net.Http",
+        "version": "8.0.0.0",
+        "culture": null,
+        "flags": 0,
+        "public_key_or_token": {
+          "kind": "public-key-token",
+          "byte_length": 8,
+          "sha256": "971150dd73dc318e68a98cce9b91ac7dea2d43c562b4f5a9a2f4272c7e29477e",
+          "token": "b03f5f7f11d50a3a"
+        },
+        "hash_value_sha256": null,
+        "hash_value_length": 0,
+        "token": "0x23000002",
+        "row_offset": 30370
+      },
+      {
+        "name": "System.Text.Json",
+        "version": "8.0.0.0",
+        "culture": null,
+        "flags": 0,
+        "public_key_or_token": {
+          "kind": "public-key-token",
+          "byte_length": 8,
+          "sha256": "b110cdfb7d5f67fc7bbd638f784ad02eb45fb121d838f42fd283e5b331f82995",
+          "token": "cc7b13ffcd2ddd51"
+        },
+        "hash_value_sha256": null,
+        "hash_value_length": 0,
+        "token": "0x23000003",
+        "row_offset": 30390
+      },
+      {
+        "name": "System.Collections",
+        "version": "8.0.0.0",
+        "culture": null,
+        "flags": 0,
+        "public_key_or_token": {
+          "kind": "public-key-token",
+          "byte_length": 8,
+          "sha256": "971150dd73dc318e68a98cce9b91ac7dea2d43c562b4f5a9a2f4272c7e29477e",
+          "token": "b03f5f7f11d50a3a"
+        },
+        "hash_value_sha256": null,
+        "hash_value_length": 0,
+        "token": "0x23000004",
+        "row_offset": 30410
+      },
+      {
+        "name": "System.Net.Primitives",
+        "version": "8.0.0.0",
+        "culture": null,
+        "flags": 0,
+        "public_key_or_token": {
+          "kind": "public-key-token",
+          "byte_length": 8,
+          "sha256": "971150dd73dc318e68a98cce9b91ac7dea2d43c562b4f5a9a2f4272c7e29477e",
+          "token": "b03f5f7f11d50a3a"
+        },
+        "hash_value_sha256": null,
+        "hash_value_length": 0,
+        "token": "0x23000005",
+        "row_offset": 30430
+      },
+      {
+        "name": "System.Linq",
+        "version": "8.0.0.0",
+        "culture": null,
+        "flags": 0,
+        "public_key_or_token": {
+          "kind": "public-key-token",
+          "byte_length": 8,
+          "sha256": "971150dd73dc318e68a98cce9b91ac7dea2d43c562b4f5a9a2f4272c7e29477e",
+          "token": "b03f5f7f11d50a3a"
+        },
+        "hash_value_sha256": null,
+        "hash_value_length": 0,
+        "token": "0x23000006",
+        "row_offset": 30450
+      },
+      {
+        "name": "System.Threading.Thread",
+        "version": "8.0.0.0",
+        "culture": null,
+        "flags": 0,
+        "public_key_or_token": {
+          "kind": "public-key-token",
+          "byte_length": 8,
+          "sha256": "971150dd73dc318e68a98cce9b91ac7dea2d43c562b4f5a9a2f4272c7e29477e",
+          "token": "b03f5f7f11d50a3a"
+        },
+        "hash_value_sha256": null,
+        "hash_value_length": 0,
+        "token": "0x23000007",
+        "row_offset": 30470
+      }
+    ],
+    "resources": [],
+    "attributes": [
+      {
+        "parent_token": "0x06000001",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000001",
+        "row_offset": 27082
+      },
+      {
+        "parent_token": "0x00000001",
+        "constructor_token": "0x0a00000b",
+        "type_name": "System.Runtime.CompilerServices.RefSafetyRulesAttribute",
+        "value_length": 8,
+        "value_sha256": "4348c667007804e5f14a1cca64aa0d7aa95149a7120ce85cf5eb2a416d52b5ba",
+        "decoded_fixed_string": null,
+        "token": "0x0c000002",
+        "row_offset": 27088
+      },
+      {
+        "parent_token": "0x20000001",
+        "constructor_token": "0x0a000001",
+        "type_name": "System.Runtime.CompilerServices.CompilationRelaxationsAttribute",
+        "value_length": 8,
+        "value_sha256": "e37a02053d377bad23ea19b7443bffd15fc0b9b45cf9d88a2b2464838374009b",
+        "decoded_fixed_string": null,
+        "token": "0x0c000003",
+        "row_offset": 27094
+      },
+      {
+        "parent_token": "0x20000001",
+        "constructor_token": "0x0a000002",
+        "type_name": "System.Runtime.CompilerServices.RuntimeCompatibilityAttribute",
+        "value_length": 30,
+        "value_sha256": "4611a48823d62972173df33a4677daf48b4c4a5e8bd71f94914052aa56c7c2e0",
+        "decoded_fixed_string": null,
+        "token": "0x0c000004",
+        "row_offset": 27100
+      },
+      {
+        "parent_token": "0x20000001",
+        "constructor_token": "0x0a000003",
+        "type_name": "System.Diagnostics.DebuggableAttribute",
+        "value_length": 8,
+        "value_sha256": "6ab1684123fce9ed54ee2be74c776c58aed6aa8bf8dc2ede79239eaba616d772",
+        "decoded_fixed_string": null,
+        "token": "0x0c000005",
+        "row_offset": 27106
+      },
+      {
+        "parent_token": "0x20000001",
+        "constructor_token": "0x0a000004",
+        "type_name": "System.Runtime.Versioning.TargetFrameworkAttribute",
+        "value_length": 61,
+        "value_sha256": "45e0f75c08b6f2dc17fa9460e21043f2c6faa66ae856da7a813ad87bc79584a6",
+        "decoded_fixed_string": ".NETCoreApp,Version=v8.0",
+        "token": "0x0c000006",
+        "row_offset": 27112
+      },
+      {
+        "parent_token": "0x20000001",
+        "constructor_token": "0x0a000005",
+        "type_name": "System.Reflection.AssemblyCompanyAttribute",
+        "value_length": 31,
+        "value_sha256": "fb25a39da2acbf174f8496bf175999968fb894edafbc42285d17969fc34d81bb",
+        "decoded_fixed_string": null,
+        "token": "0x0c000007",
+        "row_offset": 27118
+      },
+      {
+        "parent_token": "0x20000001",
+        "constructor_token": "0x0a000006",
+        "type_name": "System.Reflection.AssemblyConfigurationAttribute",
+        "value_length": 12,
+        "value_sha256": "739194e6c3639113ebfbccf301c083af2627642a7aacaceba90eaacb8fae9f4f",
+        "decoded_fixed_string": null,
+        "token": "0x0c000008",
+        "row_offset": 27124
+      },
+      {
+        "parent_token": "0x20000001",
+        "constructor_token": "0x0a000007",
+        "type_name": "System.Reflection.AssemblyFileVersionAttribute",
+        "value_length": 12,
+        "value_sha256": "6ef011a9a5b3a5b90d5025a5411de947e296a2e57616f6f16966ad709dbc9b08",
+        "decoded_fixed_string": null,
+        "token": "0x0c000009",
+        "row_offset": 27130
+      },
+      {
+        "parent_token": "0x20000001",
+        "constructor_token": "0x0a000008",
+        "type_name": "System.Reflection.AssemblyInformationalVersionAttribute",
+        "value_length": 10,
+        "value_sha256": "a8eb6a8ed244df5009363a4e4ee4341809bd5d1111d39d365308eb11e8995a6e",
+        "decoded_fixed_string": null,
+        "token": "0x0c00000a",
+        "row_offset": 27136
+      },
+      {
+        "parent_token": "0x20000001",
+        "constructor_token": "0x0a000009",
+        "type_name": "System.Reflection.AssemblyProductAttribute",
+        "value_length": 31,
+        "value_sha256": "fb25a39da2acbf174f8496bf175999968fb894edafbc42285d17969fc34d81bb",
+        "decoded_fixed_string": null,
+        "token": "0x0c00000b",
+        "row_offset": 27142
+      },
+      {
+        "parent_token": "0x20000001",
+        "constructor_token": "0x0a00000a",
+        "type_name": "System.Reflection.AssemblyTitleAttribute",
+        "value_length": 31,
+        "value_sha256": "fb25a39da2acbf174f8496bf175999968fb894edafbc42285d17969fc34d81bb",
+        "decoded_fixed_string": null,
+        "token": "0x0c00000c",
+        "row_offset": 27148
+      },
+      {
+        "parent_token": "0x04000004",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00000d",
+        "row_offset": 27154
+      },
+      {
+        "parent_token": "0x06000006",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 81,
+        "value_sha256": "0aeb729faf245b4ad68f5e743e0836bfb32585b0413eb96e9867c1f97c48dd4b",
+        "decoded_fixed_string": null,
+        "token": "0x0c00000e",
+        "row_offset": 27160
+      },
+      {
+        "parent_token": "0x06000008",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 83,
+        "value_sha256": "2bf4e0b2c3fdb9bc3653045de8a41c56f51bf064856ecb18bea122f01bdb4d16",
+        "decoded_fixed_string": null,
+        "token": "0x0c00000f",
+        "row_offset": 27166
+      },
+      {
+        "parent_token": "0x0600000a",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 83,
+        "value_sha256": "66c5194fb20552ddbcd63017d14de1311eab6be48811fcc77364bda22c8b856a",
+        "decoded_fixed_string": null,
+        "token": "0x0c000010",
+        "row_offset": 27172
+      },
+      {
+        "parent_token": "0x0600000c",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 82,
+        "value_sha256": "5563ca0545b4ef4e3cfbac2a42fe96c9d1b27eaf5a14ad84505cee8eae60f574",
+        "decoded_fixed_string": null,
+        "token": "0x0c000011",
+        "row_offset": 27178
+      },
+      {
+        "parent_token": "0x0600000e",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 73,
+        "value_sha256": "d42c04276319349aff3d4544f19480f7febaeee711d3325dd0f1500cef7dbd88",
+        "decoded_fixed_string": null,
+        "token": "0x0c000012",
+        "row_offset": 27184
+      },
+      {
+        "parent_token": "0x06000010",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 78,
+        "value_sha256": "1ec0fd76ed765e805fc813ec6fb64e6306472336d5ed631837259f318db239c3",
+        "decoded_fixed_string": null,
+        "token": "0x0c000013",
+        "row_offset": 27190
+      },
+      {
+        "parent_token": "0x06000012",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 85,
+        "value_sha256": "a7e6cb7e06407891fb5c809a79599f8abdffb5b1f07f3879d675a6727936340e",
+        "decoded_fixed_string": null,
+        "token": "0x0c000014",
+        "row_offset": 27196
+      },
+      {
+        "parent_token": "0x06000014",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 81,
+        "value_sha256": "0d970de233c6d0ce3c7bde3483277d4ae218a1d718b7d832562fe89c8a352e11",
+        "decoded_fixed_string": null,
+        "token": "0x0c000015",
+        "row_offset": 27202
+      },
+      {
+        "parent_token": "0x06000017",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 91,
+        "value_sha256": "67e4ee1c097e015830e5a4535b5ddaf2992cb2261aaf786220e0b270d88ea340",
+        "decoded_fixed_string": null,
+        "token": "0x0c000016",
+        "row_offset": 27208
+      },
+      {
+        "parent_token": "0x06000018",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 80,
+        "value_sha256": "2a7ea00e195e9f2a4c232f8cbd9f495226249034bc645fd267be40e6424bf55f",
+        "decoded_fixed_string": null,
+        "token": "0x0c000017",
+        "row_offset": 27214
+      },
+      {
+        "parent_token": "0x06000019",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 88,
+        "value_sha256": "9a3cdc19f15d633cf1aaaf1a9b24c580262c9c4ba4f7e03c55c151db968c7ffd",
+        "decoded_fixed_string": null,
+        "token": "0x0c000018",
+        "row_offset": 27220
+      },
+      {
+        "parent_token": "0x0600001c",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 80,
+        "value_sha256": "89d2dd42e77a271f6cc8cb63031ed5cdae7e463e41c4e270b81e84dd00f28b0a",
+        "decoded_fixed_string": null,
+        "token": "0x0c000019",
+        "row_offset": 27226
+      },
+      {
+        "parent_token": "0x0600001c",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00001a",
+        "row_offset": 27232
+      },
+      {
+        "parent_token": "0x0200001e",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00001b",
+        "row_offset": 27238
+      },
+      {
+        "parent_token": "0x0200001f",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00001c",
+        "row_offset": 27244
+      },
+      {
+        "parent_token": "0x02000020",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00001d",
+        "row_offset": 27250
+      },
+      {
+        "parent_token": "0x02000021",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00001e",
+        "row_offset": 27256
+      },
+      {
+        "parent_token": "0x02000022",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00001f",
+        "row_offset": 27262
+      },
+      {
+        "parent_token": "0x02000023",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000020",
+        "row_offset": 27268
+      },
+      {
+        "parent_token": "0x02000024",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000021",
+        "row_offset": 27274
+      },
+      {
+        "parent_token": "0x02000025",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000022",
+        "row_offset": 27280
+      },
+      {
+        "parent_token": "0x02000026",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000023",
+        "row_offset": 27286
+      },
+      {
+        "parent_token": "0x02000027",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000024",
+        "row_offset": 27292
+      },
+      {
+        "parent_token": "0x02000028",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000025",
+        "row_offset": 27298
+      },
+      {
+        "parent_token": "0x02000029",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000026",
+        "row_offset": 27304
+      },
+      {
+        "parent_token": "0x0200002a",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000027",
+        "row_offset": 27310
+      },
+      {
+        "parent_token": "0x0200002b",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000028",
+        "row_offset": 27316
+      },
+      {
+        "parent_token": "0x0200002c",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000029",
+        "row_offset": 27322
+      },
+      {
+        "parent_token": "0x0200002d",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00002a",
+        "row_offset": 27328
+      },
+      {
+        "parent_token": "0x0200002e",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00002b",
+        "row_offset": 27334
+      },
+      {
+        "parent_token": "0x0200002f",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00002c",
+        "row_offset": 27340
+      },
+      {
+        "parent_token": "0x02000030",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00002d",
+        "row_offset": 27346
+      },
+      {
+        "parent_token": "0x02000031",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00002e",
+        "row_offset": 27352
+      },
+      {
+        "parent_token": "0x06000039",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00002f",
+        "row_offset": 27358
+      },
+      {
+        "parent_token": "0x0600003a",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000030",
+        "row_offset": 27364
+      },
+      {
+        "parent_token": "0x0600003b",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000031",
+        "row_offset": 27370
+      },
+      {
+        "parent_token": "0x0600003c",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000032",
+        "row_offset": 27376
+      },
+      {
+        "parent_token": "0x0600003d",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000033",
+        "row_offset": 27382
+      },
+      {
+        "parent_token": "0x0600003e",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000034",
+        "row_offset": 27388
+      },
+      {
+        "parent_token": "0x0600003f",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000035",
+        "row_offset": 27394
+      },
+      {
+        "parent_token": "0x06000040",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000036",
+        "row_offset": 27400
+      },
+      {
+        "parent_token": "0x04000041",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000037",
+        "row_offset": 27406
+      },
+      {
+        "parent_token": "0x06000042",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000038",
+        "row_offset": 27412
+      },
+      {
+        "parent_token": "0x04000042",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000039",
+        "row_offset": 27418
+      },
+      {
+        "parent_token": "0x06000043",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00003a",
+        "row_offset": 27424
+      },
+      {
+        "parent_token": "0x04000043",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00003b",
+        "row_offset": 27430
+      },
+      {
+        "parent_token": "0x06000044",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00003c",
+        "row_offset": 27436
+      },
+      {
+        "parent_token": "0x04000044",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00003d",
+        "row_offset": 27442
+      },
+      {
+        "parent_token": "0x06000045",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00003e",
+        "row_offset": 27448
+      },
+      {
+        "parent_token": "0x04000045",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00003f",
+        "row_offset": 27454
+      },
+      {
+        "parent_token": "0x04000046",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000040",
+        "row_offset": 27460
+      },
+      {
+        "parent_token": "0x06000047",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000041",
+        "row_offset": 27466
+      },
+      {
+        "parent_token": "0x04000047",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000042",
+        "row_offset": 27472
+      },
+      {
+        "parent_token": "0x06000048",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000043",
+        "row_offset": 27478
+      },
+      {
+        "parent_token": "0x04000048",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000044",
+        "row_offset": 27484
+      },
+      {
+        "parent_token": "0x06000049",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000045",
+        "row_offset": 27490
+      },
+      {
+        "parent_token": "0x04000049",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000046",
+        "row_offset": 27496
+      },
+      {
+        "parent_token": "0x0600004a",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000047",
+        "row_offset": 27502
+      },
+      {
+        "parent_token": "0x0400004a",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000048",
+        "row_offset": 27508
+      },
+      {
+        "parent_token": "0x0600004b",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000049",
+        "row_offset": 27514
+      },
+      {
+        "parent_token": "0x0400004b",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00004a",
+        "row_offset": 27520
+      },
+      {
+        "parent_token": "0x0600004c",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00004b",
+        "row_offset": 27526
+      },
+      {
+        "parent_token": "0x0400004c",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00004c",
+        "row_offset": 27532
+      },
+      {
+        "parent_token": "0x0600004d",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00004d",
+        "row_offset": 27538
+      },
+      {
+        "parent_token": "0x0400004d",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00004e",
+        "row_offset": 27544
+      },
+      {
+        "parent_token": "0x0600004e",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00004f",
+        "row_offset": 27550
+      },
+      {
+        "parent_token": "0x0400004e",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000050",
+        "row_offset": 27556
+      },
+      {
+        "parent_token": "0x0600004f",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000051",
+        "row_offset": 27562
+      },
+      {
+        "parent_token": "0x0400004f",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000052",
+        "row_offset": 27568
+      },
+      {
+        "parent_token": "0x06000050",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000053",
+        "row_offset": 27574
+      },
+      {
+        "parent_token": "0x04000050",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000054",
+        "row_offset": 27580
+      },
+      {
+        "parent_token": "0x06000051",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000055",
+        "row_offset": 27586
+      },
+      {
+        "parent_token": "0x04000051",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000056",
+        "row_offset": 27592
+      },
+      {
+        "parent_token": "0x06000052",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000057",
+        "row_offset": 27598
+      },
+      {
+        "parent_token": "0x04000052",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000058",
+        "row_offset": 27604
+      },
+      {
+        "parent_token": "0x04000053",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000059",
+        "row_offset": 27610
+      },
+      {
+        "parent_token": "0x06000054",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00005a",
+        "row_offset": 27616
+      },
+      {
+        "parent_token": "0x04000054",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00005b",
+        "row_offset": 27622
+      },
+      {
+        "parent_token": "0x06000055",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00005c",
+        "row_offset": 27628
+      },
+      {
+        "parent_token": "0x04000055",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00005d",
+        "row_offset": 27634
+      },
+      {
+        "parent_token": "0x06000056",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00005e",
+        "row_offset": 27640
+      },
+      {
+        "parent_token": "0x04000056",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00005f",
+        "row_offset": 27646
+      },
+      {
+        "parent_token": "0x06000057",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000060",
+        "row_offset": 27652
+      },
+      {
+        "parent_token": "0x04000057",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000061",
+        "row_offset": 27658
+      },
+      {
+        "parent_token": "0x06000058",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000062",
+        "row_offset": 27664
+      },
+      {
+        "parent_token": "0x04000058",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000063",
+        "row_offset": 27670
+      },
+      {
+        "parent_token": "0x06000059",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000064",
+        "row_offset": 27676
+      },
+      {
+        "parent_token": "0x04000059",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000065",
+        "row_offset": 27682
+      },
+      {
+        "parent_token": "0x0400005a",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000066",
+        "row_offset": 27688
+      },
+      {
+        "parent_token": "0x0600005b",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000067",
+        "row_offset": 27694
+      },
+      {
+        "parent_token": "0x0400005b",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000068",
+        "row_offset": 27700
+      },
+      {
+        "parent_token": "0x0600005c",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000069",
+        "row_offset": 27706
+      },
+      {
+        "parent_token": "0x0400005c",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00006a",
+        "row_offset": 27712
+      },
+      {
+        "parent_token": "0x0400005d",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00006b",
+        "row_offset": 27718
+      },
+      {
+        "parent_token": "0x0600005e",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00006c",
+        "row_offset": 27724
+      },
+      {
+        "parent_token": "0x0400005e",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00006d",
+        "row_offset": 27730
+      },
+      {
+        "parent_token": "0x0600005f",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00006e",
+        "row_offset": 27736
+      },
+      {
+        "parent_token": "0x0400005f",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00006f",
+        "row_offset": 27742
+      },
+      {
+        "parent_token": "0x06000060",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000070",
+        "row_offset": 27748
+      },
+      {
+        "parent_token": "0x04000060",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000071",
+        "row_offset": 27754
+      },
+      {
+        "parent_token": "0x06000061",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000072",
+        "row_offset": 27760
+      },
+      {
+        "parent_token": "0x04000061",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000073",
+        "row_offset": 27766
+      },
+      {
+        "parent_token": "0x06000062",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000074",
+        "row_offset": 27772
+      },
+      {
+        "parent_token": "0x04000062",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000075",
+        "row_offset": 27778
+      },
+      {
+        "parent_token": "0x06000063",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000076",
+        "row_offset": 27784
+      },
+      {
+        "parent_token": "0x04000063",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000077",
+        "row_offset": 27790
+      },
+      {
+        "parent_token": "0x06000064",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000078",
+        "row_offset": 27796
+      },
+      {
+        "parent_token": "0x04000064",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000079",
+        "row_offset": 27802
+      },
+      {
+        "parent_token": "0x06000065",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00007a",
+        "row_offset": 27808
+      },
+      {
+        "parent_token": "0x04000065",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00007b",
+        "row_offset": 27814
+      },
+      {
+        "parent_token": "0x06000066",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00007c",
+        "row_offset": 27820
+      },
+      {
+        "parent_token": "0x04000066",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00007d",
+        "row_offset": 27826
+      },
+      {
+        "parent_token": "0x06000067",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00007e",
+        "row_offset": 27832
+      },
+      {
+        "parent_token": "0x04000068",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00007f",
+        "row_offset": 27838
+      },
+      {
+        "parent_token": "0x06000069",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000080",
+        "row_offset": 27844
+      },
+      {
+        "parent_token": "0x04000069",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000081",
+        "row_offset": 27850
+      },
+      {
+        "parent_token": "0x0600006a",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000082",
+        "row_offset": 27856
+      },
+      {
+        "parent_token": "0x0400006a",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000083",
+        "row_offset": 27862
+      },
+      {
+        "parent_token": "0x0600006b",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000084",
+        "row_offset": 27868
+      },
+      {
+        "parent_token": "0x0600006c",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000085",
+        "row_offset": 27874
+      },
+      {
+        "parent_token": "0x0600006e",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000086",
+        "row_offset": 27880
+      },
+      {
+        "parent_token": "0x0600006f",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000087",
+        "row_offset": 27886
+      },
+      {
+        "parent_token": "0x06000070",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000088",
+        "row_offset": 27892
+      },
+      {
+        "parent_token": "0x06000071",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000089",
+        "row_offset": 27898
+      },
+      {
+        "parent_token": "0x06000072",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00008a",
+        "row_offset": 27904
+      },
+      {
+        "parent_token": "0x06000073",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00008b",
+        "row_offset": 27910
+      },
+      {
+        "parent_token": "0x04000073",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00008c",
+        "row_offset": 27916
+      },
+      {
+        "parent_token": "0x06000074",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00008d",
+        "row_offset": 27922
+      },
+      {
+        "parent_token": "0x04000074",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00008e",
+        "row_offset": 27928
+      },
+      {
+        "parent_token": "0x06000075",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00008f",
+        "row_offset": 27934
+      },
+      {
+        "parent_token": "0x04000075",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000090",
+        "row_offset": 27940
+      },
+      {
+        "parent_token": "0x06000076",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000091",
+        "row_offset": 27946
+      },
+      {
+        "parent_token": "0x04000076",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000092",
+        "row_offset": 27952
+      },
+      {
+        "parent_token": "0x06000077",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000093",
+        "row_offset": 27958
+      },
+      {
+        "parent_token": "0x04000077",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000094",
+        "row_offset": 27964
+      },
+      {
+        "parent_token": "0x06000078",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000095",
+        "row_offset": 27970
+      },
+      {
+        "parent_token": "0x04000078",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000096",
+        "row_offset": 27976
+      },
+      {
+        "parent_token": "0x06000079",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000097",
+        "row_offset": 27982
+      },
+      {
+        "parent_token": "0x04000079",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000098",
+        "row_offset": 27988
+      },
+      {
+        "parent_token": "0x0400007a",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c000099",
+        "row_offset": 27994
+      },
+      {
+        "parent_token": "0x0600007b",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00009a",
+        "row_offset": 28000
+      },
+      {
+        "parent_token": "0x0400007b",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00009b",
+        "row_offset": 28006
+      },
+      {
+        "parent_token": "0x0600007c",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00009c",
+        "row_offset": 28012
+      },
+      {
+        "parent_token": "0x0800007d",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c00009d",
+        "row_offset": 28018
+      },
+      {
+        "parent_token": "0x0600007e",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00009e",
+        "row_offset": 28024
+      },
+      {
+        "parent_token": "0x0600007f",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c00009f",
+        "row_offset": 28030
+      },
+      {
+        "parent_token": "0x06000080",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000a0",
+        "row_offset": 28036
+      },
+      {
+        "parent_token": "0x08000080",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000a1",
+        "row_offset": 28042
+      },
+      {
+        "parent_token": "0x06000081",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000a2",
+        "row_offset": 28048
+      },
+      {
+        "parent_token": "0x08000081",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000a3",
+        "row_offset": 28054
+      },
+      {
+        "parent_token": "0x06000082",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000a4",
+        "row_offset": 28060
+      },
+      {
+        "parent_token": "0x08000082",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000a5",
+        "row_offset": 28066
+      },
+      {
+        "parent_token": "0x06000083",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000a6",
+        "row_offset": 28072
+      },
+      {
+        "parent_token": "0x08000083",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000a7",
+        "row_offset": 28078
+      },
+      {
+        "parent_token": "0x06000084",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000a8",
+        "row_offset": 28084
+      },
+      {
+        "parent_token": "0x08000084",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000a9",
+        "row_offset": 28090
+      },
+      {
+        "parent_token": "0x06000085",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000aa",
+        "row_offset": 28096
+      },
+      {
+        "parent_token": "0x08000085",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000ab",
+        "row_offset": 28102
+      },
+      {
+        "parent_token": "0x08000086",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000ac",
+        "row_offset": 28108
+      },
+      {
+        "parent_token": "0x08000087",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000ad",
+        "row_offset": 28114
+      },
+      {
+        "parent_token": "0x08000088",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000ae",
+        "row_offset": 28120
+      },
+      {
+        "parent_token": "0x06000089",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000af",
+        "row_offset": 28126
+      },
+      {
+        "parent_token": "0x08000089",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000b0",
+        "row_offset": 28132
+      },
+      {
+        "parent_token": "0x0600008a",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000b1",
+        "row_offset": 28138
+      },
+      {
+        "parent_token": "0x0800008a",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000b2",
+        "row_offset": 28144
+      },
+      {
+        "parent_token": "0x0600008b",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000b3",
+        "row_offset": 28150
+      },
+      {
+        "parent_token": "0x0600008c",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000b4",
+        "row_offset": 28156
+      },
+      {
+        "parent_token": "0x0800008c",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000b5",
+        "row_offset": 28162
+      },
+      {
+        "parent_token": "0x0800008d",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000b6",
+        "row_offset": 28168
+      },
+      {
+        "parent_token": "0x0600008e",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000b7",
+        "row_offset": 28174
+      },
+      {
+        "parent_token": "0x0800008e",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000b8",
+        "row_offset": 28180
+      },
+      {
+        "parent_token": "0x0600008f",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000b9",
+        "row_offset": 28186
+      },
+      {
+        "parent_token": "0x0800008f",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000ba",
+        "row_offset": 28192
+      },
+      {
+        "parent_token": "0x06000090",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000bb",
+        "row_offset": 28198
+      },
+      {
+        "parent_token": "0x08000090",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000bc",
+        "row_offset": 28204
+      },
+      {
+        "parent_token": "0x06000091",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000bd",
+        "row_offset": 28210
+      },
+      {
+        "parent_token": "0x08000091",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000be",
+        "row_offset": 28216
+      },
+      {
+        "parent_token": "0x08000092",
+        "constructor_token": "0x0a000010",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 5,
+        "value_sha256": "9c9d8c6a5bdfdf8321bca643b0c2a42269fdbe5f181376f42fd7856841f0333f",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000bf",
+        "row_offset": 28222
+      },
+      {
+        "parent_token": "0x06000097",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000c0",
+        "row_offset": 28228
+      },
+      {
+        "parent_token": "0x06000098",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000c1",
+        "row_offset": 28234
+      },
+      {
+        "parent_token": "0x06000099",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000c2",
+        "row_offset": 28240
+      },
+      {
+        "parent_token": "0x060000a0",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000c3",
+        "row_offset": 28246
+      },
+      {
+        "parent_token": "0x060000a1",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000c4",
+        "row_offset": 28252
+      },
+      {
+        "parent_token": "0x060000a2",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000c5",
+        "row_offset": 28258
+      },
+      {
+        "parent_token": "0x060000a3",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000c6",
+        "row_offset": 28264
+      },
+      {
+        "parent_token": "0x060000a4",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000c7",
+        "row_offset": 28270
+      },
+      {
+        "parent_token": "0x060000a5",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000c8",
+        "row_offset": 28276
+      },
+      {
+        "parent_token": "0x060000a6",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000c9",
+        "row_offset": 28282
+      },
+      {
+        "parent_token": "0x060000a7",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000ca",
+        "row_offset": 28288
+      },
+      {
+        "parent_token": "0x060000a9",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000cb",
+        "row_offset": 28294
+      },
+      {
+        "parent_token": "0x060000aa",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000cc",
+        "row_offset": 28300
+      },
+      {
+        "parent_token": "0x040000aa",
+        "constructor_token": "0x0a000012",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 10,
+        "value_sha256": "29459e96393bc81e308ae50e2626435c0111d8b2b54196dd80acb8a90c92d5fd",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000cd",
+        "row_offset": 28306
+      },
+      {
+        "parent_token": "0x060000ab",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000ce",
+        "row_offset": 28312
+      },
+      {
+        "parent_token": "0x060000ac",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000cf",
+        "row_offset": 28318
+      },
+      {
+        "parent_token": "0x040000ac",
+        "constructor_token": "0x0a000012",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 10,
+        "value_sha256": "29459e96393bc81e308ae50e2626435c0111d8b2b54196dd80acb8a90c92d5fd",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000d0",
+        "row_offset": 28324
+      },
+      {
+        "parent_token": "0x060000ad",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000d1",
+        "row_offset": 28330
+      },
+      {
+        "parent_token": "0x060000ae",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000d2",
+        "row_offset": 28336
+      },
+      {
+        "parent_token": "0x060000af",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000d3",
+        "row_offset": 28342
+      },
+      {
+        "parent_token": "0x060000b0",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000d4",
+        "row_offset": 28348
+      },
+      {
+        "parent_token": "0x060000b1",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000d5",
+        "row_offset": 28354
+      },
+      {
+        "parent_token": "0x060000b2",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000d6",
+        "row_offset": 28360
+      },
+      {
+        "parent_token": "0x040000b6",
+        "constructor_token": "0x0a000012",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 10,
+        "value_sha256": "29459e96393bc81e308ae50e2626435c0111d8b2b54196dd80acb8a90c92d5fd",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000d7",
+        "row_offset": 28366
+      },
+      {
+        "parent_token": "0x060000be",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000d8",
+        "row_offset": 28372
+      },
+      {
+        "parent_token": "0x060000c0",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 102,
+        "value_sha256": "0a369360f732eecdfaf7824990aad90ddaf7b145383ca9073569bbef6b13f697",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000d9",
+        "row_offset": 28378
+      },
+      {
+        "parent_token": "0x040000c1",
+        "constructor_token": "0x0a000012",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 10,
+        "value_sha256": "29459e96393bc81e308ae50e2626435c0111d8b2b54196dd80acb8a90c92d5fd",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000da",
+        "row_offset": 28384
+      },
+      {
+        "parent_token": "0x060000c2",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 102,
+        "value_sha256": "e62c907919cb89ad6c4693660971c6e0256db0c7747dffc95621b3ea3aa61f99",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000db",
+        "row_offset": 28390
+      },
+      {
+        "parent_token": "0x060000c4",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 101,
+        "value_sha256": "8063a22f9be4df0062c8f3affd06c46639096e7e8a492fde12f2b14d01d08218",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000dc",
+        "row_offset": 28396
+      },
+      {
+        "parent_token": "0x060000c6",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 92,
+        "value_sha256": "bb23ff791d30259e8d3d796e854193426358eb62cbe196d1cd886cefb42dba6c",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000dd",
+        "row_offset": 28402
+      },
+      {
+        "parent_token": "0x040000c7",
+        "constructor_token": "0x0a000012",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 10,
+        "value_sha256": "29459e96393bc81e308ae50e2626435c0111d8b2b54196dd80acb8a90c92d5fd",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000de",
+        "row_offset": 28408
+      },
+      {
+        "parent_token": "0x060000c8",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 97,
+        "value_sha256": "adbb37ff8db307040fb19af2a4b4661fc247234d8fb8d5babc067703bc4591fc",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000df",
+        "row_offset": 28414
+      },
+      {
+        "parent_token": "0x040000c9",
+        "constructor_token": "0x0a000012",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 10,
+        "value_sha256": "29459e96393bc81e308ae50e2626435c0111d8b2b54196dd80acb8a90c92d5fd",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000e0",
+        "row_offset": 28420
+      },
+      {
+        "parent_token": "0x060000ca",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 104,
+        "value_sha256": "072e5df301e536fdafbd81d108168feb5f150bc843de799308b24f622744e7b9",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000e1",
+        "row_offset": 28426
+      },
+      {
+        "parent_token": "0x060000cc",
+        "constructor_token": "0x0a00000d",
+        "type_name": "System.Runtime.CompilerServices.AsyncStateMachineAttribute",
+        "value_length": 100,
+        "value_sha256": "6fab95872169674842034c41580f8c4e622b233851339dbe376bfb49805aedc7",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000e2",
+        "row_offset": 28432
+      },
+      {
+        "parent_token": "0x060000d1",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000e3",
+        "row_offset": 28438
+      },
+      {
+        "parent_token": "0x060000d3",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000e4",
+        "row_offset": 28444
+      },
+      {
+        "parent_token": "0x040000d4",
+        "constructor_token": "0x0a000012",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 10,
+        "value_sha256": "29459e96393bc81e308ae50e2626435c0111d8b2b54196dd80acb8a90c92d5fd",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000e5",
+        "row_offset": 28450
+      },
+      {
+        "parent_token": "0x060000d5",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000e6",
+        "row_offset": 28456
+      },
+      {
+        "parent_token": "0x060000d7",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000e7",
+        "row_offset": 28462
+      },
+      {
+        "parent_token": "0x060000d9",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000e8",
+        "row_offset": 28468
+      },
+      {
+        "parent_token": "0x040000da",
+        "constructor_token": "0x0a000012",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 10,
+        "value_sha256": "29459e96393bc81e308ae50e2626435c0111d8b2b54196dd80acb8a90c92d5fd",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000e9",
+        "row_offset": 28474
+      },
+      {
+        "parent_token": "0x060000db",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000ea",
+        "row_offset": 28480
+      },
+      {
+        "parent_token": "0x040000dc",
+        "constructor_token": "0x0a000012",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 10,
+        "value_sha256": "29459e96393bc81e308ae50e2626435c0111d8b2b54196dd80acb8a90c92d5fd",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000eb",
+        "row_offset": 28486
+      },
+      {
+        "parent_token": "0x060000dd",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000ec",
+        "row_offset": 28492
+      },
+      {
+        "parent_token": "0x060000df",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000ed",
+        "row_offset": 28498
+      },
+      {
+        "parent_token": "0x060000e1",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000ee",
+        "row_offset": 28504
+      },
+      {
+        "parent_token": "0x060000e3",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000ef",
+        "row_offset": 28510
+      },
+      {
+        "parent_token": "0x060000e5",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000f0",
+        "row_offset": 28516
+      },
+      {
+        "parent_token": "0x060000e6",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000f1",
+        "row_offset": 28522
+      },
+      {
+        "parent_token": "0x060000e7",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000f2",
+        "row_offset": 28528
+      },
+      {
+        "parent_token": "0x040000e7",
+        "constructor_token": "0x0a000012",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 10,
+        "value_sha256": "29459e96393bc81e308ae50e2626435c0111d8b2b54196dd80acb8a90c92d5fd",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000f3",
+        "row_offset": 28534
+      },
+      {
+        "parent_token": "0x060000ea",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000f4",
+        "row_offset": 28540
+      },
+      {
+        "parent_token": "0x060000ec",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000f5",
+        "row_offset": 28546
+      },
+      {
+        "parent_token": "0x060000ee",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000f6",
+        "row_offset": 28552
+      },
+      {
+        "parent_token": "0x060000f0",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000f7",
+        "row_offset": 28558
+      },
+      {
+        "parent_token": "0x060000f2",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000f8",
+        "row_offset": 28564
+      },
+      {
+        "parent_token": "0x040000f2",
+        "constructor_token": "0x0a000012",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 10,
+        "value_sha256": "29459e96393bc81e308ae50e2626435c0111d8b2b54196dd80acb8a90c92d5fd",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000f9",
+        "row_offset": 28570
+      },
+      {
+        "parent_token": "0x060000f4",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000fa",
+        "row_offset": 28576
+      },
+      {
+        "parent_token": "0x060000f6",
+        "constructor_token": "0x0a000011",
+        "type_name": "System.Diagnostics.DebuggerHiddenAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000fb",
+        "row_offset": 28582
+      },
+      {
+        "parent_token": "0x040000fa",
+        "constructor_token": "0x0a000012",
+        "type_name": "System.Runtime.CompilerServices.NullableAttribute",
+        "value_length": 10,
+        "value_sha256": "29459e96393bc81e308ae50e2626435c0111d8b2b54196dd80acb8a90c92d5fd",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000fc",
+        "row_offset": 28588
+      },
+      {
+        "parent_token": "0x0400010a",
+        "constructor_token": "0x0a00000c",
+        "type_name": "System.Runtime.CompilerServices.CompilerGeneratedAttribute",
+        "value_length": 4,
+        "value_sha256": "67abdd721024f0ff4e0b3f4c2fc13bc5bad42d0b7851d456d88d203d15aaa450",
+        "decoded_fixed_string": null,
+        "token": "0x0c0000fd",
+        "row_offset": 28594
+      }
+    ],
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "limitations": [
+      "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+    ]
+  },
+  "confidence": "observed",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+  ],
+  "locations": [
+    {
+      "kind": "file-offset-range",
+      "start": 520,
+      "end": 592
+    },
+    {
+      "kind": "file-offset",
+      "offset": 17120
+    },
+    {
+      "kind": "file-offset",
+      "offset": 30328
+    }
+  ],
+  "evidence_links": []
+}

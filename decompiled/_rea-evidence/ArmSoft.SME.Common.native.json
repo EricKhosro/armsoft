@@ -1,0 +1,117 @@
+{
+  "evidence_id": "ev_057cacadd91613d07984ef1186775ac0d77205098a03e9ac7c79f36732794768",
+  "subject": {
+    "name": "C:\\Program Files\\Armenian Software\\AS Trade\\ArmSoft.SME.Common.dll",
+    "digest": {
+      "sha256": "d695493589f4cb9f0b0f59a5f66a7055f2fe1639d21ebc59d0ddfcfbd178301d"
+    },
+    "format": "pe",
+    "architecture": "x86",
+    "local_path": "C:\\Program Files\\Armenian Software\\AS Trade\\ArmSoft.SME.Common.dll"
+  },
+  "provider": {
+    "id": "rea-dotnet-static",
+    "name": "REA managed static analysis provider",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis",
+  "operation": "inspect_managed_native_boundaries",
+  "parameters": {},
+  "raw_result": null,
+  "normalized_result": {
+    "artifact": {
+      "path": "C:\\Program Files\\Armenian Software\\AS Trade\\ArmSoft.SME.Common.dll",
+      "sha256": "d695493589f4cb9f0b0f59a5f66a7055f2fe1639d21ebc59d0ddfcfbd178301d",
+      "byte_length": 1748992,
+      "format": "pe"
+    },
+    "module": {
+      "name": "ArmSoft.SME.Common.dll",
+      "generation": 0,
+      "mvid": "c6c88149-37e9-4a66-8f29-7b9d979fc004",
+      "enc_id": null,
+      "enc_base_id": null,
+      "token": "0x00000001",
+      "row_offset": 194864
+    },
+    "metadata": {
+      "status": "complete",
+      "version": "v4.0.30319",
+      "table_row_counts": {
+        "Module": 1,
+        "TypeRef": 206,
+        "TypeDef": 569,
+        "Field": 11719,
+        "MethodDef": 7207,
+        "Param": 2686,
+        "InterfaceImpl": 5,
+        "MemberRef": 668,
+        "Constant": 10005,
+        "CustomAttribute": 4101,
+        "ClassLayout": 7,
+        "StandAloneSig": 116,
+        "PropertyMap": 327,
+        "Property": 4234,
+        "MethodSemantics": 5385,
+        "MethodImpl": 1,
+        "TypeSpec": 181,
+        "FieldRVA": 2,
+        "Assembly": 1,
+        "AssemblyRef": 22,
+        "NestedClass": 80,
+        "GenericParam": 29,
+        "MethodSpec": 35,
+        "GenericParamConstraint": 16
+      }
+    },
+    "identity_scope": {
+      "token_identity": "build-local",
+      "requires_artifact_sha256": "d695493589f4cb9f0b0f59a5f66a7055f2fe1639d21ebc59d0ddfcfbd178301d",
+      "requires_mvid": "c6c88149-37e9-4a66-8f29-7b9d979fc004"
+    },
+    "cli_native": {
+      "il_only": true,
+      "requires_32bit": false,
+      "strong_name_signed": false,
+      "native_entry_point": false,
+      "ready_to_run_signature": false,
+      "managed_native_header_rva": 0,
+      "managed_native_header_size": 0
+    },
+    "module_refs": [],
+    "pinvoke_imports": [],
+    "native_implementations": [],
+    "summary": {
+      "module_ref_count": 0,
+      "pinvoke_import_count": 0,
+      "native_implementation_count": 0,
+      "ready_to_run": false,
+      "mixed_mode_or_native_header": false
+    },
+    "coverage": {
+      "state": "complete",
+      "issues": []
+    },
+    "limitations": [
+      "P/Invoke rows prove managed import declarations only; this inspection does not verify that a native library, export, thunk, or provider-qualified function exists.",
+      "Managed metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+      "ReadyToRun, NativeAOT, C++/CLI, and IL2CPP native semantics require separately selected native-provider evidence; this tool does not translate managed tokens into native addresses."
+    ]
+  },
+  "confidence": "observed",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "P/Invoke rows prove managed import declarations only; this inspection does not verify that a native library, export, thunk, or provider-qualified function exists.",
+    "Managed metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+    "ReadyToRun, NativeAOT, C++/CLI, and IL2CPP native semantics require separately selected native-provider evidence; this tool does not translate managed tokens into native addresses."
+  ],
+  "locations": [
+    {
+      "kind": "file-offset",
+      "offset": 194864
+    }
+  ],
+  "evidence_links": []
+}

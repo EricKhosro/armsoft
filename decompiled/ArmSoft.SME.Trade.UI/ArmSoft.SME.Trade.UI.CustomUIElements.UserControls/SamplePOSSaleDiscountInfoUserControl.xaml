@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls.SamplePOSSaleDiscountInfoUserControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions;assembly=ArmSoft.SME.Core.UI" xmlns:tradeCommon="clr-namespace:ArmSoft.SME.Trade.Common;assembly=ArmSoft.SME.Trade.Common" xmlns:usercontrols="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.UserControls;assembly=ArmSoft.SME.Trade.UI">
+  <Grid Name="PartnerInfo" VerticalAlignment="Bottom">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto" />
+      <RowDefinition Style="{StaticResource SamplePOSInsideControlMainGridSeparatorRowDefinition}" />
+      <RowDefinition Height="auto" />
+      <RowDefinition Style="{StaticResource SamplePOSInsideControlMainGridSeparatorRowDefinition}" />
+      <RowDefinition Height="auto" />
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" VerticalAlignment="Center" Orientation="Horizontal">
+      <Grid Name="Card_Number">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="auto" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <dx:DXImage Name="TD_CardImage" Grid.Column="0" Style="{StaticResource SamplePOSInsideCardTitleImageStyle}" Source="{ext:ASImage credit_card_32.svg}" />
+        <dxe:TextEdit Name="TB_CardNumber" Grid.Column="1" HorizontalAlignment="Left" NullText="{x:Static tradeCommon:Resources.POSCardNumber_NullText}" Style="{StaticResource SamplePOSInsideCardPrimaryTextEditStyle}" />
+      </Grid>
+    </StackPanel>
+    <TextBlock Name="TB_CardHolderName" Grid.Row="2" Style="{StaticResource SamplePOSInsideCardPrimaryTextBlockStyle}" Text="" TextTrimming="CharacterEllipsis" />
+    <Grid Name="DiscountGrid" Row="4" VerticalAlignment="Center" Visibility="Hidden">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="auto" />
+        <ColumnDefinition Style="{StaticResource SamplePOSKeyValueSeparatorColumnsDefintionStyle}" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <TextBlock Name="TB_DiscountCaption" Grid.Column="0" Style="{StaticResource SamplePOSInsideCardPrimaryTextBlockStyle}" Text="{x:Static tradeCommon:Resources.DiscountShort}" />
+      <Grid Column="2" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="auto" />
+          <ColumnDefinition Width="auto" />
+          <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Style="{StaticResource SamplePOSInsideCardPrimaryTextBlockStyle}" Text="(" />
+        <TextBlock Name="TB_DiscountPercent" Grid.Column="1" Style="{StaticResource SamplePOSInsideCardPrimaryTextBlockStyle}" Text="0.00" />
+        <TextBlock Grid.Column="2" Style="{StaticResource SamplePOSInsideCardPrimaryTextBlockStyle}" Text="%)" />
+      </Grid>
+    </Grid>
+  </Grid>
+</UserControl>

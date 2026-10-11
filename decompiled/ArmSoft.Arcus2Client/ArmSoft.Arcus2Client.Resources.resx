@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>1.3</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="AmountIsNotCorrect" xml:space="preserve"><value>Amount is not correct</value></data>
+  <data name="AccountRestricted" xml:space="preserve"><value>Account restricted</value></data>
+  <data name="BadCard" xml:space="preserve"><value>Bad card</value></data>
+  <data name="InvalidTransaction" xml:space="preserve"><value>Invalid transaction</value></data>
+  <data name="ReconcileError" xml:space="preserve"><value>Reconcile error</value></data>
+  <data name="CallIssuer" xml:space="preserve"><value>Call issuer</value></data>
+  <data name="RequestInProgress" xml:space="preserve"><value>Request in progress</value></data>
+  <data name="InsufficientFunds" xml:space="preserve"><value>Insufficient funds</value></data>
+  <data name="LostOriginalTransaction" xml:space="preserve"><value>Lost original transaction</value></data>
+  <data name="LostCard" xml:space="preserve"><value>Lost card</value></data>
+  <data name="UnknownTransaction" xml:space="preserve"><value>Unknown transaction</value></data>
+  <data name="PickUpCard" xml:space="preserve"><value>Pick up card</value></data>
+  <data name="InvalidAccount" xml:space="preserve"><value>Invalid account</value></data>
+  <data name="LimitReached" xml:space="preserve"><value>Limit reached</value></data>
+  <data name="Timeout" xml:space="preserve"><value>Timeout</value></data>
+  <data name="Accepted" xml:space="preserve"><value>Accepted</value></data>
+  <data name="IncorrectPin" xml:space="preserve"><value>Incorrect pin</value></data>
+  <data name="PinProcessingError" xml:space="preserve"><value>Pin processing error</value></data>
+  <data name="StolenCard" xml:space="preserve"><value>Stolen card</value></data>
+  <data name="InvalidCard" xml:space="preserve"><value>Invalid card</value></data>
+  <data name="TransactionIsNotHonored" xml:space="preserve"><value>Transaction is not honored</value></data>
+  <data name="UnknownError" xml:space="preserve"><value>Unknown error</value></data>
+  <data name="InitializationException" xml:space="preserve"><value>Failed to initialize</value></data>
+  <data name="CallSecurity" xml:space="preserve"><value>Call security</value></data>
+  <data name="TransactionIsNotPermitted" xml:space="preserve"><value>Transaction is not permitted</value></data>
+  <data name="IssuerIsUnknown" xml:space="preserve"><value>Issuer is unknown</value></data>
+  <data name="CannotProcessAmount" xml:space="preserve"><value>Cannot process amount</value></data>
+  <data name="GetException" xml:space="preserve"><value>Failed to get parameter</value></data>
+  <data name="IssuerIsInoperable" xml:space="preserve"><value>Issuer is inoperable</value></data>
+  <data name="WrongMessage" xml:space="preserve"><value>Wrong message</value></data>
+  <data name="SystemError" xml:space="preserve"><value>System error</value></data>
+  <data name="CardExpired" xml:space="preserve"><value>Card expired</value></data>
+  <data name="TryAgain" xml:space="preserve"><value>Try again</value></data>
+  <data name="CardIsRestricted" xml:space="preserve"><value>Card is restricted</value></data>
+  <data name="SetException" xml:space="preserve"><value>Failed to set parameter</value></data>
+  <data name="ExpiredCard" xml:space="preserve"><value>Expired card</value></data>
+  <data name="ForcedPostNoAccount" xml:space="preserve"><value>Forced post no account</value></data>
+  <data name="InvalidPin" xml:space="preserve"><value>Invalid pin</value></data>
+  <data name="WithdrawalLimitExceeded" xml:space="preserve"><value>Withdrawal limit exceeded</value></data>
+  <data name="IsNotPermitted" xml:space="preserve"><value>Is not permitted</value></data>
+  <data name="DuplicateTransaction" xml:space="preserve"><value>Duplicate transaction</value></data>
+  <data name="SystemMalfunction" xml:space="preserve"><value>System malfunction</value></data>
+  <data name="InvalidMerchantID" xml:space="preserve"><value>Invalid merchant Id</value></data>
+  </root>

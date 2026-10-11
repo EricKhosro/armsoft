@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="32px" height="32px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;class:White}
+	.st1{fill:#212121;class:Black}
+	.st2{fill:#212121;fill-opacity:0.1;}
+	.st3{fill:#d6e7fd;class:Blue_Light}
+	.st4{fill:none;stroke:#0964B0;stroke-miterlimit:10;class:Blue_Dark}
+</style>
+<g id="card">
+	<g id="icon">
+		<rect x="1.5" y="2.5" class="st0" width="29" height="28"/>
+		<rect x="4.5" y="20.5" class="st0" width="9" height="6"/>
+		<path class="st1" d="M13,21v5H5v-5H13 M14,20H4v7h10V20z"/>
+		<rect x="18.5" y="20.5" class="st0" width="9" height="6"/>
+		<path class="st1" d="M27,21v5h-8v-5H27 M28,20H18v7h10V20z"/>
+		<rect x="4.5" y="10.5" class="st0" width="9" height="6"/>
+		<path class="st1" d="M13,11v5H5v-5H13 M14,10H4v7h10V10z"/>
+		<rect x="18.5" y="10.5" class="st0" width="9" height="6"/>
+		<path class="st1" d="M27,11v5h-8v-5H27 M28,10H18v7h10V10z"/>
+		<rect x="5" y="11" class="st2" width="8" height="5"/>
+		<rect x="19" y="11" class="st2" width="8" height="5"/>
+		<rect x="19" y="21" class="st2" width="8" height="5"/>
+		<rect x="5" y="21" class="st2" width="8" height="5"/>
+		<path class="st1" d="M31,31H1V2h30V31z M2,30h28V3H2V30z"/>
+		<rect x="1.5" y="2.5" class="st3" width="29" height="4"/>
+		<rect x="1.5" y="2.5" class="st4" width="29" height="4"/>
+	</g>
+</g>
+</svg>

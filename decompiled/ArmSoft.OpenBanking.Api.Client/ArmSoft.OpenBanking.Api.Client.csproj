@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>ArmSoft.OpenBanking.Api.Client</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="ArmSoft.OpenBanking.Api.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OpenBanking.Api.Common\26.4.0\lib\net8.0\ArmSoft.OpenBanking.Api.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.OpenBanking.Api.Client.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OpenBanking.Api.Client.Core\26.4.0\lib\net8.0\ArmSoft.OpenBanking.Api.Client.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.OnlineBanking.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OnlineBanking.Common\8.16.1\lib\net8.0\ArmSoft.OnlineBanking.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

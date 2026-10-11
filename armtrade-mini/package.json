@@ -1,0 +1,22 @@
+{
+  "name": "armtrade-mini",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Minimal retail app (POS, Products, Import, Inventory) — Electron + React + NestJS",
+  "workspaces": [
+    "api",
+    "app"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,app -c blue,green \"npm:dev:api\" \"npm:dev:app\"",
+    "dev:api": "npm --workspace api run start:dev",
+    "dev:app": "npm --workspace app run dev",
+    "build": "npm --workspace api run build && npm --workspace app run build",
+    "sim": "npm --workspace api run sim",
+    "test:devices": "npm --workspace api run build && npm --workspace api run test:devices",
+    "postinstall": "echo \"Run 'npm run dev' to start the API and the desktop app together.\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

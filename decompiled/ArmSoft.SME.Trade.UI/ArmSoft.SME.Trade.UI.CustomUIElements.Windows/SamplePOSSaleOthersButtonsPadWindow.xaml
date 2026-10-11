@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dx:ThemedWindow x:Class="ArmSoft.SME.Trade.UI.CustomUIElements.Windows.SamplePOSSaleOthersButtonsPadWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:coreCommon="clr-namespace:ArmSoft.SME.Common;assembly=ArmSoft.SME.Common" xmlns:customWindowControls="clr-namespace:ArmSoft.SME.Core.UI.CustomWindowControls;assembly=ArmSoft.SME.Core.UI" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions;assembly=ArmSoft.SME.Core.UI" xmlns:tradeCommon="clr-namespace:ArmSoft.SME.Trade.Common;assembly=ArmSoft.SME.Trade.Common" Title="{x:Static coreCommon:Resources.Other}" Width="640" Height="300" MinWidth="520" MinHeight="240" Style="{StaticResource TouchModeBaseThemedWindowStyle}" WindowStartupLocation="CenterOwner" xmlns:windows="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.Windows;assembly=ArmSoft.SME.Trade.UI" KeyDown="SaleOtherTouchButtonsPadWindow_KeyDown">
+  <FrameworkElement.Resources>
+    <ResourceDictionary>
+      <Style x:Key="PrimarySeparatorLineStyle" TargetType="{x:Type Separator}">
+        <Setter Property="FrameworkElement.UseLayoutRounding" Value="True" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+      </Style>
+      <Style x:Key="TouchModeInsideContainerSeparatorLineRowDefintionStyle" TargetType="{x:Type RowDefinition}">
+        <Setter Property="Height" Value="auto" />
+      </Style>
+    </ResourceDictionary>
+  </FrameworkElement.Resources>
+  <Grid Name="MainGrid" Style="{StaticResource TouchModeSingleWindowContainerGridStyle}">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource SamplePOSPrimaryButtonsSeparatorColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource SamplePOSPrimaryButtonsSeparatorColumnDefintionStyle}" />
+      <ColumnDefinition Style="{StaticResource TouchModePrimaryButtonColumnDefintionStyle}" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorLineRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryButtonRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModeInsideContainerSeparatorRowDefintionStyle}" />
+      <RowDefinition Style="{StaticResource TouchModePrimaryTextBlockRowDefintionStyle}" />
+    </Grid.RowDefinitions>
+    <customWindowControls:CWCSimpleButton Name="TaxCodeButton" Grid.Row="0" Grid.Column="0" Style="{StaticResource SamplePOSPrimaryButtonStyle}" Click="TaxCodeButton_Click">
+      <Grid Style="{StaticResource SamplePOSButtonWithImageAndTextContentGridStyle}">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonTextColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+        </Grid.ColumnDefinitions>
+        <dx:DXImage Grid.Column="0" Style="{StaticResource SamplePOSButtonWithContentImageStyle}" Source="{ext:ASImage pos_customer_find.svg}" />
+        <TextBlock Name="TaxCodeButtonCaption" Grid.Column="1" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static coreCommon:Resources.OptionsTaxCode}" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="FindBuyerButton" Grid.Row="0" Grid.Column="2" Style="{StaticResource SamplePOSPrimaryButtonStyle}" Click="FindBuyerButton_Click">
+      <Grid Style="{StaticResource SamplePOSButtonWithImageAndTextContentGridStyle}">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonTextColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+        </Grid.ColumnDefinitions>
+        <dx:DXImage Grid.Column="0" Style="{StaticResource SamplePOSButtonWithContentImageStyle}" Source="{ext:ASImage pos_customer_find.svg}" />
+        <Grid Column="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="FindBuyerButtonCaption1" Grid.Row="0" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.POSFindBuyerLine1}" />
+          <TextBlock Name="FindBuyerButtonCaption2" Grid.Row="1" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.POSFindBuyerLine2}" />
+        </Grid>
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="NewBuyer" Grid.Row="0" Grid.Column="4" Style="{StaticResource SamplePOSPrimaryButtonStyle}" Click="NewBuyer_Click">
+      <Grid Style="{StaticResource SamplePOSButtonWithImageAndTextContentGridStyle}">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonTextColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+        </Grid.ColumnDefinitions>
+        <dx:DXImage Grid.Column="0" Style="{StaticResource SamplePOSButtonWithContentImageStyle}" Source="{ext:ASImage pos_customer_add_32.svg}" />
+        <TextBlock Name="ButtonNewBuyerCaption" Grid.Column="1" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.NewBuyer}" />
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="SalesDocumentsHistoryButton" Grid.Row="2" Grid.Column="0" Style="{StaticResource SamplePOSPrimaryButtonStyle}" Click="SalesDocumentsHistoryButton_Click">
+      <Grid>
+        <Border Style="{StaticResource FeatureAddedNewStateBordersStyle}">
+          <TextBlock Style="{StaticResource FeatureAddedNewStateTextStyle}" Text="{x:Static coreCommon:Resources.NewForAddedFeature}" />
+        </Border>
+        <Grid Style="{StaticResource SamplePOSButtonWithImageAndTextContentGridStyle}">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+            <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonTextColumnDefintionStyle}" />
+            <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+          </Grid.ColumnDefinitions>
+          <dx:DXImage Grid.Column="0" Style="{StaticResource SamplePOSButtonWithContentImageStyle}" Source="{ext:ASImage pos_ecr_find_32.svg}" />
+          <Grid Column="1">
+            <Grid.RowDefinitions>
+              <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+              <RowDefinition Style="{StaticResource TouchModeManyRowedButtonRowDefintionStyle}" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static coreCommon:Resources.ECR}" />
+            <TextBlock Grid.Row="1" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static coreCommon:Resources.Checks}" />
+          </Grid>
+        </Grid>
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="EMarkReceiptButton" Grid.Row="2" Grid.Column="2" Style="{StaticResource SamplePOSPrimaryButtonStyle}" Click="EMarkReceiptButton_Click">
+      <Grid Style="{StaticResource SamplePOSButtonWithImageAndTextContentGridStyle}">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonTextColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+        </Grid.ColumnDefinitions>
+        <dx:DXImage Grid.Column="0" Style="{StaticResource SamplePOSButtonWithContentImageStyle}" Source="{ext:ASImage emark_32.svg}" />
+        <Grid Column="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          <TextBlock Grid.Row="0" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.EMarkReceiptButtonPart1}" />
+          <TextBlock Grid.Row="1" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.EMarkReceiptButtonPart2}" />
+        </Grid>
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <Separator Name="HorizontalSeparator1" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5" Style="{StaticResource PrimarySeparatorLineStyle}" />
+    <customWindowControls:CWCSimpleButton Name="CashInButton" Grid.Row="6" Grid.Column="0" Style="{StaticResource SamplePOSPrimaryButtonStyle}" Click="CashInButton_Click">
+      <Grid Style="{StaticResource SamplePOSButtonWithImageAndTextContentGridStyle}">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonTextColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+        </Grid.ColumnDefinitions>
+        <dx:DXImage Grid.Column="0" Style="{StaticResource SamplePOSButtonWithContentImageStyle}" Source="{ext:ASImage pos_cash_out_32.svg}" />
+        <Grid Column="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="CashInButtonCaption1" Grid.Row="0" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static coreCommon:Resources.ofCash}" />
+          <TextBlock Name="CashInButtonCaption2" Grid.Row="1" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static coreCommon:Resources.CashIncome}" />
+        </Grid>
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="CashOutButton" Grid.Row="6" Grid.Column="2" Style="{StaticResource SamplePOSPrimaryButtonStyle}" Click="CashOutButton_Click">
+      <Grid Style="{StaticResource SamplePOSButtonWithImageAndTextContentGridStyle}">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonTextColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+        </Grid.ColumnDefinitions>
+        <dx:DXImage Grid.Column="0" Style="{StaticResource SamplePOSButtonWithContentImageStyle}" Source="{ext:ASImage pos_cash_in_32.svg}" />
+        <Grid Column="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="CashOutButtonCaption1" Grid.Row="0" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static coreCommon:Resources.ofCash}" />
+          <TextBlock Name="CashOutButtonCaption2" Grid.Row="1" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static coreCommon:Resources.CashExit}" />
+        </Grid>
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <customWindowControls:CWCSimpleButton Name="LastECRCheckButton" Grid.Row="6" Grid.Column="4" Style="{StaticResource SamplePOSPrimaryButtonStyle}" Click="LastECRCheckButton_Click">
+      <Grid Style="{StaticResource SamplePOSButtonWithImageAndTextContentGridStyle}">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonTextColumnDefintionStyle}" />
+          <ColumnDefinition Style="{StaticResource SamplePOSInsideButtonImageColumnDefintionStyle}" />
+        </Grid.ColumnDefinitions>
+        <dx:DXImage Grid.Column="0" Style="{StaticResource SamplePOSButtonWithContentImageStyle}" Source="{ext:ASImage pos_ecr_print_32.svg}" />
+        <Grid Column="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          <TextBlock Name="LastECRCheckButtonCaption1" Grid.Row="0" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.ECRLastCheck}" />
+          <TextBlock Name="LastECRCheckButtonCaption2" Grid.Row="1" Style="{StaticResource SamplePOSButtonWithContentTextBlockStyle}" Text="{x:Static tradeCommon:Resources.DuplicatePrintShort}" />
+        </Grid>
+      </Grid>
+    </customWindowControls:CWCSimpleButton>
+    <StackPanel Name="BottomInfoStackPanels" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="5" Style="{StaticResource TouchModeHorizontalStackPanelStyle}">
+      <TextBlock Name="AvailableCash" Style="{StaticResource TouchModeImportantSecondaryTextBlockStyle}" />
+      <TextBlock Name="AvailableCashAmount" Style="{StaticResource TouchModeImportantSecondaryTextBlockStyle}" />
+      <TextBlock Name="CurCode" Style="{StaticResource TouchModeImportantSecondaryTextBlockStyle}" />
+    </StackPanel>
+  </Grid>
+</dx:ThemedWindow>

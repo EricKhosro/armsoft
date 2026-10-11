@@ -1,0 +1,18 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_61_2553)">
+<path d="M6 7.414V5.619C5.537 5.542 5.031 5.5 4.5 5.5C2.301 5.5 0.517 6.224 0.501 7.138L0.5 13.442C0.5 14.395 2.291 15.5 4.5 15.5C6.709 15.5 8.5 14.395 8.5 13.443V9.85L6 7.414Z" fill="#FFE1CE" class="Orange_Light" />
+<path d="M8.654 10L8 9.363V13.443C8 13.99 6.557 15 4.5 15C2.443 15 1 13.99 1 13.443V8.557C1.878 9.067 3.213 9.333 4.5 9.333C5.54 9.333 6.611 9.159 7.447 8.823L6.653 8.049C6.097 8.215 5.376 8.332 4.5 8.332C2.235 8.332 1 7.551 1 7.149C1 6.693 2.396 6 4.5 6C5.053 6 5.557 6.048 6 6.127V5.114C5.516 5.039 5.008 5 4.5 5C2.27 5 0.014 5.735 0.001 7.138L0 13.443C0 14.781 2.145 16 4.5 16C6.855 16 9 14.781 9 13.443V10H8.654Z" fill="#EC6206" class="Orange_Dark" />
+<path d="M7.5 0.5H15.5V8.5H9.264L7.5 6.781V0.5Z" fill="#F3D7FD" />
+<path d="M7.5 0.5H15.5V8.5H9.264L7.5 6.781V0.5Z" fill="none" stroke="#9900CC" class="Purple_Dark" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M10 8.5H13.5V5.5H10V8.5Z" fill="white" />
+<path d="M10 8.5H13.5V5.5H10V8.5Z" fill="none" stroke="#9900CC" class="Purple_Dark" stroke-miterlimit="10"/>
+<path d="M9.5 3.5L13.5 3.5V0.5L9.5 0.5V3.5Z" fill="white" />
+<path d="M9.5 3.5L13.5 3.5V0.5L9.5 0.5V3.5Z" fill="none" stroke="#9900CC" class="Purple_Dark" stroke-miterlimit="10"/>
+<path d="M12.049 11.605L13.44 10.231L14.831 11.605M13.5 10.3V13.025C13.5 13.287 13.287 13.5 13.025 13.5H9.60001" stroke="#D92A18" stroke-miterlimit="10"/>
+</g>
+<defs>
+<clipPath id="clip0_61_2553">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

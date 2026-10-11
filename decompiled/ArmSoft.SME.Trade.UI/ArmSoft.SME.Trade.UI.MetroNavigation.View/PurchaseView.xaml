@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dxmvvm:ModuleView x:Class="ArmSoft.SME.Trade.UI.MetroNavigation.View.PurchaseView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvmsample" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions;assembly=ArmSoft.SME.Core.UI" xmlns:local="clr-namespace:ArmSoft.SME.Trade.UI.MetroNavigation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:view="clr-namespace:ArmSoft.SME.Trade.UI.MetroNavigation.View">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <DockPanel Grid.Row="0" Grid.Column="0">
+      <dxc:SimpleButton Name="PurchasePageTitle" Grid.Row="0" Content="Purchase" Style="{StaticResource MetroButton}" Command="{Binding Parent.ShowMainCommand}" Glyph="{ext:ASImage Back.svg}" />
+      <local:NavigatorView x:Name="TileView" Grid.Column="1" HorizontalAlignment="Right" />
+    </DockPanel>
+    <local:MetroNavigationPage x:Name="PurchasePage" Grid.Row="1" Margin="0,10,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+  </Grid>
+</dxmvvm:ModuleView>

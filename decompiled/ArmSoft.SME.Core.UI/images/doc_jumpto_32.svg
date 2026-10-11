@@ -1,0 +1,21 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+<defs>
+	<style>	.cls-1{fill:#fff;class:White}.cls-2{fill:#212121;class:Black}.cls-3{fill:#787979;opacity:0.6;isolation:isolate;}.cls-4{fill:#D6E7FD;class:Blue_Light}.cls-5{fill:#0070CB;class:Blue_Dark}.cls-6{fill:none;stroke:#b70a0a ;stroke-miterlimit:10;stroke-width:1.1px;}
+	</style>
+</defs>
+<g id="main">
+<g id="icon">
+<path class="cls-1" d="M7.5,29.5H21.73L16.33,24l-1.09-1.11-.39-.39,7-7.1.39.39,1.52,1.49,1,1-1,1v1.14h3.36l.74,0,.71.11.68.19.29.12V8.5l-8-8H7.5Zm14.4,0h.48l-.23-.24Z"/>
+<path class="cls-1" d="M.5,25.5H17.79L16.33,24l-1.09-1.11-.39-.39L18.5,18.8V9.5H.5Z"/>
+<path class="cls-2" d="M0,25.5V26H18.28l-1-1H1V10H18v9.31l1-1V9H0Z"/>
+<path class="cls-3" d="M6,15H1v1H6v5H1v1H6v3H7V22h5v3h1V22h2.36l1-1H13V16h5V15H13V10H12v5H7V10H6Zm6,1v5H7V16Z"/>
+<polygon class="cls-4" points="14.85 22.52 15.85 21.5 0.5 21.5 0.5 25.5 17.79 25.5 14.85 22.52"/>
+<polygon class="cls-5" points="17.29 25 1 25 1 22 15.36 22 16.34 21 0.5 21 0 21 0 21.5 0 25.5 0 26 0.5 26 18.28 26 17.29 25"/>
+<polygon class="cls-2" points="21.24 29 8 29 8 27 7 27 7 30 22.22 30 21.24 29"/>
+<path class="cls-2" d="M8,1H21V9h8V20.75l.21.06.65.26.14.08V8.29L21.71,0H7V8H8Zm14,.71L28.29,8H22Z"/>
+</g>
+<g id="overlay">
+<path class="cls-6" d="M22.22,27.08l-4.5-4.56,4.5-4.59m3.66,13h1.2a4.24,4.24,0,0,0,4.32-4.23h0a4.24,4.24,0,0,0-4.32-4.22H17.73"/>
+</g>
+</g>
+</svg>

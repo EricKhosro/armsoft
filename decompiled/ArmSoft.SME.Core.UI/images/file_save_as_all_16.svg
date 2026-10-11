@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+  <g id="main">
+    <g id="icon">
+      <path d="M6.5,10.5L6.8,10.5L6.8,6.8L8.8,6.8L14.5,6.8L14.5,3.557L11.53,0.5L6.5,0.5zM3.5,12.5L6.8,12.5L6.8,12L5,12L5,2.5L3.5,2.5zM0.5,14.5L6.8,14.5L6.8,14L2,14L2,4.5L0.5,4.5zz" fill="#FFFFFF" class="White"/>
+      <path d="M6,11L6.8,11L6.8,6.8L7,6.8L7,1L11,1L11,4L14,4L14,6.8L15,6.8L15,3.354L11.74,0L6,0zM13.26,3L12,3L12,1.699zM3,13L6.8,13L6.8,12L4,12L4,3L5,3L5,2L3,2zM0,15L6.8,15L6.8,14L1,14L1,5L2,5L2,4L0,4zz" fill="#212121"/>
+    </g>
+    <g id="overlay">
+      <polygon points="13.5,8.5 13.5,11.5 10.5,11.5 10.5,8.5 8.5,8.5 8.5,14.305 9.719,15.5 10.5,15.5 10.5,13.6 13.5,13.6 13.5,15.5 15.5,15.5 15.5,8.5" fill="#F3D7FD" class="Purple_Light" stroke-linejoin="miter"/>
+      <path d="M16,16H9.515L8,14.515V8h8V16zM9.923,15H15V9H9v5.095L9.923,15z" fill="#9900CC" class="Purple_Dark"/>
+      <rect x="10.5" y="13.5" width="3" height="2" fill="#FFFFFF" class="White"/>
+	  <rect x="10.5" y="13.5" width="3" height="2" fill="none" stroke="#9900CC" class="Purple_Dark" stroke-width="1" stroke-miterlimit="10" transform="matrix(-1 -1.22465e-16 1.22465e-16 -1 24 29)"/>
+      <rect x="10.5" y="8.5" width="3" height="3" fill="#FFFFFF" class="White"/>
+	  <rect x="10.5" y="8.5" width="3" height="3" fill="none" stroke="#9900CC" class="Purple_Dark" stroke-width="1" stroke-miterlimit="10" transform="matrix(-1 -1.22465e-16 1.22465e-16 -1 24 20)"/>
+    </g>
+  </g>
+</svg>

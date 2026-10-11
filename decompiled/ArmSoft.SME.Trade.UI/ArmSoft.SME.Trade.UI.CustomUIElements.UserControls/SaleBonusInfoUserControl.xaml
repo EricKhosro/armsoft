@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl x:Class="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls.SaleBonusInfoUserControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:ext="clr-namespace:ArmSoft.SME.Core.UI.Extensions;assembly=ArmSoft.SME.Core.UI" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:tradeCommon="clr-namespace:ArmSoft.SME.Trade.Common;assembly=ArmSoft.SME.Trade.Common" xmlns:usercontrols="clr-namespace:ArmSoft.SME.Trade.UI.CustomUIElements.UserControls;assembly=ArmSoft.SME.Trade.UI">
+  <Grid Name="PartnerInfo">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="210*" />
+      <ColumnDefinition Width="190*" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Center" Orientation="Horizontal">
+      <Grid Name="Card_Number">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="30" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <dx:DXImage Name="TD_CardImage" Grid.Column="0" Width="24" Height="24" Source="{Binding Converter={StaticResource ImageByNameConverter}, ConverterParameter=credit_card_32.svg}" />
+        <dxe:TextEdit Name="TB_CardNumber" Grid.Column="1" Margin="-2,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" FontWeight="Bold" IsReadOnly="True" ShowBorder="False" ShowNullText="True" Text="{x:Static tradeCommon:Resources.POSCardNumber_NullText}" Foreground="{ext:ThemeBasedColor BlackWhite}" NullTextForeground="{ext:ThemeBasedColor Gray#a6a6a6}" />
+      </Grid>
+    </StackPanel>
+    <TextBlock Name="TB_CardHolderName" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="16" Margin="1,5,6,4" VerticalAlignment="Center" FontSize="12" FontWeight="Bold" Text="" TextTrimming="CharacterEllipsis" Foreground="{ext:ThemeBasedColor BlackWhite}" />
+    <StackPanel Grid.Row="2" Grid.Column="0" Height="16" Margin="1,5,0,4" VerticalAlignment="Center" Orientation="Horizontal">
+      <TextBlock Name="TB_BonusCaption" FontSize="12" FontWeight="Bold" Text="Կուտ․ բոն: " Foreground="{ext:ThemeBasedColor BlackWhite}" />
+      <TextBlock Name="TB_Bonus" Width="98" FontSize="12" FontWeight="Bold" Text="0.00" Foreground="{ext:ThemeBasedColor BlackWhite}" />
+    </StackPanel>
+    <StackPanel Grid.Row="2" Grid.Column="1" Height="16" Margin="1,4,0,5" VerticalAlignment="Center" Orientation="Horizontal">
+      <TextBlock Name="TB_DiscountCaption" Margin="4,0,0,0" FontSize="12" FontWeight="Bold" Text="Զեղչ (" Foreground="{ext:ThemeBasedColor BlackWhite}" />
+      <TextBlock Name="TB_DiscountPercent" FontSize="12" FontWeight="Bold" Text="0.00" Foreground="{ext:ThemeBasedColor BlackWhite}" />
+      <TextBlock FontSize="12" FontWeight="Bold" Text="%)" Foreground="{ext:ThemeBasedColor BlackWhite}" />
+    </StackPanel>
+    <StackPanel Grid.Row="3" Grid.Column="0" Height="16" Margin="1,5,0,4" VerticalAlignment="Center" Orientation="Horizontal">
+      <TextBlock Name="TB_AccumulatedBonusCaption" FontSize="12" FontWeight="Bold" Text="Հաշվ․ բոն: " Foreground="{ext:ThemeBasedColor BlackWhite}" />
+      <TextBlock Name="TB_AccumulatedBonus" Width="98" FontSize="12" FontWeight="Bold" Text="0.00" Foreground="{ext:ThemeBasedColor #dd0326#fb7376}" />
+    </StackPanel>
+    <StackPanel Grid.Row="3" Grid.Column="1" Height="16" Margin="1,5,0,4" VerticalAlignment="Center" Orientation="Horizontal">
+      <TextBlock Name="TB_AddedBonusCaption" Margin="4,0,0,0" FontSize="12" FontWeight="Bold" Text="Ավ. բոն: " Foreground="{ext:ThemeBasedColor #dd0326#fb7376}" />
+      <TextBlock Name="TB_AddedBonus" Width="92" FontSize="12" FontWeight="Bold" Text="0.00" Foreground="{ext:ThemeBasedColor #dd0326#fb7376}" />
+    </StackPanel>
+  </Grid>
+</UserControl>

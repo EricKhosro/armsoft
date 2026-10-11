@@ -1,0 +1,251 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>ArmSoft.SME.Trade.UI</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWPF>True</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net10.0-windows7.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\FavoritesTouchPadControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\NumericTouchPadControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\POSSearchPanelControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleBonusInfoUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleGoodUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleHeaderUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleStatusBarUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleTotalUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleTouchModeButtonsPadUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleTouchModeWithFavoritesAltModeButtonsPadUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleTouchModeWithFavoritesButtonsPadUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSaleableGoodInfoUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSaleDiscountInfoUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSaleHeaderUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSalePaymentMehtodsPadUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSaleStatusBarUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSaleTotalUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSaleTouchModeButtonsPadUserControl.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\CashIOTouchWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\CustomBarCodeOrTINSearchWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\CustomSearchWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\FromPrePaymentTouchWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\NewBuyerWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\NonCashPaymentTouchWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\PrintPrePaymentReturnTouchWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\PrintPrePaymentTouchWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\SaleDiscountsEditWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\SaleEditRowWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\SaleOtherTouchButtonsPadWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\SamplePOSNewBuyerWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\SamplePOSSaleOthersButtonsPadWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.CustomUIElements\PoleDisplayWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.DataView.Reports.Analysis\AnalysisDashBoardWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.Documents.Goods\MTSelectPartyWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.Documents.Goods\SaleWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.Documents.Goods\SamplePOSSaleWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.MetroNavigation.View\AdminToolsView.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.MetroNavigation.View\AnalysisReportsView.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.MetroNavigation.View\CashBankView.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.MetroNavigation.View\eInvoicingView.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.MetroNavigation.View\MainView.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.MetroNavigation.View\PointOfSaleView.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.MetroNavigation.View\PurchaseView.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.MetroNavigation.View\SaleView.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.MetroNavigation.View\StorageView.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.MetroNavigation.View\UserAWPView.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.MetroNavigation\MainNavigationWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.MetroNavigation\MetroNavigationPage.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.MetroNavigation\NavigatorView.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.OtherWindows\GoodsSelectPartyWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI.Views\SalesDocumentsHistoryWindow.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI\About.xaml" />
+    <Page Remove="ArmSoft.SME.Trade.UI\DeviceSettings.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\FavoritesTouchPadControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/favoritestouchpadcontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\NumericTouchPadControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/numerictouchpadcontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\POSSearchPanelControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/possearchpanelcontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleBonusInfoUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/salebonusinfousercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleGoodUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/salegoodusercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleHeaderUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/saleheaderusercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleStatusBarUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/salestatusbarusercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleTotalUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/saletotalusercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleTouchModeButtonsPadUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/saletouchmodebuttonspadusercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleTouchModeWithFavoritesAltModeButtonsPadUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/saletouchmodewithfavoritesaltmodebuttonspadusercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SaleTouchModeWithFavoritesButtonsPadUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/saletouchmodewithfavoritesbuttonspadusercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSaleableGoodInfoUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/samplepossaleablegoօdinfousercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSaleDiscountInfoUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/samplepossalediscountinfousercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSaleHeaderUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/samplepossaleheaderusercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSalePaymentMehtodsPadUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/samplepossalepaymentmehtodspadusercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSaleStatusBarUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/samplepossalestatusbarusercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSaleTotalUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/samplepossaletotalusercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.UserControls\SamplePOSSaleTouchModeButtonsPadUserControl.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/samplepossaletouchmodebuttonspadusercontrol.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\CashIOTouchWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/windows/cashiotouchwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\CustomBarCodeOrTINSearchWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/windows/custombarcodeortinsearchwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\CustomSearchWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/windows/customsearchwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\FromPrePaymentTouchWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/windows/fromprepaymenttouchwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\NewBuyerWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/windows/newbuyerwindow .xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\NonCashPaymentTouchWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/windows/noncashpaymenttouchwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\PrintPrePaymentReturnTouchWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/windows/printprepaymentreturntouchwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\PrintPrePaymentTouchWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/windows/printprepaymenttouchwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\SaleDiscountsEditWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/windows/salediscounteditwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\SaleEditRowWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/windows/saleeditrowwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\SaleOtherTouchButtonsPadWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/windows/saleothertouchbuttonspadwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\SamplePOSNewBuyerWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/windows/sampleposnewbuyerwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements.Windows\SamplePOSSaleOthersButtonsPadWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/windows/samplepossaleothersbuttonspadwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.CustomUIElements\PoleDisplayWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/poledisplaywindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.DataView.Reports.Analysis\AnalysisDashBoardWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="dataview/reports/analysis/analysisdashboardwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.Documents.Goods\MTSelectPartyWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="documents/goods/mtselectpartywindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.Documents.Goods\SaleWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="documents/goods/salewindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.Documents.Goods\SamplePOSSaleWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="documents/goods/samplepossalewindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.MetroNavigation.View\AdminToolsView.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metronavigation/view/admintoolsview.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.MetroNavigation.View\AnalysisReportsView.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metronavigation/view/analysisreportsview.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.MetroNavigation.View\CashBankView.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metronavigation/view/cashbankview.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.MetroNavigation.View\eInvoicingView.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metronavigation/view/einvoicingview.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.MetroNavigation.View\MainView.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metronavigation/view/mainview.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.MetroNavigation.View\PointOfSaleView.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metronavigation/view/pointofsaleview.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.MetroNavigation.View\PurchaseView.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metronavigation/view/purchaseview.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.MetroNavigation.View\SaleView.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metronavigation/view/saleview.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.MetroNavigation.View\StorageView.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metronavigation/view/storageview.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.MetroNavigation.View\UserAWPView.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metronavigation/view/userawpview.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.MetroNavigation\MainNavigationWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metronavigation/mainnavigationwindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.MetroNavigation\MetroNavigationPage.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metronavigation/metronavigationpage.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.MetroNavigation\NavigatorView.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="metronavigation/navigatorview.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.OtherWindows\GoodsSelectPartyWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="otherwindows/rowdialogwindows/goodsselectpartywindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI.Views\SalesDocumentsHistoryWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/salesdocumentshistorywindow.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI\About.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="about.xaml" />
+    <Page Include="ArmSoft.SME.Trade.UI\DeviceSettings.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="customuielements/user controls/devicesettings.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.PrintTemplates2\1.0.67\lib\net10.0\DevExpress.Data.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Trade.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Trade.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Core.UI">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Core.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Core\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Core.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Client">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.SME.Trade.Client">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\ArmSoft.SME.Trade.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="AppLife.Api">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AppLife.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.LayoutControl.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.LayoutControl\25.2.6\lib\net8.0-windows\DevExpress.Xpf.LayoutControl.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Ports">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\System.IO.Ports\10.0.7\lib\net10.0\System.IO.Ports.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Grid.Core\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Grid.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.DependencyInjection.Abstractions\10.0.7\lib\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.Configuration.Abstractions\10.0.7\lib\net10.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v25.2.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Grid.Core\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Grid.v25.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CommunityToolkit.Mvvm">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\CommunityToolkit.Mvvm\8.4.2\lib\net8.0\CommunityToolkit.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.Cloud.Client">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\AddIn\bin\ArmSoft.Cloud.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Stub.System.Data.SQLite.Core.NetStandard\1.0.119\lib\netstandard2.1\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="b2bClient.V2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\b2bClient.V2\1.0.5\lib\net8.0\b2bClient.V2.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.ECRConnector">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.ECRConnector\1.0.5\lib\net8.0\ArmSoft.ECRConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\System.ServiceModel.Primitives\8.1.2\lib\net8.0\System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.EMarkReceiptClient">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.EMarkReceiptClient\1.0.0-pre8\lib\net8.0\ArmSoft.EMarkReceiptClient.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.NavBar.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.NavBar\25.2.6\lib\net8.0-windows\DevExpress.Xpf.NavBar.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v25.2.Extensions">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Core.Extensions\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Core.v25.2.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Controls.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Controls\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Controls.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.Arcus2Client">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.Arcus2Client\1.2.1\lib\net8.0-windows7.0\ArmSoft.Arcus2Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.ElScaleConnector">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.ElScaleConnector\1.0.1\lib\net8.0\ArmSoft.ElScaleConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.PossoftPayClient">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.PossoftPayClient\1.0.3\lib\net8.0\ArmSoft.PossoftPayClient.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.TaxService">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.TaxService\1.0.38\lib\net8.0\ArmSoft.TaxService.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.PrintTemplates2\1.0.67\lib\net10.0\DevExpress.DataAccess.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Ribbon.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Ribbon\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Ribbon.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Office.Interop.Excel\15.0.4795.1001\lib\netstandard2.0\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Docking\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Docking.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Layout.v25.2.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Docking\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Layout.v25.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.InternetBank.APIClient.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OnlineBanking.APIClient\8.16.1\lib\net8.0\ArmSoft.InternetBank.APIClient.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v25.2.Core">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.PrintTemplates2\1.0.67\lib\net10.0\DevExpress.Printing.v25.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ardalis.SmartEnum">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Ardalis.SmartEnum.StrongName\8.2.1\lib\net10.0\Ardalis.SmartEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.DependencyInjection\10.0.0\lib\net10.0\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Microsoft.Extensions.Logging.Abstractions\10.0.7\lib\net10.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\Serilog\4.3.1\lib\net10.0\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Mvvm\25.2.6\lib\net8.0-windows\DevExpress.Mvvm.v25.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ArmSoft.OnlineBanking.Common">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\ArmSoft.OnlineBanking.Common\8.16.1\lib\net8.0\ArmSoft.OnlineBanking.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Charts.v25.2">
+      <HintPath>C:\Program Files\Armenian Software\AS Trade\lib\DevExpress.Wpf.Charts\25.2.6\lib\net8.0-windows\DevExpress.Xpf.Charts.v25.2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
